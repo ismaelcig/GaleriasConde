@@ -1,0 +1,64 @@
+﻿<metro:Window 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:Elysium.Controls;assembly=Elysium"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:metro="http://schemas.codeplex.com/elysium"
+        xmlns:params="http://schemas.codeplex.com/elysium/params"
+        xmlns:User_Controls="clr-namespace:Galeria.User_Controls"
+        params:Design.Theme="Light"
+        params:Manager.Theme="Light"
+        params:Manager.AccentBrush="BlueViolet"
+        params:Manager.ContrastBrush="BlanchedAlmond"
+        params:Window.CloseButtonToolTip="{DynamicResource CloseApp}"
+        params:Window.MaximizeButtonToolTip="{DynamicResource MaximizeApp}"
+        params:Window.MinimizeButtonToolTip="{DynamicResource MinimizeApp}"
+        
+        WindowStartupLocation="CenterOwner"
+        x:Class="Galeria.Windows.C_Galeria"
+        Title="{DynamicResource CGtitle}" Height="480" MinHeight="480" Width="735" MinWidth="735" Closed="Window_Closed">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="203*"/>
+        </Grid.RowDefinitions>
+        <TabControl Grid.RowSpan="2">
+            <TabItem x:Name="Pst1" Header="{DynamicResource CGpst1}">
+                <Grid>
+                    <!--Mostrar obras-->
+                    <TextBlock Margin="0,0,0,393"><Run Text="Mostrar obras"/></TextBlock>
+                    <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Height="158" Width="707"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="Pst2" Header="{DynamicResource CGpst2}">
+                <Grid>
+                    <!--Mostrar Autores-->
+                    <TextBlock><Run Text="Mostrar Autores"/></TextBlock>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="Pst3" Header="{DynamicResource CGpst3}" >
+                <Grid>
+                    <!--Mostrar Mensajes-->
+                    <TextBlock><Run Text="Mostrar Mensajes"/></TextBlock>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="Pst4" Header="{DynamicResource CGpst4}" >
+                <Grid>
+                    <!--Mostrar Ventana Admin-->
+                    <TextBlock><Run Text="Mostrar Ventana Admin"/></TextBlock>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="Pst5" Header="{DynamicResource CGpst5}" >
+                <Grid>
+                    <!--Mostrar Informes-->
+                    <TextBlock><Run Text="Mostrar Informes"/></TextBlock>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <StackPanel x:Name="spPerfil" Orientation="Horizontal" Grid.RowSpan="1" Background="Aquamarine" HorizontalAlignment="Right" Width="230">
+            <User_Controls:LanguageSelector x:Name="languageSelector" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+
+        </StackPanel>
+    </Grid>
+</metro:Window>

@@ -1,0 +1,29 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Galeria.User_Controls"
+             xmlns:ControlzEx="clr-namespace:ControlzEx;assembly=MaterialDesignThemes.Wpf" x:Class="Galeria.User_Controls.LanguageSelector"
+             mc:Ignorable="d" 
+             d:DesignHeight="40" d:DesignWidth="130">
+    <UserControl.Resources>
+        <Style x:Key="{x:Type ComboBox}" TargetType="ComboBox">
+            <Setter Property="SnapsToDevicePixels" Value="true"/>
+            <!--<Setter Property="OverridesDefaultStyle" Value="true"/>-->
+            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
+
+        </Style>
+    </UserControl.Resources>
+    
+    
+    <Grid>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" SelectedIndex="0" Margin="0,0,0,0" VerticalAlignment="Top" Width="130" Height="40" Background="Lavender" BorderBrush="Gold" BorderThickness="1.5" FontSize="20" VerticalContentAlignment="Center" SelectionChanged="comboBox_SelectionChanged"/>
+
+
+
+
+    </Grid>
+</UserControl>

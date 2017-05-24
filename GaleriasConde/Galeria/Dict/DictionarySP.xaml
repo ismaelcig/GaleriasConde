@@ -1,0 +1,65 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib"
+                    xmlns:local="clr-namespace:Galeria.Dict">
+                    
+<!--MainWindow-->
+    <system:String x:Key="MWtitle">Bienvenido</system:String>
+    <system:String x:Key="MWtxt">Usuario</system:String>
+    <system:String x:Key="MWpass">Contraseña</system:String>
+    <system:String x:Key="MWb1">Continuar</system:String>
+    <system:String x:Key="MWb2">Registrarse</system:String>
+    <system:String x:Key="MWb3">Confirmar</system:String>
+    <system:String x:Key="MWb4">Atrás</system:String>
+    <system:String x:Key="MW_Msg1">Debe introducir un nombre de usuario</system:String>
+    <system:String x:Key="MW_Msg2">El usuario introducido no existe. ¿Desea continuar sin registrarse?</system:String>
+    <system:String x:Key="MW_Msg3">Contraseña incorrecta</system:String>
+    <system:String x:Key="MW_Msg4">Debe introducir una contraseña</system:String>
+    <system:String x:Key="MW_Msg5">Ha ocurrido un problema al tratar de acceder a la Base de Datos</system:String>
+    
+<!--Misc-->
+    <system:String x:Key="CloseApp">Abandonar Galería</system:String>
+    <system:String x:Key="CloseWin">Cerrar Ventana</system:String>
+    <system:String x:Key="MaximizeApp">Maximizar</system:String>
+    <system:String x:Key="MinimizeApp">Minimizar</system:String>
+
+<!--Registro-->
+    <system:String x:Key="RGtitle">Registro</system:String>
+    <system:String x:Key="RGnombre">Nombre</system:String>
+    <system:String x:Key="RGapell">Apellidos</system:String>
+    <system:String x:Key="RGnick">Nick</system:String>
+    <system:String x:Key="RGnacion">Nacionalidad</system:String>
+    <system:String x:Key="RGdir">Dirección</system:String>
+    <system:String x:Key="RGemail">Email</system:String>
+    <system:String x:Key="RGtlf">Teléfono de contacto</system:String>
+    <system:String x:Key="RGb1">Siguiente</system:String>
+    <system:String x:Key="RGb2">Ya tengo una cuenta</system:String>
+
+    <system:String x:Key="RGpass">Contraseña</system:String>
+    <system:String x:Key="RGpass1">Verificar Contraseña</system:String>
+    <system:String x:Key="RGcheck1">Debe contener una letra mayúscula</system:String>
+    <system:String x:Key="RGcheck2">Debe contener una letra minúscula</system:String>
+    <system:String x:Key="RGcheck3">Debe tener al menos 5 caracteres</system:String>
+    <system:String x:Key="RGcheck4">Debe tener al menos un número</system:String>
+    <system:String x:Key="RGcheck5">Ambas contraseñas deben coincidir</system:String>
+    <system:String x:Key="RGb3">Confirmar</system:String>
+    <system:String x:Key="RGb4">Atrás</system:String>
+
+    <system:String x:Key="RG_Msg1">Cubra los campos antes de proseguir</system:String>
+    <system:String x:Key="RG_Msg2">Ya existe un usuario con ese nick</system:String>
+    <system:String x:Key="RG_Msg3">Ahora puede entrar con su cuenta</system:String>
+
+
+    <!--wGaleria-->
+    <system:String x:Key="CGtitle">Galerías Conde</system:String>
+    <system:String x:Key="CGpst1">Ver Obras</system:String>
+    <system:String x:Key="CGpst2">Ver Autores</system:String>
+    <system:String x:Key="CGpst3">Mensajes</system:String>
+    <system:String x:Key="CGpst4">Gestión</system:String>
+    <system:String x:Key="CGpst5">Informes</system:String>
+    
+
+</ResourceDictionary>
+
+<!--https://social.msdn.microsoft.com/Forums/en-US/aa9a8300-5e26-4a4f-a0ff-a9a0626272a1/wpf-multilanguage-application?forum=wpf
+    https://www.codeproject.com/Articles/123460/Simplest-Way-to-Implement-Multilingual-WPF-Applica-->

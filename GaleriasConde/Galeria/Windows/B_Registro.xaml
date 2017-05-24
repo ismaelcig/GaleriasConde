@@ -1,0 +1,64 @@
+﻿<Controls:Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:Elysium.Controls;assembly=Elysium"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:metro="http://schemas.codeplex.com/elysium"
+        xmlns:params="http://schemas.codeplex.com/elysium/params"
+        params:Design.Theme="Light"
+        params:Manager.Theme="Light"
+        params:Manager.AccentBrush="BlueViolet"
+        params:Manager.ContrastBrush="BlanchedAlmond"
+        TextElement.FontWeight="Bold"
+        TextElement.FontSize="15"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+        params:Window.CloseButtonToolTip="{DynamicResource CloseWin}"
+        params:Window.MinimizeButtonToolTip="{DynamicResource MinimizeApp}"
+        xmlns:User_Controls="clr-namespace:Galeria.User_Controls"
+    
+        WindowStartupLocation="CenterScreen"
+        x:Class="Galeria.Windows.B_Registro"
+        Title="{DynamicResource RGtitle}" Height="311.237" Width="358.331" ResizeMode="CanMinimize" Closed="Window_Closed">
+
+    <Controls:Window.Resources>
+        <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource MaterialDesignTextBox}"/>
+        <Style TargetType="{x:Type PasswordBox}" BasedOn="{StaticResource MaterialDesignPasswordBox}"/>
+        <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource MaterialDesignComboBox}"/>
+    </Controls:Window.Resources>
+
+
+    <Grid DataContext="{Binding Source=Usuario}">
+        <User_Controls:LanguageSelector HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" Panel.ZIndex="10"/>
+        <!--Grid Datos-->
+        <Grid x:Name="gridDatos">
+            <TextBox x:Name="txt1Name" MaxLength="25" Text="{Binding Path=nombre, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" TabIndex="1" HorizontalAlignment="Left" Height="40" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="158" materialDesign:HintAssist.Hint="{DynamicResource RGnombre}" materialDesign:HintAssist.IsFloating="True"/>
+            <TextBox x:Name="txt2Apell" MaxLength="25" Text="{Binding Path=apellidos, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" TabIndex="2" HorizontalAlignment="Left" Height="40" Margin="10,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" materialDesign:HintAssist.Hint="{DynamicResource RGapell}" materialDesign:HintAssist.IsFloating="True"/>
+            <TextBox x:Name="txt3Nick" MaxLength="25" Text="{Binding Path=nick, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" TabIndex="3" HorizontalAlignment="Left" Height="40" Margin="10,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="158" materialDesign:HintAssist.Hint="{DynamicResource RGnick}" materialDesign:HintAssist.IsFloating="True"/>
+            <ComboBox x:Name="comboBox" TabIndex="4" HorizontalAlignment="Left" Margin="184,100,0,0" VerticalAlignment="Top" Width="158" materialDesign:HintAssist.Hint="{DynamicResource RGnacion}" materialDesign:HintAssist.IsFloating="True" Height="40"/>
+            <TextBox x:Name="txt4Dir" Text="{Binding Path=direccion, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" TabIndex="5" HorizontalAlignment="Left" Height="40" Margin="10,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="330" materialDesign:HintAssist.Hint="{DynamicResource RGdir}" materialDesign:HintAssist.IsFloating="True"/>
+            <TextBox x:Name="txt5Email" Text="{Binding Path=email, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" TabIndex="6" HorizontalAlignment="Left" Height="40" Margin="10,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="158" materialDesign:HintAssist.Hint="{DynamicResource RGemail}" materialDesign:HintAssist.IsFloating="True"/>
+            <TextBox x:Name="txt6Tlf" Text="{Binding Path=tlf, UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True, ValidatesOnDataErrors=True}" TabIndex="7" HorizontalAlignment="Left" Height="40" Margin="182,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="158" materialDesign:HintAssist.Hint="{DynamicResource RGtlf}" materialDesign:HintAssist.IsFloating="True"/>
+            <Button x:Name="buttSig" Content="{DynamicResource RGb1}" HorizontalAlignment="Left" Margin="43,0,0,10" VerticalAlignment="Bottom" Width="92" Click="buttSig_Click"/>
+            <Button x:Name="buttCancel" Content="{DynamicResource RGb2}" HorizontalAlignment="Right" Margin="0,0,47,10" VerticalAlignment="Bottom" Width="164" Click="buttCancel_Click"/>
+        </Grid>
+        <!--Grid contraseña-->
+        <Grid x:Name="gridPass" HorizontalAlignment="Stretch" Visibility="Hidden" VerticalAlignment="Stretch" Background="White">
+            <PasswordBox x:Name="passwordBox1" HorizontalAlignment="Left" Margin="43,46,0,0" VerticalAlignment="Top" Height="40" Width="265" PasswordChanged="passwordBox_PasswordChanged" KeyDown="passwordBox1_KeyDown" materialDesign:HintAssist.Hint="{DynamicResource RGpass}" materialDesign:HintAssist.IsFloating="True"/>
+            <PasswordBox x:Name="passwordBox2" HorizontalAlignment="Left" Margin="43,86,0,0" VerticalAlignment="Top" Height="40" Width="265" PasswordChanged="passwordBox_PasswordChanged" KeyUp="passwordBox1_KeyDown" materialDesign:HintAssist.Hint="{DynamicResource RGpass1}" materialDesign:HintAssist.IsFloating="True"/>
+            <metro:ToggleSwitch x:Name="check1" IsChecked="False" IsEnabled="False" HorizontalAlignment="Left" Margin="10,129,0,0" VerticalAlignment="Top"/>
+            <metro:ToggleSwitch x:Name="check2" IsChecked="False" IsEnabled="False" HorizontalAlignment="Left" Margin="10,153,0,0" VerticalAlignment="Top"/>
+            <metro:ToggleSwitch x:Name="check3" IsChecked="False" IsEnabled="False" HorizontalAlignment="Left" Margin="10,177,0,0" VerticalAlignment="Top"/>
+            <metro:ToggleSwitch x:Name="check4" IsChecked="False" IsEnabled="False" HorizontalAlignment="Left" Margin="10,201,0,0" VerticalAlignment="Top"/>
+            <metro:ToggleSwitch x:Name="check5" IsChecked="False" IsEnabled="False" HorizontalAlignment="Left" Margin="10,222,0,0" VerticalAlignment="Top"/>
+            <Label Content="{DynamicResource RGcheck1}" HorizontalAlignment="Left" Margin="60,129,0,0" VerticalAlignment="Top"/>
+            <Label Content="{DynamicResource RGcheck2}" HorizontalAlignment="Left" Margin="60,153,0,0" VerticalAlignment="Top"/>
+            <Label Content="{DynamicResource RGcheck3}" HorizontalAlignment="Left" Margin="60,177,0,0" VerticalAlignment="Top"/>
+            <Label Content="{DynamicResource RGcheck4}" HorizontalAlignment="Left" Margin="60,201,0,0" VerticalAlignment="Top"/>
+            <Label Content="{DynamicResource RGcheck5}" HorizontalAlignment="Left" Margin="60,222,0,0" VerticalAlignment="Top"/>
+
+            <Button x:Name="buttConfirmar" Content="{DynamicResource RGb3}" HorizontalAlignment="Left" Margin="70,0,0,10" VerticalAlignment="Bottom" Width="100" Click="buttConfirmar_Click"/>
+            <Button x:Name="buttBack" Content="{DynamicResource RGb4}" HorizontalAlignment="Right" Margin="0,0,70,10" VerticalAlignment="Bottom" Width="100" Click="buttBack_Click"/>
+            
+        </Grid>
+    </Grid>
+</Controls:Window>
