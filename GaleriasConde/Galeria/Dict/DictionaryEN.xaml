@@ -25,6 +25,29 @@
 
     <!--Registro-->
     <system:String x:Key="RGtitle">Sign Up</system:String>
+    <system:String x:Key="RGnombre">Name</system:String>
+    <system:String x:Key="RGapell">Surnames</system:String>
+    <system:String x:Key="RGnick">Nick</system:String>
+    <system:String x:Key="RGnacion">Nationality</system:String>
+    <system:String x:Key="RGdir">Direction</system:String>
+    <system:String x:Key="RGemail">Email</system:String>
+    <system:String x:Key="RGtlf">Phone Number</system:String>
+    <system:String x:Key="RGb1">Next</system:String>
+    <system:String x:Key="RGb2">I already have an account</system:String>
+
+    <system:String x:Key="RGpass">Password</system:String>
+    <system:String x:Key="RGpass1">Verify Password</system:String>
+    <system:String x:Key="RGcheck1">Must contain uppercase letter</system:String>
+    <system:String x:Key="RGcheck2">Must contain a lowercase letter</system:String>
+    <system:String x:Key="RGcheck3">Must be at least 5 characters</system:String>
+    <system:String x:Key="RGcheck4">Must have at least one number</system:String>
+    <system:String x:Key="RGcheck5">Both passwords must match</system:String>
+    <system:String x:Key="RGb3">Confirm</system:String>
+    <system:String x:Key="RGb4">Back</system:String>
+
+    <system:String x:Key="RG_Msg1">No field can be empty</system:String>
+    <system:String x:Key="RG_Msg2">A user already exists with that nick</system:String>
+    <system:String x:Key="RG_Msg3">You can now log in with your account</system:String>
 
     <!--wGaleria-->
     <system:String x:Key="CGtitle">Galerías Conde</system:String>

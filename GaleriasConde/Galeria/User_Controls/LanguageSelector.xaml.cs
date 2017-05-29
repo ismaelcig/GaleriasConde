@@ -82,12 +82,34 @@ namespace Galeria.User_Controls
             {
                 try
                 {
+                    ResourceDictionary prevDict = A_Login.dict;//Diccionario previo, para hacer remove
+                    A_Login.dict = cd.LanguageSelector((string)comboBox.SelectedValue);//Nuevo diccionario, para add
                     foreach (Window w in A_Login.windows)
                     {
-                        w.Resources.MergedDictionaries.Remove(A_Login.dict);
-                        A_Login.dict = cd.LanguageSelector((string)comboBox.SelectedValue);
-                        w.Resources.MergedDictionaries.Add(A_Login.dict);
+                        w.Resources.MergedDictionaries.Remove(prevDict);
+                        w.Resources.MergedDictionaries.Add(A_Login.dict);//Hasta aquí debería bastar, pero para los HintBox, como no tienen binding, necesito indicar a mano el cambio
+                        if (w.Name == "A_Login")
+                        {
+                            A_Login.mw.LoadHints();
+                        }
+                        else if (w.Name == "B_Registro")
+                        {
+                            B_Registro.bregistro.LoadHints();
+                        }
+                        else if (w.Name == "C_Galeria")
+                        {
+                            C_Galeria.CGaleria.LoadHints();
+                        }
                     }
+                    //foreach (Ventana v in A_Login.ventanas)
+                    //{
+                    //    v.Window.Resources.MergedDictionaries.Remove(prevDict);
+                    //    v.Window.Resources.MergedDictionaries.Add(A_Login.dict);
+                    //    foreach (HintTextBox txt in v.Txts)
+                    //    {
+                    //        txt.hintTB.Text = (string)A_Login.dict["MWtxt"];
+                    //    }
+                    //}
                 }
                 catch (Exception ex)
                 {
@@ -95,6 +117,5 @@ namespace Galeria.User_Controls
                 }
             }
         }
-
     }
 }

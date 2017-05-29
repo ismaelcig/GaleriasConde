@@ -23,10 +23,12 @@ namespace Galeria.Windows
         public C_Galeria()
         {
             InitializeComponent();
+            this.Name = "C_Galeria";
             CGaleria = this;
             
             Resources.MergedDictionaries.Add(A_Login.dict);
             LoadWindow();
+            LoadHints();
             
         }
 
@@ -56,6 +58,10 @@ namespace Galeria.Windows
             else return false;
         }
 
+        public void LoadHints()
+        {
+
+        }
 
 
         private void Window_Closed(object sender, EventArgs e)

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\ismaelci\documents\visual studio 2015\Projects\GaleriasConde\Galeria\obj\Debug\
+C:\Users\ismaelci\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\
 Galeria
 none
 false
 DEBUG;TRACE
-C:\Users\ismaelci\documents\visual studio 2015\Projects\GaleriasConde\Galeria\App.xaml
-7-276468570
+C:\Users\ismaelci\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\App.xaml
+10-85429459
 
-30-627389287
-211713763009
-Dict\DictionaryEN.xaml;Dict\DictionarySP.xaml;MainWindow.xaml;User_Controls\LanguageSelector.xaml;Windows\A_Login.xaml;Windows\B_Registro.xaml;Windows\C_Galeria.xaml;
+33-310546130
+21-2082924173
+Dict\DictionaryEN.xaml;Dict\DictionarySP.xaml;MainWindow.xaml;User_Controls\HintComboBox.xaml;User_Controls\HintPassBox.xaml;User_Controls\HintTextBox.xaml;User_Controls\LanguageSelector.xaml;Windows\A_Login.xaml;Windows\B_Registro.xaml;Windows\C_Galeria.xaml;
 
-True
+False
 

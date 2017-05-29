@@ -2,8 +2,8 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:system="clr-namespace:System;assembly=mscorlib"
                     xmlns:local="clr-namespace:Galeria.Dict">
-                    
-<!--MainWindow-->
+
+    <!--MainWindow-->
     <system:String x:Key="MWtitle">Bienvenido</system:String>
     <system:String x:Key="MWtxt">Usuario</system:String>
     <system:String x:Key="MWpass">Contraseña</system:String>
@@ -16,14 +16,14 @@
     <system:String x:Key="MW_Msg3">Contraseña incorrecta</system:String>
     <system:String x:Key="MW_Msg4">Debe introducir una contraseña</system:String>
     <system:String x:Key="MW_Msg5">Ha ocurrido un problema al tratar de acceder a la Base de Datos</system:String>
-    
-<!--Misc-->
+
+    <!--Misc-->
     <system:String x:Key="CloseApp">Abandonar Galería</system:String>
     <system:String x:Key="CloseWin">Cerrar Ventana</system:String>
     <system:String x:Key="MaximizeApp">Maximizar</system:String>
     <system:String x:Key="MinimizeApp">Minimizar</system:String>
 
-<!--Registro-->
+    <!--Registro-->
     <system:String x:Key="RGtitle">Registro</system:String>
     <system:String x:Key="RGnombre">Nombre</system:String>
     <system:String x:Key="RGapell">Apellidos</system:String>
@@ -57,9 +57,6 @@
     <system:String x:Key="CGpst3">Mensajes</system:String>
     <system:String x:Key="CGpst4">Gestión</system:String>
     <system:String x:Key="CGpst5">Informes</system:String>
-    
+
 
 </ResourceDictionary>
-
-<!--https://social.msdn.microsoft.com/Forums/en-US/aa9a8300-5e26-4a4f-a0ff-a9a0626272a1/wpf-multilanguage-application?forum=wpf
-    https://www.codeproject.com/Articles/123460/Simplest-Way-to-Implement-Multilingual-WPF-Applica-->

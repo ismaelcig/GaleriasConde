@@ -107,6 +107,15 @@
     <Compile Include="Model\Tipo.cs" />
     <Compile Include="Model\Transaccion.cs" />
     <Compile Include="Model\Usuario.cs" />
+    <Compile Include="User_Controls\HintComboBox.xaml.cs">
+      <DependentUpon>HintComboBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User_Controls\HintPassBox.xaml.cs">
+      <DependentUpon>HintPassBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User_Controls\HintTextBox.xaml.cs">
+      <DependentUpon>HintTextBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="User_Controls\LanguageSelector.xaml.cs">
       <DependentUpon>LanguageSelector.xaml</DependentUpon>
     </Compile>
@@ -139,6 +148,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="User_Controls\HintComboBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User_Controls\HintPassBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User_Controls\HintTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="User_Controls\LanguageSelector.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
