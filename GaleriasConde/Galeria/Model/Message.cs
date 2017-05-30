@@ -1,27 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Galeria.Model
+namespace Galeria.Model//Todavía no está en la BD
 {
-    public class Mensaje
+    public class Message
     {
-        public Mensaje()
+        public Message()
         {
-            sinLeer = true;
+            //sinLeer = true;
         }
-        public int MensajeID { get; set; }
+        public int MessageID { get; set; }
 
-        [Required]
-        public string texto { get; set; }
+        //[Required]
+        public string text { get; set; }
 
         //El usuario que envía (o el admin que responde)
-        public virtual Usuario Emisor { get; set; }
+        public virtual User Sender { get; set; }
+        //Chat al que se envía
         //El usuario que recibe (cuando el usuario envía, esto queda vacío)
-        public virtual Usuario Receptor { get; set; }
+        //public virtual Usuario Receptor { get; set; }
 
         //public int UsuarioID { get; set; }
 

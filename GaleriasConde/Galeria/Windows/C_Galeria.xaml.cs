@@ -49,7 +49,7 @@ namespace Galeria.Windows
         
         public bool Permisos(int perfil)
         {
-            if (A_Login.user.Perfil.PerfilID  >= perfil)
+            if (A_Login.user.Profile.ProfileID >= perfil)
             {
                 return true;
             }

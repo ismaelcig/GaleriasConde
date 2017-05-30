@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Galeria.DAL.Repositories;
+using Galeria.DAL.Repositories.Translations;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,125 +13,138 @@ namespace Galeria.DAL
         private GaleriaContext context = new GaleriaContext();
         private bool disposed = false;
 
-        private AutoresRepository autoresRepository;
-        private TransaccionesRepository transaccionesRepository;
-        private UsuariosRepository usuariosRepository;
-        private ObrasRepository obrasRepository;
-        private TiposRepository tiposRepository;
-        private NacionalidadesRepository nacionalidadesRepository;
-        private MensajesRepository mensajesRepository;
-        //private ConversacionesRepository conversacionesRepository;
-        //private PermisosRepository permisosRepository;
-        private PerfilesRepository perfilesRepository;
+        private ArtworksRep artworksRep;
+        private ArtworkTranslationsRep artworkTranslationsRep;
+        private AuthorsRep authorsRep;
+        private AuthorTranslationsRep authorTranslationsRep;
+        private NationalitiesRep nationalitiesRep;
+        private NationalityTranslationsRep nationalityTranslationsRep;
+        private ProfilesRep profilesRep;
+        private TransactionsRep transactionsRep;
+        private TypesRep typesRep;
+        private TypeTranslationsRep typeTranslationsRep;
+        private UsersRep usersRep;
+        //private MensajesRepository mensajesRepository;
 
-        public AutoresRepository AutoresRepository
+        public ArtworksRep ArtworksRep
         {
             get
             {
-                if (this.autoresRepository == null)
+                if (this.artworksRep == null)
                 {
-                    this.autoresRepository = new AutoresRepository(context);
+                    this.artworksRep = new ArtworksRep(context);
                 }
-                return autoresRepository;
+                return artworksRep;
             }
         }
-        public TransaccionesRepository TransaccionesRepository
+        public ArtworkTranslationsRep ArtworkTranslationsRep
         {
             get
             {
-                if (this.transaccionesRepository == null)
+                if (this.artworkTranslationsRep == null)
                 {
-                    this.transaccionesRepository = new TransaccionesRepository(context);
+                    this.artworkTranslationsRep = new ArtworkTranslationsRep(context);
                 }
-                return transaccionesRepository;
+                return artworkTranslationsRep;
             }
         }
-        public UsuariosRepository UsuariosRepository
+        public AuthorsRep AuthorsRep
         {
             get
             {
-                if (this.usuariosRepository == null)
+                if (this.authorsRep == null)
                 {
-                    this.usuariosRepository = new UsuariosRepository(context);
+                    this.authorsRep = new AuthorsRep(context);
                 }
-                return usuariosRepository;
+                return authorsRep;
             }
         }
-        public ObrasRepository ObrasRepository
+        public AuthorTranslationsRep AuthorTranslationsRep
         {
             get
             {
-                if (this.obrasRepository == null)
+                if (this.authorTranslationsRep == null)
                 {
-                    this.obrasRepository = new ObrasRepository(context);
+                    this.authorTranslationsRep = new AuthorTranslationsRep(context);
                 }
-                return obrasRepository;
+                return authorTranslationsRep;
             }
         }
-        public TiposRepository TiposRepository
+        public NationalitiesRep NationalitiesRep
         {
             get
             {
-                if (this.tiposRepository == null)
+                if (this.nationalitiesRep == null)
                 {
-                    this.tiposRepository = new TiposRepository(context);
+                    this.nationalitiesRep = new NationalitiesRep(context);
                 }
-                return tiposRepository;
+                return nationalitiesRep;
             }
         }
-        public NacionalidadesRepository NacionalidadesRepository
+        public NationalityTranslationsRep NationalityTranslationsRep
         {
             get
             {
-                if (this.nacionalidadesRepository == null)
+                if (this.nationalityTranslationsRep == null)
                 {
-                    this.nacionalidadesRepository = new NacionalidadesRepository(context);
+                    this.nationalityTranslationsRep = new NationalityTranslationsRep(context);
                 }
-                return nacionalidadesRepository;
+                return nationalityTranslationsRep;
             }
         }
-        public MensajesRepository MensajesRepository
+        public ProfilesRep ProfilesRep
         {
             get
             {
-                if (this.mensajesRepository == null)
+                if (this.profilesRep == null)
                 {
-                    this.mensajesRepository = new MensajesRepository(context);
+                    this.profilesRep = new ProfilesRep(context);
                 }
-                return mensajesRepository;
+                return profilesRep;
             }
-        }/*
-        public ConversacionesRepository ConversacionesRepository
+        }
+        public TransactionsRep TransactionsRep
         {
             get
             {
-                if (this.conversacionesRepository == null)
+                if (this.transactionsRep == null)
                 {
-                    this.conversacionesRepository = new ConversacionesRepository(context);
+                    this.transactionsRep = new TransactionsRep(context);
                 }
-                return conversacionesRepository;
+                return transactionsRep;
             }
-        }*/
-        //public PermisosRepository PermisosRepository
-        //{
-        //    get
-        //    {
-        //        if (this.permisosRepository == null)
-        //        {
-        //            this.permisosRepository = new PermisosRepository(context);
-        //        }
-        //        return permisosRepository;
-        //    }
-        //}
-        public PerfilesRepository PerfilesRepository
+        }
+        public TypesRep TypesRep
         {
             get
             {
-                if (this.perfilesRepository == null)
+                if (this.typesRep == null)
                 {
-                    this.perfilesRepository = new PerfilesRepository(context);
+                    this.typesRep = new TypesRep(context);
                 }
-                return perfilesRepository;
+                return typesRep;
+            }
+        }
+        public TypeTranslationsRep TypeTranslationsRep
+        {
+            get
+            {
+                if (this.typeTranslationsRep == null)
+                {
+                    this.typeTranslationsRep = new TypeTranslationsRep(context);
+                }
+                return typeTranslationsRep;
+            }
+        }
+        public UsersRep UsersRep
+        {
+            get
+            {
+                if (this.usersRep == null)
+                {
+                    this.usersRep = new UsersRep(context);
+                }
+                return usersRep;
             }
         }
 

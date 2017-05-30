@@ -75,46 +75,31 @@ namespace Galeria.DAL
             Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
             string includeProperties = "")
         {
-            try
+            dbSet = context.Set<TEntity>();
+            IQueryable<TEntity> query = dbSet;
+            if (filter != null)
             {
-                dbSet = context.Set<TEntity>();
-                IQueryable<TEntity> query = dbSet;
-                if (filter != null)
-                {
-                    query = query.Where(filter);
-                }
-                foreach (var includeProperty in includeProperties.Split
-                (new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
-                {
-                    query = query.Include(includeProperty);
-                }
-                if (orderBy != null)
-                {
-                    return orderBy(query).ToList();
-                }
-                else
-                {
-                    return query.ToList();
-                }
+                query = query.Where(filter);
             }
-            catch (Exception ex)
+            foreach (var includeProperty in includeProperties.Split
+            (new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
             {
-                Console.WriteLine("Error: " + ex);
-                return null;
+                query = query.Include(includeProperty);
             }
+            if (orderBy != null)
+            {
+                return orderBy(query).ToList();
+            }
+            else
+            {
+                return query.ToList();
+            }
+
         }
         public TEntity Single(Expression<Func<TEntity, bool>> predicate)
         {
-            try
-            {
-                dbSet = context.Set<TEntity>();
-                return dbSet.FirstOrDefault(predicate);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error: " + ex);
-                return null;
-            }
+            dbSet = context.Set<TEntity>();
+            return dbSet.FirstOrDefault(predicate);
         }
     }
 }

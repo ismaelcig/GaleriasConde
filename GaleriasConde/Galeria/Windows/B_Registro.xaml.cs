@@ -22,7 +22,7 @@ namespace Galeria.Windows
     public partial class B_Registro : Elysium.Controls.Window//TODO: BorderBrush = Brushes.Red en todos los casos de error
     {
         public static B_Registro bregistro;
-        Usuario us = new Usuario();
+        User us = new User();
 
         public B_Registro()
         {
@@ -32,7 +32,7 @@ namespace Galeria.Windows
 
             comboBox.DisplayMemberPath = "nombre";
             comboBox.SelectedValuePath = "NacionalidadID";
-            comboBox.ItemsSource = A_Login.u.NacionalidadesRepository.GetAll();
+            comboBox.ItemsSource = A_Login.u.NationalitiesRep.GetAll();
             gridPass.Visibility = Visibility.Hidden;
         }
 
@@ -47,16 +47,16 @@ namespace Galeria.Windows
             {//Comprueba que se han rellenado los campos antes de proseguir
                 //Creo un usuario con esos datos y lo valido
                 #region CreaUser
-                us.nombre = txt1Name.Text;
-                us.apellidos = txt2Apell.Text;
+                us.name = txt1Name.Text;
+                us.surnames = txt2Apell.Text;
                 us.nick = txt3Nick.Text;
-                us.Nacionalidad = (Nacionalidad)comboBox.SelectedItem;
+                us.Nationality = (Nationality)comboBox.SelectedItem;
                 //us.pass = passwordBox1.Password;
-                us.direccion = txt4Dir.Text;
+                us.address = txt4Dir.Text;
                 us.email = txt5Email.Text;
                 us.tlf = txt6Tlf.Text;
                 #endregion
-                if (A_Login.u.UsuariosRepository.Get(c => c.nick == us.nick).Count > 0)
+                if (A_Login.u.UsersRep.Get(c => c.nick == us.nick).Count > 0)
                 {//Significa que ya hay un usuario con ese nick
                     MessageBox.Show((string)A_Login.dict["RG_Msg2"]);//Nick ya registrado
                     txt3Nick.Text = "";
@@ -139,7 +139,7 @@ namespace Galeria.Windows
 
         private void buttConfirmar_Click(object sender, RoutedEventArgs e)
         {//Se registra al usuario
-            A_Login.u.UsuariosRepository.Create(us);
+            A_Login.u.UsersRep.Create(us);
             MessageBox.Show((string)A_Login.dict["RG_Msg3"]);
             Cerrar();
         }

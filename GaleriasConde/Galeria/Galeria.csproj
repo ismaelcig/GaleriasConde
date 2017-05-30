@@ -86,27 +86,38 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="DAL\AutoresRepository.cs" />
+    <Compile Include="DAL\Repositories\ArtworksRep.cs" />
+    <Compile Include="DAL\Repositories\NationalitiesRep.cs" />
+    <Compile Include="DAL\Repositories\ProfilesRep.cs" />
+    <Compile Include="DAL\Repositories\TransactionsRep.cs" />
+    <Compile Include="DAL\Repositories\Translations\ArtworkTranslationsRep.cs" />
+    <Compile Include="DAL\Repositories\AuthorsRep.cs" />
+    <Compile Include="DAL\Repositories\Translations\AuthorTranslationsRep.cs" />
     <Compile Include="DAL\GaleriaContext.cs" />
     <Compile Include="DAL\GenericRepository.cs" />
-    <Compile Include="DAL\MensajesRepository.cs" />
-    <Compile Include="DAL\NacionalidadesRepository.cs" />
-    <Compile Include="DAL\ObrasRepository.cs" />
-    <Compile Include="DAL\PerfilesRepository.cs" />
-    <Compile Include="DAL\TiposRepository.cs" />
-    <Compile Include="DAL\TransaccionesRepository.cs" />
+    <Compile Include="DAL\Repositories\Translations\NationalityTranslationsRep.cs" />
+    <Compile Include="DAL\Repositories\Translations\TypeTranslationsRep.cs" />
+    <Compile Include="DAL\Repositories\TypesRep.cs" />
+    <Compile Include="DAL\Repositories\UsersRep.cs" />
     <Compile Include="DAL\UnitOfWork.cs" />
-    <Compile Include="DAL\UsuariosRepository.cs" />
     <Compile Include="Dict\CargarDiccionarios.cs" />
-    <Compile Include="Model\Autor.cs" />
-    <Compile Include="Model\Mensaje.cs" />
-    <Compile Include="Model\Nacionalidad.cs" />
-    <Compile Include="Model\Obra.cs" />
-    <Compile Include="Model\Perfil.cs" />
-    <Compile Include="Model\PropertyValidateModel.cs" />
-    <Compile Include="Model\Tipo.cs" />
-    <Compile Include="Model\Transaccion.cs" />
-    <Compile Include="Model\Usuario.cs" />
+    <Compile Include="Migrations\201705301034285_Migr0530.cs" />
+    <Compile Include="Migrations\201705301034285_Migr0530.Designer.cs">
+      <DependentUpon>201705301034285_Migr0530.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Artwork.cs" />
+    <Compile Include="Model\Author.cs" />
+    <Compile Include="Model\Message.cs" />
+    <Compile Include="Model\Nationality.cs" />
+    <Compile Include="Model\Profile.cs" />
+    <Compile Include="Model\Transaction.cs" />
+    <Compile Include="Model\Translation\ArtworkTranslations.cs" />
+    <Compile Include="Model\Translation\AuthorTranslations.cs" />
+    <Compile Include="Model\Translation\NationalityTranslations.cs" />
+    <Compile Include="Model\Translation\TypeTranslations.cs" />
+    <Compile Include="Model\Type.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="User_Controls\LanguageSelector.xaml.cs">
       <DependentUpon>LanguageSelector.xaml</DependentUpon>
     </Compile>
@@ -170,6 +181,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Migrations\201705301034285_Migr0530.resx">
+      <DependentUpon>201705301034285_Migr0530.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
