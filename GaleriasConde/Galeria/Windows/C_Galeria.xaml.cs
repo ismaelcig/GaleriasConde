@@ -19,11 +19,16 @@ namespace Galeria.Windows
     /// </summary>
     public partial class C_Galeria : Elysium.Controls.Window
     {
-        public static C_Galeria CGaleria;
+        public static C_Galeria cg;
+        bool hidenL = false;
+        System.Windows.Threading.DispatcherTimer dispatcherTimer;
+
         public C_Galeria()
         {
             InitializeComponent();
-            CGaleria = this;
+            this.Name = "C_Galeria";
+            cg = this;
+            A_Login.windows.Add(cg);
             
             Resources.MergedDictionaries.Add(A_Login.dict);
             LoadWindow();
@@ -63,6 +68,57 @@ namespace Galeria.Windows
             //A_Login.mw.Show();
             A_Login.mw.Close();
             Close();
+        }
+
+        
+    
+
+
+
+        void LoadArtworks()
+        {//Cargar Obras
+
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            button.IsEnabled = false;
+            dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
+            dispatcherTimer.Tick += DispatcherTimer_Tick;
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, 1);
+            dispatcherTimer.Start();
+        }
+
+        private void DispatcherTimer_Tick(object sender, EventArgs e)
+        {
+            if (hidenL)
+            {
+                if (docky.Width < 200)
+                {
+                    docky.Width = docky.Width + 10;
+                }
+                else
+                {
+                    hidenL = false;
+                    button.IsEnabled = true;
+                    button.Content = "<-";
+                    dispatcherTimer.Stop();
+                }
+            }
+            else
+            {
+                if (docky.Width > button.Width)
+                {
+                    docky.Width = docky.Width - 10;
+                }
+                else
+                {
+                    hidenL = true;
+                    button.IsEnabled = true;
+                    button.Content = "->";
+                    dispatcherTimer.Stop();
+                }
+            }
         }
     }
 }

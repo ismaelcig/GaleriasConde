@@ -25,9 +25,16 @@
         <TabControl Grid.RowSpan="2">
             <TabItem x:Name="Pst1" Header="{DynamicResource CGpst1}">
                 <Grid>
+
+                    <DockPanel x:Name="docky" Background="Cornsilk" HorizontalAlignment="Left" LastChildFill="True" Margin="10,10,5,10" VerticalAlignment="Stretch" Width="200">
+                        <Button x:Name="button" Content="&lt;-" Height="40" VerticalAlignment="Top" Width="75" HorizontalAlignment="Right" Click="button_Click"/>
+                    </DockPanel>
+                    <Viewbox HorizontalAlignment="Left" Margin="206,20,0,0" VerticalAlignment="Top">
+                        <User_Controls:AnimatedWrapPanel x:Name="awp" HorizontalAlignment="Stretch" Margin="10,10,10,10" VerticalAlignment="Stretch" />
+
+                    </Viewbox>
                     <!--Mostrar obras-->
-                    <TextBlock Margin="0,0,0,393"><Run Text="Mostrar obras"/></TextBlock>
-                    <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Height="158" Width="707"/>
+                    
                 </Grid>
             </TabItem>
             <TabItem x:Name="Pst2" Header="{DynamicResource CGpst2}">

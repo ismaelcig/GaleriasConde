@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Galeria.Other_Classes;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -15,37 +16,62 @@ namespace Galeria.DAL
         DbSet<TEntity> dbSet;
         public GenericRepository(GaleriaContext context)
         {
-            this.context = context;
-            this.dbSet = context.Set<TEntity>();
+            try
+            {
+                this.context = context;
+                this.dbSet = context.Set<TEntity>();
+            }
+            catch (Exception ex)
+            {
+                ErrorLog.Log("GenericRep1", ex.Message);
+            }
         }
 
         public void Update(TEntity entity)
         {
-
-            context.Entry(entity).State = EntityState.Modified;
-            context.SaveChanges();
+            try
+            {
+                context.Entry(entity).State = EntityState.Modified;
+                context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                ErrorLog.Log("GenericRep2", ex.Message);
+            }
         }
         public void Delete(TEntity entityToDelete)
         {
-            dbSet = context.Set<TEntity>();
-            if (context.Entry(entityToDelete).State == EntityState.Detached)
+            try
             {
-                dbSet.Attach(entityToDelete);
+                dbSet = context.Set<TEntity>();
+                if (context.Entry(entityToDelete).State == EntityState.Detached)
+                {
+                    dbSet.Attach(entityToDelete);
+                }
+                dbSet.Remove(entityToDelete);
+
+                context.Entry(entityToDelete).State = EntityState.Deleted;
+                context.SaveChanges();
             }
-            dbSet.Remove(entityToDelete);
-
-            context.Entry(entityToDelete).State = EntityState.Deleted;
-            context.SaveChanges();
-
+            catch (Exception ex)
+            {
+                ErrorLog.Log("GenericRep3", ex.Message);
+            }
         }
 
         public void Delete(Expression<Func<TEntity, bool>> predicate)
         {
-            dbSet = context.Set<TEntity>();
-            var entities = dbSet.Where(predicate).ToList();
-            entities.ForEach(x => context.Entry(x).State = EntityState.Deleted);
-            context.SaveChanges();
-
+            try
+            {
+                dbSet = context.Set<TEntity>();
+                var entities = dbSet.Where(predicate).ToList();
+                entities.ForEach(x => context.Entry(x).State = EntityState.Deleted);
+                context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                ErrorLog.Log("GenericRep4", ex.Message);
+            }
         }
 
         public void Create(TEntity entity)
@@ -58,7 +84,7 @@ namespace Galeria.DAL
             }
             catch (Exception ex)
             {
-                string mensaje = ex.Message;
+                ErrorLog.Log("GenericRep5", ex.Message);
             }
 
 
@@ -67,39 +93,62 @@ namespace Galeria.DAL
 
         public List<TEntity> GetAll()
         {
-            return (List<TEntity>)context.Set<TEntity>().ToList();
-
+            try
+            {
+                return (List<TEntity>)context.Set<TEntity>().ToList();
+            }
+            catch (Exception ex)
+            {
+                ErrorLog.Log("GenericRep6", ex.Message);
+                return null;
+            }
         }
         public List<TEntity> Get(
             Expression<Func<TEntity, bool>> filter = null,
             Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
             string includeProperties = "")
         {
-            dbSet = context.Set<TEntity>();
-            IQueryable<TEntity> query = dbSet;
-            if (filter != null)
+            try
             {
-                query = query.Where(filter);
+                dbSet = context.Set<TEntity>();
+                IQueryable<TEntity> query = dbSet;
+                if (filter != null)
+                {
+                    query = query.Where(filter);
+                }
+                foreach (var includeProperty in includeProperties.Split
+                (new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(includeProperty);
+                }
+                if (orderBy != null)
+                {
+                    return orderBy(query).ToList();
+                }
+                else
+                {
+                    return query.ToList();
+                }
             }
-            foreach (var includeProperty in includeProperties.Split
-            (new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+            catch (Exception ex)
             {
-                query = query.Include(includeProperty);
-            }
-            if (orderBy != null)
-            {
-                return orderBy(query).ToList();
-            }
-            else
-            {
-                return query.ToList();
+                ErrorLog.Log("GenericRep7", ex.Message);
+                return null;
             }
 
         }
         public TEntity Single(Expression<Func<TEntity, bool>> predicate)
         {
-            dbSet = context.Set<TEntity>();
-            return dbSet.FirstOrDefault(predicate);
+            try
+            {
+                dbSet = context.Set<TEntity>();
+                return dbSet.FirstOrDefault(predicate);
+            }
+            catch (Exception ex)
+            {
+                ErrorLog.Log("GenericRep8", ex.Message);
+                return null;
+            }
         }
     }
 }

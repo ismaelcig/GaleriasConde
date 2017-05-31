@@ -1,4 +1,6 @@
-﻿using Galeria.Model;
+﻿using Galeria.Dict;
+using Galeria.Model;
+using Galeria.VO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -21,18 +23,19 @@ namespace Galeria.Windows
     /// </summary>
     public partial class B_Registro : Elysium.Controls.Window//TODO: BorderBrush = Brushes.Red en todos los casos de error
     {
-        public static B_Registro bregistro;
+        public static B_Registro br;
         User us = new User();
+        CargarDiccionarios cd = new CargarDiccionarios();
+        List<NationalityVO> nationalitiesVO = new List<NationalityVO>();
 
         public B_Registro()
         {
             InitializeComponent();
-            bregistro = this;
+            this.Name = "B_Registro";
+            br = this;
+            A_Login.windows.Add(br);
             txt1Name.Focus();
-
-            comboBox.DisplayMemberPath = "nombre";
-            comboBox.SelectedValuePath = "NacionalidadID";
-            comboBox.ItemsSource = A_Login.u.NationalitiesRep.GetAll();
+            LoadNationalities();
             gridPass.Visibility = Visibility.Hidden;
         }
 
@@ -42,7 +45,7 @@ namespace Galeria.Windows
         #region GridBase
         private void buttSig_Click(object sender, RoutedEventArgs e)
         {
-            txt3Nick.BorderBrush = null;
+            txt3Nick.BorderBrush = Brushes.Gray;
             if (string.IsNullOrWhiteSpace(txt1Name.Text) && string.IsNullOrWhiteSpace(txt2Apell.Text) && string.IsNullOrWhiteSpace(txt3Nick.Text) && string.IsNullOrWhiteSpace(txt4Dir.Text) && string.IsNullOrWhiteSpace(txt5Email.Text) && string.IsNullOrWhiteSpace(txt6Tlf.Text) && comboBox.SelectedIndex != -1)
             {//Comprueba que se han rellenado los campos antes de proseguir
                 //Creo un usuario con esos datos y lo valido
@@ -77,12 +80,12 @@ namespace Galeria.Windows
 
         private void buttCancel_Click(object sender, RoutedEventArgs e)
         {
-            Cerrar();
+            CloseW();
         }
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            Cerrar();
+            CloseW();
         }
         #endregion
 
@@ -141,7 +144,7 @@ namespace Galeria.Windows
         {//Se registra al usuario
             A_Login.u.UsersRep.Create(us);
             MessageBox.Show((string)A_Login.dict["RG_Msg3"]);
-            Cerrar();
+            CloseW();
         }
 
         private void buttBack_Click(object sender, RoutedEventArgs e)
@@ -155,6 +158,12 @@ namespace Galeria.Windows
             passwordBox2.Password = "";
         }
         #endregion
+
+
+        /*******************************************/
+        //                METHODS                  //
+        /*******************************************/
+
 
         //MÉTODO VALIDACIÓN
         private Boolean validado(Object obj)
@@ -179,14 +188,28 @@ namespace Galeria.Windows
                 return true;
             }
         }
-        void Cerrar()
+        void CloseW()
         {//Devuelve a la ventana de Login
-            A_Login.windows.Remove(bregistro);//Elimino esta ventana de la lista de ventanas abiertas
+            A_Login.windows.Remove(br);//Elimino esta ventana de la lista de ventanas abiertas
             A_Login.mw.Show();
             Close();
             A_Login.mw.textBox.Focus();
         }
-
+        public void LoadNationalities()
+        {
+            foreach (Nationality n in A_Login.u.NationalitiesRep.GetAll())
+            {
+                NationalityVO nVO = new NationalityVO();
+                nVO.NationalityID = n.NationalityID;
+                string lang = cd.GetCurrentLanguage();
+                nVO.codNation = A_Login.u.NationalityTranslationsRep.Single(c => c.NationalityID == n.NationalityID && c.lang == lang).codNation;
+                nationalitiesVO.Add(nVO);
+            }
+            comboBox.ItemsSource = null;
+            comboBox.ItemsSource = nationalitiesVO;
+            comboBox.DisplayMemberPath = "codNation";
+            comboBox.SelectedValuePath = "NationalityID";
+        }
 
     }
 }

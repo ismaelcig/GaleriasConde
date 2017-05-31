@@ -1,0 +1,2 @@
+Log Entry : 10:49:01, miércoles, 31 de mayo de 2017 :: From GenericRep8 :: LINQ to Entities does not recognize the method 'System.String GetCurrentLanguage()' method, and this method cannot be translated into a store expression.
+------------------------------------------------------------

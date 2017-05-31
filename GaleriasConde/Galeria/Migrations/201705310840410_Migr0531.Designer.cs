@@ -7,13 +7,13 @@ namespace Galeria.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Migr0530 : IMigrationMetadata
+    public sealed partial class Migr0531 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Migr0530));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Migr0531));
         
         string IMigrationMetadata.Id
         {
-            get { return "201705301034285_Migr0530"; }
+            get { return "201705310840410_Migr0531"; }
         }
         
         string IMigrationMetadata.Source

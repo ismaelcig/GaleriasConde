@@ -22,6 +22,7 @@
     <system:String x:Key="CloseWin">Cerrar Ventana</system:String>
     <system:String x:Key="MaximizeApp">Maximizar</system:String>
     <system:String x:Key="MinimizeApp">Minimizar</system:String>
+    <system:String x:Key="Error">Ha ocurrido un error, si el problema persiste, por favor, póngase en contacto con nosotros en GaleriasConde@support.com</system:String>
 
 <!--Registro-->
     <system:String x:Key="RGtitle">Registro</system:String>
@@ -49,16 +50,13 @@
     <system:String x:Key="RG_Msg2">Ya existe un usuario con ese nick</system:String>
     <system:String x:Key="RG_Msg3">Ahora puede entrar con su cuenta</system:String>
 
-
-    <!--wGaleria-->
+<!--wGaleria-->
     <system:String x:Key="CGtitle">Galerías Conde</system:String>
     <system:String x:Key="CGpst1">Ver Obras</system:String>
     <system:String x:Key="CGpst2">Ver Autores</system:String>
     <system:String x:Key="CGpst3">Mensajes</system:String>
     <system:String x:Key="CGpst4">Gestión</system:String>
     <system:String x:Key="CGpst5">Informes</system:String>
-    
-
 </ResourceDictionary>
 
 <!--https://social.msdn.microsoft.com/Forums/en-US/aa9a8300-5e26-4a4f-a0ff-a9a0626272a1/wpf-multilanguage-application?forum=wpf

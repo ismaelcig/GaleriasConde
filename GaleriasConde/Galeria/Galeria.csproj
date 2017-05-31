@@ -101,9 +101,9 @@
     <Compile Include="DAL\Repositories\UsersRep.cs" />
     <Compile Include="DAL\UnitOfWork.cs" />
     <Compile Include="Dict\CargarDiccionarios.cs" />
-    <Compile Include="Migrations\201705301034285_Migr0530.cs" />
-    <Compile Include="Migrations\201705301034285_Migr0530.Designer.cs">
-      <DependentUpon>201705301034285_Migr0530.cs</DependentUpon>
+    <Compile Include="Migrations\201705310840410_Migr0531.cs" />
+    <Compile Include="Migrations\201705310840410_Migr0531.Designer.cs">
+      <DependentUpon>201705310840410_Migr0531.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Artwork.cs" />
@@ -118,9 +118,18 @@
     <Compile Include="Model\Translation\TypeTranslations.cs" />
     <Compile Include="Model\Type.cs" />
     <Compile Include="Model\User.cs" />
+    <Compile Include="Other Classes\AnimationBase.cs" />
+    <Compile Include="Other Classes\ErrorLog.cs" />
+    <Compile Include="Other Classes\FractionDistanceAnimator.cs" />
+    <Compile Include="Other Classes\IArrangeAnimator.cs" />
+    <Compile Include="User_Controls\AnimatedWrapPanel.cs" />
     <Compile Include="User_Controls\LanguageSelector.xaml.cs">
       <DependentUpon>LanguageSelector.xaml</DependentUpon>
     </Compile>
+    <Compile Include="User_Controls\LeftPanel.xaml.cs">
+      <DependentUpon>LeftPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VO\NationalityVO.cs" />
     <Compile Include="Windows\A_Login.xaml.cs">
       <DependentUpon>A_Login.xaml</DependentUpon>
     </Compile>
@@ -154,6 +163,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="User_Controls\LeftPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\A_Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -181,8 +194,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\201705301034285_Migr0530.resx">
-      <DependentUpon>201705301034285_Migr0530.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201705310840410_Migr0531.resx">
+      <DependentUpon>201705310840410_Migr0531.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

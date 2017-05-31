@@ -1,6 +1,7 @@
 ﻿using Galeria.DAL;
 using Galeria.Dict;
 using Galeria.Model;
+using Galeria.Other_Classes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,8 +40,9 @@ namespace Galeria.Windows
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error Initialize component - \r\n  " + ex);
+                ErrorLog.Log("A_Log1", ex.Message);
             }
+            this.Name = "A_Login";
             mw = this;
             windows.Add(mw);
             GridPW.Visibility = Visibility.Hidden;
@@ -53,48 +55,60 @@ namespace Galeria.Windows
         #region Buttons
         private void buttNext_Click(object sender, RoutedEventArgs e)
         {//Pasa al siguiente Grid si el usuario existe, else: pregunta si quiere entrar sin registrarse
-            if (!string.IsNullOrWhiteSpace(textBox.Text))
+            try
             {
-                if (u.UsersRep.Get(c => c.nick.ToString() == textBox.Text).Count == 1)
-                {//Comprueba que existe el usuario introducido
-
-                    //Guardo el usuario que entra
-                    user = u.UsersRep.Single(c => c.nick.ToString() == textBox.Text);
-
-                    //Muestra Password Grid
-                    GridPW.Visibility = Visibility.Visible;
-                    passwordBox.Focus();
-                }
-                else
+                if (!string.IsNullOrWhiteSpace(textBox.Text))
                 {
-                    string msg = (string)dict["MW_Msg2"];//User no existe
-                    var result = MessageBox.Show(msg, "", MessageBoxButton.YesNo, MessageBoxImage.Question);
-                    if (result == MessageBoxResult.Yes)
-                    {//Entra sin usuario, con el nick que acaba de escribir, no tiene ningún permiso
-                        user = new User { nick = textBox.Text };
-                        C_Galeria gal = new C_Galeria();
-                        windows.Add(gal);
-                        gal.Show();
+                    if (u.UsersRep.Get(c => c.nick.ToString() == textBox.Text).Count == 1)
+                    {//Comprueba que existe el usuario introducido
+
+                        //Guardo el usuario que entra
+                        user = u.UsersRep.Single(c => c.nick.ToString() == textBox.Text);
+
+                        //Muestra Password Grid
+                        GridPW.Visibility = Visibility.Visible;
+                        passwordBox.Focus();
                     }
                     else
                     {
-                        textBox.Text = "";
-                        textBox.Focus();
+                        string msg = (string)dict["MW_Msg2"];//User no existe
+                        var result = MessageBox.Show(msg, "", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                        if (result == MessageBoxResult.Yes)
+                        {//Entra sin usuario, con el nick que acaba de escribir, no tiene ningún permiso
+                            user = new User { nick = textBox.Text, Profile = u.ProfilesRep.Single(c => c.codProfile == "Default") };
+                            C_Galeria gal = new C_Galeria();
+                            gal.Show();
+                        }
+                        else
+                        {
+                            textBox.Text = "";
+                            textBox.Focus();
+                        }
                     }
                 }
+                else
+                {
+                    string msg = (string)dict["MW_Msg1"];//Campo vacío
+                    MessageBox.Show(msg);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                string msg = (string)dict["MW_Msg1"];//Campo vacío
-                MessageBox.Show(msg);
+                ErrorLog.Log("A_Log2", ex.Message);
             }
         }
         private void buttReg_Click(object sender, RoutedEventArgs e)
         {
-            B_Registro reg = new B_Registro();
-            windows.Add(reg);
-            reg.Show();
-            mw.Hide();
+            try
+            {
+                B_Registro reg = new B_Registro();
+                reg.Show();
+                mw.Hide();
+            }
+            catch (Exception ex)
+            {
+                ErrorLog.Log("A_Log3", ex.Message);
+            }
         }
 
 
@@ -106,7 +120,6 @@ namespace Galeria.Windows
                 if (passwordBox.Password == user.pass)
                 {//Comprueba su contraseña
                     C_Galeria gal = new C_Galeria();
-                    windows.Add(gal);
                     gal.Show();
                     textBox.Text = "";
                     passwordBox.Password = "";

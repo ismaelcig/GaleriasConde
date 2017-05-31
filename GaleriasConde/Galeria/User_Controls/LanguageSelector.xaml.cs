@@ -1,4 +1,5 @@
 ﻿using Galeria.Dict;
+using Galeria.Other_Classes;
 using Galeria.Windows;
 using System;
 using System.Collections.Generic;
@@ -34,7 +35,7 @@ namespace Galeria.User_Controls
             }
             catch (Exception ex)
             {
-                string s = ex.Message;
+                ErrorLog.Log("LangSel1", ex.Message);
             }
             #region Idiomas
             languages.Add(new Lang { LangID = "en-US", display = "English" });//Inglés EEUU
@@ -87,11 +88,15 @@ namespace Galeria.User_Controls
                         w.Resources.MergedDictionaries.Remove(A_Login.dict);
                         A_Login.dict = cd.LanguageSelector((string)comboBox.SelectedValue);
                         w.Resources.MergedDictionaries.Add(A_Login.dict);
+                        if (w.Name == "B_Registro")
+                        {
+                            B_Registro.br.LoadNationalities();
+                        }
                     }
                 }
                 catch (Exception ex)
                 {
-                    string error = ex.Message;
+                    ErrorLog.Log("LangSel2", ex.Message);
                 }
             }
         }

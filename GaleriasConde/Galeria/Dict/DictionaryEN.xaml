@@ -17,14 +17,38 @@
     <system:String x:Key="MW_Msg4">You must enter a password</system:String>
     <system:String x:Key="MW_Msg5">There was a problem trying to access the Database</system:String>
 
-    <!--Misc-->
+<!--Misc-->
     <system:String x:Key="CloseApp">Close Gallery</system:String>
     <system:String x:Key="CloseWin">Close Window</system:String>
     <system:String x:Key="MaximizeApp">Maximize</system:String>
     <system:String x:Key="MinimizeApp">Minimize</system:String>
+    <system:String x:Key="Error">An error has occurred, if the problem persists, please, contact us at GaleriasConde@support.com</system:String>
 
-    <!--Registro-->
+<!--Registro-->
     <system:String x:Key="RGtitle">Sign Up</system:String>
+    <system:String x:Key="RGnombre">Name</system:String>
+    <system:String x:Key="RGapell">Surnames</system:String>
+    <system:String x:Key="RGnick">Nick</system:String>
+    <system:String x:Key="RGnacion">Nationality</system:String>
+    <system:String x:Key="RGdir">Adress</system:String>
+    <system:String x:Key="RGemail">Email</system:String>
+    <system:String x:Key="RGtlf">Phone number</system:String>
+    <system:String x:Key="RGb1">Next</system:String>
+    <system:String x:Key="RGb2">I am already registered</system:String>
+
+    <system:String x:Key="RGpass">Password</system:String>
+    <system:String x:Key="RGpass1">Verify password</system:String>
+    <system:String x:Key="RGcheck1">Must contain uppercase letter</system:String>
+    <system:String x:Key="RGcheck2">Must contain a lowercase letter</system:String>
+    <system:String x:Key="RGcheck3">Must be at least 5 characters</system:String>
+    <system:String x:Key="RGcheck4">Must have at least one number</system:String>
+    <system:String x:Key="RGcheck5">Both passwords must match</system:String>
+    <system:String x:Key="RGb3">Ok</system:String>
+    <system:String x:Key="RGb4">Back</system:String>
+
+    <system:String x:Key="RG_Msg1">No field can be empty</system:String>
+    <system:String x:Key="RG_Msg2">This nick is already registered</system:String>
+    <system:String x:Key="RG_Msg3">Now you can log in</system:String>
 
     <!--wGaleria-->
     <system:String x:Key="CGtitle">Galerías Conde</system:String>
