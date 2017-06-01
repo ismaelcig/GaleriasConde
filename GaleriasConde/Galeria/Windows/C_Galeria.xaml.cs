@@ -32,6 +32,7 @@ namespace Galeria.Windows
             
             Resources.MergedDictionaries.Add(A_Login.dict);
             LoadWindow();
+            LoadArtworks();
             
         }
 
@@ -77,18 +78,33 @@ namespace Galeria.Windows
 
         void LoadArtworks()
         {//Cargar Obras
-
+            
         }
-
+        double ih;//Altura inicial
+        double dh;//Desired Height (altura final)
+        double desplazamiento;
         private void button_Click(object sender, RoutedEventArgs e)
         {
+            if (!hidenL)
+            {
+                ih = ActualHeight - 101;
+                dh = 40;
+            }
+            else
+            {
+                ih = 40;
+                dh = ActualHeight - 101;
+
+            }
+            desplazamiento = dh - ih;
+            docky.Height = docky.ActualHeight;
+
             button.IsEnabled = false;
             dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
             dispatcherTimer.Tick += DispatcherTimer_Tick;
             dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, 1);
             dispatcherTimer.Start();
         }
-
         private void DispatcherTimer_Tick(object sender, EventArgs e)
         {
             if (hidenL)
@@ -96,12 +112,17 @@ namespace Galeria.Windows
                 if (docky.Width < 200)
                 {
                     docky.Width = docky.Width + 10;
+                    label.Width = label.Width + 10;
+                    //docky.Height = docky.Height + ah;
+                    docky.Height = docky.Height + (desplazamiento / 13);
                 }
                 else
-                {
+                {//Termina de ampliar
                     hidenL = false;
                     button.IsEnabled = true;
                     button.Content = "<-";
+                    docky.Height = Double.NaN;
+                    docky.VerticalAlignment = VerticalAlignment.Stretch;
                     dispatcherTimer.Stop();
                 }
             }
@@ -110,15 +131,32 @@ namespace Galeria.Windows
                 if (docky.Width > button.Width)
                 {
                     docky.Width = docky.Width - 10;
+                    label.Width = label.Width - 10;
+                    docky.VerticalAlignment = VerticalAlignment.Top;
+                    if (docky.Height > 40)
+                    {
+                        docky.Height = docky.Height + (desplazamiento / 13);
+                    }
+                    
                 }
                 else
-                {
+                {//Termina de minimizar
+                    docky.Height = 40;//por si acaso con alguna resolución da problema
                     hidenL = true;
                     button.IsEnabled = true;
                     button.Content = "->";
                     dispatcherTimer.Stop();
                 }
             }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("Actdocky=" + docky.ActualHeight);
+            Console.WriteLine("docky=" + docky.Height);
+            Console.WriteLine("spFilter=" + spFilter.ActualHeight);
+            Console.WriteLine("button1=" + button1.ActualHeight);
+            docky.Height = 40;
         }
     }
 }

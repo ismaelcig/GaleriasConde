@@ -57,6 +57,11 @@
     <system:String x:Key="CGpst3">Mensajes</system:String>
     <system:String x:Key="CGpst4">Gestión</system:String>
     <system:String x:Key="CGpst5">Informes</system:String>
+    
+    <!--Pst1-->
+    <system:String x:Key="CG1Filter">Filtrar</system:String>
+    <system:String x:Key="CG1Search">Buscar...</system:String>
+    
 </ResourceDictionary>
 
 <!--https://social.msdn.microsoft.com/Forums/en-US/aa9a8300-5e26-4a4f-a0ff-a9a0626272a1/wpf-multilanguage-application?forum=wpf

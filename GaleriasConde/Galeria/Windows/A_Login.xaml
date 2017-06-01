@@ -39,7 +39,7 @@
             <Button x:Name="buttReg" Content="{DynamicResource MWb2}" HorizontalAlignment="Left" Margin="154,70,0,0" VerticalAlignment="Top" Width="104" Click="buttReg_Click"/>
         </Grid>
         <Grid x:Name="GridPW" Background="White" Visibility="Hidden">
-            <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="46,20,0,0" VerticalAlignment="Top" Height="39" Width="212" materialDesign:HintAssist.Hint="{DynamicResource MWpass}" materialDesign:HintAssist.FloatingScale="1" materialDesign:HintAssist.IsFloating="True"  KeyDown="passwordBox_KeyDown"/>
+            <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="46,20,0,0" VerticalAlignment="Top" Height="39" Width="212" materialDesign:HintAssist.Hint="{DynamicResource MWpass}" materialDesign:HintAssist.FloatingScale="0.8" materialDesign:HintAssist.IsFloating="True"  KeyDown="passwordBox_KeyDown"/>
             <!-- KeyDown="textBox_KeyDown"-->
             <Button x:Name="buttLogin" Content="{DynamicResource MWb3}" HorizontalAlignment="Left" Margin="46,70,0,0" VerticalAlignment="Top" Width="104" Click="buttLogin_Click"/>
             <Button x:Name="buttBack" Content="{DynamicResource MWb4}" HorizontalAlignment="Left" Margin="154,70,0,0" VerticalAlignment="Top" Width="104" Click="buttBack_Click"/>

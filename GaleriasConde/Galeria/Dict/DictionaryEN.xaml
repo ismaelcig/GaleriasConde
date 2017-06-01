@@ -57,4 +57,8 @@
     <system:String x:Key="CGpst3">Messages</system:String>
     <system:String x:Key="CGpst4">Management</system:String>
     <system:String x:Key="CGpst5">Reports</system:String>
+
+    <!--Pst1-->
+    <system:String x:Key="CG1Filter">Filter</system:String>
+    <system:String x:Key="CG1Search">Search...</system:String>
 </ResourceDictionary>

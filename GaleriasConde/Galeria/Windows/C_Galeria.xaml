@@ -10,31 +10,56 @@
         params:Manager.Theme="Light"
         params:Manager.AccentBrush="BlueViolet"
         params:Manager.ContrastBrush="BlanchedAlmond"
+        TextElement.FontWeight="Bold"
+        TextElement.FontSize="15"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
         params:Window.CloseButtonToolTip="{DynamicResource CloseApp}"
         params:Window.MaximizeButtonToolTip="{DynamicResource MaximizeApp}"
         params:Window.MinimizeButtonToolTip="{DynamicResource MinimizeApp}"
         
         WindowStartupLocation="CenterOwner"
         x:Class="Galeria.Windows.C_Galeria"
-        Title="{DynamicResource CGtitle}" Height="480" MinHeight="480" Width="735" MinWidth="735" Closed="Window_Closed">
+        Title="{DynamicResource CGtitle}" Height="480" MinHeight="480" Width="740" MinWidth="740" Closed="Window_Closed">
+
+    <Controls:Window.Resources>
+        <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource MaterialDesignTextBox}"/>
+    </Controls:Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="36"/>
             <RowDefinition Height="203*"/>
         </Grid.RowDefinitions>
         <TabControl Grid.RowSpan="2">
             <TabItem x:Name="Pst1" Header="{DynamicResource CGpst1}">
                 <Grid>
 
-                    <DockPanel x:Name="docky" Background="Cornsilk" HorizontalAlignment="Left" LastChildFill="True" Margin="10,10,5,10" VerticalAlignment="Stretch" Width="200">
-                        <Button x:Name="button" Content="&lt;-" Height="40" VerticalAlignment="Top" Width="75" HorizontalAlignment="Right" Click="button_Click"/>
+                    <!--Border x:Name="borderDocky" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Margin="10,10,5,10" VerticalAlignment="Stretch" Width="200"-->
+                    <DockPanel x:Name="docky" Background="IndianRed" LastChildFill="True" HorizontalAlignment="Left" Margin="10,10,5,10" VerticalAlignment="Stretch" Width="200" >
+                        <Border BorderThickness="0,0,0,1" BorderBrush="Black" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="40" DockPanel.Dock="Top">
+                            <StackPanel Orientation="Horizontal" Background="WhiteSmoke">
+                                <Label x:Name="label" Content="{DynamicResource CG1Filter}" FontSize="20"  Width="130"/>
+                                <!--Tiene que haber otra forma de colocar esto-->
+                                <Button x:Name="button" Content="&lt;-" Height="40" VerticalAlignment="Top" Width="70" HorizontalAlignment="Right" Click="button_Click"/>
+                            </StackPanel>
+                        </Border>
+
+                        <StackPanel x:Name="spFilter" Orientation="Vertical" Background="Black" MinHeight="0" VerticalAlignment="Top" HorizontalAlignment="Stretch" DockPanel.Dock="Top">
+                            <Button x:Name="button1" Content="ZZZZZZZZZZ" Click="Button_Click_1"/>
+                            <Button Content="ZZZZZZZZZZ"/>
+                        </StackPanel>
+                        <TextBox x:Name="textBox" Height="39" Text="" VerticalAlignment="Bottom" Width="200" materialDesign:HintAssist.Hint="{DynamicResource CG1Search}" materialDesign:HintAssist.FloatingScale="0.8" materialDesign:HintAssist.IsFloating="True" Background="White" params:Design.AccentBrush="Black" />
+                        
+                        <!--<TextBox x:Name="searchBox" TextWrapping="Wrap" materialDesign:HintAssist.Hint="{DynamicResource CG1Search}" Height="39" materialDesign:HintAssist.FloatingScale="0.8" materialDesign:HintAssist.IsFloating="True" DockPanel.Dock="Bottom" VerticalAlignment="Bottom" HorizontalAlignment="Stretch"/>-->
+                        
                     </DockPanel>
-                    <Viewbox HorizontalAlignment="Left" Margin="206,20,0,0" VerticalAlignment="Top">
+                    <!--/Border-->
+                    
+                    <Viewbox HorizontalAlignment="Left" Margin="275,20,0,0" VerticalAlignment="Top">
                         <User_Controls:AnimatedWrapPanel x:Name="awp" HorizontalAlignment="Stretch" Margin="10,10,10,10" VerticalAlignment="Stretch" />
 
                     </Viewbox>
                     <!--Mostrar obras-->
-                    
+                    <TextBox x:Name="textBox1" Height="39" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" materialDesign:HintAssist.Hint="{DynamicResource CG1Search}" materialDesign:HintAssist.FloatingScale="0.8" materialDesign:HintAssist.IsFloating="True" Margin="586,32,21,0"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="Pst2" Header="{DynamicResource CGpst2}">
