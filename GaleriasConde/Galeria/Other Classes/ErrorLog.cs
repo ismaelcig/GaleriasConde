@@ -11,7 +11,7 @@ namespace Galeria.Other_Classes
 {
     class ErrorLog
     {
-        public static void Log(string origin, string logMessage)
+        public static void Log(string origin, Exception ex)
         {
             if (!File.Exists("Logs.txt"))
             {
@@ -22,10 +22,13 @@ namespace Galeria.Other_Classes
                         DateTime.Now.ToLongTimeString() + ", " +
                         DateTime.Now.ToLongDateString() + " :: " +
                         "From " + origin + " :: " +
-                        logMessage + Environment.NewLine +
+                        ex.Message + Environment.NewLine +
+                        " :Inner Exception: " + ex.InnerException + Environment.NewLine +
                         "------------------------------------------------------------";
-            StreamWriter sw = new StreamWriter("Logs.txt");
+            StreamWriter sw;
+            sw = File.AppendText("Logs.txt");
             sw.WriteLine(error);
+            sw.Flush();
             sw.Close();
             MessageBox.Show((string)A_Login.dict["Error"]);//Muestra error genérico
         }

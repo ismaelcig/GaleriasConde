@@ -123,13 +123,22 @@
     <Compile Include="Other Classes\FractionDistanceAnimator.cs" />
     <Compile Include="Other Classes\IArrangeAnimator.cs" />
     <Compile Include="User_Controls\AnimatedWrapPanel.cs" />
+    <Compile Include="User_Controls\ConversDetail.xaml.cs">
+      <DependentUpon>ConversDetail.xaml</DependentUpon>
+    </Compile>
     <Compile Include="User_Controls\LanguageSelector.xaml.cs">
       <DependentUpon>LanguageSelector.xaml</DependentUpon>
     </Compile>
     <Compile Include="User_Controls\LeftPanel.xaml.cs">
       <DependentUpon>LeftPanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="User_Controls\UserPanel.xaml.cs">
+      <DependentUpon>UserPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VO\ArtworkVO.cs" />
+    <Compile Include="VO\AuthorVO.cs" />
     <Compile Include="VO\NationalityVO.cs" />
+    <Compile Include="VO\TypeVO.cs" />
     <Compile Include="Windows\A_Login.xaml.cs">
       <DependentUpon>A_Login.xaml</DependentUpon>
     </Compile>
@@ -159,11 +168,19 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="User_Controls\ConversDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="User_Controls\LanguageSelector.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="User_Controls\LeftPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User_Controls\UserPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

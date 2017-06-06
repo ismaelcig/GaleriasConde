@@ -35,7 +35,7 @@ namespace Galeria.User_Controls
             }
             catch (Exception ex)
             {
-                ErrorLog.Log("LangSel1", ex.Message);
+                ErrorLog.Log("LangSel1", ex);
             }
             #region Idiomas
             languages.Add(new Lang { LangID = "en-US", display = "English" });//Inglés EEUU
@@ -88,15 +88,22 @@ namespace Galeria.User_Controls
                         w.Resources.MergedDictionaries.Remove(A_Login.dict);
                         A_Login.dict = cd.LanguageSelector((string)comboBox.SelectedValue);
                         w.Resources.MergedDictionaries.Add(A_Login.dict);
-                        if (w.Name == "B_Registro")
+                        switch (w.Name)
                         {
-                            B_Registro.br.LoadNationalities();
+                            default:
+                                break;
+                            case "B_Registro":
+                                B_Registro.br.LoadNationalities();
+                                break;
+                            case "C_Galeria":
+                                C_Galeria.cg.OnLangChange();
+                                break;
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    ErrorLog.Log("LangSel2", ex.Message);
+                    ErrorLog.Log("LangSel2", ex);
                 }
             }
         }

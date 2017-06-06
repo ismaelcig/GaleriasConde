@@ -33,7 +33,7 @@
 
     <Grid>
         <Grid x:Name="GridUS">
-            <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="39" Margin="46,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="212" materialDesign:HintAssist.Hint="{DynamicResource MWtxt}" materialDesign:HintAssist.FloatingScale="0.8" materialDesign:HintAssist.IsFloating="True" KeyDown="textBox_KeyDown"/>
+            <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="39" Margin="46,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="212" materialDesign:HintAssist.Hint="{DynamicResource MWtxt}" materialDesign:HintAssist.FloatingScale="0.8" materialDesign:HintAssist.IsFloating="True" KeyDown="textBox_KeyDown" />
             <!-- TextChanged="textBox_TextChanged-->
             <Button x:Name="buttNext" Content="{DynamicResource MWb1}" HorizontalAlignment="Left" Margin="46,70,0,0" VerticalAlignment="Top" Width="104" Click="buttNext_Click"/>
             <Button x:Name="buttReg" Content="{DynamicResource MWb2}" HorizontalAlignment="Left" Margin="154,70,0,0" VerticalAlignment="Top" Width="104" Click="buttReg_Click"/>

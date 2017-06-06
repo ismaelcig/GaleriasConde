@@ -61,7 +61,14 @@
     <!--Pst1-->
     <system:String x:Key="CG1Filter">Filtrar</system:String>
     <system:String x:Key="CG1Search">Buscar...</system:String>
-    
+    <system:String x:Key="CG1AllFilter">Todas</system:String>
+
+
+    <!--UserPanel-->
+    <system:String x:Key="UPMsg">¿Está seguro de que desea salir?</system:String>
+    <system:String x:Key="UPCaption">Confirmación</system:String>
+    <system:String x:Key="UPButton">Salir</system:String>
+
 </ResourceDictionary>
 
 <!--https://social.msdn.microsoft.com/Forums/en-US/aa9a8300-5e26-4a4f-a0ff-a9a0626272a1/wpf-multilanguage-application?forum=wpf

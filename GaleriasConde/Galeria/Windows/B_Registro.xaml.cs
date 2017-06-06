@@ -34,6 +34,7 @@ namespace Galeria.Windows
             this.Name = "B_Registro";
             br = this;
             A_Login.windows.Add(br);
+            Resources.MergedDictionaries.Add(A_Login.dict);
             txt1Name.Focus();
             LoadNationalities();
             gridPass.Visibility = Visibility.Hidden;
@@ -46,18 +47,20 @@ namespace Galeria.Windows
         private void buttSig_Click(object sender, RoutedEventArgs e)
         {
             txt3Nick.BorderBrush = Brushes.Gray;
-            if (string.IsNullOrWhiteSpace(txt1Name.Text) && string.IsNullOrWhiteSpace(txt2Apell.Text) && string.IsNullOrWhiteSpace(txt3Nick.Text) && string.IsNullOrWhiteSpace(txt4Dir.Text) && string.IsNullOrWhiteSpace(txt5Email.Text) && string.IsNullOrWhiteSpace(txt6Tlf.Text) && comboBox.SelectedIndex != -1)
+            if (!string.IsNullOrWhiteSpace(txt1Name.Text) && !string.IsNullOrWhiteSpace(txt2Apell.Text) && !string.IsNullOrWhiteSpace(txt3Nick.Text) && !string.IsNullOrWhiteSpace(txt4Dir.Text) && !string.IsNullOrWhiteSpace(txt5Email.Text) && !string.IsNullOrWhiteSpace(txt6Tlf.Text) && comboBox.SelectedIndex != -1)
             {//Comprueba que se han rellenado los campos antes de proseguir
                 //Creo un usuario con esos datos y lo valido
                 #region CreaUser
                 us.name = txt1Name.Text;
                 us.surnames = txt2Apell.Text;
                 us.nick = txt3Nick.Text;
-                us.Nationality = (Nationality)comboBox.SelectedItem;
+                NationalityVO nVO = (NationalityVO)comboBox.SelectedItem;//NationalityVO es el objeto que uso en ejecución
+                us.Nationality = A_Login.u.NationalitiesRep.Single(c => c.NationalityID == nVO.NationalityID);//Nationality es lo que el usuario guarda en la BD
                 //us.pass = passwordBox1.Password;
                 us.address = txt4Dir.Text;
                 us.email = txt5Email.Text;
                 us.tlf = txt6Tlf.Text;
+                us.Profile = A_Login.u.ProfilesRep.Single(c => c.ProfileID == 2);//Por defecto se crea como usuario normal, la cuenta master le puede cambiar a admin
                 #endregion
                 if (A_Login.u.UsersRep.Get(c => c.nick == us.nick).Count > 0)
                 {//Significa que ya hay un usuario con ese nick
@@ -142,6 +145,7 @@ namespace Galeria.Windows
 
         private void buttConfirmar_Click(object sender, RoutedEventArgs e)
         {//Se registra al usuario
+            us.pass = passwordBox1.Password;
             A_Login.u.UsersRep.Create(us);
             MessageBox.Show((string)A_Login.dict["RG_Msg3"]);
             CloseW();
@@ -197,6 +201,7 @@ namespace Galeria.Windows
         }
         public void LoadNationalities()
         {
+            nationalitiesVO = new List<NationalityVO>();
             foreach (Nationality n in A_Login.u.NationalitiesRep.GetAll())
             {
                 NationalityVO nVO = new NationalityVO();

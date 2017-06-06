@@ -23,7 +23,7 @@ namespace Galeria.DAL
             }
             catch (Exception ex)
             {
-                ErrorLog.Log("GenericRep1", ex.Message);
+                ErrorLog.Log("GenericRep1", ex);
             }
         }
 
@@ -36,7 +36,7 @@ namespace Galeria.DAL
             }
             catch (Exception ex)
             {
-                ErrorLog.Log("GenericRep2", ex.Message);
+                ErrorLog.Log("GenericRep2", ex);
             }
         }
         public void Delete(TEntity entityToDelete)
@@ -55,7 +55,7 @@ namespace Galeria.DAL
             }
             catch (Exception ex)
             {
-                ErrorLog.Log("GenericRep3", ex.Message);
+                ErrorLog.Log("GenericRep3", ex);
             }
         }
 
@@ -70,7 +70,7 @@ namespace Galeria.DAL
             }
             catch (Exception ex)
             {
-                ErrorLog.Log("GenericRep4", ex.Message);
+                ErrorLog.Log("GenericRep4", ex);
             }
         }
 
@@ -84,7 +84,7 @@ namespace Galeria.DAL
             }
             catch (Exception ex)
             {
-                ErrorLog.Log("GenericRep5", ex.Message);
+                ErrorLog.Log("GenericRep5", ex);
             }
 
 
@@ -99,7 +99,7 @@ namespace Galeria.DAL
             }
             catch (Exception ex)
             {
-                ErrorLog.Log("GenericRep6", ex.Message);
+                ErrorLog.Log("GenericRep6", ex);
                 return null;
             }
         }
@@ -132,7 +132,7 @@ namespace Galeria.DAL
             }
             catch (Exception ex)
             {
-                ErrorLog.Log("GenericRep7", ex.Message);
+                ErrorLog.Log("GenericRep7", ex);
                 return null;
             }
 
@@ -146,7 +146,7 @@ namespace Galeria.DAL
             }
             catch (Exception ex)
             {
-                ErrorLog.Log("GenericRep8", ex.Message);
+                ErrorLog.Log("GenericRep8", ex);
                 return null;
             }
         }

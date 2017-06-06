@@ -40,7 +40,7 @@ namespace Galeria.Windows
             }
             catch (Exception ex)
             {
-                ErrorLog.Log("A_Log1", ex.Message);
+                ErrorLog.Log("A_Log1", ex);
             }
             this.Name = "A_Login";
             mw = this;
@@ -94,7 +94,7 @@ namespace Galeria.Windows
             }
             catch (Exception ex)
             {
-                ErrorLog.Log("A_Log2", ex.Message);
+                ErrorLog.Log("A_Log2", ex);
             }
         }
         private void buttReg_Click(object sender, RoutedEventArgs e)
@@ -107,7 +107,7 @@ namespace Galeria.Windows
             }
             catch (Exception ex)
             {
-                ErrorLog.Log("A_Log3", ex.Message);
+                ErrorLog.Log("A_Log3", ex);
             }
         }
 
@@ -147,8 +147,6 @@ namespace Galeria.Windows
             GridPW.Visibility = Visibility.Hidden;
             textBox.Focus(); 
         }
-
-
         #endregion
 
 

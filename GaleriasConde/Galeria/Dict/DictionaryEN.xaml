@@ -61,4 +61,12 @@
     <!--Pst1-->
     <system:String x:Key="CG1Filter">Filter</system:String>
     <system:String x:Key="CG1Search">Search...</system:String>
+    <system:String x:Key="CG1AllFilter">All</system:String>
+
+
+    <!--UserPanel-->
+    <system:String x:Key="UPMsg">Are you sure you want to exit?</system:String>
+    <system:String x:Key="UPCaption">Confirmation</system:String>
+    <system:String x:Key="UPButton">Log Out</system:String>
+    
 </ResourceDictionary>
