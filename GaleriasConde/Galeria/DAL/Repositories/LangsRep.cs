@@ -7,16 +7,17 @@ using System.Threading.Tasks;
 
 namespace Galeria.DAL.Repositories
 {
-    public class NationalitiesRep : GenericRepository<Nationality>
+    public class LangsRep : GenericRepository<Lang>
     {
-        public NationalitiesRep(GaleriaContext context) : base(context)
+        public LangsRep(GaleriaContext context) : base(context)
         {
         }
-        public IEnumerable<Nationality> GetFiltrado(String buscado)
+        public IEnumerable<Lang> GetFiltrado(String buscado)
         {
             if (!string.IsNullOrWhiteSpace(buscado))
             {
-                return Get(filter: (c => c.NationalityID.ToString().Contains(buscado.ToUpper())
+                return Get(filter: (c => c.codLang.Equals(buscado)
+                                         || c.display.ToUpper().Equals(buscado.ToUpper())
                                          )
                                          );
             }

@@ -32,3 +32,9 @@ Log Entry : 12:38:13, martes, 6 de junio de 2017 :: From GenericRep8 :: An error
    en System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
    en System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
 ------------------------------------------------------------
+Log Entry : 10:13:24, miércoles, 7 de junio de 2017 :: From GenericRep7 :: The model backing the 'GaleriaContext' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 10:13:28, miércoles, 7 de junio de 2017 :: From A_Log2 :: Referencia a objeto no establecida como instancia de un objeto.
+ :Inner Exception: 
+------------------------------------------------------------

@@ -87,6 +87,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DAL\Repositories\ArtworksRep.cs" />
+    <Compile Include="DAL\Repositories\LangsRep.cs" />
     <Compile Include="DAL\Repositories\NationalitiesRep.cs" />
     <Compile Include="DAL\Repositories\ProfilesRep.cs" />
     <Compile Include="DAL\Repositories\TransactionsRep.cs" />
@@ -105,9 +106,14 @@
     <Compile Include="Migrations\201705310840410_Migr0531.Designer.cs">
       <DependentUpon>201705310840410_Migr0531.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706070827488_Migr0607.cs" />
+    <Compile Include="Migrations\201706070827488_Migr0607.Designer.cs">
+      <DependentUpon>201706070827488_Migr0607.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Artwork.cs" />
     <Compile Include="Model\Author.cs" />
+    <Compile Include="Model\Lang.cs" />
     <Compile Include="Model\Message.cs" />
     <Compile Include="Model\Nationality.cs" />
     <Compile Include="Model\Profile.cs" />
@@ -213,6 +219,9 @@
     </Compile>
     <EmbeddedResource Include="Migrations\201705310840410_Migr0531.resx">
       <DependentUpon>201705310840410_Migr0531.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706070827488_Migr0607.resx">
+      <DependentUpon>201706070827488_Migr0607.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

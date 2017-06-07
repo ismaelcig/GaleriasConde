@@ -16,10 +16,10 @@ namespace Galeria.DAL.Repositories
         {
             if (!string.IsNullOrWhiteSpace(buscado))
             {
-                return Get(filter: (art => art.ArtworkID.ToString().Contains(buscado.ToUpper())
-                                         || art.onStock.ToString().Contains(buscado.ToUpper())
-                                         || art.date.ToString().Contains(buscado.ToUpper())
-                                         || art.dimensions.ToString().Contains(buscado.ToUpper())
+                return Get(filter: (c => c.ArtworkID.ToString().Contains(buscado.ToUpper())
+                                         || c.onStock.ToString().Contains(buscado.ToUpper())
+                                         || c.date.ToString().Contains(buscado.ToUpper())
+                                         || c.dimensions.ToString().Contains(buscado.ToUpper())
                                          )
                                          );
             }

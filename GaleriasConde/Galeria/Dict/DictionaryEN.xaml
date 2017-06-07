@@ -23,6 +23,7 @@
     <system:String x:Key="MaximizeApp">Maximize</system:String>
     <system:String x:Key="MinimizeApp">Minimize</system:String>
     <system:String x:Key="Error">An error has occurred, if the problem persists, please, contact us at GaleriasConde@support.com</system:String>
+    <system:String x:Key="ID">ID</system:String>
 
 <!--Registro-->
     <system:String x:Key="RGtitle">Sign Up</system:String>
@@ -62,6 +63,17 @@
     <system:String x:Key="CG1Filter">Filter</system:String>
     <system:String x:Key="CG1Search">Search...</system:String>
     <system:String x:Key="CG1AllFilter">All</system:String>
+
+    <!--Pst4-->
+    <system:String x:Key="CG4User">User</system:String>
+    <system:String x:Key="CG4Nick">Nick</system:String>
+    <system:String x:Key="CG4Name">Name</system:String>
+    <system:String x:Key="CG4Surnames">Surnames</system:String>
+    <system:String x:Key="CG4Tlf">Phone</system:String>
+    <system:String x:Key="CG4Email">Email</system:String>
+    <system:String x:Key="CG4Profile">Profile</system:String>
+    <system:String x:Key="CG4Admin">Admin</system:String>
+    <system:String x:Key="CG4Nat">Nationality</system:String>
 
 
     <!--UserPanel-->

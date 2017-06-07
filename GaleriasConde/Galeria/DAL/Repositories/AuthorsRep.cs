@@ -16,9 +16,9 @@ namespace Galeria.DAL.Repositories
         {
             if (!string.IsNullOrWhiteSpace(buscado))
             {
-                return Get(filter: (aut => aut.AuthorID.ToString().Contains(buscado.ToUpper())
-                                         || aut.realName.ToUpper().Contains(buscado.ToUpper())
-                                         || aut.artName.ToString().Contains(buscado.ToUpper())
+                return Get(filter: (c => c.AuthorID.ToString().Contains(buscado.ToUpper())
+                                         || c.realName.ToUpper().Contains(buscado.ToUpper())
+                                         || c.artName.ToString().Contains(buscado.ToUpper())
                                          )
                                          );
             }

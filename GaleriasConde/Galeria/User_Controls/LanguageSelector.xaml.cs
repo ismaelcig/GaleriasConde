@@ -1,4 +1,5 @@
 ﻿using Galeria.Dict;
+using Galeria.Model;
 using Galeria.Other_Classes;
 using Galeria.Windows;
 using System;
@@ -25,8 +26,8 @@ namespace Galeria.User_Controls
     {
         CargarDiccionarios cd = new CargarDiccionarios();
         int cont = 0;
-        List<Lang> languages = new List<Lang>();
-        //public static Window parentWindow;//Al menos por ahora, es necesario settear esta variable desde la ventana donde se encuentra (problema, no se ve la variable)
+        //List<Lang> languages = new List<Lang>();
+
         public LanguageSelector()
         {
             try
@@ -37,21 +38,24 @@ namespace Galeria.User_Controls
             {
                 ErrorLog.Log("LangSel1", ex);
             }
+            //languages = A_Login.u.LangsRep.GetAll();
             #region Idiomas
-            languages.Add(new Lang { LangID = "en-US", display = "English" });//Inglés EEUU
-            //languages.Add(new Lang { LangID = "fr-CA", display = "Français" });//Francés Canadá
-            languages.Add(new Lang { LangID = "es-ES", display = "Español" });//Español España
-            //languages.Add(new Lang { LangID = "gl-ES", display = "Galego" });//Gallego
+            /*Añadidos*/
+            //LangID = 1, codLang = "en-US", display = "English" });//Inglés EEUU
+            //LangID = 2, codLang = "es-ES", display = "Español" });//Español España
+            /*Aún no añadidos*/
+            //LangID = 3, codLang = "gl-ES", display = "Galego" });//Gallego
+            //LangID = 4, codLang = "fr-CA", display = "Français" });//Francés Canadá
             #endregion
 
-            comboBox.ItemsSource = languages;
+            comboBox.ItemsSource = A_Login.u.LangsRep.GetAll();
             comboBox.DisplayMemberPath = "display";
-            comboBox.SelectedValuePath = "LangID";
+            comboBox.SelectedValuePath = "codLang";
             //Por defecto, se selecciona el idioma establecido
             int i = 0;
             foreach (Lang l in comboBox.ItemsSource)
             {
-                if (l.LangID == cd.GetCurrentLanguage())
+                if (l.codLang == cd.GetCurrentLanguage())
                 {
                     break;
                 }
@@ -61,16 +65,6 @@ namespace Galeria.User_Controls
                 }
             }
             comboBox.SelectedIndex = i;
-        }
-
-        private class Lang
-        {
-            public Lang()
-            {
-
-            }
-            public string LangID { get; set; }
-            public string display { get; set; }
         }
 
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)

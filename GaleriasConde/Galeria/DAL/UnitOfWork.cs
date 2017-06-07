@@ -17,6 +17,7 @@ namespace Galeria.DAL
         private ArtworkTranslationsRep artworkTranslationsRep;
         private AuthorsRep authorsRep;
         private AuthorTranslationsRep authorTranslationsRep;
+        private LangsRep langsRep;
         private NationalitiesRep nationalitiesRep;
         private NationalityTranslationsRep nationalityTranslationsRep;
         private ProfilesRep profilesRep;
@@ -24,6 +25,7 @@ namespace Galeria.DAL
         private TypesRep typesRep;
         private TypeTranslationsRep typeTranslationsRep;
         private UsersRep usersRep;
+
         //private MensajesRepository mensajesRepository;
 
         public ArtworksRep ArtworksRep
@@ -68,6 +70,17 @@ namespace Galeria.DAL
                     this.authorTranslationsRep = new AuthorTranslationsRep(context);
                 }
                 return authorTranslationsRep;
+            }
+        }
+        public LangsRep LangsRep
+        {
+            get
+            {
+                if (this.langsRep == null)
+                {
+                    this.langsRep = new LangsRep(context);
+                }
+                return langsRep;
             }
         }
         public NationalitiesRep NationalitiesRep

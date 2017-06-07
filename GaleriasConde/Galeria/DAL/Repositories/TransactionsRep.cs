@@ -16,9 +16,9 @@ namespace Galeria.DAL.Repositories
         {
             if (!string.IsNullOrWhiteSpace(buscado))
             {
-                return Get(filter: (tran => tran.TransactionID.ToString().Contains(buscado.ToUpper())
-                                         || tran.money.ToString().Contains(buscado.ToUpper())
-                                         || tran.done.ToString().Contains(buscado.ToUpper())
+                return Get(filter: (c => c.TransactionID.ToString().Contains(buscado.ToUpper())
+                                         || c.money.ToString().Contains(buscado.ToUpper())
+                                         || c.done.ToString().Contains(buscado.ToUpper())
                                          )
                                          );
             }

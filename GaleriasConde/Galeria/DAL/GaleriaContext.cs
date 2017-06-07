@@ -44,6 +44,7 @@ namespace Galeria.DAL
         public DbSet<User> Users { get; set; }
         //public DbSet<Mensaje> Mensajes { get; set; }
         public DbSet<Profile> Profiles { get; set; }
+        public DbSet<Lang> Langs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

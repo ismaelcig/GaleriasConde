@@ -42,7 +42,7 @@ namespace Galeria.Windows
             LoadWindow();
             LoadArtworks(ArtworkVO.GetArtworksVO());
             LoadFilters();
-            dataGrid.ItemsSource = A_Login.u.ProfilesRep.GetAll();
+            dataGridUser.ItemsSource = A_Login.u.UsersRep.GetAll();
         }
 
         public void LoadWindow()
@@ -59,7 +59,7 @@ namespace Galeria.Windows
             {
                 Pst5.Width = 0;
             }
-
+            HideGrids();
         }
         
         public bool Permisos(int perfil)
@@ -71,6 +71,11 @@ namespace Galeria.Windows
             else return false;
         }
 
+        void HideGrids()
+        {//TODO: Añadir todos los grids de gestión
+            gridUsers.Visibility = Visibility.Hidden;
+
+        }
 
 
         private void Window_Closing(object sender, EventArgs e)
@@ -289,5 +294,17 @@ namespace Galeria.Windows
                 Close();
             }
         }
+
+
+
+        #region Management
+        private void sub_Users_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            //TODO: Ocultar los demás grids, y recargar datagrid, hacer método con switch
+            gridUsers.Visibility = Visibility.Visible;
+        }
+
+
+        #endregion
     }
 }

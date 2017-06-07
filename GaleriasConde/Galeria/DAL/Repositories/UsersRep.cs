@@ -16,14 +16,14 @@ namespace Galeria.DAL.Repositories
         {
             if (!string.IsNullOrWhiteSpace(buscado))
             {
-                return Get(filter: (c => c.UserID.ToString().Contains(buscado.ToUpper())
-                                         || c.name.ToUpper().Contains(buscado.ToUpper())
-                                         || c.surnames.ToString().Contains(buscado.ToUpper())
-                                         || c.nick.ToString().Contains(buscado.ToUpper())
-                                         || c.pass.ToString().Contains(buscado.ToUpper())
+                return Get(filter: (c => c.UserID.ToString().Equals(buscado.ToUpper())
+                                         || c.name.Equals(buscado)
+                                         || c.surnames.Equals(buscado)
+                                         || c.nick.Equals(buscado)
+                                         || c.pass.Equals(buscado)
                                          || c.address.ToString().Contains(buscado.ToUpper())
-                                         || c.tlf.ToString().Contains(buscado.ToUpper())
-                                         || c.email.ToString().Contains(buscado.ToUpper())
+                                         || c.tlf.ToString().Equals(buscado)
+                                         || c.email.ToString().Equals(buscado.ToUpper())
                                          )
                                          );
             }

@@ -23,6 +23,7 @@
     <system:String x:Key="MaximizeApp">Maximizar</system:String>
     <system:String x:Key="MinimizeApp">Minimizar</system:String>
     <system:String x:Key="Error">Ha ocurrido un error, si el problema persiste, por favor, póngase en contacto con nosotros en GaleriasConde@support.com</system:String>
+    <system:String x:Key="ID">ID</system:String>
 
 <!--Registro-->
     <system:String x:Key="RGtitle">Registro</system:String>
@@ -57,12 +58,23 @@
     <system:String x:Key="CGpst3">Mensajes</system:String>
     <system:String x:Key="CGpst4">Gestión</system:String>
     <system:String x:Key="CGpst5">Informes</system:String>
-    
+
     <!--Pst1-->
     <system:String x:Key="CG1Filter">Filtrar</system:String>
     <system:String x:Key="CG1Search">Buscar...</system:String>
     <system:String x:Key="CG1AllFilter">Todas</system:String>
 
+    <!--Pst4-->
+    <system:String x:Key="CG4User">Usuario</system:String>
+    <system:String x:Key="CG4Nick">Nick</system:String>
+    <system:String x:Key="CG4Name">Nombre</system:String>
+    <system:String x:Key="CG4Surnames">Apellidos</system:String>
+    <system:String x:Key="CG4Tlf">Teléfono</system:String>
+    <system:String x:Key="CG4Email">Email</system:String>
+    <system:String x:Key="CG4Profile">Perfil</system:String>
+    <system:String x:Key="CG4Admin">Administrador</system:String>
+    <system:String x:Key="CG4Nat">Nacionalidad</system:String>
+    
 
     <!--UserPanel-->
     <system:String x:Key="UPMsg">¿Está seguro de que desea salir?</system:String>
