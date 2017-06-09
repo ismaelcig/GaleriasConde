@@ -6,6 +6,7 @@
         xmlns:metro="http://schemas.codeplex.com/elysium"
         xmlns:params="http://schemas.codeplex.com/elysium/params"
         xmlns:User_Controls="clr-namespace:Galeria.User_Controls"
+        xmlns:Management_Windows="clr-namespace:Galeria.User_Controls.Management_Windows"
         params:Design.Theme="Light"
         params:Manager.Theme="Light"
         params:Manager.AccentBrush="BlueViolet"
@@ -21,11 +22,11 @@
         x:Class="Galeria.Windows.C_Galeria"
         Title="{DynamicResource CGtitle}" Height="480" MinHeight="480" Width="742" MinWidth="742" Closing="Window_Closing">
 
-    <Controls:Window.Resources>
+    <metro:Window.Resources>
         <!--<Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource MaterialDesignTextBox}">
             <Setter Property="BorderThickness" Value="0,0,0,1"/>
         </Style>-->
-        <Style TargetType="Label" x:Key="submenu">
+        <Style TargetType="{x:Type Label}" x:Key="submenu">
             <Setter Property="FontSize" Value="20"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
             <Style.Triggers>
@@ -37,7 +38,7 @@
             </Style.Triggers>
         </Style>
 
-        <Style TargetType="Button" x:Key="userBut">
+        <Style TargetType="{x:Type Button}" x:Key="userBut">
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="Background" Value="#FF4474F1"/>
@@ -45,8 +46,7 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
-        <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource MaterialDesignTextBox}"/>
-    </Controls:Window.Resources>
+    </metro:Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="36"/>
@@ -63,7 +63,7 @@
                                 <Button x:Name="button" Content="&lt;-" Height="40" VerticalAlignment="Top" Width="70" HorizontalAlignment="Right" Click="button_Click"/>
                             </StackPanel>
                         </Border>
-                        <TextBox x:Name="txtSearchArt" Height="39" DockPanel.Dock="Bottom"  Text="" VerticalAlignment="Bottom" Width="200" materialDesign:HintAssist.Hint="{DynamicResource CG1Search}" materialDesign:HintAssist.FloatingScale="0.8" materialDesign:HintAssist.IsFloating="False" Background="White" params:Design.AccentBrush="Black" />
+                        <TextBox x:Name="txtSearchArt" Height="39" DockPanel.Dock="Bottom" Style="{StaticResource mdTxt}" Text="" VerticalAlignment="Bottom" Width="200" materialDesign:HintAssist.Hint="{DynamicResource CG1Search}" materialDesign:HintAssist.FloatingScale="0.8" materialDesign:HintAssist.IsFloating="False" Background="White" params:Design.AccentBrush="Black" />
 
                         <Border BorderThickness="1" BorderBrush="Black"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
                             <ScrollViewer Background="Wheat" VerticalScrollBarVisibility="Auto">
@@ -97,53 +97,20 @@
             </TabItem>
             <TabItem x:Name="Pst4" Header="{DynamicResource CGpst4}" >
                 <Grid Background="LightGray">
-                    <!--<DataGrid x:Name="dataGrid" HorizontalAlignment="Stretch" Margin="10,36,10,10" VerticalAlignment="Stretch" />-->
-                    <!--Mostrar Ventana Admin-->
-                    <Label x:Name="sub_Users" Content="{DynamicResource CG4User}" Style="{StaticResource submenu}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" MouseDown="sub_Users_MouseDown"/>
-                    <!--<TextBox x:Name="txtNatID" Text="" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0" Height="39" Width="200" materialDesign:HintAssist.Hint="{DynamicResource ID}" materialDesign:HintAssist.FloatingScale="0.8" materialDesign:HintAssist.IsFloating="False" Background="White" params:Design.AccentBrush="Black" />
-                    <TextBox x:Name="txtNat" Text="" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0" Height="39" Width="200" materialDesign:HintAssist.Hint="{DynamicResource ID}" materialDesign:HintAssist.FloatingScale="0.8" materialDesign:HintAssist.IsFloating="False" Background="White" params:Design.AccentBrush="Black" />-->
-                    <Grid x:Name="gridUsers" Background="White" Visibility="Visible" Margin="0,40,0,0">
-                        <DataGrid x:Name="dataGridUser" Background="AntiqueWhite" HorizontalAlignment="Stretch" Margin="241,0,0,0" VerticalAlignment="Stretch" DataContext="{Binding Source=User}" AutoGenerateColumns="False" IsReadOnly="True"><!-- SelectionChanged="dataGridUser_SelectionChanged"-->
-                            <DataGrid.Columns>
-                                <DataGridTextColumn Binding="{Binding nick}">
-                                    <DataGridTextColumn.Header>
-                                        <TextBlock Text="{DynamicResource CG4Nick}" HorizontalAlignment="Center" />
-                                    </DataGridTextColumn.Header>
-                                </DataGridTextColumn>
-                                <DataGridTextColumn Binding="{Binding name}">
-                                    <DataGridTextColumn.Header>
-                                        <TextBlock Text="{DynamicResource CG4Name}" HorizontalAlignment="Center" />
-                                    </DataGridTextColumn.Header>
-                                </DataGridTextColumn>
-                                <DataGridTextColumn Binding="{Binding surnames}">
-                                    <DataGridTextColumn.Header>
-                                        <TextBlock Text="{DynamicResource CG4Surnames}" HorizontalAlignment="Center" />
-                                    </DataGridTextColumn.Header>
-                                </DataGridTextColumn>
-                                <DataGridTextColumn Binding="{Binding tlf}">
-                                    <DataGridTextColumn.Header>
-                                        <TextBlock Text="{DynamicResource CG4Tlf}" HorizontalAlignment="Center" />
-                                    </DataGridTextColumn.Header>
-                                </DataGridTextColumn>
-                                <DataGridTextColumn Binding="{Binding email}">
-                                    <DataGridTextColumn.Header>
-                                        <TextBlock Text="{DynamicResource CG4Email}" HorizontalAlignment="Center" />
-                                    </DataGridTextColumn.Header>
-                                </DataGridTextColumn>
-                                <!--<DataGridTextColumn Header="{DynamicResource CG4Profile}" Binding="{Binding Profile.codProfile}"/>-->
-                                <!--<DataGridTextColumn Header="NatID" Binding="{Binding Nationality.NationalityID}"/>-->
-                            </DataGrid.Columns>
-                        </DataGrid>
+                    <!--Pestañas Management-->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10,10,10,0">
+                        <Label x:Name="sub_Users" Content="{DynamicResource Users}" Style="{StaticResource submenu}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" MouseDown="sub_Users_MouseDown"/>
+                        <Label x:Name="sub_Trans" Content="{DynamicResource Transs}" Style="{StaticResource submenu}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" MouseDown="sub_Trans_MouseDown"/>
+                        <Label x:Name="sub_Nats" Content="{DynamicResource Nats}" Style="{StaticResource submenu}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" MouseDown="sub_Nats_MouseDown"/>
+                        <Label x:Name="sub_Auths" Content="{DynamicResource Auths}" Style="{StaticResource submenu}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" MouseDown="sub_Auths_MouseDown"/>
+                        <Label x:Name="sub_Types" Content="{DynamicResource Types}" Style="{StaticResource submenu}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" MouseDown="sub_Types_MouseDown"/>
+                        <Label x:Name="sub_Arts" Content="{DynamicResource Arts}" Style="{StaticResource submenu}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" MouseDown="sub_Arts_MouseDown"/>
+                    </StackPanel>
 
-                        <TextBox x:Name="txtUser" IsEnabled="False" HorizontalAlignment="Left" Height="36" Margin="21,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199"  materialDesign:HintAssist.Hint="{DynamicResource ID}" materialDesign:HintAssist.IsFloating="True" materialDesign:HintAssist.FloatingScale="0.8" />
-                        <!-- Background="White" BorderBrush="White" CaretBrush="White" OpacityMask="White"-->
-                        <Label x:Name="label1" Content="{DynamicResource CG4Admin}" HorizontalAlignment="Left" Margin="70,58,0,0" VerticalAlignment="Top"/>
-                        <metro:ToggleSwitch x:Name="checkBoxUser" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top"/>
-                        <!--<Button x:Name="buttUserMod" Content="Modificar" HorizontalAlignment="Left" Margin="21,113,0,0" VerticalAlignment="Top" Width="94" Click="buttUserMod_Click"/>-->
-                        <!--<Button x:Name="buttUserDel" Content="Eliminar" HorizontalAlignment="Left" Margin="134,113,0,0" VerticalAlignment="Top" Width="86" Click="buttUserDel_Click"/>-->
-                        <!--<CheckBox x:Name="checkBoxUser" HorizontalAlignment="Left" Margin="116,67,0,0" VerticalAlignment="Top"/>-->
-                        
-                    </Grid>
+                    <Management_Windows:MngUsers x:Name="gridUsers" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Hidden" Margin="0,40,0,0"/>
+                    <Management_Windows:MngTrans x:Name="gridTrans" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Hidden" Margin="0,40,0,0"/>
+                    <Management_Windows:MngNats x:Name="gridNats" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Hidden" Margin="0,40,0,0"/>
+
                 </Grid>
             </TabItem>
             <TabItem x:Name="Pst5" Header="{DynamicResource CGpst5}" >

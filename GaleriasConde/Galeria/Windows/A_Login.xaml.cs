@@ -99,6 +99,8 @@ namespace Galeria.Windows
         }
         private void buttReg_Click(object sender, RoutedEventArgs e)
         {
+            textBox.Text = "";
+            passwordBox.Password = "";
             try
             {
                 B_Registro reg = new B_Registro();

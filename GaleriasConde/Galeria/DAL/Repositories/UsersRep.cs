@@ -24,6 +24,7 @@ namespace Galeria.DAL.Repositories
                                          || c.address.ToString().Contains(buscado.ToUpper())
                                          || c.tlf.ToString().Equals(buscado)
                                          || c.email.ToString().Equals(buscado.ToUpper())
+                                         || c.Nationality.NationalityID.ToString().Equals(buscado)
                                          )
                                          );
             }

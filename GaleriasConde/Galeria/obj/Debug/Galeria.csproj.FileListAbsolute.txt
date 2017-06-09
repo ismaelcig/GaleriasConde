@@ -92,3 +92,13 @@ C:\Users\ismaelci\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug
 C:\Users\ismaelci\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\UserPanel.g.cs
 C:\Users\ismaelci\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\UserPanel.baml
 C:\Users\ismaelci\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\Galeria.Migrations.Migr0607.resources
+C:\Users\ismaelci\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngUsers.g.cs
+C:\Users\ismaelci\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngUsers.baml
+C:\Users\ismaelci\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngNats.g.cs
+C:\Users\ismaelci\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngTrans.g.cs
+C:\Users\ismaelci\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MultiLanguageWarning.g.cs
+C:\Users\ismaelci\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngNats.baml
+C:\Users\ismaelci\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngTrans.baml
+C:\Users\ismaelci\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MultiLanguageWarning.baml
+C:\Users\ismaelci\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngAuths.g.cs
+C:\Users\ismaelci\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngAuths.baml

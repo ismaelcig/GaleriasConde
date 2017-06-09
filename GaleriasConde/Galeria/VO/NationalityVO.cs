@@ -1,4 +1,8 @@
-﻿using System;
+﻿using Galeria.Dict;
+using Galeria.Model;
+using Galeria.Model.Translation;
+using Galeria.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,5 +14,18 @@ namespace Galeria.VO
     {
         public int NationalityID { get; set; }
         public string codNation { get; set; }
+    }
+
+    public static class NationalityConverter
+    {
+        public static NationalityVO toVO(Nationality data)//Pasa de Nationality a NationalityVO
+        {
+            CargarDiccionarios cd = new CargarDiccionarios();
+            string lang = cd.GetCurrentLanguage();
+            NationalityVO result = new NationalityVO();
+            result.NationalityID = data.NationalityID;
+            result.codNation = A_Login.u.NationalityTranslationsRep.Single(c => c.NationalityID == data.NationalityID && c.lang == lang).codNation;
+            return result;
+        }
     }
 }

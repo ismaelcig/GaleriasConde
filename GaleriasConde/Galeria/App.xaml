@@ -12,6 +12,16 @@
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.PasswordBox.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ComboBox.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+
+            <Style TargetType="{x:Type TextBox}" x:Key="mdTxt" BasedOn="{StaticResource MaterialDesignTextBox}"/>
+            <Style TargetType="{x:Type ComboBox}" x:Key="mdCombo" BasedOn="{StaticResource MaterialDesignComboBox}"/>
+            <Style TargetType="{x:Type DataGrid}" x:Key="dg">
+                <Setter Property="Background"  Value="AntiqueWhite"/>
+                <Setter Property="AutoGenerateColumns" Value="False"/>
+                <Setter Property="IsReadOnly" Value="True"/>
+            </Style>
+            <BitmapImage x:Key="warning" UriSource="../Images/warning.ico" />
         </ResourceDictionary>
     </Application.Resources>
 </Application>

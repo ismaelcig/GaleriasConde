@@ -40,29 +40,29 @@ namespace Galeria.Windows
             
             Resources.MergedDictionaries.Add(A_Login.dict);
             LoadWindow();
-            LoadArtworks(ArtworkVO.GetArtworksVO());
-            LoadFilters();
-            dataGridUser.ItemsSource = A_Login.u.UsersRep.GetAll();
+            OnLangChange();
+            //dataGridUser.ItemsSource = A_Login.u.UsersRep.GetAll();
         }
 
-        public void LoadWindow()
+        public void LoadWindow()//TODO: Añadir elementos de la pestaña Gestión
         {
-            if (!Permisos(2))
+            if (!Authorization(2))//Usuario registrado
             {
                 Pst3.Width = 0;
             }
-            if (!Permisos(3))
+            if (!Authorization(3))//Admin
             {
                 Pst4.Width = 0;
             }
-            if (!Permisos(4))
+            if (!Authorization(4))//Master
             {
                 Pst5.Width = 0;
+                sub_Users.Width = 0;
             }
             HideGrids();
         }
         
-        public bool Permisos(int perfil)
+        public bool Authorization(int perfil)
         {
             if (A_Login.user.Profile.ProfileID >= perfil)
             {
@@ -74,7 +74,8 @@ namespace Galeria.Windows
         void HideGrids()
         {//TODO: Añadir todos los grids de gestión
             gridUsers.Visibility = Visibility.Hidden;
-
+            gridTrans.Visibility = Visibility.Hidden;
+            gridNats.Visibility = Visibility.Hidden;
         }
 
 
@@ -301,10 +302,38 @@ namespace Galeria.Windows
         private void sub_Users_MouseDown(object sender, MouseButtonEventArgs e)
         {
             //TODO: Ocultar los demás grids, y recargar datagrid, hacer método con switch
+            HideGrids();
             gridUsers.Visibility = Visibility.Visible;
+        }
+
+        private void sub_Trans_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            HideGrids();
+            gridTrans.Visibility = Visibility.Visible;
+        }
+
+        private void sub_Nats_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            HideGrids();
+            gridNats.Visibility = Visibility.Visible;
         }
 
 
         #endregion
+
+        private void sub_Auths_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void sub_Types_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void sub_Arts_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }

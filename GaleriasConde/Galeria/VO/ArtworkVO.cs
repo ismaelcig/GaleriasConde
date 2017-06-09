@@ -56,4 +56,22 @@ namespace Galeria.VO
         }
 
     }
+
+    public static class ArtworkConverter
+    {
+        public static ArtworkVO toVO(Artwork data)//Pasa de Artwork a ArtworkVO
+        {
+            CargarDiccionarios cd = new CargarDiccionarios();
+            string lang = cd.GetCurrentLanguage();
+            ArtworkVO result = new ArtworkVO();
+            result.ArtworkID = data.ArtworkID;
+            result.onStock = data.onStock;
+            result.img = data.img;
+            result.date = data.date;
+            result.dimensions = data.dimensions;
+            result.title = A_Login.u.ArtworkTranslationsRep.Single(c => c.ArtworkID == data.ArtworkID && c.lang == lang).title;
+            result.info = A_Login.u.ArtworkTranslationsRep.Single(c => c.ArtworkID == data.ArtworkID && c.lang == lang).info;
+            return result;
+        }
+    }
 }

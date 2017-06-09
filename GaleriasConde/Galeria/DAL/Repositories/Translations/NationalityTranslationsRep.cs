@@ -18,7 +18,6 @@ namespace Galeria.DAL.Repositories.Translations
             {
                 return Get(filter: (c => c.NationalityID.ToString().Contains(buscado.ToUpper())
                                          || c.lang.ToUpper().Contains(buscado.ToUpper())
-                                         || c.isDefault.ToString().Contains(buscado.ToUpper())
                                          || c.codNation.ToString().Contains(buscado.ToUpper())
                                          )
                                          );

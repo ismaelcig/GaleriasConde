@@ -7,15 +7,13 @@
     <system:String x:Key="MWtitle">Bienvenido</system:String>
     <system:String x:Key="MWtxt">Usuario</system:String>
     <system:String x:Key="MWpass">Contraseña</system:String>
-    <system:String x:Key="MWb1">Continuar</system:String>
     <system:String x:Key="MWb2">Registrarse</system:String>
-    <system:String x:Key="MWb3">Confirmar</system:String>
-    <system:String x:Key="MWb4">Atrás</system:String>
-    <system:String x:Key="MW_Msg1">Debe introducir un nombre de usuario</system:String>
+    <system:String x:Key="MWb3">Login</system:String>
+    <system:String x:Key="MW_Msg1">Debe introducir un nombre de usuario.</system:String>
     <system:String x:Key="MW_Msg2">El usuario introducido no existe. ¿Desea continuar sin registrarse?</system:String>
-    <system:String x:Key="MW_Msg3">Contraseña incorrecta</system:String>
-    <system:String x:Key="MW_Msg4">Debe introducir una contraseña</system:String>
-    <system:String x:Key="MW_Msg5">Ha ocurrido un problema al tratar de acceder a la Base de Datos</system:String>
+    <system:String x:Key="MW_Msg3">Contraseña incorrecta.</system:String>
+    <system:String x:Key="MW_Msg4">Debe introducir una contraseña.</system:String>
+    <system:String x:Key="MW_Msg5">Ha ocurrido un problema al tratar de acceder a la Base de Datos.</system:String>
     
 <!--Misc-->
     <system:String x:Key="CloseApp">Abandonar Galería</system:String>
@@ -24,17 +22,19 @@
     <system:String x:Key="MinimizeApp">Minimizar</system:String>
     <system:String x:Key="Error">Ha ocurrido un error, si el problema persiste, por favor, póngase en contacto con nosotros en GaleriasConde@support.com</system:String>
     <system:String x:Key="ID">ID</system:String>
+    <system:String x:Key="Next">Siguiente</system:String>
+    <system:String x:Key="Ok">Confirmar</system:String>
+    <system:String x:Key="Back">Atrás</system:String>
 
 <!--Registro-->
     <system:String x:Key="RGtitle">Registro</system:String>
-    <system:String x:Key="RGnombre">Nombre</system:String>
-    <system:String x:Key="RGapell">Apellidos</system:String>
-    <system:String x:Key="RGnick">Nick</system:String>
-    <system:String x:Key="RGnacion">Nacionalidad</system:String>
-    <system:String x:Key="RGdir">Dirección</system:String>
-    <system:String x:Key="RGemail">Email</system:String>
-    <system:String x:Key="RGtlf">Teléfono de contacto</system:String>
-    <system:String x:Key="RGb1">Siguiente</system:String>
+    <system:String x:Key="Name">Nombre</system:String>
+    <system:String x:Key="Surnames">Apellidos</system:String>
+    <system:String x:Key="Nick">Nick</system:String>
+    <system:String x:Key="Nat">Nacionalidad</system:String>
+    <system:String x:Key="Address">Dirección</system:String>
+    <system:String x:Key="Email">Email</system:String>
+    <system:String x:Key="Tlf">Teléfono de contacto</system:String>
     <system:String x:Key="RGb2">Ya tengo una cuenta</system:String>
 
     <system:String x:Key="RGpass">Contraseña</system:String>
@@ -44,12 +44,10 @@
     <system:String x:Key="RGcheck3">Debe tener al menos 5 caracteres</system:String>
     <system:String x:Key="RGcheck4">Debe tener al menos un número</system:String>
     <system:String x:Key="RGcheck5">Ambas contraseñas deben coincidir</system:String>
-    <system:String x:Key="RGb3">Confirmar</system:String>
-    <system:String x:Key="RGb4">Atrás</system:String>
 
-    <system:String x:Key="RG_Msg1">Cubra los campos antes de proseguir</system:String>
-    <system:String x:Key="RG_Msg2">Ya existe un usuario con ese nick</system:String>
-    <system:String x:Key="RG_Msg3">Ahora puede entrar con su cuenta</system:String>
+    <system:String x:Key="RG_Msg1">Cubra los campos antes de proseguir.</system:String>
+    <system:String x:Key="RG_Msg2">Ya existe un usuario con ese nick.</system:String>
+    <system:String x:Key="RG_Msg3">Ahora puede entrar con su cuenta.</system:String>
 
 <!--wGaleria-->
     <system:String x:Key="CGtitle">Galerías Conde</system:String>
@@ -65,16 +63,39 @@
     <system:String x:Key="CG1AllFilter">Todas</system:String>
 
     <!--Pst4-->
-    <system:String x:Key="CG4User">Usuario</system:String>
-    <system:String x:Key="CG4Nick">Nick</system:String>
-    <system:String x:Key="CG4Name">Nombre</system:String>
-    <system:String x:Key="CG4Surnames">Apellidos</system:String>
-    <system:String x:Key="CG4Tlf">Teléfono</system:String>
-    <system:String x:Key="CG4Email">Email</system:String>
-    <system:String x:Key="CG4Profile">Perfil</system:String>
-    <system:String x:Key="CG4Admin">Administrador</system:String>
-    <system:String x:Key="CG4Nat">Nacionalidad</system:String>
-    
+    <system:String x:Key="User">Usuario</system:String>
+    <system:String x:Key="Users">Usuarios</system:String>
+    <system:String x:Key="Profile">Perfil</system:String>
+    <system:String x:Key="Admin">Administrador</system:String>
+    <system:String x:Key="warn">Este elemento debe registrarse en todos los idiomas</system:String>
+
+    <system:String x:Key="Trans">Transacción</system:String>
+    <system:String x:Key="Transs">Transacciones</system:String>
+
+    <system:String x:Key="Nats">Nacionalidades</system:String>
+    <system:String x:Key="NUsers">Nº Usuarios</system:String>
+    <system:String x:Key="DelConfirmation">¿Está seguro de que desea borrar todos los registros sobre este objeto?</system:String>
+    <system:String x:Key="MngN_Msg1"> Usuarios tienen asociada esta Nacionalidad. No puede ser eliminada.</system:String>
+
+    <system:String x:Key="Auth">Autor</system:String>
+    <system:String x:Key="Auths">Autores</system:String>
+    <system:String x:Key="realName">Nombre Real</system:String>
+    <system:String x:Key="artName">Nombre Artístico</system:String>
+    <system:String x:Key="ArtNum">Nº Obras</system:String>
+    <system:String x:Key="descr">Descripción</system:String>
+
+    <system:String x:Key="Type">Tipo</system:String>
+    <system:String x:Key="Types">Tipos</system:String>
+
+    <system:String x:Key="Art">Obra</system:String>
+    <system:String x:Key="Arts">Obras</system:String>
+
+    <system:String x:Key="CG4Add">Añadir</system:String>
+    <system:String x:Key="CG4Mod">Modificar</system:String>
+    <system:String x:Key="CG4Del">Eliminar</system:String>
+
+    <system:String x:Key="MngU_Msg1">No puede eliminar sus propios permisos.</system:String>
+    <system:String x:Key="MngU_Msg2">No puede eliminar la cuenta master.</system:String>
 
     <!--UserPanel-->
     <system:String x:Key="UPMsg">¿Está seguro de que desea salir?</system:String>

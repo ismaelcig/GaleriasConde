@@ -18,7 +18,6 @@ namespace Galeria.DAL.Repositories.Translations
             {
                 return Get(filter: (artTr => artTr.ArtworkID.ToString().Contains(buscado.ToUpper())
                                          || artTr.lang.ToUpper().Contains(buscado.ToUpper())
-                                         || artTr.isDefault.ToString().Contains(buscado.ToUpper())
                                          || artTr.title.ToString().Contains(buscado.ToUpper())
                                          || artTr.info.ToString().Contains(buscado.ToUpper())
                                          )

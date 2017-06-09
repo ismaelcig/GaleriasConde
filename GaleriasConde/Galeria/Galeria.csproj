@@ -138,6 +138,21 @@
     <Compile Include="User_Controls\LeftPanel.xaml.cs">
       <DependentUpon>LeftPanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="User_Controls\Management_Windows\MngAuths.xaml.cs">
+      <DependentUpon>MngAuths.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User_Controls\Management_Windows\MngNats.xaml.cs">
+      <DependentUpon>MngNats.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User_Controls\Management_Windows\MngTrans.xaml.cs">
+      <DependentUpon>MngTrans.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User_Controls\Management_Windows\MngUsers.xaml.cs">
+      <DependentUpon>MngUsers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User_Controls\Management_Windows\MultiLanguageWarning.xaml.cs">
+      <DependentUpon>MultiLanguageWarning.xaml</DependentUpon>
+    </Compile>
     <Compile Include="User_Controls\UserPanel.xaml.cs">
       <DependentUpon>UserPanel.xaml</DependentUpon>
     </Compile>
@@ -183,6 +198,26 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="User_Controls\LeftPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User_Controls\Management_Windows\MngAuths.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User_Controls\Management_Windows\MngNats.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User_Controls\Management_Windows\MngTrans.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User_Controls\Management_Windows\MngUsers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User_Controls\Management_Windows\MultiLanguageWarning.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -240,7 +275,9 @@
   <ItemGroup>
     <None Include="FodyWeavers.xml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\warning.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.2.0.0\build\dotnet\Fody.targets" Condition="Exists('..\packages\Fody.2.0.0\build\dotnet\Fody.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

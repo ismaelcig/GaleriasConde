@@ -7,15 +7,13 @@
     <system:String x:Key="MWtitle">Welcome</system:String>
     <system:String x:Key="MWtxt">User</system:String>
     <system:String x:Key="MWpass">Password</system:String>
-    <system:String x:Key="MWb1">Next</system:String>
     <system:String x:Key="MWb2">Sign Up</system:String>
     <system:String x:Key="MWb3">Login</system:String>
-    <system:String x:Key="MWb4">Back</system:String>
-    <system:String x:Key="MW_Msg1">You must enter a username</system:String>
+    <system:String x:Key="MW_Msg1">You must enter a username.</system:String>
     <system:String x:Key="MW_Msg2">The entered user does not exist. Do you want to continue without signing up?</system:String>
-    <system:String x:Key="MW_Msg3">Wrong password</system:String>
-    <system:String x:Key="MW_Msg4">You must enter a password</system:String>
-    <system:String x:Key="MW_Msg5">There was a problem trying to access the Database</system:String>
+    <system:String x:Key="MW_Msg3">Wrong password.</system:String>
+    <system:String x:Key="MW_Msg4">You must enter a password.</system:String>
+    <system:String x:Key="MW_Msg5">There was a problem trying to access the Database.</system:String>
 
 <!--Misc-->
     <system:String x:Key="CloseApp">Close Gallery</system:String>
@@ -24,17 +22,19 @@
     <system:String x:Key="MinimizeApp">Minimize</system:String>
     <system:String x:Key="Error">An error has occurred, if the problem persists, please, contact us at GaleriasConde@support.com</system:String>
     <system:String x:Key="ID">ID</system:String>
+    <system:String x:Key="Next">Next</system:String>
+    <system:String x:Key="Ok">Ok</system:String>
+    <system:String x:Key="Back">Back</system:String>
 
 <!--Registro-->
     <system:String x:Key="RGtitle">Sign Up</system:String>
-    <system:String x:Key="RGnombre">Name</system:String>
-    <system:String x:Key="RGapell">Surnames</system:String>
-    <system:String x:Key="RGnick">Nick</system:String>
-    <system:String x:Key="RGnacion">Nationality</system:String>
-    <system:String x:Key="RGdir">Adress</system:String>
-    <system:String x:Key="RGemail">Email</system:String>
-    <system:String x:Key="RGtlf">Phone number</system:String>
-    <system:String x:Key="RGb1">Next</system:String>
+    <system:String x:Key="Name">Name</system:String>
+    <system:String x:Key="Surnames">Surnames</system:String>
+    <system:String x:Key="Nick">Nick</system:String>
+    <system:String x:Key="Nat">Nationality</system:String>
+    <system:String x:Key="Address">Address</system:String>
+    <system:String x:Key="Email">Email</system:String>
+    <system:String x:Key="Tlf">Phone number</system:String>
     <system:String x:Key="RGb2">I am already registered</system:String>
 
     <system:String x:Key="RGpass">Password</system:String>
@@ -44,12 +44,10 @@
     <system:String x:Key="RGcheck3">Must be at least 5 characters</system:String>
     <system:String x:Key="RGcheck4">Must have at least one number</system:String>
     <system:String x:Key="RGcheck5">Both passwords must match</system:String>
-    <system:String x:Key="RGb3">Ok</system:String>
-    <system:String x:Key="RGb4">Back</system:String>
 
-    <system:String x:Key="RG_Msg1">No field can be empty</system:String>
-    <system:String x:Key="RG_Msg2">This nick is already registered</system:String>
-    <system:String x:Key="RG_Msg3">Now you can log in</system:String>
+    <system:String x:Key="RG_Msg1">No field can be empty.</system:String>
+    <system:String x:Key="RG_Msg2">This nick is already registered.</system:String>
+    <system:String x:Key="RG_Msg3">Now you can log in.</system:String>
 
     <!--wGaleria-->
     <system:String x:Key="CGtitle">Galerías Conde</system:String>
@@ -65,16 +63,39 @@
     <system:String x:Key="CG1AllFilter">All</system:String>
 
     <!--Pst4-->
-    <system:String x:Key="CG4User">User</system:String>
-    <system:String x:Key="CG4Nick">Nick</system:String>
-    <system:String x:Key="CG4Name">Name</system:String>
-    <system:String x:Key="CG4Surnames">Surnames</system:String>
-    <system:String x:Key="CG4Tlf">Phone</system:String>
-    <system:String x:Key="CG4Email">Email</system:String>
-    <system:String x:Key="CG4Profile">Profile</system:String>
-    <system:String x:Key="CG4Admin">Admin</system:String>
-    <system:String x:Key="CG4Nat">Nationality</system:String>
+    <system:String x:Key="User">User</system:String>
+    <system:String x:Key="Users">Users</system:String>
+    <system:String x:Key="Profile">Profile</system:String>
+    <system:String x:Key="Admin">Admin</system:String>
+    <system:String x:Key="warn">This element must be registered in all languages</system:String>
 
+    <system:String x:Key="Trans">Transaction</system:String>
+    <system:String x:Key="Transs">Transactions</system:String>
+
+    <system:String x:Key="Nats">Nationalities</system:String>
+    <system:String x:Key="NUsers">Nº Users</system:String>
+    <system:String x:Key="DelConfirmation">Are you sure you want to delete all records about this object?</system:String>
+    <system:String x:Key="MngN_Msg1"> Users have associated this Nationality. It can't be deleted.</system:String>
+
+    <system:String x:Key="Auth">Author</system:String>
+    <system:String x:Key="Auths">Authors</system:String>
+    <system:String x:Key="realName">Real Name</system:String>
+    <system:String x:Key="artName">Artistic Name</system:String>
+    <system:String x:Key="ArtNum">Artworks Number</system:String>
+    <system:String x:Key="descr">Description</system:String>
+
+    <system:String x:Key="Type">Type</system:String>
+    <system:String x:Key="Types">Types</system:String>
+
+    <system:String x:Key="Art">Artwork</system:String>
+    <system:String x:Key="Arts">Artworks</system:String>
+
+    <system:String x:Key="CG4Add">Add</system:String>
+    <system:String x:Key="CG4Mod">Modify</system:String><!-- ¿Change? -->
+    <system:String x:Key="CG4Del">Delete</system:String>
+
+    <system:String x:Key="MngU_Msg1">You can't delete your own permission.</system:String>
+    <system:String x:Key="MngU_Msg2">You can't delete master account.</system:String>
 
     <!--UserPanel-->
     <system:String x:Key="UPMsg">Are you sure you want to exit?</system:String>
