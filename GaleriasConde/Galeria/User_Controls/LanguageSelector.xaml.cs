@@ -53,18 +53,25 @@ namespace Galeria.User_Controls
             comboBox.SelectedValuePath = "codLang";
             //Por defecto, se selecciona el idioma establecido
             int i = 0;
-            foreach (Lang l in comboBox.ItemsSource)
+            try
             {
-                if (l.codLang == cd.GetCurrentLanguage())
+                foreach (Lang l in comboBox.ItemsSource)
                 {
-                    break;
+                    if (l.codLang == cd.GetCurrentLanguage())
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        i++;
+                    }
                 }
-                else
-                {
-                    i++;
-                }
+                comboBox.SelectedIndex = i;
             }
-            comboBox.SelectedIndex = i;
+            catch (Exception ex)
+            {
+                ErrorLog.Log("LangSel2", ex);
+            }
         }
 
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -87,7 +94,7 @@ namespace Galeria.User_Controls
                             default:
                                 break;
                             case "B_Registro":
-                                B_Registro.br.LoadNationalities();
+                                B_Registro.br.OnLangChange();
                                 break;
                             case "C_Galeria":
                                 C_Galeria.cg.OnLangChange();
@@ -97,7 +104,7 @@ namespace Galeria.User_Controls
                 }
                 catch (Exception ex)
                 {
-                    ErrorLog.Log("LangSel2", ex);
+                    ErrorLog.Log("LangSel3", ex);
                 }
             }
         }

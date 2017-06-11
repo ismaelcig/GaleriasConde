@@ -98,19 +98,19 @@
             <TabItem x:Name="Pst4" Header="{DynamicResource CGpst4}" >
                 <Grid Background="LightGray">
                     <!--Pestañas Management-->
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10,10,10,0">
-                        <Label x:Name="sub_Users" Content="{DynamicResource Users}" Style="{StaticResource submenu}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" MouseDown="sub_Users_MouseDown"/>
-                        <Label x:Name="sub_Trans" Content="{DynamicResource Transs}" Style="{StaticResource submenu}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" MouseDown="sub_Trans_MouseDown"/>
-                        <Label x:Name="sub_Nats" Content="{DynamicResource Nats}" Style="{StaticResource submenu}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" MouseDown="sub_Nats_MouseDown"/>
-                        <Label x:Name="sub_Auths" Content="{DynamicResource Auths}" Style="{StaticResource submenu}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" MouseDown="sub_Auths_MouseDown"/>
-                        <Label x:Name="sub_Types" Content="{DynamicResource Types}" Style="{StaticResource submenu}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" MouseDown="sub_Types_MouseDown"/>
-                        <Label x:Name="sub_Arts" Content="{DynamicResource Arts}" Style="{StaticResource submenu}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" MouseDown="sub_Arts_MouseDown"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10,0,10,0">
+                        <Label x:Name="sub_Users" Content="{DynamicResource Users}" Style="{StaticResource submenu}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0" MouseDown="sub_Users_MouseDown"/>
+                        <Label x:Name="sub_Trans" Content="{DynamicResource Transs}" Style="{StaticResource submenu}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0" MouseDown="sub_Trans_MouseDown"/>
+                        <Label x:Name="sub_Nats" Content="{DynamicResource Nats}" Style="{StaticResource submenu}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0" MouseDown="sub_Nats_MouseDown"/>
+                        <Label x:Name="sub_Auths" Content="{DynamicResource Auths}" Style="{StaticResource submenu}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0" MouseDown="sub_Auths_MouseDown"/>
+                        <Label x:Name="sub_Types" Content="{DynamicResource Types}" Style="{StaticResource submenu}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0" MouseDown="sub_Types_MouseDown"/>
+                        <Label x:Name="sub_Arts" Content="{DynamicResource Arts}" Style="{StaticResource submenu}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0" MouseDown="sub_Arts_MouseDown"/>
                     </StackPanel>
 
-                    <Management_Windows:MngUsers x:Name="gridUsers" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Hidden" Margin="0,40,0,0"/>
-                    <Management_Windows:MngTrans x:Name="gridTrans" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Hidden" Margin="0,40,0,0"/>
-                    <Management_Windows:MngNats x:Name="gridNats" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Hidden" Margin="0,40,0,0"/>
-
+                    <Management_Windows:MngUsers x:Name="gridUsers" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Hidden" Margin="0,35,0,0"/>
+                    <Management_Windows:MngTrans x:Name="gridTrans" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Hidden" Margin="0,35,0,0"/>
+                    <Management_Windows:MngNats x:Name="gridNats" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Hidden" Margin="0,35,0,0"/>
+                    <Management_Windows:MngAuths x:Name="gridAuths" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Hidden" Margin="0,35,0,0"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="Pst5" Header="{DynamicResource CGpst5}" >

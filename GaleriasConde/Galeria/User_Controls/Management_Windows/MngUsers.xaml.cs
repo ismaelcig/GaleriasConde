@@ -87,8 +87,7 @@ namespace Galeria.User_Controls.Management_Windows
 
         //Botón Eliminar (no se puede eliminar la cuenta master)
         private void buttDel_Click(object sender, RoutedEventArgs e)
-        {
-            if (obj.nick != "master")
+        {if (obj.nick != "master")
             {
                 A_Login.u.UsersRep.Delete(obj);
                 dataGrid.SelectedIndex = -1;

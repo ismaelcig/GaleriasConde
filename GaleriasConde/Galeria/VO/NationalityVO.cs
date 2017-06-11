@@ -14,11 +14,11 @@ namespace Galeria.VO
     {
         public int NationalityID { get; set; }
         public string codNation { get; set; }
-    }
+    }//Añadir lista de Usuarios/Autores?
 
     public static class NationalityConverter
     {
-        public static NationalityVO toVO(Nationality data)//Pasa de Nationality a NationalityVO
+        public static NationalityVO toVO(Nationality data)//Pasa de Nationality a NationalityVO en el idioma de la app
         {
             CargarDiccionarios cd = new CargarDiccionarios();
             string lang = cd.GetCurrentLanguage();

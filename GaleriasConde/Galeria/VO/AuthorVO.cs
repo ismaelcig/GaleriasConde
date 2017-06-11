@@ -15,7 +15,7 @@ namespace Galeria.VO
         public string realName { get; set; }
         public string artName { get; set; }
         public string description { get; set; }
-
+        //Lista de Obras?
         public static List<AuthorVO> GetAuthorsVO()
         {
             List<AuthorVO> l = new List<AuthorVO>();

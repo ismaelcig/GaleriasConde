@@ -16,7 +16,7 @@ namespace Galeria.VO
 
     public static class TypeConverter
     {
-        public static TypeVO toVO(Model.Type data)//Pasa de Nationality a NationalityVO
+        public static TypeVO toVO(Model.Type data)//Pasa de Type a TypeVO
         {
             CargarDiccionarios cd = new CargarDiccionarios();
             string lang = cd.GetCurrentLanguage();

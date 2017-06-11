@@ -24,5 +24,11 @@ namespace Galeria.User_Controls.Management_Windows
         {
             InitializeComponent();
         }
+
+
+        public void ReloadData()
+        {
+
+        }
     }
 }

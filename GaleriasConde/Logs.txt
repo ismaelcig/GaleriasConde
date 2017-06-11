@@ -10,3 +10,75 @@ Log Entry : 10:32:37 AM, Friday, June 9, 2017 :: From GenericRep6 :: A network-r
 Log Entry : 10:33:44 AM, Friday, June 9, 2017 :: From GenericRep6 :: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
  :Inner Exception: 
 ------------------------------------------------------------
+Log Entry : 10:09:13, sábado, 10 de junio de 2017 :: From GenericRep6 :: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 10:11:27, sábado, 10 de junio de 2017 :: From GenericRep6 :: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 10:57:18, domingo, 11 de junio de 2017 :: From GenericRep6 :: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 11:01:10, domingo, 11 de junio de 2017 :: From GenericRep6 :: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 11:01:12, domingo, 11 de junio de 2017 :: From LangSel2 :: Referencia a objeto no establecida como instancia de un objeto.
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 11:02:37, domingo, 11 de junio de 2017 :: From GenericRep6 :: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 11:02:39, domingo, 11 de junio de 2017 :: From LangSel2 :: Referencia a objeto no establecida como instancia de un objeto.
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 12:45:51, domingo, 11 de junio de 2017 :: From GenericRep6 :: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 12:45:58, domingo, 11 de junio de 2017 :: From LangSel2 :: Referencia a objeto no establecida como instancia de un objeto.
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 12:46:47, domingo, 11 de junio de 2017 :: From GenericRep6 :: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 12:48:23, domingo, 11 de junio de 2017 :: From GenericRep6 :: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 12:48:25, domingo, 11 de junio de 2017 :: From LangSel2 :: Referencia a objeto no establecida como instancia de un objeto.
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 12:52:22, domingo, 11 de junio de 2017 :: From GenericRep6 :: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 12:53:20, domingo, 11 de junio de 2017 :: From GenericRep6 :: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 12:53:22, domingo, 11 de junio de 2017 :: From LangSel2 :: Referencia a objeto no establecida como instancia de un objeto.
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 12:54:09, domingo, 11 de junio de 2017 :: From GenericRep6 :: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 12:54:56, domingo, 11 de junio de 2017 :: From GenericRep6 :: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 13:14:59, domingo, 11 de junio de 2017 :: From LangSel2 :: Referencia a objeto no establecida como instancia de un objeto.
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 13:16:49, domingo, 11 de junio de 2017 :: From GenericRep6 :: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 13:18:56, domingo, 11 de junio de 2017 :: From GenericRep6 :: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 13:36:35, domingo, 11 de junio de 2017 :: From LangSel2 :: Referencia a objeto no establecida como instancia de un objeto.
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 13:37:23, domingo, 11 de junio de 2017 :: From GenericRep6 :: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 13:37:54, domingo, 11 de junio de 2017 :: From GenericRep6 :: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 13:41:03, domingo, 11 de junio de 2017 :: From LangSel2 :: Referencia a objeto no establecida como instancia de un objeto.
+ :Inner Exception: 
+------------------------------------------------------------

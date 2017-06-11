@@ -44,7 +44,6 @@ namespace Galeria.User_Controls.Management_Windows
                 txtID.Text = obj.NationalityID.ToString();
                 txtNac.Text = obj.codNation;//Muestra el cod en el idioma de la aplicación
                 
-                
                 buttMod.IsEnabled = true;
                 buttDel.IsEnabled = true;
             }
@@ -61,7 +60,7 @@ namespace Galeria.User_Controls.Management_Windows
 
         private void buttAdd_Click(object sender, RoutedEventArgs e)
         {
-            if (txtNac.Text != "")
+            if (!string.IsNullOrWhiteSpace(txtNac.Text))
             {//Rollback(?)
                 try
                 {
@@ -92,7 +91,7 @@ namespace Galeria.User_Controls.Management_Windows
         {
             try
             {
-                if (txtNac.Text != "")
+                if (!string.IsNullOrWhiteSpace(txtNac.Text))
                 {
                     obj.codNation = txtNac.Text;//obj es el VO
 
@@ -145,14 +144,13 @@ namespace Galeria.User_Controls.Management_Windows
                     }
                     
                 }
-                
-
             }
         }
 
         public void ReloadData()
         {//Carga elementos VO en el dataGrid
             dataGrid.ItemsSource = null;
+            VOs.Clear();
             foreach (Nationality item in A_Login.u.NationalitiesRep.GetAll())
             {
                 VOs.Add(NationalityConverter.toVO(item));

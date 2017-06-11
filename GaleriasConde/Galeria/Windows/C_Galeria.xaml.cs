@@ -41,7 +41,6 @@ namespace Galeria.Windows
             Resources.MergedDictionaries.Add(A_Login.dict);
             LoadWindow();
             OnLangChange();
-            //dataGridUser.ItemsSource = A_Login.u.UsersRep.GetAll();
         }
 
         public void LoadWindow()//TODO: Añadir elementos de la pestaña Gestión
@@ -267,6 +266,10 @@ namespace Galeria.Windows
         {
             LoadFilters();
             LoadArtworks(ArtworkVO.GetArtworksVO());//Esto implica que al cambiar de idioma elimina los filtros, pero está bien así
+            gridUsers.ReloadData();
+            gridTrans.ReloadData();
+            gridNats.ReloadData();
+            gridAuths.ReloadData();
         }
         
         //Botón que muestra el panel de usuario

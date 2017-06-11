@@ -14,9 +14,9 @@ namespace Galeria.Model
             Artworks = new HashSet<Artwork>();
         }
         public int AuthorID { get; set; }
-        [StringLength(150, ErrorMessage = "Un nombre no puede superar los 150 caracteres")]
+        [StringLength(150)]
         public string realName { get; set; }
-        [StringLength(150, ErrorMessage = "Un nombre no puede superar los 150 caracteres")]
+        [StringLength(150)]
         public string artName { get; set; }
         //[StringLength(500, ErrorMessage = "La descripción no puede superar los 500 caracteres")]
         //public string descripcion { get; set; }

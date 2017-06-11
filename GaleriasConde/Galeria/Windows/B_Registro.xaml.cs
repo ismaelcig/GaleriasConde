@@ -1,5 +1,6 @@
 ﻿using Galeria.Dict;
 using Galeria.Model;
+using Galeria.Other_Classes;
 using Galeria.VO;
 using System;
 using System.Collections.Generic;
@@ -25,7 +26,6 @@ namespace Galeria.Windows
     {
         public static B_Registro br;
         User us = new User();
-        CargarDiccionarios cd = new CargarDiccionarios();
         List<NationalityVO> nationalitiesVO = new List<NationalityVO>();
 
         public B_Registro()
@@ -36,7 +36,7 @@ namespace Galeria.Windows
             A_Login.windows.Add(br);
             Resources.MergedDictionaries.Add(A_Login.dict);
             txt1Name.Focus();
-            LoadNationalities();
+            OnLangChange();
             gridPass.Visibility = Visibility.Hidden;
         }
 
@@ -199,21 +199,10 @@ namespace Galeria.Windows
             Close();
             A_Login.mw.textBox.Focus();
         }
-        public void LoadNationalities()
+
+        public void OnLangChange()
         {
-            nationalitiesVO = new List<NationalityVO>();
-            foreach (Nationality n in A_Login.u.NationalitiesRep.GetAll())
-            {
-                NationalityVO nVO = new NationalityVO();
-                nVO.NationalityID = n.NationalityID;
-                string lang = cd.GetCurrentLanguage();
-                nVO.codNation = A_Login.u.NationalityTranslationsRep.Single(c => c.NationalityID == n.NationalityID && c.lang == lang).codNation;
-                nationalitiesVO.Add(nVO);
-            }
-            comboBox.ItemsSource = null;
-            comboBox.ItemsSource = nationalitiesVO;
-            comboBox.DisplayMemberPath = "codNation";
-            comboBox.SelectedValuePath = "NationalityID";
+            Loaders.LoadNationalities(comboBox);
         }
 
     }

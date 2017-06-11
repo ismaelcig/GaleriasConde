@@ -19,23 +19,23 @@
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
              d:DesignHeight="500" d:DesignWidth="600">
     <Grid Background="White">
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Stretch" Margin="240,0,0,0" VerticalAlignment="Stretch" DataContext="{Binding Source=Nacionalidad}" Style="{StaticResource dg}" SelectionChanged="dataGrid_SelectionChanged">
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Stretch" Margin="240,0,0,0" VerticalAlignment="Stretch" DataContext="{Binding Source=NationalityVO}" Style="{StaticResource dg}" SelectionChanged="dataGrid_SelectionChanged">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding NacionalidadID}">
+                <DataGridTextColumn Binding="{Binding NationalityID}">
                     <DataGridTextColumn.Header>
                         <TextBlock Text="{DynamicResource ID}" HorizontalAlignment="Center" />
                     </DataGridTextColumn.Header>
                 </DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding nombre}">
+                <DataGridTextColumn Binding="{Binding codNation}">
                     <DataGridTextColumn.Header>
-                        <TextBlock Text="{DynamicResource Name}" HorizontalAlignment="Center" />
+                        <TextBlock Text="{DynamicResource Nat}" HorizontalAlignment="Center" />
                     </DataGridTextColumn.Header>
                 </DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding Usuarios.Count}">
+                <!--<DataGridTextColumn Binding="{Binding Users.Count}">
                     <DataGridTextColumn.Header>
                         <TextBlock Text="{DynamicResource NUsers}" HorizontalAlignment="Center" />
                     </DataGridTextColumn.Header>
-                </DataGridTextColumn>
+                </DataGridTextColumn>-->
                 <!--<DataGridTextColumn Header="Nº Autores" Binding="{Binding Autores.Count}"/>-->
             </DataGrid.Columns>
         </DataGrid>

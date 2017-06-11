@@ -53,17 +53,13 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MaterialDesignColors, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MaterialDesignColors.1.1.2\lib\net45\MaterialDesignColors.dll</HintPath>
+    <Reference Include="MaterialDesignColors, Version=1.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.1.3\lib\net45\MaterialDesignColors.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MaterialDesignThemes.Wpf, Version=2.3.0.823, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignThemes.2.3.0.823\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
       <Private>True</Private>
-    </Reference>
-    <Reference Include="PropertyChanged, Version=1.53.0.0, Culture=neutral, PublicKeyToken=ee3ee20bcf148ddd, processorArchitecture=MSIL">
-      <HintPath>..\packages\PropertyChanged.Fody.1.53.0\lib\netstandard10\PropertyChanged.dll</HintPath>
-      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -110,6 +106,10 @@
     <Compile Include="Migrations\201706070827488_Migr0607.Designer.cs">
       <DependentUpon>201706070827488_Migr0607.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706110853426_Migr0611.cs" />
+    <Compile Include="Migrations\201706110853426_Migr0611.Designer.cs">
+      <DependentUpon>201706110853426_Migr0611.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Artwork.cs" />
     <Compile Include="Model\Author.cs" />
@@ -128,6 +128,7 @@
     <Compile Include="Other Classes\ErrorLog.cs" />
     <Compile Include="Other Classes\FractionDistanceAnimator.cs" />
     <Compile Include="Other Classes\IArrangeAnimator.cs" />
+    <Compile Include="Other Classes\Loaders.cs" />
     <Compile Include="User_Controls\AnimatedWrapPanel.cs" />
     <Compile Include="User_Controls\ConversDetail.xaml.cs">
       <DependentUpon>ConversDetail.xaml</DependentUpon>
@@ -146,6 +147,9 @@
     </Compile>
     <Compile Include="User_Controls\Management_Windows\MngTrans.xaml.cs">
       <DependentUpon>MngTrans.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User_Controls\Management_Windows\MngTypes.xaml.cs">
+      <DependentUpon>MngTypes.xaml</DependentUpon>
     </Compile>
     <Compile Include="User_Controls\Management_Windows\MngUsers.xaml.cs">
       <DependentUpon>MngUsers.xaml</DependentUpon>
@@ -213,6 +217,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="User_Controls\Management_Windows\MngTypes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="User_Controls\Management_Windows\MngUsers.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -257,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706070827488_Migr0607.resx">
       <DependentUpon>201706070827488_Migr0607.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706110853426_Migr0611.resx">
+      <DependentUpon>201706110853426_Migr0611.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

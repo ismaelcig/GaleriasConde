@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\ismaelci\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\
+C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\
 Galeria
 none
 false
 DEBUG;TRACE
-C:\Users\ismaelci\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\App.xaml
-15-2038491511
+C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\App.xaml
+161209868465
 
-64-1966087399
-21-2082924173
-Dict\DictionaryEN.xaml;Dict\DictionarySP.xaml;MainWindow.xaml;User_Controls\ConversDetail.xaml;User_Controls\LanguageSelector.xaml;User_Controls\LeftPanel.xaml;User_Controls\Management_Windows\MngAuths.xaml;User_Controls\Management_Windows\MngNats.xaml;User_Controls\Management_Windows\MngTrans.xaml;User_Controls\Management_Windows\MngUsers.xaml;User_Controls\Management_Windows\MultiLanguageWarning.xaml;User_Controls\UserPanel.xaml;Windows\A_Login.xaml;Windows\B_Registro.xaml;Windows\C_Galeria.xaml;
+68-1371545042
+201173872179
+Dict\DictionaryEN.xaml;Dict\DictionarySP.xaml;MainWindow.xaml;User_Controls\ConversDetail.xaml;User_Controls\LanguageSelector.xaml;User_Controls\LeftPanel.xaml;User_Controls\Management_Windows\MngAuths.xaml;User_Controls\Management_Windows\MngNats.xaml;User_Controls\Management_Windows\MngTrans.xaml;User_Controls\Management_Windows\MngTypes.xaml;User_Controls\Management_Windows\MngUsers.xaml;User_Controls\Management_Windows\MultiLanguageWarning.xaml;User_Controls\UserPanel.xaml;Windows\A_Login.xaml;Windows\B_Registro.xaml;Windows\C_Galeria.xaml;
 
-True
+False
 
