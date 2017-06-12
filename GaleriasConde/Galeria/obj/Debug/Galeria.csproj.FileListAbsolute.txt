@@ -170,3 +170,6 @@ C:\Users\ismaelci\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug
 C:\Users\ismaelci\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngTypes.baml
 C:\Users\ismaelci\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\Galeria.Migrations.Migr0611.resources
 C:\Users\ismaelci\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngArts.g.cs
+C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngArts.baml
