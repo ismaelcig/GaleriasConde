@@ -14,7 +14,24 @@ namespace Galeria.VO
     {
         public int NationalityID { get; set; }
         public string codNation { get; set; }
-    }//Añadir lista de Usuarios/Autores?
+        public List<User> users { get; set; }
+        public List<AuthorVO> authorVO { get; set; }
+
+        public static List<NationalityVO> GetNationalitiesVO()
+        {
+            List<NationalityVO> l = new List<NationalityVO>();
+            foreach (Nationality n in A_Login.u.NationalitiesRep.GetAll())
+            {
+                l.Add(NationalityConverter.toVO(n));
+            }
+            return l;
+        }
+
+        public static NationalityVO GetNationalityVO(int ID)
+        {
+            return NationalityConverter.toVO(A_Login.u.NationalitiesRep.Single(c => c.NationalityID == ID));
+        }
+    }
 
     public static class NationalityConverter
     {
@@ -25,6 +42,15 @@ namespace Galeria.VO
             NationalityVO result = new NationalityVO();
             result.NationalityID = data.NationalityID;
             result.codNation = A_Login.u.NationalityTranslationsRep.Single(c => c.NationalityID == data.NationalityID && c.lang == lang).codNation;
+            result.users = User.GetUsers(data.NationalityID, "Nationality");
+            result.authorVO = AuthorVO.GetAuthorsVO(data.NationalityID, "Nationality");
+            return result;
+        }
+
+        public static Nationality fromVO(NationalityVO data)//Pasa de NationalityVO a Nationality
+        {
+            Nationality result = new Nationality();
+            result.NationalityID = data.NationalityID;
             return result;
         }
     }

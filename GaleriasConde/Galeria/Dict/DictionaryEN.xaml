@@ -71,9 +71,16 @@
 
     <system:String x:Key="Trans">Transaction</system:String>
     <system:String x:Key="Transs">Transactions</system:String>
+    <system:String x:Key="Benefit">Benefit</system:String>
+    <system:String x:Key="Comm">Comment</system:String>
+    <system:String x:Key="Done">Done</system:String>
+    <system:String x:Key="benefToolTip">If it is a sale, enter a negative value</system:String>
+	<system:String x:Key="MngTr_Msg1">Benefit value invalid</system:String>
+	<system:String x:Key="MngTr_Msg2">Once created, only master can changue Transactions</system:String>
 
     <system:String x:Key="Nats">Nationalities</system:String>
     <system:String x:Key="NUsers">Nº Users</system:String>
+    <system:String x:Key="NAuths">Nº Authors</system:String>
     <system:String x:Key="DelConfirmation">Are you sure you want to delete all records about this object?</system:String>
     <system:String x:Key="MngN_Msg1"> Users have associated this Nationality. It can't be deleted.</system:String>
 
@@ -88,6 +95,7 @@
     <system:String x:Key="Type">Type</system:String>
     <system:String x:Key="Types">Types</system:String>
     <system:String x:Key="MngT_Msg1"> Artworks belong to this Type. It can't be deleted.</system:String>
+    <system:String x:Key="NArts">Nº Artworks</system:String>
 
     <system:String x:Key="Art">Artwork</system:String>
     <system:String x:Key="Arts">Artworks</system:String>

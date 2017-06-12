@@ -17,24 +17,58 @@ namespace Galeria.Other_Classes
         {
             try
             {
-                CargarDiccionarios cd = new CargarDiccionarios();
-                List<NationalityVO> nationalitiesVO = new List<NationalityVO>();
+                List<NationalityVO> VOs = new List<NationalityVO>();
                 foreach (Nationality n in A_Login.u.NationalitiesRep.GetAll())
                 {
-                    NationalityVO nVO = new NationalityVO();
-                    nVO.NationalityID = n.NationalityID;
-                    string lang = cd.GetCurrentLanguage();
-                    nVO.codNation = A_Login.u.NationalityTranslationsRep.Single(c => c.NationalityID == n.NationalityID && c.lang == lang).codNation;
-                    nationalitiesVO.Add(nVO);
+                    NationalityVO nVO = NationalityConverter.toVO(n);
+                    VOs.Add(nVO);
                 }
                 comboBox.ItemsSource = null;
-                comboBox.ItemsSource = nationalitiesVO;
+                comboBox.ItemsSource = VOs;
                 comboBox.DisplayMemberPath = "codNation";
                 comboBox.SelectedValuePath = "NationalityID";
             }
             catch (Exception ex)
             {
                 ErrorLog.Log("Loaders1", ex);
+            }
+        }
+
+        public static void LoadArtworks(ComboBox comboBox)//Se le pasa un cB, y carga ArtworkVOs
+        {
+            try
+            {
+                List<ArtworkVO> VOs = new List<ArtworkVO>();
+                foreach (Artwork a in A_Login.u.ArtworksRep.GetAll())
+                {
+                    ArtworkVO aVO = ArtworkConverter.toVO(a);
+                    VOs.Add(aVO);
+                }
+                comboBox.ItemsSource = null;
+                comboBox.ItemsSource = VOs;
+                comboBox.DisplayMemberPath = "title";
+                comboBox.SelectedValuePath = "ArtworkID";
+            }
+            catch (Exception ex)
+            {
+                ErrorLog.Log("Loaders2", ex);
+            }
+        }
+
+
+
+        public static void LoadUsers(ComboBox comboBox)//Se le pasa un cB, y carga Users
+        {
+            try
+            {
+                comboBox.ItemsSource = null;
+                comboBox.ItemsSource = A_Login.u.UsersRep.GetAll();
+                comboBox.DisplayMemberPath = "nick";
+                comboBox.SelectedValuePath = "UserID";
+            }
+            catch (Exception ex)
+            {
+                ErrorLog.Log("Loaders3", ex);
             }
         }
     }

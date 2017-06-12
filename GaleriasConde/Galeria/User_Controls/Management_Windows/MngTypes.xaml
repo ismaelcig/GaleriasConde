@@ -31,11 +31,11 @@
                         <TextBlock Text="{DynamicResource Type}" HorizontalAlignment="Center" />
                     </DataGridTextColumn.Header>
                 </DataGridTextColumn>
-                <!--<DataGridTextColumn Binding="{Binding Usuarios.Count}">
+                <DataGridTextColumn Binding="{Binding artworksVO.Count}">
                     <DataGridTextColumn.Header>
-                        <TextBlock Text="{DynamicResource NUsers}" HorizontalAlignment="Center" />
+                        <TextBlock Text="{DynamicResource NArts}" HorizontalAlignment="Center" />
                     </DataGridTextColumn.Header>
-                </DataGridTextColumn>-->
+                </DataGridTextColumn>
                 <!--<DataGridTextColumn Header="Nº Autores" Binding="{Binding Autores.Count}"/>-->
             </DataGrid.Columns>
         </DataGrid>
@@ -43,8 +43,8 @@
         <Button x:Name="buttAdd" Content="{DynamicResource CG4Add}" HorizontalAlignment="Left" Margin="10,108,0,0" VerticalAlignment="Top" Width="70" Click="buttAdd_Click" Padding="0,6,0,6"/>
         <Button x:Name="buttMod" Content="{DynamicResource CG4Mod}" HorizontalAlignment="Left" Margin="85,108,0,0" VerticalAlignment="Top" Width="70" Click="buttMod_Click" Padding="0,6,0,6"/>
         <Button x:Name="buttDel" Content="{DynamicResource CG4Del}" HorizontalAlignment="Left" Margin="160,108,0,0" VerticalAlignment="Top" Width="70" Click="buttDel_Click" Padding="0,6,0,6"/>
-        <TextBox x:Name="txtID" IsEnabled="False" HorizontalAlignment="Left" Height="37" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" materialDesign:HintAssist.Hint="{DynamicResource ID}" materialDesign:HintAssist.IsFloating="True" Style="{StaticResource mdTxt}"/>
-        <TextBox x:Name="txtType" HorizontalAlignment="Left" Height="35" Margin="10,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" materialDesign:HintAssist.Hint="{DynamicResource Nat}" materialDesign:HintAssist.IsFloating="True" Style="{StaticResource mdTxt}"/>
+        <TextBox x:Name="txtID" IsEnabled="False" HorizontalAlignment="Left" Height="40" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" materialDesign:HintAssist.Hint="{DynamicResource ID}" materialDesign:HintAssist.IsFloating="True" Style="{StaticResource mdTxt}"/>
+        <TextBox x:Name="txtType" HorizontalAlignment="Left" Height="40" Margin="10,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" materialDesign:HintAssist.Hint="{DynamicResource Type}" materialDesign:HintAssist.IsFloating="True" Style="{StaticResource mdTxt}"/>
         <local:MultiLanguageWarning HorizontalAlignment="Left" Margin="180,10,0,0" VerticalAlignment="Top"/>
     </Grid>
 </UserControl>

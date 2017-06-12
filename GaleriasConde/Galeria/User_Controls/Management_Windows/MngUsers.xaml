@@ -56,8 +56,8 @@
 
         <TextBox x:Name="txtUser" IsEnabled="False" HorizontalAlignment="Left" Height="40" Margin="21,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199" Style="{StaticResource mdTxt}" materialDesign:HintAssist.Hint="{DynamicResource User}" materialDesign:HintAssist.IsFloating="True" materialDesign:HintAssist.FloatingScale="0.8" />
         <!-- Background="White" BorderBrush="White" CaretBrush="White" OpacityMask="White"-->
-        <metro:ToggleSwitch x:Name="checkBox" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label1" Content="{DynamicResource Admin}" HorizontalAlignment="Left" Margin="70,58,0,0" VerticalAlignment="Top"/>
+        <metro:ToggleSwitch x:Name="checkBox" HorizontalAlignment="Left" Margin="20,64,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="{DynamicResource Admin}" HorizontalAlignment="Left" Margin="75,58,0,0" VerticalAlignment="Top"/>
         
         <Button x:Name="buttMod" Content="{DynamicResource CG4Mod}" HorizontalAlignment="Left" Margin="15,113,0,0" VerticalAlignment="Top" Width="95" Click="buttMod_Click"/>
         <Button x:Name="buttDel" Content="{DynamicResource CG4Del}" HorizontalAlignment="Left" Margin="135,113,0,0" VerticalAlignment="Top" Width="95" Click="buttDel_Click"/>

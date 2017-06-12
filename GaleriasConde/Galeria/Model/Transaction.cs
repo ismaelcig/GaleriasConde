@@ -13,11 +13,8 @@ namespace Galeria.Model
             done = false;
         }
         public int TransactionID { get; set; }
-        //[DataType(DataType.Text)]
         //public string operation { get; set; } //Será Compra o Venta
-        //[DataType(DataType.Currency)]
         public double money { get; set; }//Si es positivo->beneficio para la empresa, es decir, una venta
-        //[Range(0, 150), DataType(DataType.Text)]
         public string comment { get; set; }
         public bool done { get; set; }//La transacción se crea cuando llega a un acuerdo, esto indica que se ha llevado a cabo el pago y la transferencia
 

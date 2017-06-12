@@ -71,10 +71,27 @@ namespace Galeria.Windows
         }
 
         void HideGrids()
-        {//TODO: Añadir todos los grids de gestión
+        {//Oculta grids de Gestión
+            sub_Users.Background = Brushes.LightSteelBlue;
+            sub_Trans.Background = Brushes.LightSteelBlue;
+            sub_Nats.Background = Brushes.LightSteelBlue;
+            sub_Auths.Background = Brushes.LightSteelBlue;
+            sub_Types.Background = Brushes.LightSteelBlue;
+            sub_Arts.Background = Brushes.LightSteelBlue;
+
+            sub_Users.Foreground = Brushes.Teal;
+            sub_Trans.Foreground = Brushes.Teal;
+            sub_Nats.Foreground = Brushes.Teal;
+            sub_Auths.Foreground = Brushes.Teal;
+            sub_Types.Foreground = Brushes.Teal;
+            sub_Arts.Foreground = Brushes.Teal;
+
             gridUsers.Visibility = Visibility.Hidden;
             gridTrans.Visibility = Visibility.Hidden;
             gridNats.Visibility = Visibility.Hidden;
+            gridAuths.Visibility = Visibility.Hidden;
+            gridTypes.Visibility = Visibility.Hidden;
+            gridArts.Visibility = Visibility.Hidden;
         }
 
 
@@ -225,7 +242,7 @@ namespace Galeria.Windows
         private void B_Click(object sender, RoutedEventArgs e)
         {
             int typeIndex = int.Parse(Regex.Match(((sender as Button).Name), @"\d+").Value);
-            LoadArtworks(ArtworkVO.GetArtworksVO(typeIndex));
+            LoadArtworks(ArtworkVO.GetArtworksVO(typeIndex, "Type"));
         }
         #endregion
 
@@ -270,6 +287,8 @@ namespace Galeria.Windows
             gridTrans.ReloadData();
             gridNats.ReloadData();
             gridAuths.ReloadData();
+            gridTypes.ReloadData();
+            gridArts.ReloadData();
         }
         
         //Botón que muestra el panel de usuario
@@ -299,44 +318,67 @@ namespace Galeria.Windows
             }
         }
 
-
-
         #region Management
         private void sub_Users_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            //TODO: Ocultar los demás grids, y recargar datagrid, hacer método con switch
+            //Ocultar los demás grids, y recargar datagrid, hacer método con switch
             HideGrids();
+            sub_Users.Background = Brushes.SlateBlue;
+            sub_Users.Foreground = Brushes.OrangeRed;
+            sub_Users.FontWeight = FontWeights.Black;
+            sub_Users.FontStretch = FontStretches.Medium;
             gridUsers.Visibility = Visibility.Visible;
         }
 
         private void sub_Trans_MouseDown(object sender, MouseButtonEventArgs e)
         {
             HideGrids();
+            sub_Trans.Background = Brushes.SlateBlue;
+            sub_Trans.Foreground = Brushes.OrangeRed;
+            sub_Trans.FontWeight = FontWeights.Black;
+            sub_Trans.FontStretch = FontStretches.Medium;
             gridTrans.Visibility = Visibility.Visible;
         }
 
         private void sub_Nats_MouseDown(object sender, MouseButtonEventArgs e)
         {
             HideGrids();
+            sub_Nats.Background = Brushes.SlateBlue;
+            sub_Nats.Foreground = Brushes.OrangeRed;
+            sub_Nats.FontWeight = FontWeights.Black;
+            sub_Nats.FontStretch = FontStretches.Medium;
             gridNats.Visibility = Visibility.Visible;
         }
 
-
-        #endregion
-
         private void sub_Auths_MouseDown(object sender, MouseButtonEventArgs e)
         {
-
+            HideGrids();
+            sub_Auths.Background = Brushes.SlateBlue;
+            sub_Auths.Foreground = Brushes.OrangeRed;
+            sub_Auths.FontWeight = FontWeights.Black;
+            sub_Auths.FontStretch = FontStretches.Medium;
+            gridAuths.Visibility = Visibility.Visible;
         }
 
         private void sub_Types_MouseDown(object sender, MouseButtonEventArgs e)
         {
-
+            HideGrids();
+            sub_Types.Background = Brushes.SlateBlue;
+            sub_Types.Foreground = Brushes.OrangeRed;
+            sub_Types.FontWeight = FontWeights.Black;
+            sub_Types.FontStretch = FontStretches.Medium;
+            gridTypes.Visibility = Visibility.Visible;
         }
 
         private void sub_Arts_MouseDown(object sender, MouseButtonEventArgs e)
         {
-
+            HideGrids();
+            sub_Arts.Background = Brushes.SlateBlue;
+            sub_Arts.Foreground = Brushes.OrangeRed;
+            sub_Arts.FontWeight = FontWeights.Black;
+            sub_Arts.FontStretch = FontStretches.Medium;
+            gridArts.Visibility = Visibility.Visible;
         }
+        #endregion
     }
 }

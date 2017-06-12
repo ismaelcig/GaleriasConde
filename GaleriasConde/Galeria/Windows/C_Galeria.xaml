@@ -29,11 +29,15 @@
         <Style TargetType="{x:Type Label}" x:Key="submenu">
             <Setter Property="FontSize" Value="20"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Background" Value="LightSteelBlue"/>
+            <Setter Property="Foreground" Value="Firebrick" />
+            <Setter Property="BorderThickness" Value="1"/>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="Foreground" Value="OrangeRed" />
                     <Setter Property="FontWeight" Value="Black"/>
                     <Setter Property="FontStretch" Value="Medium" />
+                    <Setter Property="Background" Value="SlateBlue"/>
                 </Trigger>
             </Style.Triggers>
         </Style>
@@ -111,6 +115,8 @@
                     <Management_Windows:MngTrans x:Name="gridTrans" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Hidden" Margin="0,35,0,0"/>
                     <Management_Windows:MngNats x:Name="gridNats" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Hidden" Margin="0,35,0,0"/>
                     <Management_Windows:MngAuths x:Name="gridAuths" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Hidden" Margin="0,35,0,0"/>
+                    <Management_Windows:MngTypes x:Name="gridTypes" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Hidden" Margin="0,35,0,0"/>
+                    <Management_Windows:MngArts x:Name="gridArts" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Hidden" Margin="0,35,0,0"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="Pst5" Header="{DynamicResource CGpst5}" >

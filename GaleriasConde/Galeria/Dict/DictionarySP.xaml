@@ -71,9 +71,16 @@
 
     <system:String x:Key="Trans">Transacción</system:String>
     <system:String x:Key="Transs">Transacciones</system:String>
+    <system:String x:Key="Benefit">Beneficio</system:String>
+    <system:String x:Key="Comm">Comentario</system:String>
+    <system:String x:Key="Done">Hecho</system:String>
+    <system:String x:Key="benefToolTip">Si es una venta, inserte un valor negativo</system:String>
+	<system:String x:Key="MngTr_Msg1">El valor de Beneficio es inválido</system:String>
+	<system:String x:Key="MngTr_Msg2">Una vez creadas, sólo master puede cambiar las Transacciones</system:String>
 
-    <system:String x:Key="Nats">Nacionalidades</system:String>
+    <system:String x:Key="Nats">Nacionalidades</system:String> 
     <system:String x:Key="NUsers">Nº Usuarios</system:String>
+    <system:String x:Key="NAuths">Nº Autores</system:String>
     <system:String x:Key="DelConfirmation">¿Está seguro de que desea borrar todos los registros sobre este objeto?</system:String>
     <system:String x:Key="MngN_Msg1"> Usuarios tienen asociada esta Nacionalidad. No puede ser eliminada.</system:String>
 
@@ -88,6 +95,7 @@
     <system:String x:Key="Type">Tipo</system:String>
     <system:String x:Key="Types">Tipos</system:String>
     <system:String x:Key="MngT_Msg1"> Obras pertenecen a este Tipo. No puede ser eliminado.</system:String>
+    <system:String x:Key="NArts">Nº Obras</system:String>
 
     <system:String x:Key="Art">Obra</system:String>
     <system:String x:Key="Arts">Obras</system:String>

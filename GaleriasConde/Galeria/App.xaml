@@ -21,7 +21,7 @@
                 <Setter Property="AutoGenerateColumns" Value="False"/>
                 <Setter Property="IsReadOnly" Value="True"/>
             </Style>
-            <BitmapImage x:Key="warning" UriSource="../Images/warning.ico" />
+            <BitmapImage x:Key="warning" UriSource="Images/warning.ico" />
         </ResourceDictionary>
     </Application.Resources>
 </Application>

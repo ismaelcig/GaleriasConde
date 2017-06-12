@@ -10,8 +10,6 @@ namespace Galeria.Model
 {
     public class User
     {
-        //public class Usuario : PropertyValidateModel
-        //{
         public User()
         {
             Transactions = new HashSet<Transaction>();
@@ -39,6 +37,35 @@ namespace Galeria.Model
         public virtual ICollection<Transaction> Transactions { get; set; }
         ////public virtual ICollection<Conversacion> Conversaciones { get; set; }
         //public virtual ICollection<Mensaje> Mensajes { get; set; }
-        //}
+
+        public static List<User> GetUsers()
+        {
+            return A_Login.u.UsersRep.GetAll();
+        }
+
+        public static List<User> GetUsers(int ID, string field)
+        {
+            List<User> l = new List<User>();
+            switch (field)
+            {
+                default:
+                    break;
+                case "Nationality":
+                    foreach (User u in A_Login.u.UsersRep.Get(c => c.Nationality.NationalityID == ID))
+                    {
+                        l.Add(u);
+                    }
+                    break;
+                case "Profile":
+                    foreach (User u in A_Login.u.UsersRep.Get(c => c.Profile.ProfileID == ID))
+                    {
+                        l.Add(u);
+                    }
+                    break;
+            }
+            return l;
+        }
+
+
     }
 }
