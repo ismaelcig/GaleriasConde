@@ -63,7 +63,6 @@
                         <Border BorderThickness="0,0,0,1" BorderBrush="Black" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="40" DockPanel.Dock="Top">
                             <StackPanel Orientation="Horizontal" Background="WhiteSmoke">
                                 <Label x:Name="label" Content="{DynamicResource CG1Filter}" FontSize="20"  Width="130"/>
-                                <!--Tiene que haber otra forma de colocar esto-->
                                 <Button x:Name="button" Content="&lt;-" Height="40" VerticalAlignment="Top" Width="70" HorizontalAlignment="Right" Click="button_Click"/>
                             </StackPanel>
                         </Border>
@@ -83,7 +82,9 @@
                         </Border>
                     </DockPanel>
                     <!--Mostrar obras-->
-                    <User_Controls:AnimatedWrapPanel x:Name="awpArtworks" Background="Gainsboro" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="210,10,10,10"/>
+					<ScrollViewer x:Name="MyScrollViewer" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="210,10,10,10">
+						<User_Controls:AnimatedWrapPanel x:Name="awpArtworks" Background="Gainsboro"/>
+					</ScrollViewer>
                 </Grid>
             </TabItem>
             <TabItem x:Name="Pst2" Header="{DynamicResource CGpst2}">

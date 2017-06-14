@@ -93,10 +93,11 @@ namespace Galeria.User_Controls.Management_Windows
             {
                 if (!string.IsNullOrWhiteSpace(txtType.Text))
                 {
-                    obj.codType = txtType.Text;//obj es el VO
-
-                    TypeTranslations tt = new TypeTranslations(obj, cd.GetCurrentLanguage());
-                    A_Login.u.TypeTranslationsRep.Update(tt);//Modifica el codType
+                    string lang = cd.GetCurrentLanguage();
+                    TypeTranslations tt = A_Login.u.TypeTranslationsRep.Single(c => c.TypeID == obj.TypeID && c.lang == lang);
+                    tt.codType = txtType.Text;
+                    A_Login.u.TypeTranslationsRep.Update(tt);
+                    
                     ReloadData();
                     dataGrid.SelectedIndex = -1;
                 }
@@ -137,6 +138,9 @@ namespace Galeria.User_Controls.Management_Windows
                             A_Login.u.TypeTranslationsRep.Delete(tt);
                         }
                         A_Login.u.TypesRep.Delete(A_Login.u.TypesRep.Single(c => c.TypeID == obj.TypeID));
+
+                        ReloadData();
+                        dataGrid.SelectedIndex = -1;
                     }
                     catch (Exception ex)
                     {
@@ -153,7 +157,7 @@ namespace Galeria.User_Controls.Management_Windows
             VOs.Clear();
             foreach (Model.Type item in A_Login.u.TypesRep.GetAll())
             {
-                VOs.Add(TypeConverter.toVO(item));
+                VOs.Add(new TypeVO(item.TypeID));
             }
             dataGrid.ItemsSource = VOs;
         }

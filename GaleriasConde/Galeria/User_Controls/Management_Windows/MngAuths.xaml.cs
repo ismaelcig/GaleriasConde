@@ -45,6 +45,14 @@ namespace Galeria.User_Controls.Management_Windows
                 txtName.Text = obj.realName;
                 txtArt.Text = obj.artName;
                 txtInfo.Text = obj.description;
+                //comboBox.SelectedItem = obj.nationalityVO;
+                foreach (NationalityVO item in comboBox.ItemsSource)
+                {
+                    if (item.NationalityID == obj.nationalityVO.NationalityID)
+                    {
+                        comboBox.SelectedItem = item;//Así funciona
+                    }
+                }
 
                 buttMod.IsEnabled = true;
                 buttDel.IsEnabled = true;
@@ -101,12 +109,17 @@ namespace Galeria.User_Controls.Management_Windows
             {
                 if (!string.IsNullOrWhiteSpace(txtArt.Text) && !string.IsNullOrWhiteSpace(txtInfo.Text))
                 {
-                    obj.realName = txtName.Text;
-                    obj.artName = txtArt.Text;
-                    obj.description = txtInfo.Text;//obj es el VO
+                    string lang = cd.GetCurrentLanguage();
+                    AuthorTranslations at = A_Login.u.AuthorTranslationsRep.Single(c => c.AuthorID == obj.AuthorID && c.lang == lang);
+                    at.description = txtInfo.Text;
+                    A_Login.u.AuthorTranslationsRep.Update(at);
 
-                    AuthorTranslations at = new AuthorTranslations(obj, cd.GetCurrentLanguage());
-                    A_Login.u.AuthorTranslationsRep.Update(at);//Modifica el codNation
+                    Author a = A_Login.u.AuthorsRep.Single(c => c.AuthorID == obj.AuthorID);
+                    a.artName = txtArt.Text;
+                    a.realName = txtName.Text;
+                    a.Nationality = A_Login.u.NationalitiesRep.Single(c => c.NationalityID == (int)comboBox.SelectedValue);
+                    A_Login.u.AuthorsRep.Update(a);
+
                     ReloadData();
                     dataGrid.SelectedIndex = -1;
                 }
@@ -147,6 +160,9 @@ namespace Galeria.User_Controls.Management_Windows
                             A_Login.u.AuthorTranslationsRep.Delete(at);
                         }
                         A_Login.u.AuthorsRep.Delete(A_Login.u.AuthorsRep.Single(c => c.AuthorID == obj.AuthorID));
+
+                        ReloadData();
+                        dataGrid.SelectedIndex = -1;
                     }
                     catch (Exception ex)
                     {
@@ -163,7 +179,7 @@ namespace Galeria.User_Controls.Management_Windows
             VOs.Clear();
             foreach (Author item in A_Login.u.AuthorsRep.GetAll())
             {
-                VOs.Add(AuthorConverter.toVO(item));
+                VOs.Add(new AuthorVO(item.AuthorID));
             }
             dataGrid.ItemsSource = VOs;
             Loaders.LoadNationalities(comboBox);

@@ -31,7 +31,7 @@
                         <TextBlock Text="{DynamicResource Type}" HorizontalAlignment="Center" />
                     </DataGridTextColumn.Header>
                 </DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding artworksVO.Count}">
+                <DataGridTextColumn Binding="{Binding nArts}">
                     <DataGridTextColumn.Header>
                         <TextBlock Text="{DynamicResource NArts}" HorizontalAlignment="Center" />
                     </DataGridTextColumn.Header>

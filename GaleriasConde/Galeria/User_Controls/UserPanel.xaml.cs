@@ -27,7 +27,10 @@ namespace Galeria.User_Controls
             lblNick.Content = A_Login.user.nick;
             lblEmail.Content = A_Login.user.email;
             lblTlf.Content = A_Login.user.tlf;
-            
+            if (A_Login.user.Profile.codProfile == "Default")
+            {
+                buttEdit.Visibility = Visibility.Hidden;
+            }
         }
 
         private void buttEdit_Click(object sender, RoutedEventArgs e)

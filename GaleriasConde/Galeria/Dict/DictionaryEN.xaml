@@ -75,7 +75,7 @@
     <system:String x:Key="Comm">Comment</system:String>
     <system:String x:Key="Done">Done</system:String>
     <system:String x:Key="benefToolTip">If it is a sale, enter a negative value</system:String>
-	<system:String x:Key="MngTr_Msg1">Benefit value invalid</system:String>
+	<system:String x:Key="MngTr_Msg1">Benefit value invalid. Enter a positive value if it is a sales operation. Enter a negative value if it is a purchase operation.</system:String>
 	<system:String x:Key="MngTr_Msg2">Once created, only master can changue Transactions</system:String>
 
     <system:String x:Key="Nats">Nationalities</system:String>
@@ -99,6 +99,13 @@
 
     <system:String x:Key="Art">Artwork</system:String>
     <system:String x:Key="Arts">Artworks</system:String>
+    <system:String x:Key="Title">Title</system:String>
+    <system:String x:Key="onStock">On Stock</system:String>
+    <system:String x:Key="date">Date</system:String>
+    <system:String x:Key="dimensions">Dimensions</system:String>
+    <system:String x:Key="img">Image</system:String>
+	<system:String x:Key="ofdFilter">Image files (*.png;*.jpeg;*.jpg;*.gif)|*.png;*.jpeg;*.jpg;*.gif|All files (*.*)|*.*</system:String>
+	<system:String x:Key="MngArt_Msg1">You can only add .png, .jpg, .jpeg or .gif files</system:String>
 
     <system:String x:Key="CG4Add">Add</system:String>
     <system:String x:Key="CG4Mod">Modify</system:String><!-- ¿Change? -->
@@ -113,3 +120,6 @@
     <system:String x:Key="UPButton">Log Out</system:String>
     
 </ResourceDictionary>
+
+<!--https://social.msdn.microsoft.com/Forums/en-US/aa9a8300-5e26-4a4f-a0ff-a9a0626272a1/wpf-multilanguage-application?forum=wpf
+    https://www.codeproject.com/Articles/123460/Simplest-Way-to-Implement-Multilingual-WPF-Applica-->

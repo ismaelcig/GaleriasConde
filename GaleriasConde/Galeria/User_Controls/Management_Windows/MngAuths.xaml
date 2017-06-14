@@ -42,7 +42,7 @@
                         <TextBlock Text="{DynamicResource Nat}" HorizontalAlignment="Center" />
                     </DataGridTextColumn.Header>
                 </DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding artworksVO.Count}">
+                <DataGridTextColumn Binding="{Binding nArts}">
                     <DataGridTextColumn.Header>
                         <TextBlock Text="{DynamicResource ArtNum}" HorizontalAlignment="Center" />
                     </DataGridTextColumn.Header>
@@ -59,7 +59,7 @@
         <TextBox x:Name="txtName" MaxLength="125" HorizontalAlignment="Left" Height="40" Margin="10,51,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="226" materialDesign:HintAssist.Hint="{DynamicResource realName}" materialDesign:HintAssist.IsFloating="True" Style="{StaticResource mdTxt}"/>
         <TextBox x:Name="txtArt" MaxLength="125" HorizontalAlignment="Left" Height="40" Margin="10,91,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="226" materialDesign:HintAssist.Hint="{DynamicResource artName}" materialDesign:HintAssist.IsFloating="True" Style="{StaticResource mdTxt}"/>
         <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="71,10,0,0" VerticalAlignment="Top" Height="40" Width="119" materialDesign:HintAssist.Hint="{DynamicResource Nat}" materialDesign:HintAssist.IsFloating="True" Style="{StaticResource mdCombo}"/>
-        <TextBox x:Name="txtInfo" HorizontalAlignment="Left" Margin="10,130,0,40" TextWrapping="Wrap" Text="" VerticalAlignment="Stretch" Width="226" AcceptsReturn="True" VerticalContentAlignment="Top" materialDesign:HintAssist.Hint="{DynamicResource realName}" materialDesign:HintAssist.IsFloating="True" Style="{StaticResource mdTxt}"/>
+        <TextBox x:Name="txtInfo" HorizontalAlignment="Left" Margin="10,130,0,40" TextWrapping="Wrap" Text="" VerticalAlignment="Stretch" Width="226" AcceptsReturn="True" VerticalContentAlignment="Top" materialDesign:HintAssist.Hint="{DynamicResource descr}" materialDesign:HintAssist.IsFloating="True" Style="{StaticResource mdTxt}"/>
         <!--<TextBox x:Name="txtID" IsEnabled="False" HorizontalAlignment="Left" Height="41" Margin="10,10,0,0" TextWrapping="Wrap" Text="{Binding nombreReal, NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="56" materialDesign:HintAssist.Hint="ID" materialDesign:HintAssist.IsFloating="True"/>-->
         <!--<TextBox x:Name="txtName" HorizontalAlignment="Left" Height="39" Margin="10,51,0,0" TextWrapping="Wrap" Text="{Binding nombreArtistico, NotifyOnValidationError=True, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="226" materialDesign:HintAssist.Hint="{DynamicResource realName}" materialDesign:HintAssist.IsFloating="True" Style="{StaticResource mdTxt}"/>-->
         <!--<TextBox x:Name="txtArt" HorizontalAlignment="Left" Height="39" Margin="10,91,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="226" materialDesign:HintAssist.Hint="{DynamicResource artName}" materialDesign:HintAssist.IsFloating="True" Style="{StaticResource mdTxt}"/>-->

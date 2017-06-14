@@ -31,17 +31,16 @@
                         <TextBlock Text="{DynamicResource Nat}" HorizontalAlignment="Center" />
                     </DataGridTextColumn.Header>
                 </DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding users.Count}">
+                <DataGridTextColumn Binding="{Binding nUsers}">
                     <DataGridTextColumn.Header>
                         <TextBlock Text="{DynamicResource NUsers}" HorizontalAlignment="Center" />
                     </DataGridTextColumn.Header>
                 </DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding authorVO.Count}">
+                <DataGridTextColumn Binding="{Binding nAuthors}">
                     <DataGridTextColumn.Header>
                         <TextBlock Text="{DynamicResource NAuths}" HorizontalAlignment="Center" />
                     </DataGridTextColumn.Header>
                 </DataGridTextColumn>
-                <!--<DataGridTextColumn Header="Nº Autores" Binding="{Binding Autores.Count}"/>-->
             </DataGrid.Columns>
         </DataGrid>
         

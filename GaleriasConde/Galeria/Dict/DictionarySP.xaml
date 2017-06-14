@@ -73,9 +73,9 @@
     <system:String x:Key="Transs">Transacciones</system:String>
     <system:String x:Key="Benefit">Beneficio</system:String>
     <system:String x:Key="Comm">Comentario</system:String>
-    <system:String x:Key="Done">Hecho</system:String>
+    <system:String x:Key="Done">Realizada</system:String>
     <system:String x:Key="benefToolTip">Si es una venta, inserte un valor negativo</system:String>
-	<system:String x:Key="MngTr_Msg1">El valor de Beneficio es inválido</system:String>
+	<system:String x:Key="MngTr_Msg1">El valor de Beneficio es inválido. Introduce un valor positivo si es una operación de venta. Introduce un valor negativo si es una operación de compra.</system:String>
 	<system:String x:Key="MngTr_Msg2">Una vez creadas, sólo master puede cambiar las Transacciones</system:String>
 
     <system:String x:Key="Nats">Nacionalidades</system:String> 
@@ -99,6 +99,13 @@
 
     <system:String x:Key="Art">Obra</system:String>
     <system:String x:Key="Arts">Obras</system:String>
+    <system:String x:Key="Title">Título</system:String>
+    <system:String x:Key="onStock">En Posesión</system:String>
+    <system:String x:Key="date">Fecha</system:String>
+    <system:String x:Key="dimensions">Dimensiones</system:String>
+    <system:String x:Key="img">Imagen</system:String>
+	<system:String x:Key="ofdFilter">Imágenes (*.png;*.jpeg;*.jpg;*.gif)|*.png;*.jpeg;*.jpg;*.gif|Todos (*.*)|*.*</system:String>
+	<system:String x:Key="MngArt_Msg1">Sólo puedes añadir archivos .png, .jpg, .jpeg or .gif</system:String>
 
     <system:String x:Key="CG4Add">Añadir</system:String>
     <system:String x:Key="CG4Mod">Modificar</system:String>

@@ -46,8 +46,11 @@ namespace Galeria.User_Controls.Management_Windows
                 txtBenefit.Text = Math.Abs(obj.money).ToString();
                 txtComment.Text = obj.comment;
 
-                buttMod.IsEnabled = true;
-                buttDel.IsEnabled = true;
+                if (A_Login.user.nick == "master")
+                {
+                    buttMod.IsEnabled = true;
+                    buttDel.IsEnabled = true;
+                }
             }
             else
             {
@@ -74,7 +77,7 @@ namespace Galeria.User_Controls.Management_Windows
                     if (benefit != 0)
                     {
                         Transaction t = new Transaction();
-                        t.Artwork = ArtworkConverter.fromVO((ArtworkVO)comboBoxArt.SelectedItem);
+                        t.Artwork = A_Login.u.ArtworksRep.Single(c => c.ArtworkID == (int)comboBoxArt.SelectedValue);
                         t.comment = txtComment.Text;
                         t.done = checkBox.IsChecked;
                         t.money = benefit;
@@ -87,7 +90,7 @@ namespace Galeria.User_Controls.Management_Windows
                     }
                     else
                     {
-                        MessageBox.Show((string)A_Login.dict["MngTr_Msg1"]);//valor inválido
+                        MessageBox.Show((string)A_Login.dict["MngTr_Msg1"]);//Beneficio incorrecto
                     }
                     
                 }
@@ -106,31 +109,31 @@ namespace Galeria.User_Controls.Management_Windows
         {
             try
             {
-                if (A_Login.user.nick == "master")
+                if (comboBoxArt.SelectedIndex != -1 && comboBoxUser.SelectedIndex != -1 && !string.IsNullOrWhiteSpace(txtBenefit.Text))
                 {
-                    if (comboBoxArt.SelectedIndex != -1 && comboBoxUser.SelectedIndex != -1 && !string.IsNullOrWhiteSpace(txtBenefit.Text))
-                    {
-                        double benefit;
-                        double.TryParse(txtBenefit.Text, out benefit);
+                    double benefit;
+                    double.TryParse(txtBenefit.Text, out benefit);
+                    if (benefit != 0)
+                    {//Es un dato válido
+                        Transaction t = A_Login.u.TransactionsRep.Single(c => c.TransactionID == obj.TransactionID);
+                        t.comment = txtComment.Text;
+                        t.done = checkBox.IsChecked;
+                        t.money = benefit;
+                        t.Artwork = A_Login.u.ArtworksRep.Single(c => c.ArtworkID == (int)comboBoxArt.SelectedValue);
+                        t.User = A_Login.u.UsersRep.Single(c => c.UserID == (int)comboBoxUser.SelectedValue);
+                        A_Login.u.TransactionsRep.Update(t);
 
-                        obj.Artwork = ArtworkConverter.fromVO((ArtworkVO)comboBoxArt.SelectedItem);
-                        obj.comment = txtComment.Text;
-                        obj.done = checkBox.IsChecked;
-                        obj.money = benefit;
-                        obj.User = (User)comboBoxUser.SelectedItem;
-                        
-                        A_Login.u.TransactionsRep.Update(obj);//Modifica el codNation
                         ReloadData();
                         dataGrid.SelectedIndex = -1;
                     }
                     else
-                    {
-                        MessageBox.Show((string)A_Login.dict["RG_Msg1"]);//Campo vacío
+                    {//Beneficio incorrecto
+                        MessageBox.Show((string)A_Login.dict["MngTr_Msg1"]);//Beneficio incorrecto
                     }
                 }
                 else
                 {
-                    MessageBox.Show((string)A_Login.dict["RG_Msg2"]);//Sólo master puede modificar transacciones
+                    MessageBox.Show((string)A_Login.dict["RG_Msg1"]);//Campo vacío
                 }
             }
             catch (Exception ex)
@@ -147,6 +150,9 @@ namespace Galeria.User_Controls.Management_Windows
                 try
                 {
                     A_Login.u.TransactionsRep.Delete(A_Login.u.TransactionsRep.Single(c => c.TransactionID == obj.TransactionID));
+
+                    ReloadData();
+                    dataGrid.SelectedIndex = -1;
                 }
                 catch (Exception ex)
                 {
@@ -159,7 +165,7 @@ namespace Galeria.User_Controls.Management_Windows
         public void ReloadData()
         {//Carga transacciones en el dataGrid
             dataGrid.ItemsSource = null;
-            dataGrid.ItemsSource = A_Login.u.UsersRep.GetAll();
+            dataGrid.ItemsSource = A_Login.u.TransactionsRep.GetAll();
             Loaders.LoadArtworks(comboBoxArt);
             Loaders.LoadUsers(comboBoxUser);
         }

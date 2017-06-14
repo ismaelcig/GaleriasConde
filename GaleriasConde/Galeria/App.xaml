@@ -15,13 +15,133 @@
 
 
             <Style TargetType="{x:Type TextBox}" x:Key="mdTxt" BasedOn="{StaticResource MaterialDesignTextBox}"/>
+            
             <Style TargetType="{x:Type ComboBox}" x:Key="mdCombo" BasedOn="{StaticResource MaterialDesignComboBox}"/>
+            
             <Style TargetType="{x:Type DataGrid}" x:Key="dg">
                 <Setter Property="Background"  Value="AntiqueWhite"/>
                 <Setter Property="AutoGenerateColumns" Value="False"/>
                 <Setter Property="IsReadOnly" Value="True"/>
             </Style>
+            
             <BitmapImage x:Key="warning" UriSource="Images/warning.ico" />
+            
+            <Style TargetType="{x:Type Button}" x:Key="filterAll">
+                <Setter Property="FontSize" Value="17"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="Foreground" Value="#1e1f30"/>
+                <Setter Property="Margin" Value="5,5,5,3"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Grid x:Name="grid">
+                                <Border x:Name="border" CornerRadius="2" BorderBrush="Black" BorderThickness="1.5">
+                                    <Border.Background>
+                                        <RadialGradientBrush GradientOrigin="0.496,1.052">
+                                            <RadialGradientBrush.RelativeTransform>
+                                                <TransformGroup>
+                                                    <ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="1.5" ScaleY="1.5"/>
+                                                    <TranslateTransform X="0.02" Y="0.3"/>
+                                                </TransformGroup>
+                                            </RadialGradientBrush.RelativeTransform>
+                                            <GradientStop Offset="1" Color="#67a0c6"/><!--000-->
+                                            <GradientStop Offset="0.3" Color="#FFFFFFFF"/>
+                                        </RadialGradientBrush>
+                                    </Border.Background>
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" TextElement.FontWeight="Bold"/>
+                                </Border>
+
+                            </Grid>
+                            <ControlTemplate.Triggers>
+
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter Property="Background" TargetName="border">
+                                        <Setter.Value>
+                                            <RadialGradientBrush GradientOrigin="0.496,1.052">
+                                                <RadialGradientBrush.RelativeTransform>
+                                                    <TransformGroup>
+                                                        <ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="1.5" ScaleY="1.5"/>
+                                                        <TranslateTransform X="0.02" Y="0.3"/>
+                                                    </TransformGroup>
+                                                </RadialGradientBrush.RelativeTransform>
+                                                <GradientStop Color="#54a4d8" Offset="1"/>
+                                                <GradientStop Color="#103040" Offset="0.3"/>
+                                            </RadialGradientBrush>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Setter Property="BorderThickness" Value="3"/>
+                                </Trigger>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="BorderBrush" TargetName="border" Value="#3386FF"/>
+                                    <Setter Property="BorderThickness" Value="3"/>
+                                </Trigger>
+                                <!--<Trigger Property="IsEnabled" Value="False">
+                                    <Setter Property="Opacity" TargetName="grid" Value="0.25"/>
+                                </Trigger>-->
+
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style TargetType="{x:Type Button}" x:Key="filterButtons">
+                <Setter Property="FontSize" Value="17"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="Foreground" Value="#515266"/>
+                <Setter Property="Margin" Value="5,5,5,0.5"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Grid x:Name="grid">
+                                <Border x:Name="border" CornerRadius="2" BorderBrush="Black" BorderThickness="1.5">
+                                    <Border.Background>
+                                        <RadialGradientBrush GradientOrigin="0.496,1.052">
+                                            <RadialGradientBrush.RelativeTransform>
+                                                <TransformGroup>
+                                                    <ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="1.5" ScaleY="1.5"/>
+                                                    <TranslateTransform X="0.02" Y="0.3"/>
+                                                </TransformGroup>
+                                            </RadialGradientBrush.RelativeTransform>
+                                            <GradientStop Offset="1" Color="#83B8DB"/><!--000-->
+                                            <GradientStop Offset="0.3" Color="#FFFFFFFF"/>
+                                        </RadialGradientBrush>
+                                    </Border.Background>
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" TextElement.FontWeight="Bold"/>
+                                </Border>
+
+                            </Grid>
+                            <ControlTemplate.Triggers>
+
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter Property="Background" TargetName="border">
+                                        <Setter.Value>
+                                            <RadialGradientBrush GradientOrigin="0.496,1.052">
+                                                <RadialGradientBrush.RelativeTransform>
+                                                    <TransformGroup>
+                                                        <ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="1.5" ScaleY="1.5"/>
+                                                        <TranslateTransform X="0.02" Y="0.3"/>
+                                                    </TransformGroup>
+                                                </RadialGradientBrush.RelativeTransform>
+                                                <GradientStop Color="#80a4bc" Offset="1"/>
+                                                <GradientStop Color="#184c66" Offset="0.3"/>
+                                            </RadialGradientBrush>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="BorderBrush" TargetName="border" Value="#3379e0"/>
+                                    <Setter Property="BorderThickness" Value="3"/>
+                                </Trigger>
+                                <!--<Trigger Property="IsEnabled" Value="False">
+                                    <Setter Property="Opacity" TargetName="grid" Value="0.25"/>
+                                </Trigger>-->
+
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

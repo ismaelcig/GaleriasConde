@@ -1,4 +1,5 @@
 ﻿using Galeria.Dict;
+using Galeria.Model.Translation;
 using Galeria.Windows;
 using System;
 using System.Collections.Generic;
@@ -12,27 +13,22 @@ namespace Galeria.VO
     {
         public int TypeID { get; set; }
         public string codType { get; set; }
-        public List<ArtworkVO> artworksVO { get; set; }//Para cargar en datagrid, o acceder a ellos
-    }
+        public int nArts { get; set; }//Para cargar en datagrid
 
-    public static class TypeConverter
-    {
-        public static TypeVO toVO(Model.Type data)//Pasa de Type a TypeVO
+        public TypeVO()
+        {
+
+        }
+
+        public TypeVO(int id)
         {
             CargarDiccionarios cd = new CargarDiccionarios();
             string lang = cd.GetCurrentLanguage();
-            TypeVO result = new TypeVO();
-            result.TypeID = data.TypeID;
-            result.codType = A_Login.u.TypeTranslationsRep.Single(c => c.TypeID == data.TypeID && c.lang == lang).codType;
-            result.artworksVO = ArtworkVO.GetArtworksVO(result.TypeID, "Type");//VO de las obras que pertenecen a este tipo
-            return result;
-        }
-
-        public static Model.Type fromVO(TypeVO data)//Pasa de TypeVO a Type
-        {
-            Model.Type result = new Model.Type();
-            result.TypeID = data.TypeID;
-            return result;
+            Model.Type t = A_Login.u.TypesRep.Single(c => c.TypeID == id);
+            TypeTranslations tt = A_Login.u.TypeTranslationsRep.Single(c => c.TypeID == id);
+            this.TypeID = t.TypeID;
+            this.codType = tt.codType;
+            this.nArts = A_Login.u.ArtworksRep.Get(c => c.Type.TypeID == id).Count;
         }
     }
 }

@@ -41,3 +41,15 @@ Log Entry : 10:13:28, miércoles, 7 de junio de 2017 :: From A_Log2 :: Referenci
 Log Entry : 10:48:03, domingo, 11 de junio de 2017 :: From GenericRep6 :: The model backing the 'GaleriaContext' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
  :Inner Exception: 
 ------------------------------------------------------------
+Log Entry : 8:28:00, martes, 13 de junio de 2017 :: From Loaders2 :: Referencia a objeto no establecida como instancia de un objeto.
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 14:47:52, martes, 13 de junio de 2017 :: From GenericRep2 :: Attaching an entity of type 'Galeria.Model.Translation.ArtworkTranslations' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 14:50:46, martes, 13 de junio de 2017 :: From GenericRep2 :: Attaching an entity of type 'Galeria.Model.Translation.AuthorTranslations' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 8:57:02, miércoles, 14 de junio de 2017 :: From GenericRep2 :: Attaching an entity of type 'Galeria.Model.Translation.NationalityTranslations' failed because another entity of the same type already has the same primary key value. This can happen when using the 'Attach' method or setting the state of an entity to 'Unchanged' or 'Modified' if any entities in the graph have conflicting key values. This may be because some entities are new and have not yet received database-generated key values. In this case use the 'Add' method or the 'Added' entity state to track the graph and then set the state of non-new entities to 'Unchanged' or 'Modified' as appropriate.
+ :Inner Exception: 
+------------------------------------------------------------

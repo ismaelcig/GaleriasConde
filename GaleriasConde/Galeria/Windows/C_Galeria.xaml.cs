@@ -1,4 +1,6 @@
 ﻿using Galeria.Dict;
+using Galeria.Model;
+using Galeria.Other_Classes;
 using Galeria.User_Controls;
 using Galeria.VO;
 using System;
@@ -31,7 +33,15 @@ namespace Galeria.Windows
 
         public C_Galeria()
         {
-            InitializeComponent();
+            try
+            {
+                InitializeComponent();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Exception: " + ex.Message);
+                MessageBox.Show("Inner: " + ex.InnerException);
+            }
             this.Name = "C_Galeria";
             cg = this;
             A_Login.windows.Add(cg);
@@ -135,7 +145,7 @@ namespace Galeria.Windows
         {
             if (hidenL)
             {
-                if (awpArtworks.Margin.Left < 210)
+                if (MyScrollViewer.Margin.Left < 210)
                 {
                     if (docky.Width < 200)
                     {
@@ -143,7 +153,7 @@ namespace Galeria.Windows
                         label.Width = label.Width + 10;
                         docky.Height = docky.Height + (desplazamiento / 13);
                     }
-                    awpArtworks.Margin = new Thickness((awpArtworks.Margin.Left + 10), 10, 10, 10);
+                    MyScrollViewer.Margin = new Thickness((MyScrollViewer.Margin.Left + 10), 10, 10, 10);
                 }
                 else
                 {//Termina de ampliar
@@ -157,7 +167,7 @@ namespace Galeria.Windows
             }
             else
             {
-                if (awpArtworks.Margin.Left > 10)
+                if (MyScrollViewer.Margin.Left > 10)
                 {
                     if (docky.Width > button.Width)
                     {
@@ -169,13 +179,13 @@ namespace Galeria.Windows
                             docky.Height = docky.Height + (desplazamiento / 13);
                         }
                     }
-                    if (awpArtworks.Margin.Left > 15)
+                    if (MyScrollViewer.Margin.Left > 15)
                     {
-                        awpArtworks.Margin = new Thickness((awpArtworks.Margin.Left - 15), 10, 10, 10);
+                        MyScrollViewer.Margin = new Thickness((MyScrollViewer.Margin.Left - 15), 10, 10, 10);
                     }
                     else
                     {
-                        awpArtworks.Margin = new Thickness((awpArtworks.Margin.Left - 5), 10, 10, 10);
+                        MyScrollViewer.Margin = new Thickness((MyScrollViewer.Margin.Left - 5), 10, 10, 10);
                     }
                 }
                 else
@@ -198,34 +208,22 @@ namespace Galeria.Windows
             Button b1 = new Button();
             b1.Name = "buttAll";
             b1.Content = (string)A_Login.dict["CG1AllFilter"];
-            b1.Margin = new Thickness(5, 5, 5, 5);
             b1.Click += B1_Click;
-            b1.Background = Brushes.LightSkyBlue;
-            var converter1 = new BrushConverter();
-            var brush1 = (Brush)converter1.ConvertFromString("#FF7ABAE2");
-            b1.BorderBrush = brush1;
+            Style style = this.FindResource("filterAll") as Style;
+            b1.Style = style;
 
             spFilter.Children.Add(b1);
 
             //Añade todos los tipos de obras
             foreach (Model.Type t in A_Login.u.TypesRep.GetAll())
-            {//No hace falta TypeVO, porque se puede hacer directamente
-                //TypeVO tVO = new TypeVO();
-                //tVO.TypeID = t.TypeID;
-                //string lang = cd.GetCurrentLanguage();
-                //tVO.codType = A_Login.u.TypeTranslationsRep.Single(c => c.TypeID == t.TypeID && c.lang == lang).codType;
-                //typesVO.Add(tVO);
-
+            {
                 Button b = new Button();
                 b.Name = "butt" + t.TypeID;
                 string lang = cd.GetCurrentLanguage();
                 b.Content = A_Login.u.TypeTranslationsRep.Single(c => c.TypeID == t.TypeID && c.lang == lang).codType;
-                b.Margin = new Thickness(5);
                 b.Click += B_Click;
-                b.Background = Brushes.LightBlue;
-                var converter = new BrushConverter();
-                var brush = (Brush)converter.ConvertFromString("#FF8CBBD8");
-                b.BorderBrush = brush;
+                style = this.FindResource("filterButtons") as Style;
+                b.Style = style;
 
                 spFilter.Children.Add(b);
             }
@@ -234,15 +232,24 @@ namespace Galeria.Windows
         //Botón cargar todo
         private void B1_Click(object sender, RoutedEventArgs e)
         {
-            LoadArtworks(ArtworkVO.GetArtworksVO());
-            //TODO: Cargar Autores
+            List<ArtworkVO> aVOs = new List<ArtworkVO>();
+            foreach (Artwork a in A_Login.u.ArtworksRep.GetAll())
+            {
+                aVOs.Add(new ArtworkVO(a.ArtworkID));
+            }
+            LoadArtworks(aVOs);
         }
 
         //Botón cargar Tipo de Obra
         private void B_Click(object sender, RoutedEventArgs e)
         {
             int typeIndex = int.Parse(Regex.Match(((sender as Button).Name), @"\d+").Value);
-            LoadArtworks(ArtworkVO.GetArtworksVO(typeIndex, "Type"));
+            List<ArtworkVO> aVOs = new List<ArtworkVO>();
+            foreach (Artwork a in A_Login.u.ArtworksRep.Get(c=>c.Type.TypeID == typeIndex))
+            {
+                aVOs.Add(new ArtworkVO(a.ArtworkID));
+            }
+            LoadArtworks(aVOs);
         }
         #endregion
 
@@ -254,11 +261,25 @@ namespace Galeria.Windows
             {//TODO: Crea para cada obra, un botón con la imagen de la Obra, y el título como Tooltip
                 Button ObraBtn = new Button();
                 ObraBtn.ToolTip = a.title;
-                ObraBtn.Content = a.title;
-                ObraBtn.Name = "pButton" + a.ArtworkID.ToString();
-                //ObraBtn.Height = 200;
-                ObraBtn.Padding = new Thickness(3);
+                ObraBtn.MaxHeight = 250;
+                ObraBtn.MaxWidth = 500;
+                //ObraBtn.Padding = new Thickness(3);
                 ObraBtn.Margin = new Thickness(2);
+
+                Viewbox container = new Viewbox();
+                //StackPanel container = new StackPanel();
+                container.Margin = new Thickness(3,3,3,3);
+                container.HorizontalAlignment = HorizontalAlignment.Left;
+                container.VerticalAlignment = VerticalAlignment.Top;
+                Image img = new Image();
+                img.HorizontalAlignment = HorizontalAlignment.Center;
+                img.Source = Converters.BytesToImg(a.img);
+                img.Height = 300;
+                container.Child = img;
+                //container.Children.Add(img);
+                ObraBtn.Content = container;
+
+                ObraBtn.Name = "pButton" + a.ArtworkID.ToString();
 
                 //ObraBtn.Click += ObraBtn_Click;
 
@@ -267,22 +288,18 @@ namespace Galeria.Windows
         }
         #endregion
 
-        //private void Button_Click_1(object sender, RoutedEventArgs e)
-        //{
-        //    Console.WriteLine("Actdocky=" + docky.ActualHeight);
-        //    Console.WriteLine("docky=" + docky.Height);
-        //    Console.WriteLine("spFilter=" + spFilter.ActualHeight);
-        //    Console.WriteLine("button1=" + button1.ActualHeight);
-        //    docky.Height = 40;
-        //}
-
 
 
         //Método que se lanza al abrir ventana, y cada vez que se cambia de idioma
         public void OnLangChange()
         {
             LoadFilters();
-            LoadArtworks(ArtworkVO.GetArtworksVO());//Esto implica que al cambiar de idioma elimina los filtros, pero está bien así
+            List<ArtworkVO> aVOs = new List<ArtworkVO>();
+            foreach (Artwork a in A_Login.u.ArtworksRep.GetAll())
+            {
+                aVOs.Add(new ArtworkVO(a.ArtworkID));
+            }
+            LoadArtworks(aVOs);//Esto implica que al cambiar de idioma elimina los filtros, pero está bien así
             gridUsers.ReloadData();
             gridTrans.ReloadData();
             gridNats.ReloadData();
@@ -318,7 +335,7 @@ namespace Galeria.Windows
             }
         }
 
-        #region Management
+        #region subMenus
         private void sub_Users_MouseDown(object sender, MouseButtonEventArgs e)
         {
             //Ocultar los demás grids, y recargar datagrid, hacer método con switch
@@ -328,6 +345,7 @@ namespace Galeria.Windows
             sub_Users.FontWeight = FontWeights.Black;
             sub_Users.FontStretch = FontStretches.Medium;
             gridUsers.Visibility = Visibility.Visible;
+            gridUsers.dataGrid.SelectedIndex = -1;
         }
 
         private void sub_Trans_MouseDown(object sender, MouseButtonEventArgs e)
@@ -338,6 +356,7 @@ namespace Galeria.Windows
             sub_Trans.FontWeight = FontWeights.Black;
             sub_Trans.FontStretch = FontStretches.Medium;
             gridTrans.Visibility = Visibility.Visible;
+            gridTrans.dataGrid.SelectedIndex = -1;
         }
 
         private void sub_Nats_MouseDown(object sender, MouseButtonEventArgs e)
@@ -348,6 +367,7 @@ namespace Galeria.Windows
             sub_Nats.FontWeight = FontWeights.Black;
             sub_Nats.FontStretch = FontStretches.Medium;
             gridNats.Visibility = Visibility.Visible;
+            gridNats.dataGrid.SelectedIndex = -1;
         }
 
         private void sub_Auths_MouseDown(object sender, MouseButtonEventArgs e)
@@ -358,6 +378,7 @@ namespace Galeria.Windows
             sub_Auths.FontWeight = FontWeights.Black;
             sub_Auths.FontStretch = FontStretches.Medium;
             gridAuths.Visibility = Visibility.Visible;
+            gridAuths.dataGrid.SelectedIndex = -1;
         }
 
         private void sub_Types_MouseDown(object sender, MouseButtonEventArgs e)
@@ -368,6 +389,7 @@ namespace Galeria.Windows
             sub_Types.FontWeight = FontWeights.Black;
             sub_Types.FontStretch = FontStretches.Medium;
             gridTypes.Visibility = Visibility.Visible;
+            gridTypes.dataGrid.SelectedIndex = -1;
         }
 
         private void sub_Arts_MouseDown(object sender, MouseButtonEventArgs e)
@@ -378,6 +400,7 @@ namespace Galeria.Windows
             sub_Arts.FontWeight = FontWeights.Black;
             sub_Arts.FontStretch = FontStretches.Medium;
             gridArts.Visibility = Visibility.Visible;
+            gridArts.dataGrid.SelectedIndex = -1;
         }
         #endregion
     }

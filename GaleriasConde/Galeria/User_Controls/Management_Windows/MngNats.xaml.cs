@@ -93,10 +93,11 @@ namespace Galeria.User_Controls.Management_Windows
             {
                 if (!string.IsNullOrWhiteSpace(txtNac.Text))
                 {
-                    obj.codNation = txtNac.Text;//obj es el VO
-
-                    NationalityTranslations nt = new NationalityTranslations(obj, cd.GetCurrentLanguage());
-                    A_Login.u.NationalityTranslationsRep.Update(nt);//Modifica el codNation
+                    string lang = cd.GetCurrentLanguage();
+                    NationalityTranslations nt = A_Login.u.NationalityTranslationsRep.Single(c => c.NationalityID == obj.NationalityID && c.lang == lang);
+                    nt.codNation = txtNac.Text;
+                    A_Login.u.NationalityTranslationsRep.Update(nt);
+                    
                     ReloadData();
                     dataGrid.SelectedIndex = -1;
                 }
@@ -137,6 +138,9 @@ namespace Galeria.User_Controls.Management_Windows
                             A_Login.u.NationalityTranslationsRep.Delete(nt);
                         }
                         A_Login.u.NationalitiesRep.Delete(A_Login.u.NationalitiesRep.Single(c => c.NationalityID == obj.NationalityID));
+
+                        ReloadData();
+                        dataGrid.SelectedIndex = -1;
                     }
                     catch (Exception ex)
                     {
@@ -153,7 +157,7 @@ namespace Galeria.User_Controls.Management_Windows
             VOs.Clear();
             foreach (Nationality item in A_Login.u.NationalitiesRep.GetAll())
             {
-                VOs.Add(NationalityConverter.toVO(item));
+                VOs.Add(new NationalityVO(item.NationalityID));
             }
             dataGrid.ItemsSource = VOs;
         }

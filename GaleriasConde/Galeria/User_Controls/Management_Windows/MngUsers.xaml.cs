@@ -67,17 +67,19 @@ namespace Galeria.User_Controls.Management_Windows
         {
             if (obj.nick != "master")
             {
+                User u = A_Login.u.UsersRep.Single(c => c.UserID == obj.UserID);
                 if (checkBox.IsChecked)
                 {
-                    obj.Profile = A_Login.u.ProfilesRep.Single(c => c.ProfileID == 3);//Lo hace admin
+                    u.Profile = A_Login.u.ProfilesRep.Single(c => c.ProfileID == 3);//Lo hace admin
                 }
                 else
                 {
-                    obj.Profile = A_Login.u.ProfilesRep.Single(c => c.ProfileID == 2);//Lo hace usuario normal
+                    u.Profile = A_Login.u.ProfilesRep.Single(c => c.ProfileID == 2);//Lo hace usuario normal
                 }
-                A_Login.u.UsersRep.Update(obj);
-                dataGrid.SelectedIndex = -1;
+                A_Login.u.UsersRep.Update(u);
+
                 ReloadData();
+                dataGrid.SelectedIndex = -1;
             }
             else
             {
@@ -90,8 +92,8 @@ namespace Galeria.User_Controls.Management_Windows
         {if (obj.nick != "master")
             {
                 A_Login.u.UsersRep.Delete(obj);
-                dataGrid.SelectedIndex = -1;
                 ReloadData();
+                dataGrid.SelectedIndex = -1;
             }
             else
             {

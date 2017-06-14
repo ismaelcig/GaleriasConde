@@ -78,6 +78,7 @@ namespace Galeria.Windows
                             user = new User { nick = textBox.Text, Profile = u.ProfilesRep.Single(c => c.codProfile == "Default") };
                             C_Galeria gal = new C_Galeria();
                             gal.Show();
+                            Hide();
                         }
                         else
                         {
