@@ -61,6 +61,7 @@
     <system:String x:Key="CG1Filter">Filtrar</system:String>
     <system:String x:Key="CG1Search">Buscar...</system:String>
     <system:String x:Key="CG1AllFilter">Todas</system:String>
+    <system:String x:Key="CG1OnStock">Sólo Disponibles</system:String>
 
     <!--Pst4-->
     <system:String x:Key="User">Usuario</system:String>

@@ -258,7 +258,7 @@ namespace Galeria.Windows
         {//Cargar Obras
             awpArtworks.Children.Clear();
             foreach (ArtworkVO a in l)
-            {//TODO: Crea para cada obra, un botón con la imagen de la Obra, y el título como Tooltip
+            {//Crea para cada obra, un botón con la imagen de la Obra, y el título como Tooltip
                 Button ObraBtn = new Button();
                 ObraBtn.ToolTip = a.title;
                 ObraBtn.MaxHeight = 250;
@@ -280,11 +280,44 @@ namespace Galeria.Windows
                 ObraBtn.Content = container;
 
                 ObraBtn.Name = "pButton" + a.ArtworkID.ToString();
-
+                //TODO: ObraBtnClick
                 //ObraBtn.Click += ObraBtn_Click;
 
-                awpArtworks.Children.Add(ObraBtn);
+                if (!checkOnStock.IsChecked)
+                {
+                    awpArtworks.Children.Add(ObraBtn);
+                }
+                else
+                {//Sólo debe mostrar las que están disponibles
+                    if (a.onStock)
+                    {
+                        awpArtworks.Children.Add(ObraBtn);
+                    }
+                }
             }
+        }
+
+        //Mientras escribe, voy buscando las obras para cargarlas
+        //Si se alcanza un nº muy elevado de registros, quizás haga falta cambiar esto por un botón de búsqueda
+        //Como no se espera alcanzar el caso, queda así para dejar más espacio al textBox
+        private void txtSearchArt_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string lang = cd.GetCurrentLanguage();
+            HashSet<Artwork> artworks = A_Login.u.ArtworksRep.GetFiltrado(txtSearchArt.Text).ToHashSet();//HashSet para evitar repeticiones
+            foreach (Model.Translation.ArtworkTranslations at in A_Login.u.ArtworkTranslationsRep.GetFiltrado(txtSearchArt.Text))
+            {
+                if (at.lang == lang)
+                {//Si at está en el idioma en el que estamos buscando
+                    artworks.Add(A_Login.u.ArtworksRep.Single(c => c.ArtworkID == at.ArtworkID));//Añado tambien el objeto Artwork
+                }
+            }
+
+            List<ArtworkVO> aVOs = new List<ArtworkVO>();//Lista que voy a cargar
+            foreach (Artwork a in artworks)
+            {
+                aVOs.Add(new ArtworkVO(a.ArtworkID));
+            }
+            LoadArtworks(aVOs);
         }
         #endregion
 

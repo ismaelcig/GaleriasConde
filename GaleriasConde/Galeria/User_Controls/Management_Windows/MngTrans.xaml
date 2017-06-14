@@ -19,6 +19,21 @@
         FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
              d:DesignHeight="500" d:DesignWidth="600">
     <Grid Background="White">
+        <Border BorderBrush="#688CAF" BorderThickness="1" Width="Auto" Height="Auto">
+            <Grid>
+                <TextBox x:Name="txtID" IsEnabled="False" HorizontalAlignment="Left" Height="40" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" materialDesign:HintAssist.Hint="{DynamicResource ID}" materialDesign:HintAssist.IsFloating="True" Style="{StaticResource mdTxt}"/>
+                <metro:ToggleSwitch x:Name="checkBox" HorizontalAlignment="Left" Margin="75,25,0,0" VerticalAlignment="Top"/>
+                <Label Content="{DynamicResource Done}" HorizontalAlignment="Left" Margin="130,20,0,0" VerticalAlignment="Top"/>
+                <ComboBox x:Name="comboBoxArt" HorizontalAlignment="Left" Height="40" Margin="10,52,0,0" VerticalAlignment="Top" Width="220" materialDesign:HintAssist.Hint="{DynamicResource Art}" materialDesign:HintAssist.IsFloating="True" Style="{StaticResource mdCombo}"/>
+                <ComboBox x:Name="comboBoxUser" HorizontalAlignment="Left" Height="40" Margin="10,92,0,0" VerticalAlignment="Top" Width="220" materialDesign:HintAssist.Hint="{DynamicResource User}" materialDesign:HintAssist.IsFloating="True" Style="{StaticResource mdCombo}"/>
+                <TextBox x:Name="txtBenefit" HorizontalAlignment="Left" Height="40" Margin="10,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" ToolTip="{DynamicResource benefToolTip}" materialDesign:HintAssist.Hint="{DynamicResource Benefit}" materialDesign:HintAssist.IsFloating="True" Style="{StaticResource mdTxt}"/>
+                <TextBox x:Name="txtComment" HorizontalAlignment="Left" Margin="10,172,0,40" TextWrapping="Wrap" VerticalAlignment="Stretch" Width="220" AcceptsReturn="True" VerticalContentAlignment="Top" materialDesign:HintAssist.Hint="{DynamicResource Comm}" materialDesign:HintAssist.IsFloating="True" Style="{StaticResource mdTxt}"/>
+
+                <Button x:Name="buttAdd" Content="{DynamicResource CG4Add}" HorizontalAlignment="Left" Margin="10,0,0,5" VerticalAlignment="Bottom" Width="70" Click="buttAdd_Click"/>
+                <Button x:Name="buttMod" Content="{DynamicResource CG4Mod}" HorizontalAlignment="Left" Margin="85,0,0,5" VerticalAlignment="Bottom" Width="70" Click="buttMod_Click"/>
+                <Button x:Name="buttDel" Content="{DynamicResource CG4Del}" HorizontalAlignment="Left" Margin="160,0,0,5" VerticalAlignment="Bottom" Width="70" Click="buttDel_Click"/>
+            </Grid>
+        </Border>
         <DataGrid x:Name="dataGrid" HorizontalAlignment="Stretch" Margin="240,0,0,0" VerticalAlignment="Stretch" DataContext="{Binding Source=Transaction}" Style="{StaticResource dg}" SelectionChanged="dataGrid_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding TransactionID}">
@@ -48,17 +63,5 @@
                 </DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
-        
-        <TextBox x:Name="txtID" IsEnabled="False" HorizontalAlignment="Left" Height="40" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" materialDesign:HintAssist.Hint="{DynamicResource ID}" materialDesign:HintAssist.IsFloating="True" Style="{StaticResource mdTxt}"/>
-        <metro:ToggleSwitch x:Name="checkBox" HorizontalAlignment="Left" Margin="75,25,0,0" VerticalAlignment="Top"/>
-        <Label Content="{DynamicResource Done}" HorizontalAlignment="Left" Margin="130,20,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboBoxArt" HorizontalAlignment="Left" Height="40" Margin="10,52,0,0" VerticalAlignment="Top" Width="220" materialDesign:HintAssist.Hint="{DynamicResource Art}" materialDesign:HintAssist.IsFloating="True" Style="{StaticResource mdCombo}"/>
-		<ComboBox x:Name="comboBoxUser" HorizontalAlignment="Left" Height="40" Margin="10,92,0,0" VerticalAlignment="Top" Width="220" materialDesign:HintAssist.Hint="{DynamicResource User}" materialDesign:HintAssist.IsFloating="True" Style="{StaticResource mdCombo}"/>
-		<TextBox x:Name="txtBenefit" HorizontalAlignment="Left" Height="40" Margin="10,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" ToolTip="{DynamicResource benefToolTip}" materialDesign:HintAssist.Hint="{DynamicResource Benefit}" materialDesign:HintAssist.IsFloating="True" Style="{StaticResource mdTxt}"/>
-		<TextBox x:Name="txtComment" HorizontalAlignment="Left" Margin="10,172,0,40" TextWrapping="Wrap" VerticalAlignment="Stretch" Width="220" materialDesign:HintAssist.Hint="{DynamicResource Comm}" materialDesign:HintAssist.IsFloating="True" Style="{StaticResource mdTxt}"/>
-		
-        <Button x:Name="buttAdd" Content="{DynamicResource CG4Add}" HorizontalAlignment="Left" Margin="10,0,0,5" VerticalAlignment="Bottom" Width="70" Click="buttAdd_Click"/>
-        <Button x:Name="buttMod" Content="{DynamicResource CG4Mod}" HorizontalAlignment="Left" Margin="85,0,0,5" VerticalAlignment="Bottom" Width="70" Click="buttMod_Click"/>
-        <Button x:Name="buttDel" Content="{DynamicResource CG4Del}" HorizontalAlignment="Left" Margin="160,0,0,5" VerticalAlignment="Bottom" Width="70" Click="buttDel_Click"/>
     </Grid>
 </UserControl>

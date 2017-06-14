@@ -47,6 +47,7 @@ namespace Galeria.User_Controls.Management_Windows
         {
             if (dataGrid.SelectedIndex > -1)
             {
+                txtinfo.ScrollToHome();
                 obj = new ArtworkVO();
                 obj = (ArtworkVO)dataGrid.SelectedItem;
                 txtID.Text = obj.ArtworkID.ToString();

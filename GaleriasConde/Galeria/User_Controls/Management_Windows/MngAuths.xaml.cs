@@ -39,6 +39,7 @@ namespace Galeria.User_Controls.Management_Windows
         {
             if (dataGrid.SelectedIndex > -1)
             {
+                txtInfo.ScrollToHome();
                 obj = new AuthorVO();
                 obj = (AuthorVO)dataGrid.SelectedItem;
                 txtID.Text = obj.AuthorID.ToString();
