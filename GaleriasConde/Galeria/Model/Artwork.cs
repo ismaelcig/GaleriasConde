@@ -29,6 +29,7 @@ namespace Galeria.Model
         public string date { get; set; }
         //[DataType(DataType.Text)]
         public string dimensions { get; set; }
+        public double money { get; set; }
         //[StringLength(500, MinimumLength = 10, ErrorMessage = "La info debe estar entre 10 y 500 caracteres")]
         //public string info { get; set; }
 

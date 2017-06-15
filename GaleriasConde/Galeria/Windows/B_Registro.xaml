@@ -42,7 +42,7 @@
             <Button x:Name="buttCancel" Content="{DynamicResource RGb2}" HorizontalAlignment="Right" Margin="0,0,47,10" VerticalAlignment="Bottom" Width="164" Click="buttCancel_Click"/>
         </Grid>
         <!--Grid contraseña-->
-        <Grid x:Name="gridPass" HorizontalAlignment="Stretch" Visibility="Visible" VerticalAlignment="Stretch" Background="White">
+        <Grid x:Name="gridPass" HorizontalAlignment="Stretch" Visibility="Hidden" VerticalAlignment="Stretch" Background="White">
             <PasswordBox x:Name="passwordBox1" HorizontalAlignment="Left" Margin="43,46,0,0" VerticalAlignment="Top" Height="40" Width="265" PasswordChanged="passwordBox_PasswordChanged" KeyDown="passwordBox1_KeyDown" materialDesign:HintAssist.Hint="{DynamicResource RGpass}" materialDesign:HintAssist.IsFloating="True"/>
             <PasswordBox x:Name="passwordBox2" HorizontalAlignment="Left" Margin="43,86,0,0" VerticalAlignment="Top" Height="40" Width="265" PasswordChanged="passwordBox_PasswordChanged" KeyUp="passwordBox1_KeyDown" materialDesign:HintAssist.Hint="{DynamicResource RGpass1}" materialDesign:HintAssist.IsFloating="True"/>
             <metro:ToggleSwitch x:Name="check1" IsChecked="False" IsEnabled="False" HorizontalAlignment="Left" Margin="10,131,0,0" VerticalAlignment="Top"/>

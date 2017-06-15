@@ -40,7 +40,7 @@ namespace Galeria.Windows
             }
             catch (Exception ex)
             {
-                ErrorLog.Log("A_Log1", ex);
+                ErrorLog.SilentLog("A_Log1", ex);
             }
             this.Name = "A_Login";
             mw = this;

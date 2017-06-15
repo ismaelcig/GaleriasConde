@@ -13,6 +13,19 @@ namespace Galeria.Other_Classes
     {
         public static void Log(string origin, Exception ex)
         {
+            LogError(origin, ex);
+            MessageBox.Show((string)A_Login.dict["Error"]);//Muestra error genérico
+        }
+
+        //Para que cuando da errores en cadena no haga spam de MsgBox
+        public static void SilentLog(string origin, Exception ex)
+        {
+            LogError(origin, ex);
+        }
+
+        //El método del Log propiamente
+        private static void LogError(string origin, Exception ex)
+        {
             if (!File.Exists("Logs.txt"))
             {
                 File.Create("Logs.txt");
@@ -30,7 +43,6 @@ namespace Galeria.Other_Classes
             sw.WriteLine(error);
             sw.Flush();
             sw.Close();
-            MessageBox.Show((string)A_Login.dict["Error"]);//Muestra error genérico
         }
     }
 }

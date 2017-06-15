@@ -119,6 +119,9 @@
     <system:String x:Key="UPMsg">¿Está seguro de que desea salir?</system:String>
     <system:String x:Key="UPCaption">Confirmación</system:String>
     <system:String x:Key="UPButton">Salir</system:String>
+    
+    <!--UserOptions-->
+    <system:String x:Key="UOtitle">Opciones de Usuario</system:String>
 
 </ResourceDictionary>
 

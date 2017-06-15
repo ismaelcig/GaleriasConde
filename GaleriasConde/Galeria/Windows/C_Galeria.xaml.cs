@@ -106,8 +106,13 @@ namespace Galeria.Windows
 
 
         private void Window_Closing(object sender, EventArgs e)
-        {//TODO: No volver a abrir login, sino cerrar todo, no permitir cerrar si hay algo abierto (?)
-            A_Login.mw.Close();
+        {//Cierra todas las demás ventanas, o lleva al menú principal
+            var result = MessageBox.Show((string)A_Login.dict["UPMsg"], (string)A_Login.dict["UPCaption"], MessageBoxButton.OKCancel, MessageBoxImage.Question);
+            if (result == MessageBoxResult.OK)
+            {
+                Application.Current.Shutdown();
+                //Application.Current.ShutdownMode = ShutdownMode.OnMainWindowClose;
+            }
         }
 
 
@@ -356,16 +361,22 @@ namespace Galeria.Windows
             show.Children.Clear();
             shadow.Visibility = Visibility.Hidden;
         }
-        
+        private void overAllShadow_MouseUp(object sender, MouseButtonEventArgs e)
+        {//Significa que esta ventana recupera el focus, cierra las otras (excepto A_Login)
+            foreach (Window item in A_Login.windows)
+            {
+                if (item.Name != "A_Login" && item.Name != "C_Galeria")
+                {
+                    item.Close();
+                }
+            }
+            overAllShadow.Visibility = Visibility.Hidden;
+        }
+
         //Método cerrar App
         public void LogOut()
         {
-            var result = MessageBox.Show((string)A_Login.dict["UPMsg"], (string)A_Login.dict["UPCaption"], MessageBoxButton.OKCancel, MessageBoxImage.Question);
-            if (result == MessageBoxResult.OK)
-            {
-                A_Login.mw.Close();
-                Close();
-            }
+            Close();
         }
 
         #region subMenus
@@ -436,5 +447,6 @@ namespace Galeria.Windows
             gridArts.dataGrid.SelectedIndex = -1;
         }
         #endregion
+
     }
 }

@@ -1,0 +1,27 @@
+﻿<metro:Window 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:Elysium.Controls;assembly=Elysium"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:metro="http://schemas.codeplex.com/elysium"
+        xmlns:params="http://schemas.codeplex.com/elysium/params"
+        xmlns:User_Controls="clr-namespace:Galeria.User_Controls"
+        xmlns:Management_Windows="clr-namespace:Galeria.User_Controls.Management_Windows"
+        params:Design.Theme="Light"
+        params:Manager.Theme="Light"
+        params:Manager.AccentBrush="BlueViolet"
+        params:Manager.ContrastBrush="BlanchedAlmond"
+        TextElement.FontWeight="Bold"
+        TextElement.FontSize="15"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+        params:Window.CloseButtonToolTip="{DynamicResource CloseApp}"
+        params:Window.MaximizeButtonToolTip="{DynamicResource MaximizeApp}"
+        params:Window.MinimizeButtonToolTip="{DynamicResource MinimizeApp}"
+        
+        WindowStartupLocation="CenterOwner"
+        x:Class="Galeria.Windows.D_UserOptions"
+        Title="{DynamicResource UOtitle}" Height="300" Width="300">
+    <Grid>
+        
+    </Grid>
+</metro:Window>

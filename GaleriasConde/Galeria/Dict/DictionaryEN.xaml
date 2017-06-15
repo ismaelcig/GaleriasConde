@@ -119,7 +119,10 @@
     <system:String x:Key="UPMsg">Are you sure you want to exit?</system:String>
     <system:String x:Key="UPCaption">Confirmation</system:String>
     <system:String x:Key="UPButton">Log Out</system:String>
-    
+
+    <!--UserOptions-->
+    <system:String x:Key="UOtitle">User Options</system:String>
+
 </ResourceDictionary>
 
 <!--https://social.msdn.microsoft.com/Forums/en-US/aa9a8300-5e26-4a4f-a0ff-a9a0626272a1/wpf-multilanguage-application?forum=wpf

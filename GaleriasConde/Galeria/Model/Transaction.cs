@@ -17,6 +17,7 @@ namespace Galeria.Model
         public double money { get; set; }//Si es positivo->beneficio para la empresa, es decir, una venta
         public string comment { get; set; }
         public bool done { get; set; }//La transacción se crea cuando llega a un acuerdo, esto indica que se ha llevado a cabo el pago y la transferencia
+        public bool registeredBy { get; set; }//Para guardar quien registra la transacción
 
         public virtual User User { get; set; }
         public virtual Artwork Artwork { get; set; }

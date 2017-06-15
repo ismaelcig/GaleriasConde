@@ -1,4 +1,5 @@
-﻿using Galeria.Windows;
+﻿using Galeria.Other_Classes;
+using Galeria.Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,7 @@ namespace Galeria.User_Controls
             lblNick.Content = A_Login.user.nick;
             lblEmail.Content = A_Login.user.email;
             lblTlf.Content = A_Login.user.tlf;
+            imgBrush.ImageSource = Converters.BytesToImg(A_Login.user.picture);
             if (A_Login.user.Profile.codProfile == "Default")
             {
                 buttEdit.Visibility = Visibility.Hidden;
@@ -35,7 +37,9 @@ namespace Galeria.User_Controls
 
         private void buttEdit_Click(object sender, RoutedEventArgs e)
         {//Abre ventana/Panel para modificar datos perfil
-
+            D_UserOptions duo = new D_UserOptions();
+            C_Galeria.cg.overAllShadow.Visibility = Visibility.Visible;
+            duo.Show();
         }
 
         private void buttClose_Click(object sender, RoutedEventArgs e)

@@ -36,7 +36,7 @@ namespace Galeria.User_Controls
             }
             catch (Exception ex)
             {
-                ErrorLog.Log("LangSel1", ex);
+                ErrorLog.SilentLog("LangSel1", ex);
             }
             //languages = A_Login.u.LangsRep.GetAll();
             #region Idiomas
@@ -70,7 +70,7 @@ namespace Galeria.User_Controls
             }
             catch (Exception ex)
             {
-                ErrorLog.Log("LangSel2", ex);
+                ErrorLog.SilentLog("LangSel2", ex);
             }
         }
 
@@ -104,7 +104,7 @@ namespace Galeria.User_Controls
                 }
                 catch (Exception ex)
                 {
-                    ErrorLog.Log("LangSel3", ex);
+                    ErrorLog.SilentLog("LangSel3", ex);
                 }
             }
         }

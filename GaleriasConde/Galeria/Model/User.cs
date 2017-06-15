@@ -26,6 +26,7 @@ namespace Galeria.Model
         public string tlf { get; set; }
         //[EmailAddress(ErrorMessage = (string)A_Login.dict["asd"])]// "Dirección email inválida")]
         public string email { get; set; }
+        public byte[] picture { get; set; }
         ////[System.ComponentModel.DataAnnotations.Schema.NotMapped]
         ////public bool autenticado { get; set; }
 

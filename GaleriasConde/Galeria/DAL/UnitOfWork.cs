@@ -1,5 +1,6 @@
 ﻿using Galeria.DAL.Repositories;
 using Galeria.DAL.Repositories.Translations;
+using Galeria.Other_Classes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -171,7 +172,7 @@ namespace Galeria.DAL
             }
             catch (Exception ex)
             {
-                string mensaje = ex.Message;
+                ErrorLog.SilentLog("UoW1", ex);
             }
         }
 

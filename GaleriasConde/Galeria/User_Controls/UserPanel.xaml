@@ -31,7 +31,11 @@
     </UserControl.Resources>
     
     <Grid Background="LightGray" MinHeight="135" MinWidth="300">
-        <Ellipse Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="75" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="75"/>
+        <Ellipse HorizontalAlignment="Left" Height="75" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="75">
+            <Ellipse.Fill>
+                <ImageBrush x:Name="imgBrush"></ImageBrush>
+            </Ellipse.Fill>
+        </Ellipse>
         <Label x:Name="lblNick" Content="Nick" HorizontalAlignment="Left" Margin="85,10,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblEmail" Content="email" FontStyle="Italic" HorizontalAlignment="Left" Margin="85,36,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblTlf" Content="988776655" FontStyle="Italic" HorizontalAlignment="Left" Margin="85,62,0,0" VerticalAlignment="Top"/>

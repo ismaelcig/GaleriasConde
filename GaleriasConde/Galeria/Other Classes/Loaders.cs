@@ -30,7 +30,7 @@ namespace Galeria.Other_Classes
             }
             catch (Exception ex)
             {
-                ErrorLog.Log("Loaders1", ex);
+                ErrorLog.SilentLog("Loaders1", ex);
             }
         }
 
@@ -51,7 +51,7 @@ namespace Galeria.Other_Classes
             }
             catch (Exception ex)
             {
-                ErrorLog.Log("Loaders2", ex);
+                ErrorLog.SilentLog("Loaders2", ex);
             }
         }
 
@@ -68,7 +68,7 @@ namespace Galeria.Other_Classes
             }
             catch (Exception ex)
             {
-                ErrorLog.Log("Loaders3", ex);
+                ErrorLog.SilentLog("Loaders3", ex);
             }
         }
 
@@ -89,7 +89,7 @@ namespace Galeria.Other_Classes
             }
             catch (Exception ex)
             {
-                ErrorLog.Log("Loaders4", ex);
+                ErrorLog.SilentLog("Loaders4", ex);
             }
         }
 
@@ -110,7 +110,7 @@ namespace Galeria.Other_Classes
             }
             catch (Exception ex)
             {
-                ErrorLog.Log("Loaders5", ex);
+                ErrorLog.SilentLog("Loaders5", ex);
             }
         }
 
