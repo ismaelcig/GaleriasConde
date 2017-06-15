@@ -79,6 +79,7 @@ namespace Galeria.User_Controls.Management_Windows
                 A_Login.u.UsersRep.Update(u);
 
                 ReloadData();
+                dataGrid.SelectedIndex = 0;
                 dataGrid.SelectedIndex = -1;
             }
             else
@@ -93,6 +94,9 @@ namespace Galeria.User_Controls.Management_Windows
             {
                 A_Login.u.UsersRep.Delete(obj);
                 ReloadData();
+                try {dataGrid.SelectedIndex = 0;}
+                catch (Exception)
+                {}
                 dataGrid.SelectedIndex = -1;
             }
             else

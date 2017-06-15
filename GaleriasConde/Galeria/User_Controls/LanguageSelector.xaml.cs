@@ -48,9 +48,7 @@ namespace Galeria.User_Controls
             //LangID = 4, codLang = "fr-CA", display = "Français" });//Francés Canadá
             #endregion
 
-            comboBox.ItemsSource = A_Login.u.LangsRep.GetAll();
-            comboBox.DisplayMemberPath = "display";
-            comboBox.SelectedValuePath = "codLang";
+            Loaders.LoadLangs(comboBox);
             //Por defecto, se selecciona el idioma establecido
             int i = 0;
             try

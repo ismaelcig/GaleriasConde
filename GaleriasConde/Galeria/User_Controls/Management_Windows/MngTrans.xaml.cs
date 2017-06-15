@@ -43,7 +43,7 @@ namespace Galeria.User_Controls.Management_Windows
                 txtID.Text = obj.TransactionID.ToString();
                 comboBoxArt.SelectedItem = obj.Artwork;
                 comboBoxUser.SelectedItem = obj.User;
-                txtBenefit.Text = Math.Abs(obj.money).ToString();
+                txtMoney.Text = Math.Abs(obj.money).ToString();
                 txtComment.Text = obj.comment;
 
                 if (A_Login.user.nick == "master")
@@ -60,7 +60,7 @@ namespace Galeria.User_Controls.Management_Windows
                 txtID.Text = "";
                 comboBoxArt.SelectedIndex = -1;
                 comboBoxUser.SelectedIndex = -1;
-                txtBenefit.Text = "";
+                txtMoney.Text = "";
                 txtComment.Text = "";
                 ReloadData();
             }
@@ -68,21 +68,26 @@ namespace Galeria.User_Controls.Management_Windows
 
         private void buttAdd_Click(object sender, RoutedEventArgs e)
         {
-            if (comboBoxArt.SelectedIndex != -1 && comboBoxUser.SelectedIndex != -1 && !string.IsNullOrWhiteSpace(txtBenefit.Text))//Comment can be empty
+            if (comboBox.SelectedIndex != -1 && comboBoxArt.SelectedIndex != -1 && comboBoxUser.SelectedIndex != -1 && !string.IsNullOrWhiteSpace(txtMoney.Text))//Comment can be empty
             {//Rollback(?)
                 try
                 {
-                    double benefit;
-                    double.TryParse(txtBenefit.Text, out benefit);
-                    if (benefit != 0)
+                    double money;
+                    double.TryParse(txtMoney.Text, out money);
+                    if (money > 0)
                     {
                         Transaction t = new Transaction();
-                        t.Artwork = A_Login.u.ArtworksRep.Single(c => c.ArtworkID == (int)comboBoxArt.SelectedValue);
                         t.comment = txtComment.Text;
-                        t.done = checkBox.IsChecked;
-                        t.money = benefit;
+                        t.money = money;
                         t.User = (User)comboBoxUser.SelectedItem;
-
+                        t.Artwork = A_Login.u.ArtworksRep.Single(c => c.ArtworkID == (int)comboBoxArt.SelectedValue);
+                        t.done = checkBox.IsChecked;
+                        if (comboBox.SelectedIndex == 0)
+                        { t.venta = true; }
+                        else if (comboBox.SelectedIndex == 1)
+                        { t.venta = false; }
+                        UpdateObra(t);
+                        t.registeredBy = A_Login.user.UserID;
                         A_Login.u.TransactionsRep.Create(t);//Creo el objeto Transaction
                         ReloadData();
                         dataGrid.SelectedIndex = 0;
@@ -90,7 +95,7 @@ namespace Galeria.User_Controls.Management_Windows
                     }
                     else
                     {
-                        MessageBox.Show((string)A_Login.dict["MngTr_Msg1"]);//Beneficio incorrecto
+                        MessageBox.Show((string)A_Login.dict["MngTr_Msg1"]);//Dinero incorrecto
                     }
                     
                 }
@@ -109,20 +114,25 @@ namespace Galeria.User_Controls.Management_Windows
         {
             try
             {
-                if (comboBoxArt.SelectedIndex != -1 && comboBoxUser.SelectedIndex != -1 && !string.IsNullOrWhiteSpace(txtBenefit.Text))
+                if (comboBoxArt.SelectedIndex != -1 && comboBoxUser.SelectedIndex != -1 && !string.IsNullOrWhiteSpace(txtMoney.Text))
                 {
-                    double benefit;
-                    double.TryParse(txtBenefit.Text, out benefit);
-                    if (benefit != 0)
+                    double money;
+                    double.TryParse(txtMoney.Text, out money);
+                    if (money != 0)
                     {//Es un dato válido
                         Transaction t = A_Login.u.TransactionsRep.Single(c => c.TransactionID == obj.TransactionID);
                         t.comment = txtComment.Text;
-                        t.done = checkBox.IsChecked;
-                        t.money = benefit;
-                        t.Artwork = A_Login.u.ArtworksRep.Single(c => c.ArtworkID == (int)comboBoxArt.SelectedValue);
+                        t.money = money;
                         t.User = A_Login.u.UsersRep.Single(c => c.UserID == (int)comboBoxUser.SelectedValue);
+                        t.Artwork = A_Login.u.ArtworksRep.Single(c => c.ArtworkID == (int)comboBoxArt.SelectedValue);
+                        t.done = checkBox.IsChecked;
+                        if (comboBox.SelectedIndex == 0)
+                        { t.venta = true; }
+                        else if (comboBox.SelectedIndex == 1)
+                        { t.venta = false; }
+                        UpdateObra(t);
                         A_Login.u.TransactionsRep.Update(t);
-
+                        
                         ReloadData();
                         dataGrid.SelectedIndex = -1;
                     }
@@ -149,7 +159,15 @@ namespace Galeria.User_Controls.Management_Windows
             {
                 try
                 {
-                    A_Login.u.TransactionsRep.Delete(A_Login.u.TransactionsRep.Single(c => c.TransactionID == obj.TransactionID));
+                    Transaction t = A_Login.u.TransactionsRep.Single(c => c.TransactionID == obj.TransactionID);
+                    if (t.done)//Si la transacción se había realizado, la deshace
+                    {
+                        if (t.venta)
+                        { t.Artwork.onStock = false; }
+                        else
+                        { t.Artwork.onStock = true; }
+                    }
+                    A_Login.u.TransactionsRep.Delete(t);
 
                     ReloadData();
                     dataGrid.SelectedIndex = -1;
@@ -166,8 +184,46 @@ namespace Galeria.User_Controls.Management_Windows
         {//Carga transacciones en el dataGrid
             dataGrid.ItemsSource = null;
             dataGrid.ItemsSource = A_Login.u.TransactionsRep.GetAll();
-            Loaders.LoadArtworks(comboBoxArt);
+            //Loaders.LoadArtworks(comboBoxArt);
             Loaders.LoadUsers(comboBoxUser);
+        }
+
+        private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {//Si se selecciona Venta,  carga las obras en posesión
+         //Si se selecciona Compra, carga las obras que no están en Posesión
+            if (comboBox.SelectedIndex == -1)
+            {
+                comboBoxArt.IsEnabled = false;
+                comboBoxArt.SelectedIndex = -1;
+                comboBox.ItemsSource = null;
+                comboBoxUser.SelectedIndex = -1;
+                txtMoney.Text = "";
+                txtComment.Text = "";
+            }
+            else
+            {
+                comboBoxArt.IsEnabled = true;
+                if (comboBox.SelectedIndex == 0)
+                {//Sell
+                    Loaders.LoadArtworks(comboBoxArt, true);
+                }
+                else if (comboBox.SelectedIndex == 1)
+                {
+                    Loaders.LoadArtworks(comboBoxArt, false);
+                }
+            }
+        }
+
+        void UpdateObra(Transaction t)
+        {
+            if (t.done)//Si la transacción se completa, actualiza el estado de la obra
+            {
+                if (t.venta)
+                    { t.Artwork.onStock = false; }
+                else
+                    { t.Artwork.onStock = true; }
+                A_Login.u.ArtworksRep.Update(t.Artwork);
+            }
         }
     }
 }

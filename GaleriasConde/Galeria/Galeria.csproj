@@ -103,6 +103,14 @@
     <Compile Include="Migrations\201706150659058_Migr0615.Designer.cs">
       <DependentUpon>201706150659058_Migr0615.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706151644282_Migr0615_.cs" />
+    <Compile Include="Migrations\201706151644282_Migr0615_.Designer.cs">
+      <DependentUpon>201706151644282_Migr0615_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706151733335_Migr0615_2.cs" />
+    <Compile Include="Migrations\201706151733335_Migr0615_2.Designer.cs">
+      <DependentUpon>201706151733335_Migr0615_2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Artwork.cs" />
     <Compile Include="Model\Author.cs" />
@@ -270,6 +278,12 @@
     </Compile>
     <EmbeddedResource Include="Migrations\201706150659058_Migr0615.resx">
       <DependentUpon>201706150659058_Migr0615.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706151644282_Migr0615_.resx">
+      <DependentUpon>201706151644282_Migr0615_.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706151733335_Migr0615_2.resx">
+      <DependentUpon>201706151733335_Migr0615_2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

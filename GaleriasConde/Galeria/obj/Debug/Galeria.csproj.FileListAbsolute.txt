@@ -157,11 +157,8 @@ C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\
 C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\Windows\B_Registro.baml
 C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\Windows\C_Galeria.baml
 C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\Galeria.g.resources
-C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\Galeria.Migrations.Migr0531.resources
-C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\Galeria.Migrations.Migr0607.resources
 C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\Galeria.Properties.Resources.resources
 C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\Galeria.csproj.GenerateResource.Cache
-C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\Galeria.Migrations.Migr0611.resources
 C:\Users\ismaelci\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngArts.g.cs
 C:\Users\ismaelci\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngTypes.g.cs
 C:\Users\ismaelci\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngArts.baml
@@ -171,3 +168,8 @@ C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\bin\Debug\
 C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngArts.g.cs
 C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngArts.baml
 C:\Users\ismaelci\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\Galeria.Migrations.Migr0615.resources
+C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\Windows\D_UserOptions.g.cs
+C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\Windows\D_UserOptions.baml
+C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\Galeria.Migrations.Migr0615.resources
+C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\Galeria.Migrations.Migr0615_.resources
+C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\Galeria.Migrations.Migr0615_2.resources

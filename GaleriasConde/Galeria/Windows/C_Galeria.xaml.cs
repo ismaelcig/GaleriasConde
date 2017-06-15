@@ -401,6 +401,8 @@ namespace Galeria.Windows
             sub_Trans.FontStretch = FontStretches.Medium;
             gridTrans.Visibility = Visibility.Visible;
             gridTrans.dataGrid.SelectedIndex = -1;
+            //gridTrans.comboBox.SelectedIndex = 0;
+            gridTrans.comboBox.SelectedIndex = -1;
         }
 
         private void sub_Nats_MouseDown(object sender, MouseButtonEventArgs e)

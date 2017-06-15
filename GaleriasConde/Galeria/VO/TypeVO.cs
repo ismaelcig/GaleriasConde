@@ -25,7 +25,7 @@ namespace Galeria.VO
             CargarDiccionarios cd = new CargarDiccionarios();
             string lang = cd.GetCurrentLanguage();
             Model.Type t = A_Login.u.TypesRep.Single(c => c.TypeID == id);
-            TypeTranslations tt = A_Login.u.TypeTranslationsRep.Single(c => c.TypeID == id);
+            TypeTranslations tt = A_Login.u.TypeTranslationsRep.Single(c => c.TypeID == id && c.lang == lang);
             this.TypeID = t.TypeID;
             this.codType = tt.codType;
             this.nArts = A_Login.u.ArtworksRep.Get(c => c.Type.TypeID == id).Count;

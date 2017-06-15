@@ -23,6 +23,7 @@ namespace Galeria.Other_Classes
                     NationalityVO nVO = new NationalityVO(n.NationalityID);
                     VOs.Add(nVO);
                 }
+                VOs = VOs.OrderBy(c => c.codNation).ToList();
                 comboBox.ItemsSource = null;
                 comboBox.ItemsSource = VOs;
                 comboBox.DisplayMemberPath = "codNation";
@@ -44,6 +45,29 @@ namespace Galeria.Other_Classes
                     ArtworkVO aVO = new ArtworkVO(a.ArtworkID);
                     VOs.Add(aVO);
                 }
+                VOs = VOs.OrderBy(c => c.title).ToList();
+                comboBox.ItemsSource = null;
+                comboBox.ItemsSource = VOs;
+                comboBox.DisplayMemberPath = "title";
+                comboBox.SelectedValuePath = "ArtworkID";
+            }
+            catch (Exception ex)
+            {
+                ErrorLog.SilentLog("Loaders2", ex);
+            }
+        }
+
+        public static void LoadArtworks(ComboBox comboBox, bool onStock)//Se le pasa un cB, y carga ArtworkVOs
+        {
+            try
+            {
+                List<ArtworkVO> VOs = new List<ArtworkVO>();
+                foreach (Artwork a in A_Login.u.ArtworksRep.Get(c=>c.onStock == onStock))
+                {
+                    ArtworkVO aVO = new ArtworkVO(a.ArtworkID);
+                    VOs.Add(aVO);
+                }
+                VOs = VOs.OrderBy(c => c.title).ToList();
                 comboBox.ItemsSource = null;
                 comboBox.ItemsSource = VOs;
                 comboBox.DisplayMemberPath = "title";
@@ -62,7 +86,7 @@ namespace Galeria.Other_Classes
             try
             {
                 comboBox.ItemsSource = null;
-                comboBox.ItemsSource = A_Login.u.UsersRep.GetAll();
+                comboBox.ItemsSource = A_Login.u.UsersRep.GetAll().OrderBy(c=>c.nick);
                 comboBox.DisplayMemberPath = "nick";
                 comboBox.SelectedValuePath = "UserID";
             }
@@ -82,6 +106,7 @@ namespace Galeria.Other_Classes
                     AuthorVO aVO = new AuthorVO(a.AuthorID);
                     VOs.Add(aVO);
                 }
+                VOs = VOs.OrderBy(c => c.artName).ToList();
                 comboBox.ItemsSource = null;
                 comboBox.ItemsSource = VOs;
                 comboBox.DisplayMemberPath = "artName";
@@ -103,6 +128,7 @@ namespace Galeria.Other_Classes
                     TypeVO aVO = new TypeVO(a.TypeID);
                     VOs.Add(aVO);
                 }
+                VOs = VOs.OrderBy(c => c.codType).ToList();
                 comboBox.ItemsSource = null;
                 comboBox.ItemsSource = VOs;
                 comboBox.DisplayMemberPath = "codType";
@@ -114,6 +140,20 @@ namespace Galeria.Other_Classes
             }
         }
 
+        public static void LoadLangs(ComboBox comboBox)//Se le pasa un cB, y carga Langs
+        {
+            try
+            {
+                comboBox.ItemsSource = null;
+                comboBox.ItemsSource = A_Login.u.LangsRep.GetAll().OrderBy(c => c.display);
+                comboBox.DisplayMemberPath = "display";
+                comboBox.SelectedValuePath = "codLang";
+            }
+            catch (Exception ex)
+            {
+                ErrorLog.SilentLog("Loaders3", ex);
+            }
+        }
 
 
 

@@ -72,11 +72,13 @@
 
     <system:String x:Key="Trans">Transaction</system:String>
     <system:String x:Key="Transs">Transactions</system:String>
-    <system:String x:Key="Benefit">Benefit</system:String>
+    <system:String x:Key="Money">Money</system:String>
     <system:String x:Key="Comm">Comment</system:String>
     <system:String x:Key="Done">Done</system:String>
-    <system:String x:Key="benefToolTip">If it is a sale, enter a negative value</system:String>
-	<system:String x:Key="MngTr_Msg1">Benefit value invalid. Enter a positive value if it is a sales operation. Enter a negative value if it is a purchase operation.</system:String>
+    <system:String x:Key="Operation">Operation</system:String>
+    <system:String x:Key="Buy">Buy</system:String>
+    <system:String x:Key="Sell">Sell</system:String>
+	<system:String x:Key="MngTr_Msg1">Money value invalid.</system:String>
 	<system:String x:Key="MngTr_Msg2">Once created, only master can changue Transactions</system:String>
 
     <system:String x:Key="Nats">Nationalities</system:String>
