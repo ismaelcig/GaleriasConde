@@ -13,6 +13,7 @@ namespace Galeria.Other_Classes
 {
     class Loaders
     {
+        #region ComboBox
         public static void LoadNationalities(ComboBox comboBox)//Se le pasa un cB, y carga NationalityVOs
         {
             try
@@ -154,8 +155,45 @@ namespace Galeria.Other_Classes
                 ErrorLog.SilentLog("Loaders3", ex);
             }
         }
+        #endregion
 
+        #region returnLists
+        //TODO: Delete
+        #endregion
 
+        #region Others
+        public static List<string> AdjustLblLenght(string txt, int maxLenght)//Divide un string para adaptarlo al espacio disponible en la interfaz
+        {
+            List<string> l = new List<string>();
+            /********************************************************/
+            string[] stringSplit = txt.Split(' ');
+            int charCounter = 0;
+            txt = "";
+
+            foreach (string item in stringSplit)
+            {
+                if (charCounter + item.Length > maxLenght)
+                {
+                    //txt += "\n";
+                    l.Add(txt);
+                    txt = "";//Limpia txt para la nueva línea
+                    charCounter = 0;
+                }
+                else
+                {
+                    if (txt != "")
+                    {
+                        txt += " ";
+                    }
+                }
+                txt += item;
+                charCounter += item.Length;
+            }
+            l.Add(txt);
+
+            return l;
+        }
+        #endregion
 
     }
 }

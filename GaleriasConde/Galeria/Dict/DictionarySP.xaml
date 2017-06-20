@@ -20,7 +20,7 @@
     <system:String x:Key="CloseWin">Cerrar Ventana</system:String>
     <system:String x:Key="MaximizeApp">Maximizar</system:String>
     <system:String x:Key="MinimizeApp">Minimizar</system:String>
-    <system:String x:Key="Error">Ha ocurrido un error, si el problema persiste, por favor, póngase en contacto con nosotros en GaleriasConde@support.com</system:String>
+    <system:String x:Key="Error">Ha ocurrido un error, si el problema persiste, por favor, póngase en contacto con nosotros en support@galerias.conde.com</system:String>
     <system:String x:Key="ID">ID</system:String>
     <system:String x:Key="Next">Siguiente</system:String>
     <system:String x:Key="Ok">Confirmar</system:String>
@@ -52,7 +52,7 @@
 <!--wGaleria-->
     <system:String x:Key="CGtitle">Galerías Conde</system:String>
     <system:String x:Key="CGpst1">Ver Obras</system:String>
-    <system:String x:Key="CGpst2">Ver Autores</system:String>
+    <system:String x:Key="CGpst2">Subastas</system:String>
     <system:String x:Key="CGpst3">Mensajes</system:String>
     <system:String x:Key="CGpst4">Gestión</system:String>
     <system:String x:Key="CGpst5">Informes</system:String>
@@ -107,8 +107,8 @@
     <system:String x:Key="date">Fecha</system:String>
     <system:String x:Key="dimensions">Dimensiones</system:String>
     <system:String x:Key="img">Imagen</system:String>
-	<system:String x:Key="ofdFilter">Imágenes (*.png;*.jpeg;*.jpg;*.gif)|*.png;*.jpeg;*.jpg;*.gif|Todos (*.*)|*.*</system:String>
-	<system:String x:Key="MngArt_Msg1">Sólo puedes añadir archivos .png, .jpg, .jpeg or .gif</system:String>
+    <system:String x:Key="ofdFilter">Imágenes (*.png;*.jpeg;*.jpg;*.gif)|*.png;*.jpeg;*.jpg;*.gif|Todos (*.*)|*.*</system:String>
+    <system:String x:Key="MngArt_Msg1">Sólo puedes añadir archivos .png, .jpg, .jpeg o .gif</system:String>
 
     <system:String x:Key="CG4Add">Añadir</system:String>
     <system:String x:Key="CG4Mod">Modificar</system:String>
@@ -121,6 +121,17 @@
     <system:String x:Key="UPMsg">¿Está seguro de que desea salir?</system:String>
     <system:String x:Key="UPCaption">Confirmación</system:String>
     <system:String x:Key="UPButton">Salir</system:String>
+    <system:String x:Key="ofdFilterIco">Imágenes (*.ico)|*.ico|Todos (*.*)|*.*</system:String>
+    <system:String x:Key="MngUP_Msg1">Sólo puedes añadir archivos .ico</system:String>
+    
+    <!--AddChat-->
+    <system:String x:Key="AClbl">Nuevo Chat con:</system:String>
+    <system:String x:Key="ACtxt">Nick Usuario</system:String>
+    <system:String x:Key="ACbutt">Crear Chat</system:String>
+    <system:String x:Key="ACbutt2">Añadir Usuario</system:String>
+    <system:String x:Key="ACbutt3">Cancelar</system:String>
+    <system:String x:Key="MngAC_Msg1">Debes introducir un usuario existente.</system:String>
+    <system:String x:Key="MngAC_Msg2">Ya existe un chat con estos usuarios.</system:String>
     
     <!--UserOptions-->
     <system:String x:Key="UOtitle">Opciones de Usuario</system:String>

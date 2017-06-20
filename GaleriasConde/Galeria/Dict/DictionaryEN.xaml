@@ -20,7 +20,7 @@
     <system:String x:Key="CloseWin">Close Window</system:String>
     <system:String x:Key="MaximizeApp">Maximize</system:String>
     <system:String x:Key="MinimizeApp">Minimize</system:String>
-    <system:String x:Key="Error">An error has occurred, if the problem persists, please, contact us at GaleriasConde@support.com</system:String>
+    <system:String x:Key="Error">An error has occurred, if the problem persists, please, contact us at support@galerias.conde.com</system:String>
     <system:String x:Key="ID">ID</system:String>
     <system:String x:Key="Next">Next</system:String>
     <system:String x:Key="Ok">Ok</system:String>
@@ -52,7 +52,7 @@
     <!--wGaleria-->
     <system:String x:Key="CGtitle">Galerías Conde</system:String>
     <system:String x:Key="CGpst1">Artworks</system:String>
-    <system:String x:Key="CGpst2">Authors</system:String>
+    <system:String x:Key="CGpst2">Auctions</system:String>
     <system:String x:Key="CGpst3">Messages</system:String>
     <system:String x:Key="CGpst4">Management</system:String>
     <system:String x:Key="CGpst5">Reports</system:String>
@@ -121,6 +121,17 @@
     <system:String x:Key="UPMsg">Are you sure you want to exit?</system:String>
     <system:String x:Key="UPCaption">Confirmation</system:String>
     <system:String x:Key="UPButton">Log Out</system:String>
+    <system:String x:Key="ofdFilterIco">Image files (*.ico)|*.ico|All files (*.*)|*.*</system:String>
+    <system:String x:Key="MngUP_Msg1">You can only add .ico files</system:String>
+
+    <!--AddChat-->
+    <system:String x:Key="AClbl">New Chat with:</system:String>
+    <system:String x:Key="ACtxt">User Nick</system:String>
+    <system:String x:Key="ACbutt">Create Chat</system:String>
+    <system:String x:Key="ACbutt2">Add User</system:String>
+    <system:String x:Key="ACbutt3">Cancel</system:String>
+    <system:String x:Key="MngAC_Msg1">You must enter an existing user.</system:String>
+    <system:String x:Key="MngAC_Msg2">Chat with these users already exists.</system:String>
 
     <!--UserOptions-->
     <system:String x:Key="UOtitle">User Options</system:String>

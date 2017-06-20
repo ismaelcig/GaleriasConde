@@ -13,6 +13,7 @@ namespace Galeria.Model
         public User()
         {
             Transactions = new HashSet<Transaction>();
+            Chats = new HashSet<Chat>();
             //Conversaciones = new HashSet<Conversacion>();
             //Mensajes = new HashSet<Mensaje>();
             //mantenerSesion = false;
@@ -36,6 +37,7 @@ namespace Galeria.Model
         public virtual Nationality Nationality { get; set; }
         public virtual Profile Profile { get; set; }
         public virtual ICollection<Transaction> Transactions { get; set; }
+        public virtual ICollection<Chat> Chats { get; set; }
         ////public virtual ICollection<Conversacion> Conversaciones { get; set; }
         //public virtual ICollection<Mensaje> Mensajes { get; set; }
 

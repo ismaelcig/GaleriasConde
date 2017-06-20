@@ -1,0 +1,40 @@
+﻿<Window x:Class="Galeria.Windows.E_Sell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Galeria.Windows"
+        mc:Ignorable="d"
+        xmlns:Controls="clr-namespace:Elysium.Controls;assembly=Elysium"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:metro="http://schemas.codeplex.com/elysium"
+        xmlns:params="http://schemas.codeplex.com/elysium/params"
+        xmlns:User_Controls="clr-namespace:Galeria.User_Controls"
+        params:Design.Theme="Light"
+        params:Manager.Theme="Light"
+        params:Manager.AccentBrush="BlueViolet"
+        params:Manager.ContrastBrush="BlanchedAlmond"
+        TextElement.FontWeight="Bold"
+        TextElement.FontSize="15"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+        Title="Vender Obra" Height="395.864" Width="437.594">
+    <Grid>
+        <Grid x:Name="g1">
+            <!--Pregunta si quiere vender una de estas obras-->
+
+        </Grid>
+        <Grid x:Name="g2">
+            <TextBox x:Name="txtTitle" MaxLength="125" HorizontalAlignment="Left" Height="40" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="410" materialDesign:HintAssist.Hint="Título" materialDesign:HintAssist.IsFloating="True" Style="{StaticResource mdTxt}"/>
+            <ComboBox x:Name="comboBoxAut" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Height="40" Width="182" materialDesign:HintAssist.Hint="Autor" materialDesign:HintAssist.IsFloating="True" Style="{StaticResource mdCombo}"/>
+            <TextBox x:Name="txtAut" HorizontalAlignment="Left" Height="40" Margin="197,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="223" materialDesign:HintAssist.Hint="¿No aparece? Escríbelo aquí" materialDesign:HintAssist.IsFloating="True" Style="{StaticResource mdTxt}"/>
+            <ComboBox x:Name="comboBoxType" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" Height="40" Width="182" materialDesign:HintAssist.Hint="Tipo" materialDesign:HintAssist.IsFloating="True" Style="{StaticResource mdCombo}"/>
+            <TextBox x:Name="txtType" HorizontalAlignment="Left" Height="40" Margin="197,90,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="223" materialDesign:HintAssist.Hint="¿No aparece? Escríbelo aquí" materialDesign:HintAssist.IsFloating="True" Style="{StaticResource mdTxt}"/>
+            <TextBox x:Name="txtinfo" HorizontalAlignment="Left" Margin="10,130,0,56" TextWrapping="Wrap" Text="" VerticalAlignment="Stretch" Width="226" AcceptsReturn="True" VerticalContentAlignment="Top" materialDesign:HintAssist.Hint="Descripción/Comentario" materialDesign:HintAssist.IsFloating="True" Style="{StaticResource mdTxt}"/>
+            <Border BorderBrush="Black" BorderThickness="1" Margin="245,135,0,0" Height="175" Width="175" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Image x:Name="img"/>
+            </Border>
+            <Button x:Name="imgSelector" Content="Seleccionar img" HorizontalAlignment="Left" Margin="282,316,0,0" VerticalAlignment="Top" Width="110" Height="40" Click="imgSelector_Click" Background="IndianRed" BorderBrush="Brown" FontWeight="Bold"/>
+            <Button x:Name="button" Content="Enviar propuesta" HorizontalAlignment="Left" Margin="40,316,0,0" VerticalAlignment="Top" Width="152" Height="40"/>
+        </Grid>
+    </Grid>
+</Window>

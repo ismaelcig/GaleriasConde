@@ -8868,130 +8868,97 @@
             <summary>
             Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbFunctionExpression" /> that invokes the canonical 'IsSimpleGeometry' function with the specified argument, which must have an Edm.Geometry result type. The result type of the expression is Edm.Boolean.
             </summary>
-            <returns>A new DbFunctionExpression that returns a Boolean value indicating whether geometryValue is a simple geometry.</returns>
-            <param name="geometryValue">The geometry value.</param>
-        </member>
-        <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialBoundary(System.Data.Entity.Core.Common.CommandTrees.DbExpression)">
-            <summary>
-            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbFunctionExpression" /> that invokes the canonical 'SpatialBoundary' function with the specified argument, which must have an Edm.Geometry result type. The result type of the expression is Edm.Geometry.
+            <returns>A new DbFunctionExpression that returns a Boolean value indicating whether gĞoØöb~+_¡#”1W	u2§Ìkñ1%Æy2x‚ƒ‘çòa¬eƒôMD*èËùXˆ\û»¬‚@„È¨qÅqPoğà2í¦=ã!&Uõ‰f¹wQéHo”ùv›u:l¯©«{g—%d`d\‚X8@>™Á¨ü³Ç°p¨„b‚dWriù~¾ëÅA$©ĞîŞhíÌ[ÇàÆµÈ¤bÉäo›İthÃ[A_àm¾ôfùH–µ®tÆèÊ^û¨R#£V-††?OôîB´ñµ0t1Ú$bAÜÀÿØ»1ÛgùYÆpˆÖiŠL–h^*a‹	rÚH~ˆ{Ş†´Œ„¿>_R¿&Ğ° ádC¶)N”¨•Á2ºã@Şl<‹8jbIú¡¬·ïÌa)º¡¦=äCIøúäThÖy)D_e)z0H .›"{MO-•#>0»fÊT/Œ=·K-(
+.Óâäo„9l>è¯®ÀÈÇz?ã bÖ>˜JMTp(òÉà+‰²y<ÙÅø°¹àZ–®ıÇÄëJõwãâ>Û"`‰UĞ÷Ò¼tà…À}ôa¸†—A–¥ÿo	¢'÷ÅÂd÷d}ÈÉ¦MÂg&œÎÒÚ¸#;ù>Øúf³±¢C›²?|ÃÉv	¨,he specified argument, which must have an Edm.Geometry result type. The result type of the expression is Edm.Geometry.
             </summary>
             <returns>A new DbFunctionExpression that returns the the boundary for geometryValue.</returns>
             <param name="geometryValue">An expression that specifies the geometry value from which the SpatialBoundary value should be retrieved.</param>
         </member>
-        <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.IsValidGeometry(System.Data.Entity.Core.Common.CommandTrees.DbExpression)">
-            <summary>
-            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbFunctionExpression" /> that invokes the canonical 'IsValidGeometry' function with the specified argument, which must have an Edm.Geometry result type. The result type of the expression is Edm.Boolean.
-            </summary>
-            <returns>A new DbFunctionExpression that returns a Boolean value indicating whether geometryValue is valid.</returns>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.gëÖiËéo_©Eb©ÚÔ°ı³n?ÿu­š‡·+àŞx·‚ñî»Nîfõßaì×^E‚#Z¶·qª*½ÇîŸ±÷nM[|ğÚÀh9é ­Öé]}®ŞÏogÑ2±éh¿PLršoÒÁÙf©™]ï#¥fä¨Jq5¿ûsZ=u©é• F>@€A‡!F`—;cÎÅ’n<<•Ha8¡€pP#(t# 0‹æî\ÿı"†Œÿõ§~?ŠyüK}şÿ>·îÿû\g¦ã]lMªêåéãyŸ—¿«w?Ÿ?Ÿ¸öø|»'o¼ªqÿ™à€Aî@êªïáP:ÀpE—aöxòõXîrûÍ/èßB­È’ÆéÚ¸(6êŠ0ŸÃzÛù¡à@@66!Õ˜âPö‰8ûğ¿<Æo"YFõfPŠvÀÓı$şGû€?HŠ‡ˆÁ™ª	ì=¿=ã€9–_LhÌÏj­-mwôt~j,=^!ûù;¼+2ÖŸñü‘©)VP¾‘Æêˆ¸ï4ì™P“C5ÙÿğoYfÒ.‘H@Ùß=4
+fäg^òiE¥,™Q­ÈG²Èïpé±ÉqæbÓe€Øò_Ëö±Ö&o‚yè‹Rì€Bop?+Rü@/c¿KH“­indicating whether geometryValue is valid.</returns>
             <param name="geometryValue">An expression that specifies the geometry value which should be tested for spatial validity.</param>
         </member>
         <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialEquals(System.Data.Entity.Core.Common.CommandTrees.DbExpression,System.Data.Entity.Core.Common.CommandTrees.DbExpression)">
             <summary>
-            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbFunctionExpression" /> that invokes the canonical 'SpatialEquals' function with the specified arguments, which must each have an Edm.Geography or Edm.Geometry result type. The result type of spatialValue1 must match the result type of spatialValue2. The result type of the expression is Edm.Boolean.
-            </summary>
-            <returns>A new DbFunctionExpression that returns a Boolean value indicating whether spatialValue1 and spatialValue2 are equal.</returns>
+            Creates a <see cHş,…ó·k=ºëë˜ôô¯¾SFƒXGìu¿²³>[xp¡Òİ³ß1`vù˜ñ‡ö œ¦Ñ=–ÎSÜ¦±°Ù’g^‹„Î»LJDN³Q¸$âYÅ}ë±ØıQ_…éq„Ì·ÈV7£Z)›®^ÓkA[ËbçÈÀ„\¨n9HÀÑò*gèÄy­Ò¤»G¶¤/xn™Û/d4u!¼Ğƒ[W•ŠšKn=i¼”¨šYµƒêë®‹Ö¾cB€	­ÿœ›{R»Sx>B¿£a1¦*B§|¯¿4û&±éï54‘…ÉsÈRmEğ&–úå¾³"Ìº	Ÿ¨_Íg—rcô‘uÛNA±Y{.)éÍåv½•„	=Í¤klêùîI+	2¯—ÊÃp§h ÂÇ®k(Jp6ë»ÇõQ/­> ­«a÷é
+äz(z)¿™)œ˜ —#O¦‚aú­R¯ÈEƒ5UòÏo‘Ó¾’ØÍœÓIšeãtò©·‚	ó1ß„i cêÃ¶Â†ÀàBo€ˆ·ÌÄ·ô>C{|lƒ%• +•#Ï·ÎÄt§Œ1ˆ=
+ÀlşÖc|´› ÅfQR‰Ğ¢ \T|÷Â<ê5ëPÜªê¿É\À5
+Êù|¯Ê2„XJáàË~Œ8hZ@ïXBdŸual.</returns>
             <param name="spatialValue1">An expression that specifies the first spatial value.</param>
             <param name="spatialValue2">An expression that specifies the spatial value that should be compared with spatialValue1 for equality.</param>
         </member>
-        <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialDisjoint(System.Data.Entity.Core.Common.CommandTrees.DbExpression,System.Data.Entity.Core.Common.CommandTrees.DbExpression)">
-            <summary>
-            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbFunctionExpression" /> that invokes the canonical 'SpatialDisjoint' function with the specified arguments, which must each have an Edm.Geography or Edm.Geometry result type. The result type of spatialValue1 must match the result type of spatialValue2. The result type of the expression is Edm.Boolean.
-            </summary>
-            <returns>A new DbFunctionExpression that returns a Boolean value indicating whether spatialValue1 and spatialValue2 are spatially disjoint.</returns>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialDisjoint(System.Data.Entity.Core.Common.CommandTrees.DbExpression,System.Data.Entity.Core.Common.ComlˆÖÙ2µá6[M†ˆì3zó…—ğpŠ…!…Á—€€—…c1Š—Œ¬–šVk¯k–Q´A°X0f—ŒÓÀÄP.„€§`éÿÏ|ä±_RÒ'àÈ´“¹ªoÏoï)/½º×çÿ9ıJÚª`"ÛÖíïu,[ü0ıºb…ò¥¶m‹Ú£ÿIõşèø¦XU©á[tüì¶æ/n	ÎÖx‘œsŒÈ[¿Õ¢!Y9¨it([‘ü9KF†ãiIñèûï¾`àCYw¨&Ú7nAiê‹ò	r€Ñ÷Å‰ûVª¸D…
+wô‡Šš‡ãÌpÅ.ÁoÙÊ¡:r8U¢>1¼?r†t/A=<ßç	ğ(ÑşäGR%y*$¼.„Bâ0àİıeŒX»ãuà¸OÕîû‡tüšBhõäów *à	.CĞ×óÕh»	9Ü#jù§ãó1%¡Zğ)Çôú£”s¢p¶[ŠÜşMb'@,ƒäã€ÒoM ÂD!P‰H§ñ‡ Qx øjj±t7h=ï%m9~ƒÌØlòE»ë1Î‡Ó}r`8Æº‰¡¼%b‰Ñök1
++¹8#?±«t‚ğ~~ª¡DKFøŞ³©È$Òfœä	‚&œÓ‡îü-fi6¯ÔÖÖ¡çÖ1şveturns a Boolean value indicating whether spatialValue1 and spatialValue2 are spatially disjoint.</returns>
             <param name="spatialValue1">An expression that specifies the first spatial value.</param>
             <param name="spatialValue2">An expression that specifies the spatial value that should be compared with spatialValue1 for disjointness.</param>
         </member>
-        <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialIntersects(System.Data.Entity.Core.Common.CommandTrees.DbExpression,System.Data.Entity.Core.Common.CommandTrees.DbExpression)">
-            <summary>
-            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbFunctionExpression" /> that invokes the canonical 'SpatialIntersects' function with the specified arguments, which must each have an Edm.Geography or Edm.Geometry result type. The result type of spatialValue1 must match the result type of spatialValue2. The result type of the expression is Edm.Boolean.
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialInt¸Ûo« Ô³µ’88—"‰ ‚
+÷4ŒÌ¸+!»‘]¢==Í1nGÔH0`ôÏè}(( ‰.íê±×øE_z°5F|©\VŠu…~îCÉÅ*„SÔöˆ1XÒ˜9ÃÄ´£à;½Ê¥yi4£Õ°ô|8—v.ş¡pdü–ÃC¬°a~í4E‹íË6NÍÁzã_hw¤
+ı©~dµ¢Â‹ç;Í˜{k!gFFì€Úa“^G%cÕ4nÌ4jÉµ·”3s2µÊÔ·jåÍ2?5kúb@Ã¢ìÌ6ækMˆúÚ6¤¼˜…R°
+*œ¸“‘Ã(Û†úoD7úŸ¾‡rŸKEOo«—¼?mj	yÂy‘‰-×YeB¶ÍŞ¸ĞLÒqÍEšÂs7éôÅ’÷AÊ8#õwJÈéÑØh/q`\æ	}¹l—ñÚt´H¿)[t·”ÜƒLœ?•ãQ•áYğÊÇŠÂx¬n8yrlˆàTŞ!Šº¦ 5¨ÍLš‚VtP’Ü­nåşã/a¦©«ÛÔRªá‰‡ş¬æñ.)9De^¦ßaOşP¥¯ÊH”,6F#r!¥g˜b2Ô!×Fp <Ûtc<ƒ={ÛüqpèâFHÿ"×¾ [Äğş²âmD——Š"ÔÎç} "ıÿssion is Edm.Boolean.
             </summary>
             <returns>A new DbFunctionExpression that returns a Boolean value indicating whether spatialValue1 and spatialValue2 intersect.</returns>
             <param name="spatialValue1">An expression that specifies the first spatial value.</param>
             <param name="spatialValue2">An expression that specifies the spatial value that should be compared with spatialValue1 for intersection.</param>
         </member>
-        <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialTouches(System.Data.Entity.Core.Common.CommandTrees.DbExpression,System.Data.Entity.Core.Common.CommandTrees.DbExpression)">
-            <summary>
-            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbFunctionExpression" /> that invokes the canonical 'SpatialTouches' function with the specified arguments, which must each have an Edm.Geometry result type. The result type of the expression is Edm.Boolean.
+        <member name="M:System.Data.‹uß„¯ê®M1#âøÕ­p-@’Áİò#5ŞS'Ø[ô+1ŸIÄkªÓ§øa…ÂÎ#Ğ
+ï´‚©94ø¨I©&™ù-Ğ'Ó­³Z.AÂ rK€è¸ãæO˜~–4jó0~_›3ƒøÈIßŸ½šwRÎßaóC=¸ÑÊ$”+ûù’†3iól$‚Œ.#ÜËúÈ5Sşv€y{ÈåÖLÊÈgd7¤ªùµCöQ·úĞÖ€f;ï†Ù@·ÉÅèh33Q<XY[9çÁˆ†ÍµÅ‡{Éœ—¿r~RÙ¡ÁYÂÕ\åWiÚsbYúËõ‰Øt$ø»œ»IŒ³›4íÎCei€²¨™aQó>*ÔcRÑOÔÌ¶¤yb£¢4æ
+Ò«DCvBšdí •P8-la…¶£û£#<<nO†\Ê?İ!BÍnîÙtQ<nñŠ~ìA±x‰tPÒ^vÏZ†ôGøå­k‡Å¬X»\ÌÎQ©	ªáÑxU§„¨d$leÒÅw‘JE²iäyû-ˆ)5M·E†k‰	0Ÿ-ä<hŸí?ñJ;ßÒéˆ±MCºfLáCoĞ5°0R­#ZÊÓ§ÑÌl¾ÛM
+áPj/Q¿ }‹4Ñ_Y˜øx¡;¾ã,á¦::ÓŞ’°±7UBoolean.
             </summary>
             <returns>A new DbFunctionExpression that returns a Boolean value indicating whether geometryValue1 touches geometryValue2.</returns>
             <param name="geometryValue1">An expression that specifies the first geometry value.</param>
             <param name="geometryValue2">An expression that specifies the geometry value that should be compared with geometryValue1.</param>
         </member>
-        <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialCrosses(System.Data.Entity.Core.Common.CommandTrees.DbExpression,System.Data.Entity.Core.Common.CommandTrees.DbExpression)">
-            <summary>
-            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbFunctionExpression" /> that invokes the canonical 'SpatialCrosses' function with the specified arguments, which must each have an Edm.Geometry result type. The result type of the expression is Edm.Boolean.
-            </summary>
+        <member name="M:System.Data.Entity.Core.Common.CommandTre­ïÈš…‘9t£ë7“–.¯
+QÕ”2báeöè^ıÎĞÒ‹ÛfÇd‡ºñ¯ã0Ûõ¨r¼œÂHv+w-€j{ŒîwSï¤+B:V
+Š‚ÍW1¸­ìjqT9|áó¤ã	+	Ïéü[èÃÛDÉ/šüĞF£ ¶ß©&ï;Œî¡ÂY›à›ƒ°ø=ÎÎÒÇÜêZK¬wWà4kD)6Å:Má)Ä¹q[¿h¨¤…çH‘qtW£½3JW€Wùö­ŞôætsGÆÕ‚/ê¬ª…¡¤@İ¥•ú•Ô‡h6á6bÊŠ7ì„.€k¯‘›³TF–Gjä@e°§snkEGÉuAaØWO·öG"+Mc’5¸zÂ!}<£3b<aÄDZpˆ(`G8îÜ/ÔÜJèí7Ó‡¢Ôè§¹¿y1Å<ÉTBT¨ÿ°ÊFnÖFŠğc–‘%¬ÏìÈ=à D÷•Y!)F xÖH›õpü£8èşe_ş0ğÇŠúÿDvöwr¹GIÆùÀJeS¿/£c20ÿ±³º¡±ı?d&âPJ¥0$6?%V®'yáuÚËnUzUuÊ/>ÿw¯ÇÉ±é&&.JÖî‘,ŞÌ¼ı®-m5Yş†ì.»ö•¹kìÈÃÚì#Ò_¹éº~ı­V“İ®»ZûŞry>
             <returns>A new DbFunctionExpression that returns a Boolean value indicating whether geometryValue1 crosses geometryValue2 intersect.</returns>
             <param name="geometryValue1">An expression that specifies the first geometry value.</param>
             <param name="geometryValue2">An expression that specifies the geometry value that should be compared with geometryValue1.</param>
         </member>
-        <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialWithin(System.Data.Entity.Core.Common.CommandTrees.DbExpression,System.Data.Entity.Core.Common.CommandTrees.DbExpression)">
-            <summary>
-            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbFunctionExpression" /> that invokes the canonical 'SpatialWithin' function with the specified arguments, which must each have an Edm.Geometry result type. The result type of the expression is Edm.Boolean.
-            </summary>
-            <returns>A new DbFunctionExpression that returns a Boolean value indicating whether geometryValue1 is spatially within geometryValue2.</returns>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilde½XMQQûÉdM•~>ô'uÔ­®h„©¸c¤‹ßÒô£…ª-Ÿ}ô¦éıPñ—ÖãŸŒ®VÃ”×W½ş%{{<z¼ÇËªuÌNï¯Ûí5$Ó¼É–úô"cóãŠéóŸ€¡²Ä ûõ›½R«F_şœY2şøO÷¯Uº¾=†Ãü‘p\±ÜÆXoÖ0Œ¾•Ãj„¹YQUTÁ+›µ¢,“±Ş&úåeæ›XoAÜškb$°¯7ìÿÑ‰æz% YØª‰F•ºû•ËI9Ğ1#ğ¾†)Ïçfº¯D“UÅQ\ûô4îèş4Û–·nÒ³É\¬g”óŸ€œ¼äÌò“¨6/ò²9À!„ÑŠàGØ4Jjè. É5!î~°4²H²è´ƒı¸åã 8ØädßÂ¦ŒÅã"ˆ„¾À¡5PUÁí]‹ Ù¤ú‚-û£5@¶=-í0İ…ávªJ2	£½Ï‰Qö(B%|å!ÓlA	Ì¦œDB	ø(€‚ß¸e±TĞú<¤E­ÉBo~F“8¥æbš\2•Šuaé9B¬Ô*r5|NW¡ ÚY0ÙUAZş±”×#KÇ)ğräZHdûàãÒ »%©Ü'"ö}@ÄŠ|#ÑÉëDç;ÚËÓàxüjÚ. &«urns>A new DbFunctionExpression that returns a Boolean value indicating whether geometryValue1 is spatially within geometryValue2.</returns>
             <param name="geometryValue1">An expression that specifies the first geometry value.</param>
             <param name="geometryValue2">An expression that specifies the geometry value that should be compared with geometryValue1.</param>
         </member>
-        <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialContains(System.Data.Entity.Core.Common.CommandTrees.DbExpression,System.Data.Entity.Core.Common.CommandTrees.DbExpression)">
-            <summary>
-            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbFunctionExpression" /> that invokes the canonical 'SpatialContains' function with the specified arguments, which must each have an Edm.Geometry result type. The result type of the expression is Edm.Boolean.
-            </summary>
-            <returns>A new DbFunctionExpression that returns a Boolean value indicating whether geometryValue1 spatially contains geometryValue2.</returns>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdÏ§l“úw{É!Ì^ã6N-oï‡'æl±‡D?›Á?“6´Ş~yÜ&ŸÇ9=n]ñ2É[Ã£±†ş§Œ½?÷~eÿÇ0ùN\Ï_Ş€?tÄ¥ş	8‰;§g±C>}UN5ˆù÷SûôÎlß×Ú“NAis»ÁCÎÚÌ‰Én¨Fúé¡æêç¬U¡¦ÉM	« Œ)Ä†lB(î0<!"2©Xæ’l
+EÉÎÓ¬9æ#áµfæã_E úÊ[¡Ó¯Ì²Ò‹ßÓìŸ÷l ĞöAÿìü³£Oı­?é¿Ñ'_ã‹·ù=ToÀ?‰WìôÚâ=DkÆeAîy|Iı€T¨ÂöõË˜ş®§	Ü9}š_¾…ñç|)ïH?b6dÿğë1Oë²ÅïùƒCL4Ë­éã4Mo~ødhƒ8€MÀd“v¤ş6âI @ríÓâ³¨ßo:d·Ud=ì3¿øx³èËÅy.KENLñóÈƒáÏ vvåÖ8¨ì(ØœóÉ4Mï”©~¾"|©3ÜÙ™™ïk5>0+ĞÂôç”¥É#¦ÙBD¶1\6e|² ™ì®ĞšÒ‡]cUÜGxÁü~°ÕœlÜ'àX$ïö `Û½Cæ¤ò08ÿû|{£ş¡§/‰€€lĞnctionExpression that returns a Boolean value indicating whether geometryValue1 spatially contains geometryValue2.</returns>
             <param name="geometryValue1">An expression that specifies the first geometry value.</param>
             <param name="geometryValue2">An expression that specifies the geometry value that should be compared with geometryValue1.</param>
         </member>
-        <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialOverlaps(System.Data.Entity.Core.Common.CommandTrees.DbExpression,System.Data.Entity.Core.Common.CommandTrees.DbExpression)">
-            <summary>
-            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbFunctionExpression" /> that invokes the canonical 'SpatialOverlaps' function with the specified arguments, which must each have an Edm.Geometry result type. The result type of the expression is Edm.Boolean.
-            </summary>
-            <returns>A new DbFunctionExpression that returns a Boolean value indicating whether geometryValue1 spatially overlaps geometryValue2.</returns>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.Spati.]=V1q¹=Ş),çŒPˆCM7ÿ—tÑ,:/CTä‡ÇÉ$ëåÅ*›i·2—Íï0ƒ5Ä
+Z£È«3ˆDÌ¾ „Ö*wĞ‹<î²/t,³|áƒ?d•üV1“-St9cÇú×¯U!cæ!M†|_´T	xĞœÆƒG4<ÁÒ{^:BãVÈ¸ƒ7´fHT˜nø‡wŠE)W(­	HN€¶ûÈBndÿ"E»HõÂ‚ş§O{ ú…Ñ5YØc Tÿ)nô,À×©! Jÿ\¶GDB{Ú=Ôv}u5‘/Ë{²÷øpcW Ú÷¾nÄ‡ ‘~=Å´ªY×ÿi”©@8¸åK{›şìøè0¨ tGÁl4+şCT°•ÿaiÒ±ÿ32ÓM§ŞDşéİ„€ßÇ´­úÑPú›¥À?æJùÊ„/ ˜ê]ÜÙğYûü{R®Ò®IMü=ÜO–¬­ÈÙäşğæds7®ø´±—²7ü×hG|¯;ûö¿ë=û¼?ó_´çÿı×t]›šóûİ®ìéO¹¾–¹c×Ö &ÃDh8N«à96¹@¹eáòü[ÅÓÓ7sõß1mv­ïé	]ÉÈ²hãfºmè&û[s]şÓİJÊóİnÌNÅ—˜t$Şô¦F'Ğ²|„¿„`	˜ÂK†EQ!‘ that returns a Boolean value indicating whether geometryValue1 spatially overlaps geometryValue2.</returns>
             <param name="geometryValue1">An expression that specifies the first geometry value.</param>
             <param name="geometryValue2">An expression that specifies the geometry value that should be compared with geometryValue1.</param>
         </member>
-        <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialRelate(System.Data.Entity.Core.Common.CommandTrees.DbExpression,System.Data.Entity.Core.Common.CommandTrees.DbExpression,System.Data.Entity.Core.Common.CommandTrees.DbExpression)">
-            <summary>
-            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbFunctionExpression" /> that invokes the canonical 'SpatialRelate' function with the specified arguments, which must have Edm.Geometry and string result types. The result type of the expression is Edm.Boolean.
-            </summary>
-            <returns>A new DbFunctionExpression that returns a Boolean value indicating whether geometryValue1 is spatially related to geometryValue2 according to the spatial relationship designated by intersectionPatternMatrix.</returns>
+        <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialRelate(System.¬âaÍË‡DXU*Ğt*°èêEN?¢È^üe^’(„ªNr‘„ğsØš0f§Å¾"Ió|ï¾kéÑ´U?O&m;Ÿâ¿wçX©ËÄóáúA2>ôföI¹Ô÷¸KëRRL+É €q&Í¤ìzwëÁhj‘¾èÜJ®8ªæs»Øy§KaÖàÿ!ÄiÒh(;qÊÀ ªşĞ¹rìøéÉsF{5¡kW­Úíe‚$	şlUş-ô˜„=ŞH(%¬‚X‚à­Ì	š/`|JşŸ NœbCE[¯gÖÒ&¦:Bfrq­‚G%Ë@F^•7È[Ï¯óIÙAôê_`ˆÅ)2øÎ#>Ooä+k %˜`R\Õê#ášˆC¾T^kÊ|VÌ±RÖ»òÄÈÄ9[k ú*ˆ2dÂ…‡İÁ+²4–…x±TK´²¥™Ÿ•¯.<k4|cª[(¼Îm‰ ”écbag~(–‹kü<ªQùW!Ïƒf›/¯ĞûªN&ì
+ĞNd*Ñhï\R‹_“Ã<;spº/.^$aÏD0J\iDdY˜³Fšíäüic”¹÷tr#¼!äaF/­õ6oÊ
+L†½ó8¼¨ÒzzÁA©Áxkµ‘·5«µ…5“ÏÜ8†C°\Ø      <returns>A new DbFunctionExpression that returns a Boolean value indicating whether geometryValue1 is spatially related to geometryValue2 according to the spatial relationship designated by intersectionPatternMatrix.</returns>
             <param name="geometryValue1">An expression that specifies the first geometry value.</param>
             <param name="geometryValue2">An expression that specifies the geometry value that should be compared with geometryValue1.</param>
-            <param name="intersectionPatternMatrix">An expression that specifies the text representation of the Dimensionally Extended Nine-Intersection Model (DE-9IM) intersection pattern used to compare geometryValue1 and geometryValue2.</param>
-        </member>
-        <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialBuffer(System.Data.Entity.Core.Common.CommandTrees.DbExpression,System.Data.Entity.Core.Common.CommandTrees.DbExpression)">
-            <summary>
-            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbFunctionExpression" /> that invokes the canonical 'SpatialBuffer' function with the specified arguments, which must have a Edm.Geography or Edm.Geometry and Edm.Double result types. The result type of the expression is Edm.Geometry.
+            <param name="inter¥÷ûÿâü]ÿ!õ‘o£órÿ'VJ}˜¹™şF44.^>÷GyŒ­iÙí0{™ôŸÏ,“ı}ïüüõ•7€ùğÉéğ÷ÃP}c`ÑXÆ¯Sğ8K¯@`·n¶å9
+gÉ_(«ÇæµÅxr‰•jÙ2ÅuœDeörUïa„x½x`=RÁŸjC‡ÅİÉ‡ñ\ìµõòkÙ«×ójÖ\
+wFzãTƒ¦À.;LÔºŠÀ™¦ÇQÌ	M	U™	ö´yjƒ Ø¬„0…«KË$µ\w3h5[@CµAµ@ üÓs†{ !.ƒ»ıY 3z ?XİÈĞTåûN Äÿ;±HLªQX¨fJÀÚ¬Œàô,Çû'`İ×‡[Ró»ş‡¼<—cãi³KDXÍ¯	Şß7ER÷:—ú“gH§’Nyø§]Z1ŸOÖ­-¾¿æ•Œx¾lêó 7XL!—ÂQ`X`Ax˜aKTî‘ó0A›tŸ’Û««¥!äİàÓÃ¯ô&Šj°ú3Ó$o[y¬™ÎŠï{À‡ª$÷xkİe°Ìxı:éóş¾˜sĞĞĞ}ÆÍxpİp;‡ÌèÓfòPç³åäÃbıVû rUê
+ 8   PK Y  ÃxŒæ¨¡QF0H       Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbFunctionExpression" /> that invokes the canonical 'SpatialBuffer' function with the specified arguments, which must have a Edm.Geography or Edm.Geometry and Edm.Double result types. The result type of the expression is Edm.Geometry.
             </summary>
             <returns>A new DbFunctionExpression that returns a geometry value representing all points less than or equal to distance from spatialValue.</returns>
-            <param name="spatialValue">An expression that specifies the spatial value.</param>
-            <param name="distance">An expression that specifies the buffer distance.</param>
-        </member>
-        <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.Distance(System.Data.Entity.Core.Common.CommandTrees.DbExpression,System.Data.Entity.Core.Common.CommandTrees.DbExpression)">
-            <summary>
-            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbFunctionExpression" /> that invokes the canonical 'Distance' function with the specified arguments, which must each have an Edm.Geography or Edm.Geometry result type.  The result type of spatialValue1 must match the result type of spatialValue2. The result type of the expression is Edm.Double.
+            <paêÖ¥ö9½$„~O Ñ›ŒŒ’çTƒx›´7lHŒ«v“‘¡-üTŠ/S‡yØwJ9ü›ì¨ˆéuûñÊIn.7™À-¹Ìˆ‡z\fpQ-±å¹ıÀ²à{eÅfŠÍ«ÔHP(
+øñmhĞí¤K3téVeòÊT0#1Cô¢Mß©ä&1£Ê®I&yªuNbFúR,$­&›.i¸´Ñ7‹ˆX?‘è"%›5÷8ÔdÓS¦©¥	?ñLš‰Ï ö[ëµ„Æ: 9„™á‰™7jú‚0dòë%x¦Ïl¿YSŠ´¥†ªùÚ¾(éq¾›¡–7!%Ür"ÖJÊèaØŸó"c–Ä¢WKğw °‡‘X™TÑÖV«>‹BætÁ<­}ŞDJa‚š$óŞßì;èCû–ëo/™İ|Æy}G…bÌ´¬T¨ËE&Z”¶®2œJìÓN¦·k3•¢D u“»
+ëz°,˜“: Tflz…»©3r7U 	PGÙ:nr7Óñ6œ¦ğ8ÉCÍf¡Éğ™×°ôÓçìn°6 LÏ®ÕšûI³æìneš]€1ë0eu„e°´ÌfjÌua¥Y­¢18càÀ!–x8 jfğuÎ´ss¹ŒuK	*Á—V„q+$^*¾g…Ì:R¥Core.Common.CommandTrees.DbFunctionExpression" /> that invokes the canonical 'Distance' function with the specified arguments, which must each have an Edm.Geography or Edm.Geometry result type.  The result type of spatialValue1 must match the result type of spatialValue2. The result type of the expression is Edm.Double.
             </summary>
             <returns>A new DbFunctionExpression that returns the distance between the closest points in spatialValue1 and spatialValue1.</returns>
-            <param name="spatialValue1">An expression that specifies the first spatial value.</param>
-            <param name="spatialValue2">An expression that specifies the spatial value from which the distance from spatialValue1 should be measured.</param>
-        </member>
-        <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialConvexHull(System.Data.Entity.Core.Common.CommandTrees.DbExpression)">
-            <summary>
-            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbFunctionExpression" /> that invokes the canonical 'SpatialConvexHull' function with the specified argument, which must have an Edm.Geometry result type. The result type of the expression is Edm.Geometry.
+            <paraÅõäÛ§ñ3ı6‰¦Î'>Åô¤=õË˜Ë®Ñ…:£¬“².i˜Ú¬Æéõd”Ä÷×çüP~RòZJâ†Ÿ:È-af äÍ¦şìOeøe©mj~âš‹äFÏµ¬Ş™c¯Å»”ìM5“7	«¯p'.^0@-Š2¾ëÑM¥-&ÆiÖQ<[¨›âmQÔ-£ÅNˆøM¼ÎÑ3rb(S†3¬C¤CJ¹2Ğ-\HšŒŸ¥m®s†`şˆt)%Nl¥YÃnf¬-ëö¸„psÒ£~ —Ö
+I“:Û…zjĞAıu%h#3¼WPêù` Ÿ”i
+Š¢B/’EŠÚ)4<GÛp©ivç–¶[àŒg€‹%Zƒ]O…oN&„ÅĞ&ÌÈ’´(	¢V\KFƒå¬¨'ë%3/M¤8Ëß“0d)n”ü¨ÎN5öJ¦P	õyRv¥<G¶ajInbKÂvIm—= =Û&ğRFA_¹ø¡T±#OÄ{‡îİÊwvÎÏmÖOêÌé‘Î$å<{ÓqˆÍÂÿã´ü¸/r}Ôª óè‚JÜcv…ùsÒ9’Édî–"b*ÜZ\ê˜p4ÜÌ«¼ã{KiPZÊQrÛt¡ë·HWîñCÙ›iL!†3!CU	äZ®Ù°NózÙJ’lF©&jT"§5>š"T:System.Data.Entity.Core.Common.CommandTrees.DbFunctionExpression" /> that invokes the canonical 'SpatialConvexHull' function with the specified argument, which must have an Edm.Geometry result type. The result type of the expression is Edm.Geometry.
             </summary>
             <returns>A new DbFunctionExpression that returns the the convex hull for geometryValue.</returns>
-            <param name="geometryValue">An expression that specifies the geometry value from which the convex hull value should be retrieved.</param>
-        </member>
-        <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialIntersection(System.Data.Entity.Core.Common.CommandTrees.DbExpression,System.Data.Entity.Core.Common.CommandTrees.DbExpression)">
-            <summary>
-            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbFunctionExpression" /> that invokes the canonical 'SpatialIntersection' function with the specified arguments, which must each have an Edm.Geography or Edm.Geometry result type. The result type of spatialValue1 must match the result type of spatialValue2. The result type of the expression is the same as the type of spatialValue1 and spatialValue2.
+            <param name="geometryValue">An expression that specifies the geometry value from which the convex hull value shƒrğûKöldÎÃIäÚ¨¥‚7	Ÿ"MlÓ´’‚’¿!ØÙôÔÖpÈ„	à6TAd)O4EÂÜä ö9Bğjà(÷%:ŸBa%Âî4H_Â_²Fà‰$=AÕÈ'—qGÕ“qàr%ªbrf,6-’ŞÄt˜¸}Ü·Ğpmo Ú°]äæFrÙ©]:@Öò¼Â°ø	½!;‘Ï/™È˜3âäÉnŠˆøğdç¯]ÌX"8çDÄ„P ç¾o¤’±<b†ÆQx½şá$À÷çd
+Oƒc]áĞ|Ëì«=”ÿhJ&ı'ñ4óSôhl'Äï·!ß“¦áüíU"‰ÅTfQPy«€„+³ôî›Bh;Q¥ßÛşhÅçQH1)¯aP,px”ZáráM?ù›~x²LD©"É' w•¦­{ƒƒÊ½9­Dµ<:kƒ#•™¶í¥ ÛĞJ&›Üæüp mĞ©ÊôA`Hçæè˜€ÍÎÓËÃÖÍx¬šÈ”	k¦ÇV^÷EAğš/Š–P¡xí!pTaj%MV)i}9œ1uĞø?€‹dÜQ"àHÎÂÌ{ §“Ÿ”ıBChİ™½=?H’™ZÅ²³·ÛÄœ¦Ìó`Pi2Ü	®ªP« ¦g:ø8FÁSÛ, which must each have an Edm.Geography or Edm.Geometry result type. The result type of spatialValue1 must match the result type of spatialValue2. The result type of the expression is the same as the type of spatialValue1 and spatialValue2.
             </summary>
             <returns>A new DbFunctionExpression that returns the spatial value representing the intersection of spatialValue1 and spatialValue2.</returns>
-            <param name="spatialValue1">An expression that specifies the first spatial value.</param>
-            <param name="spatialValue2">An expression that specifies the spatial value for which the intersection with spatialValue1 should be computed.</param>
-        </member>
-        <member name="M:System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Spatial.SpatialEdmFunctions.SpatialUnion(System.Data.Entity.Core.Common.CommandTrees.DbExpression,System.Data.Entity.Core.Common.CommandTrees.DbExpression)">
-            <summary>
-            Creates a <see cref="T:System.Data.Entity.Core.Common.CommandTrees.DbFunctionExpression" /> that invokes the canonical 'SpatialUnion' function with the specified arguments, which must each have an Edm.Geography or Edm.Geometry result type. The result type of spatialValue1 must match the result type of spatialValue2. The result type of the expression is the same as the type of spatialValue1 and spatialValue2.
+            <param name="spatialValue1">An expression that specifies the first spatial vall† øK²;¬V¿2ü|î	“Ç‡E,Øî´ˆEÛ™(Ğ#ãÎ•¡Q¯+X¤f¦Œœñ+ÂÍ2•‘ß!š´HQë³$¿ï®¥Xføxa=‹ *SÃ†¼\ŸnpJK‹­åSÄLJã¼×j²:nG@;àƒÏîr„c}s–ÿÄç¥ëß.#%47y,„‡ÓVÇq7Ü¢À!60ŞT@P¢äË5dA¼®İÕ¹Xæ`£™„­6ì´Ğ‰ÄM*Elèƒù ¼—„yH2·xpù3ş…Ù¦ôE)Tìö yØ9züùB5@Z¦U“ œ¬Ÿl["ÊéëğÂ…¹æëVåH–h°§è.áx÷%šb‡ ñ‚póPİ_ğ÷¹Ğ*ĞÑëÈ õYº°¡Ï'ª¢7sĞ¬.åÉïH~…î	—‰óR&ø0À´z+ŸOîbC¸ÂyYVp‰®?Ó±ÃRë§	1)’°VGœpq!–Ê
+‡&}Æj ¸áÛrJEt´Yêà%Í0gÓ0v+$f"ù;*ÈÂ‡ìk9’ß°{¶´ƒ–Ø?ŠÅ¸	‘¡säöq©šš°ò"°©=Zg„Ù×ÇÄGÌ|ÎĞP¥Òœ|ÌğÍ,A³œÑ¨H#-iùv›øity.Core.Common.CommandTrees.DbFunctionExpression" /> that invokes the canonical 'SpatialUnion' function with the specified arguments, which must each have an Edm.Geography or Edm.Geometry result type. The result type of spatialValue1 must match the result type of spatialValue2. The result type of the expression is the same as the type of spatialValue1 and spatialValue2.
             </summary>
             <returns>A new DbFunctionExpression that returns the spatial value representing the union of spatialValue1 and spatialValue2.</returns>
             <param name="spatialValue1">An expression that specifies the first spatial value.</param>

@@ -25,9 +25,9 @@ namespace Galeria.User_Controls.Management_Windows
     /// </summary>
     public partial class MngTrans : UserControl
     {
-        //CargarDiccionarios cd = new CargarDiccionarios();
-        Transaction obj = new Transaction();
-        //List<Transaction> transactions = new List<Transaction>();
+        CargarDiccionarios cd = new CargarDiccionarios();
+        TransactionVO obj = new TransactionVO();
+        List<TransactionVO> VOs = new List<TransactionVO>();
         public MngTrans()
         {
             InitializeComponent();
@@ -38,15 +38,35 @@ namespace Galeria.User_Controls.Management_Windows
         {
             if (dataGrid.SelectedIndex > -1)
             {
-                obj = new Transaction();
-                obj = (Transaction)dataGrid.SelectedItem;
+                obj = new TransactionVO();
+                obj = (TransactionVO)dataGrid.SelectedItem;
                 txtID.Text = obj.TransactionID.ToString();
-                comboBoxArt.SelectedItem = obj.Artwork;
+                if (obj.venta)
+                {
+                    comboBox.SelectedIndex = 0;
+                    //Loaders.LoadArtworks(comboBoxArt, true);
+                }
+                else
+                {
+                    comboBox.SelectedIndex = 1;
+                    //Loaders.LoadArtworks(comboBoxArt, false);
+                }
+                //comboBoxArt.SelectedItem = obj.ArtworkVO;
+                int cont = 0;
+                foreach (ArtworkVO item in comboBoxArt.ItemsSource)
+                {
+                    if (item.ArtworkID == obj.ArtworkVO.ArtworkID)
+                    {
+                        break;
+                    }
+                    cont++;
+                }
+                comboBoxArt.SelectedIndex = cont;
                 comboBoxUser.SelectedItem = obj.User;
-                txtMoney.Text = Math.Abs(obj.money).ToString();
+                txtMoney.Text = obj.money.ToString();
                 txtComment.Text = obj.comment;
 
-                if (A_Login.user.nick == "master")
+                if (A_Login.user.nick == obj.registeredBy.nick || A_Login.user.nick == "master")//Sólo quien lo ha registrado o master pueden hacer cambios
                 {
                     buttMod.IsEnabled = true;
                     buttDel.IsEnabled = true;
@@ -54,14 +74,14 @@ namespace Galeria.User_Controls.Management_Windows
             }
             else
             {
-                buttMod.IsEnabled = false;
-                buttDel.IsEnabled = false;
+                //buttMod.IsEnabled = false;
+                //buttDel.IsEnabled = false;
 
-                txtID.Text = "";
-                comboBoxArt.SelectedIndex = -1;
-                comboBoxUser.SelectedIndex = -1;
-                txtMoney.Text = "";
-                txtComment.Text = "";
+                //txtID.Text = "";
+                //comboBoxArt.SelectedIndex = -1;
+                //comboBoxUser.SelectedIndex = -1;
+                //txtMoney.Text = "";
+                //txtComment.Text = "";
                 ReloadData();
             }
         }
@@ -183,7 +203,21 @@ namespace Galeria.User_Controls.Management_Windows
         public void ReloadData()
         {//Carga transacciones en el dataGrid
             dataGrid.ItemsSource = null;
-            dataGrid.ItemsSource = A_Login.u.TransactionsRep.GetAll();
+            VOs.Clear();
+            foreach (Transaction item in A_Login.u.TransactionsRep.GetAll())
+            {
+                VOs.Add(new TransactionVO(item.TransactionID));
+            }
+            dataGrid.ItemsSource = VOs;
+
+            buttMod.IsEnabled = false;
+            buttDel.IsEnabled = false;
+
+            txtID.Text = "";
+            comboBoxArt.SelectedIndex = -1;
+            comboBoxUser.SelectedIndex = -1;
+            txtMoney.Text = "";
+            txtComment.Text = "";
             //Loaders.LoadArtworks(comboBoxArt);
             Loaders.LoadUsers(comboBoxUser);
         }

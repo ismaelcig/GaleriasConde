@@ -1,0 +1,37 @@
+﻿<Window x:Class="Galeria.Windows.E_Buy"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Galeria.Windows"
+        mc:Ignorable="d"
+        xmlns:Controls="clr-namespace:Elysium.Controls;assembly=Elysium"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:metro="http://schemas.codeplex.com/elysium"
+        xmlns:params="http://schemas.codeplex.com/elysium/params"
+        xmlns:User_Controls="clr-namespace:Galeria.User_Controls"
+        params:Design.Theme="Light"
+        params:Manager.Theme="Light"
+        params:Manager.AccentBrush="BlueViolet"
+        params:Manager.ContrastBrush="BlanchedAlmond"
+        TextElement.FontWeight="Bold"
+        TextElement.FontSize="15"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+        Title="E_Buy" Height="321.09" Width="589.85">
+    <Grid>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="200" Margin="10,10,0,0" VerticalAlignment="Top" Width="200">
+            <Image x:Name="image"/>
+        </Border>
+
+        <Label x:Name="lblName" Content="Título: " HorizontalAlignment="Left" Margin="215,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="15"/>
+        <Label x:Name="lblAutor" Content="Autor: " HorizontalAlignment="Left" Margin="216,43,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblDate" Content="Fecha: " HorizontalAlignment="Left" Margin="217,76,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblDim" Content="Dimensiones: " HorizontalAlignment="Left" Margin="217,109,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label3" Content="Descripción:" HorizontalAlignment="Left" Margin="217,142,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="descr" HorizontalAlignment="Left" Margin="216,170,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="11"/>
+        <CheckBox x:Name="checkBox" Content="Disponible" IsEnabled="False" HorizontalAlignment="Left" Margin="60,215,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button" Content="Quiero comprarla" HorizontalAlignment="Left" Margin="34,236,0,0" VerticalAlignment="Top" Width="148"/>
+        <Button x:Name="button1" Content="Autor"  HorizontalAlignment="Left" Margin="280,43,0,0" VerticalAlignment="Top" Width="Auto" Click="button1_Click"/>
+
+    </Grid>
+</Window>

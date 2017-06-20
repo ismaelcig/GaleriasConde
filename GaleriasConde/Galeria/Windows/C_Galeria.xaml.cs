@@ -2,6 +2,7 @@
 using Galeria.Model;
 using Galeria.Other_Classes;
 using Galeria.User_Controls;
+using Galeria.User_Controls.Messages_Window;
 using Galeria.VO;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Galeria.Windows
 {
@@ -27,9 +29,13 @@ namespace Galeria.Windows
     {
         public static C_Galeria cg;
         bool hidenL = false;
-        System.Windows.Threading.DispatcherTimer dispatcherTimer;
+        DispatcherTimer dispatcherTimer;
         CargarDiccionarios cd = new CargarDiccionarios();
         List<TypeVO> typesVO = new List<TypeVO>();
+        List<Chat> chats = new List<Chat>();//Lista de Chats del Usuario
+        public Chat selectedChat;
+
+        DispatcherTimer timerChats = new DispatcherTimer();//Timer para actualizar cada poco los mensajes
 
         public C_Galeria()
         {
@@ -51,10 +57,57 @@ namespace Galeria.Windows
             Resources.MergedDictionaries.Add(A_Login.dict);
             LoadWindow();
             OnLangChange();
+            timerChats = new DispatcherTimer();
+            timerChats.Tick += TimerChats_Tick;
+            timerChats.Interval = new TimeSpan(0, 0, 0, 5);//TODO: Controlar tiempo
+            timerChats.Start();
+        }
+
+        private void TimerChats_Tick(object sender, EventArgs e)
+        {
+            spChat.Children.RemoveRange(1, (spChat.Children.Count - 1));//Elimina todos los elementos menos el primero
+            LoadChats();
+        }
+
+        void LoadChats()
+        {
+            foreach (Chat item in A_Login.u.ChatsRep.GetAll())
+            {
+                if (item.users.Contains(A_Login.user))
+                {
+                    if (selectedChat == null)
+                    {
+                        selectedChat = item;
+                    }
+                    ChatControl cc = new ChatControl(item);
+                    cc.Margin = new Thickness(3, 3, 0, 0);
+                    spChat.Children.Add(cc);
+                }
+            }
+            chatView.LoadChatView(selectedChat);//TODO: Breakpoint
         }
 
         public void LoadWindow()//TODO: Añadir elementos de la pestaña Gestión
         {
+            if (A_Login.user.Profile.ProfileID == 1)//Usuario no registrado
+            {
+                Pst2.Visibility = Visibility.Hidden;//Subasta
+                Pst3.Visibility = Visibility.Hidden;//Mensajes
+                Pst4.Visibility = Visibility.Hidden;//Gestión
+                Pst5.Visibility = Visibility.Hidden;//Informes
+                //TODO: Añadir botones compra/Venta
+            }
+            if (A_Login.user.Profile.ProfileID >= 3)//Admin
+            {
+
+            }
+            if (A_Login.user.Profile.ProfileID >= 2)//Usuario registrado
+            {
+
+            }
+
+
+
             if (!Authorization(2))//Usuario registrado
             {
                 Pst3.Width = 0;
@@ -69,6 +122,8 @@ namespace Galeria.Windows
                 sub_Users.Width = 0;
             }
             HideGrids();
+            spChat.Children.RemoveRange(1, (spChat.Children.Count - 1));//Elimina todos los elementos menos el primero
+            LoadChats();
         }
         
         public bool Authorization(int perfil)
@@ -112,6 +167,10 @@ namespace Galeria.Windows
             {
                 Application.Current.Shutdown();
                 //Application.Current.ShutdownMode = ShutdownMode.OnMainWindowClose;
+            }
+            else
+            {
+                A_Login.mw.Show();
             }
         }
 
@@ -286,7 +345,7 @@ namespace Galeria.Windows
 
                 ObraBtn.Name = "pButton" + a.ArtworkID.ToString();
                 //TODO: ObraBtnClick
-                //ObraBtn.Click += ObraBtn_Click;
+                ObraBtn.Click += ObraBtn_Click;
 
                 if (!checkOnStock.IsChecked)
                 {
@@ -300,6 +359,16 @@ namespace Galeria.Windows
                     }
                 }
             }
+        }
+
+        private void ObraBtn_Click(object sender, RoutedEventArgs e)
+        {
+            int indexObra = int.Parse(Regex.Match(((sender as Button).Name), @"\d+").Value);
+
+            E_Buy eb = new E_Buy(new ArtworkVO(indexObra));
+            A_Login.windows.Add(eb);
+            eb.Show();
+            overAllShadow.Visibility = Visibility.Visible;
         }
 
         //Mientras escribe, voy buscando las obras para cargarlas
@@ -450,5 +519,12 @@ namespace Galeria.Windows
         }
         #endregion
 
+        private void sellButton_Click(object sender, RoutedEventArgs e)
+        {
+            E_Sell es = new E_Sell();
+            A_Login.windows.Add(es);
+            es.Show();
+            overAllShadow.Visibility = Visibility.Visible;
+        }
     }
 }

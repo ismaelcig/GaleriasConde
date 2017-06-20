@@ -69,3 +69,48 @@ Log Entry : 22:57:04, jueves, 15 de junio de 2017 :: From GenericRep3 :: Store u
    en System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
    en System.Data.Entity.Internal.InternalContext.SaveChanges()
 ------------------------------------------------------------
+Log Entry : 9:07:53, lunes, 19 de junio de 2017 :: From MngTrans2 :: Referencia a objeto no establecida como instancia de un objeto.
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 9:08:06, lunes, 19 de junio de 2017 :: From MngTrans3 :: Referencia a objeto no establecida como instancia de un objeto.
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 18:41:05, lunes, 19 de junio de 2017 :: From MngNats2 :: Referencia a objeto no establecida como instancia de un objeto.
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 18:01:30, martes, 20 de junio de 2017 :: From GenericRep7 :: Unable to create a constant value of type 'Galeria.Model.User'. Only primitive types or enumeration types are supported in this context.
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 18:01:31, martes, 20 de junio de 2017 :: From GenericRep7 :: Unable to create a constant value of type 'Galeria.Model.User'. Only primitive types or enumeration types are supported in this context.
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 18:01:32, martes, 20 de junio de 2017 :: From GenericRep7 :: Unable to create a constant value of type 'Galeria.Model.User'. Only primitive types or enumeration types are supported in this context.
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 18:03:45, martes, 20 de junio de 2017 :: From GenericRep7 :: Unable to create a constant value of type 'Galeria.Model.User'. Only primitive types or enumeration types are supported in this context.
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 18:04:59, martes, 20 de junio de 2017 :: From GenericRep7 :: Unable to create a constant value of type 'Galeria.Model.User'. Only primitive types or enumeration types are supported in this context.
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 18:07:20, martes, 20 de junio de 2017 :: From GenericRep7 :: Unable to create a constant value of type 'Galeria.Model.User'. Only primitive types or enumeration types are supported in this context.
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 18:55:07, martes, 20 de junio de 2017 :: From GenericRep7 :: Unable to create a constant value of type 'Galeria.Model.User'. Only primitive types or enumeration types are supported in this context.
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 18:57:29, martes, 20 de junio de 2017 :: From GenericRep7 :: Unable to create a constant value of type 'Galeria.Model.User'. Only primitive types or enumeration types are supported in this context.
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 21:43:56, martes, 20 de junio de 2017 :: From A_Log2 :: Referencia a objeto no establecida como instancia de un objeto.
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 21:44:06, martes, 20 de junio de 2017 :: From A_Log2 :: Referencia a objeto no establecida como instancia de un objeto.
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 21:45:47, martes, 20 de junio de 2017 :: From A_Log2 :: Referencia a objeto no establecida como instancia de un objeto.
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 21:55:41, martes, 20 de junio de 2017 :: From A_Log2 :: Referencia a objeto no establecida como instancia de un objeto.
+ :Inner Exception: 
+------------------------------------------------------------

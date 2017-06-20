@@ -20,15 +20,6 @@
         x:Class="Galeria.Windows.A_Login"
         Title="{DynamicResource MWtitle}" Height="150" Width="308" ResizeMode="CanMinimize">
 
-    <!--<Controls:Window.ApplicationBar>
-        <Controls:ApplicationBar>
-            -->
-    <!-- Right Click on the UI to open Application Bar -->
-    <!--<controls:<span class="hiddenSpellError">DropDownCommandButton  Header="THEME"/>-->
-    <!--
-        </Controls:ApplicationBar>
-    </Controls:Window.ApplicationBar>-->
-
     <metro:Window.Resources>
         <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource MaterialDesignTextBox}"/>
         <Style TargetType="{x:Type PasswordBox}" BasedOn="{StaticResource MaterialDesignPasswordBox}"/>

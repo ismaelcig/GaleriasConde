@@ -75,7 +75,7 @@ namespace Galeria.Windows
                         var result = MessageBox.Show(msg, "", MessageBoxButton.YesNo, MessageBoxImage.Question);
                         if (result == MessageBoxResult.Yes)
                         {//Entra sin usuario, con el nick que acaba de escribir, no tiene ningún permiso
-                            user = new User { nick = textBox.Text, Profile = u.ProfilesRep.Single(c => c.codProfile == "Default") };
+                            user = new User { nick = textBox.Text, Profile = u.ProfilesRep.Single(c => c.codProfile == "Default"), Chats = new List<Chat>() };
                             C_Galeria gal = new C_Galeria();
                             gal.Show();
                             Hide();

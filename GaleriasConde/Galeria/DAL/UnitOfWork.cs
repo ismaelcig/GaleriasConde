@@ -18,7 +18,9 @@ namespace Galeria.DAL
         private ArtworkTranslationsRep artworkTranslationsRep;
         private AuthorsRep authorsRep;
         private AuthorTranslationsRep authorTranslationsRep;
+        private ChatsRep chatsRep;
         private LangsRep langsRep;
+        private MessagesRep messagesRep;
         private NationalitiesRep nationalitiesRep;
         private NationalityTranslationsRep nationalityTranslationsRep;
         private ProfilesRep profilesRep;
@@ -26,8 +28,6 @@ namespace Galeria.DAL
         private TypesRep typesRep;
         private TypeTranslationsRep typeTranslationsRep;
         private UsersRep usersRep;
-
-        //private MensajesRepository mensajesRepository;
 
         public ArtworksRep ArtworksRep
         {
@@ -73,6 +73,17 @@ namespace Galeria.DAL
                 return authorTranslationsRep;
             }
         }
+        public ChatsRep ChatsRep
+        {
+            get
+            {
+                if (this.chatsRep == null)
+                {
+                    this.chatsRep = new ChatsRep(context);
+                }
+                return chatsRep;
+            }
+        }
         public LangsRep LangsRep
         {
             get
@@ -82,6 +93,17 @@ namespace Galeria.DAL
                     this.langsRep = new LangsRep(context);
                 }
                 return langsRep;
+            }
+        }
+        public MessagesRep MessagesRep
+        {
+            get
+            {
+                if (this.messagesRep == null)
+                {
+                    this.messagesRep = new MessagesRep(context);
+                }
+                return messagesRep;
             }
         }
         public NationalitiesRep NationalitiesRep

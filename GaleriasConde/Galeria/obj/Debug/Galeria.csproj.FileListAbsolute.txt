@@ -173,3 +173,144 @@ C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\
 C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\Galeria.Migrations.Migr0615.resources
 C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\Galeria.Migrations.Migr0615_.resources
 C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\Galeria.Migrations.Migr0615_2.resources
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\bin\Debug\Galeria.exe.config
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Galeria.exe
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Galeria.pdb
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\bin\Debug\Galeria.exe
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\bin\Debug\Galeria.pdb
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\bin\Debug\EntityFramework.dll
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\bin\Debug\MaterialDesignColors.dll
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\bin\Debug\Microsoft.Expression.Drawing.dll
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\bin\Debug\Microsoft.Windows.Shell.dll
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\bin\Debug\Elysium.pdb
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\bin\Debug\Elysium.Notifications.pdb
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\bin\Debug\EntityFramework.xml
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\bin\Debug\MaterialDesignColors.pdb
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\bin\Debug\Microsoft.Expression.Drawing.xml
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\bin\Debug\Microsoft.Windows.Shell.pdb
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\bin\Debug\Microsoft.Windows.Shell.xml
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Galeria.csprojResolveAssemblyReference.cache
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\MainWindow.g.cs
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\ConversDetail.g.cs
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\LanguageSelector.g.cs
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\LeftPanel.g.cs
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngArts.g.cs
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngAuths.g.cs
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngNats.g.cs
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngTrans.g.cs
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngTypes.g.cs
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngUsers.g.cs
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MultiLanguageWarning.g.cs
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\UserPanel.g.cs
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Windows\A_Login.g.cs
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Windows\B_Registro.g.cs
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Windows\C_Galeria.g.cs
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Windows\D_UserOptions.g.cs
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\App.g.cs
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Galeria_MarkupCompile.cache
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Galeria_MarkupCompile.lref
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\App.baml
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Dict\DictionaryEN.baml
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Dict\DictionarySP.baml
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\MainWindow.baml
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\ConversDetail.baml
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\LanguageSelector.baml
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\LeftPanel.baml
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngArts.baml
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngAuths.baml
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngNats.baml
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngTrans.baml
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngTypes.baml
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngUsers.baml
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MultiLanguageWarning.baml
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\UserPanel.baml
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Windows\A_Login.baml
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Windows\B_Registro.baml
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Windows\C_Galeria.baml
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Windows\D_UserOptions.baml
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Galeria.g.resources
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Galeria.Properties.Resources.resources
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Galeria.csproj.GenerateResource.Cache
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Galeria.Migrations.Migr0619.resources
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\bin\Debug\Galeria.exe.config
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\Galeria.exe
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\Galeria.pdb
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\bin\Debug\Galeria.exe
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\bin\Debug\Galeria.pdb
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\bin\Debug\EntityFramework.dll
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\bin\Debug\MaterialDesignColors.dll
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\bin\Debug\Microsoft.Expression.Drawing.dll
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\bin\Debug\Microsoft.Windows.Shell.dll
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\bin\Debug\Elysium.pdb
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\bin\Debug\Elysium.Notifications.pdb
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\bin\Debug\EntityFramework.xml
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\bin\Debug\Microsoft.Expression.Drawing.xml
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\bin\Debug\Microsoft.Windows.Shell.pdb
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\bin\Debug\Microsoft.Windows.Shell.xml
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\Galeria.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\MainWindow.g.cs
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\User_Controls\ConversDetail.g.cs
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\User_Controls\LanguageSelector.g.cs
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngArts.g.cs
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngAuths.g.cs
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngNats.g.cs
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngTrans.g.cs
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngTypes.g.cs
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngUsers.g.cs
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MultiLanguageWarning.g.cs
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\User_Controls\UserPanel.g.cs
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\Windows\A_Login.g.cs
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\Windows\B_Registro.g.cs
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\Windows\C_Galeria.g.cs
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\Windows\D_UserOptions.g.cs
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\App.g.cs
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\Galeria_MarkupCompile.cache
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\Galeria_MarkupCompile.lref
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\App.baml
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\Dict\DictionaryEN.baml
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\Dict\DictionarySP.baml
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\MainWindow.baml
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\User_Controls\ConversDetail.baml
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\User_Controls\LanguageSelector.baml
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngArts.baml
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngAuths.baml
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngNats.baml
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngTrans.baml
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngTypes.baml
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngUsers.baml
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MultiLanguageWarning.baml
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\User_Controls\UserPanel.baml
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\Windows\A_Login.baml
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\Windows\B_Registro.baml
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\Windows\C_Galeria.baml
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\Windows\D_UserOptions.baml
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\Galeria.g.resources
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\Galeria.Properties.Resources.resources
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\Galeria.csproj.GenerateResource.Cache
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\Galeria.Migrations.Migr0619.resources
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\Galeria.Migrations.Migr0619_2.resources
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\User_Controls\Messages_Window\ChatControl.g.cs
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\User_Controls\Messages_Window\ChatControl.baml
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\Galeria.Migrations.Migr0620.resources
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\User_Controls\Messages_Window\AddChat.g.cs
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\User_Controls\Messages_Window\AddChat.baml
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\User_Controls\Messages_Window\ChatView.g.cs
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\User_Controls\Messages_Window\ChatView.baml
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\Galeria.Migrations.Migr0620_2.resources
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\Windows\E_Sell.g.cs
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\Windows\E_Sell.baml
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\Windows\E_Buy.g.cs
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\Windows\E_Buy.baml

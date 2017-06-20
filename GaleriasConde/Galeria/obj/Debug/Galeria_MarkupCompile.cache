@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\
 Galeria
 none
 false
 DEBUG;TRACE
-C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\App.xaml
-18692638734
+C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\App.xaml
+221265124466
 
-671018992566
-21-566537982
-Dict\DictionaryEN.xaml;Dict\DictionarySP.xaml;MainWindow.xaml;User_Controls\ConversDetail.xaml;User_Controls\LanguageSelector.xaml;User_Controls\LeftPanel.xaml;User_Controls\Management_Windows\MngArts.xaml;User_Controls\Management_Windows\MngAuths.xaml;User_Controls\Management_Windows\MngNats.xaml;User_Controls\Management_Windows\MngTrans.xaml;User_Controls\Management_Windows\MngTypes.xaml;User_Controls\Management_Windows\MngUsers.xaml;User_Controls\Management_Windows\MultiLanguageWarning.xaml;User_Controls\UserPanel.xaml;Windows\A_Login.xaml;Windows\B_Registro.xaml;Windows\C_Galeria.xaml;Windows\D_UserOptions.xaml;
+771591510944
+21-2085916634
+Dict\DictionaryEN.xaml;Dict\DictionarySP.xaml;MainWindow.xaml;User_Controls\ConversDetail.xaml;User_Controls\LanguageSelector.xaml;User_Controls\Management_Windows\MngArts.xaml;User_Controls\Management_Windows\MngAuths.xaml;User_Controls\Management_Windows\MngNats.xaml;User_Controls\Management_Windows\MngTrans.xaml;User_Controls\Management_Windows\MngTypes.xaml;User_Controls\Management_Windows\MngUsers.xaml;User_Controls\Management_Windows\MultiLanguageWarning.xaml;User_Controls\Messages_Window\AddChat.xaml;User_Controls\Messages_Window\ChatControl.xaml;User_Controls\Messages_Window\ChatView.xaml;User_Controls\UserPanel.xaml;Windows\A_Login.xaml;Windows\B_Registro.xaml;Windows\C_Galeria.xaml;Windows\D_UserOptions.xaml;Windows\E_Buy.xaml;Windows\E_Sell.xaml;
 
 False
 

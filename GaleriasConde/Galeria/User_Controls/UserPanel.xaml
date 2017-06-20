@@ -33,7 +33,12 @@
     <Grid Background="LightGray" MinHeight="135" MinWidth="300">
         <Ellipse HorizontalAlignment="Left" Height="75" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="75">
             <Ellipse.Fill>
-                <ImageBrush x:Name="imgBrush"></ImageBrush>
+                <ImageBrush x:Name="imgBrush" ImageSource="{StaticResource camera}"/>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Ellipse Cursor="Hand" HorizontalAlignment="Left" Height="75" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="75" MouseEnter="Ellipse_MouseEnter" MouseLeave="Ellipse_MouseLeave" MouseDown="Ellipse_MouseDown">
+            <Ellipse.Fill>
+                <ImageBrush x:Name="overImgBrush" ImageSource="{StaticResource camera}" Opacity="0"></ImageBrush>
             </Ellipse.Fill>
         </Ellipse>
         <Label x:Name="lblNick" Content="Nick" HorizontalAlignment="Left" Margin="85,10,0,0" VerticalAlignment="Top"/>
@@ -44,7 +49,7 @@
             <Button x:Name="buttClose" Content="X" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="buttClose_Click"/>
         </StackPanel>
         
-        <Button x:Name="buttLogout" Content="{DynamicResource UPButton}" HorizontalAlignment="Left" Margin="117,93,0,0" VerticalAlignment="Top" Width="75" Click="buttLogout_Click"/>
+        <Button x:Name="buttLogout" Content="{DynamicResource UPButton}" HorizontalAlignment="Left" Margin="117,93,0,0" VerticalAlignment="Top" Width="75" Height="20" Click="buttLogout_Click"/>
 
     </Grid>
 </UserControl>

@@ -38,14 +38,14 @@
                 <Button x:Name="buttDel" Content="{DynamicResource CG4Del}" HorizontalAlignment="Left" Margin="160,0,0,5" VerticalAlignment="Bottom" Width="70" Click="buttDel_Click"/>
             </Grid>
         </Border>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Stretch" Margin="240,0,0,0" VerticalAlignment="Stretch" DataContext="{Binding Source=Transaction}" Style="{StaticResource dg}" SelectionChanged="dataGrid_SelectionChanged">
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Stretch" Margin="240,0,0,0" VerticalAlignment="Stretch" DataContext="{Binding Source=TransactionVO}" Style="{StaticResource dg}" SelectionChanged="dataGrid_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding TransactionID}">
                     <DataGridTextColumn.Header>
                         <TextBlock Text="{DynamicResource ID}" HorizontalAlignment="Center" />
                     </DataGridTextColumn.Header>
                 </DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding Artwork.ArtworkID}">
+                <DataGridTextColumn Binding="{Binding ArtworkVO.title}">
                     <DataGridTextColumn.Header>
                         <TextBlock Text="{DynamicResource Art}" HorizontalAlignment="Center" />
                     </DataGridTextColumn.Header>
@@ -57,7 +57,12 @@
                 </DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding money}">
                     <DataGridTextColumn.Header>
-                        <TextBlock Text="{DynamicResource Benefit}" HorizontalAlignment="Center" />
+                        <TextBlock Text="{DynamicResource Money}" HorizontalAlignment="Center" />
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding registeredBy.nick}">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="{DynamicResource Admin}"/>
                     </DataGridTextColumn.Header>
                 </DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding comment}">

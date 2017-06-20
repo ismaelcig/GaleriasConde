@@ -42,9 +42,10 @@ namespace Galeria.DAL
         public DbSet<TypeTranslations> TypeTranslations { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
         public DbSet<User> Users { get; set; }
-        //public DbSet<Mensaje> Mensajes { get; set; }
         public DbSet<Profile> Profiles { get; set; }
         public DbSet<Lang> Langs { get; set; }
+        public DbSet<Chat> Chats { get; set; }
+        public DbSet<Message> Messages { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

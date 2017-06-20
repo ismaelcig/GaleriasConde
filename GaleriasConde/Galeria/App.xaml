@@ -14,7 +14,18 @@
             </ResourceDictionary.MergedDictionaries>
 
 
+            <BitmapImage x:Key="warning" UriSource="Images/warning.ico" />
+            <BitmapImage x:Key="camera" UriSource="Images/camera.png"/>
+            <BitmapImage x:Key="add" UriSource="Images/add.ico"/>
+            <BitmapImage x:Key="addUser" UriSource="Images/Add-contact.ico"/>
+            <BitmapImage x:Key="cancel" UriSource="Images/cancel.ico"/>
+
             <Style TargetType="{x:Type TextBox}" x:Key="mdTxt" BasedOn="{StaticResource MaterialDesignTextBox}"/>
+            <!--<Style TargetType="{x:Type TextBox}" x:Key="mdTxt1">
+                <Setter Property="BorderBrush" Value="Black"/>
+                <Setter Property="BorderThickness" Value="0,0,0,1"/>
+                <Setter Property="Background" Value="Transparent"/>
+            </Style>-->
             
             <Style TargetType="{x:Type ComboBox}" x:Key="mdCombo" BasedOn="{StaticResource MaterialDesignComboBox}"/>
             
@@ -23,9 +34,7 @@
                 <Setter Property="AutoGenerateColumns" Value="False"/>
                 <Setter Property="IsReadOnly" Value="True"/>
             </Style>
-            
-            <BitmapImage x:Key="warning" UriSource="Images/warning.ico" />
-            
+
             <Style TargetType="{x:Type Button}" x:Key="filterAll">
                 <Setter Property="FontSize" Value="17"/>
                 <Setter Property="FontWeight" Value="Bold"/>
@@ -44,7 +53,7 @@
                                                     <TranslateTransform X="0.02" Y="0.3"/>
                                                 </TransformGroup>
                                             </RadialGradientBrush.RelativeTransform>
-                                            <GradientStop Offset="1" Color="#67a0c6"/><!--000-->
+                                            <GradientStop Offset="1" Color="#67a0c6"/>
                                             <GradientStop Offset="0.3" Color="#FFFFFFFF"/>
                                         </RadialGradientBrush>
                                     </Border.Background>
@@ -75,9 +84,9 @@
                                     <Setter Property="BorderBrush" TargetName="border" Value="#3386FF"/>
                                     <Setter Property="BorderThickness" Value="3"/>
                                 </Trigger>
-                                <!--<Trigger Property="IsEnabled" Value="False">
+                                <Trigger Property="IsEnabled" Value="False">
                                     <Setter Property="Opacity" TargetName="grid" Value="0.25"/>
-                                </Trigger>-->
+                                </Trigger>
 
                             </ControlTemplate.Triggers>
                         </ControlTemplate>
@@ -103,7 +112,7 @@
                                                     <TranslateTransform X="0.02" Y="0.3"/>
                                                 </TransformGroup>
                                             </RadialGradientBrush.RelativeTransform>
-                                            <GradientStop Offset="1" Color="#83B8DB"/><!--000-->
+                                            <GradientStop Offset="1" Color="#83B8DB"/>
                                             <GradientStop Offset="0.3" Color="#FFFFFFFF"/>
                                         </RadialGradientBrush>
                                     </Border.Background>
@@ -133,15 +142,24 @@
                                     <Setter Property="BorderBrush" TargetName="border" Value="#3379e0"/>
                                     <Setter Property="BorderThickness" Value="3"/>
                                 </Trigger>
-                                <!--<Trigger Property="IsEnabled" Value="False">
+                                <Trigger Property="IsEnabled" Value="False">
                                     <Setter Property="Opacity" TargetName="grid" Value="0.25"/>
-                                </Trigger>-->
+                                </Trigger>
 
                             </ControlTemplate.Triggers>
                         </ControlTemplate>
                     </Setter.Value>
                 </Setter>
             </Style>
+
+            <Style TargetType="{x:Type Button}" x:Key="AC">
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="BorderBrush" Value="Transparent"/>
+                <Setter Property="Cursor" Value="Hand"/>
+            </Style>
+            
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>
