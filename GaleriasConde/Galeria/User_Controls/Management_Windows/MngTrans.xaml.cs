@@ -31,7 +31,10 @@ namespace Galeria.User_Controls.Management_Windows
         public MngTrans()
         {
             InitializeComponent();
-            ReloadData();
+            if (A_Login.user.Profile.ProfileID >= 3)
+            {
+                ReloadData();
+            }
         }
 
         private void dataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -44,12 +47,12 @@ namespace Galeria.User_Controls.Management_Windows
                 if (obj.venta)
                 {
                     comboBox.SelectedIndex = 0;
-                    //Loaders.LoadArtworks(comboBoxArt, true);
+                    Loaders.LoadArtworks(comboBoxArt, true);
                 }
                 else
                 {
                     comboBox.SelectedIndex = 1;
-                    //Loaders.LoadArtworks(comboBoxArt, false);
+                    Loaders.LoadArtworks(comboBoxArt, false);
                 }
                 //comboBoxArt.SelectedItem = obj.ArtworkVO;
                 int cont = 0;
@@ -74,14 +77,6 @@ namespace Galeria.User_Controls.Management_Windows
             }
             else
             {
-                //buttMod.IsEnabled = false;
-                //buttDel.IsEnabled = false;
-
-                //txtID.Text = "";
-                //comboBoxArt.SelectedIndex = -1;
-                //comboBoxUser.SelectedIndex = -1;
-                //txtMoney.Text = "";
-                //txtComment.Text = "";
                 ReloadData();
             }
         }
@@ -110,8 +105,6 @@ namespace Galeria.User_Controls.Management_Windows
                         t.registeredBy = A_Login.user.UserID;
                         A_Login.u.TransactionsRep.Create(t);//Creo el objeto Transaction
                         ReloadData();
-                        dataGrid.SelectedIndex = 0;
-                        dataGrid.SelectedIndex = -1;
                     }
                     else
                     {
@@ -154,7 +147,6 @@ namespace Galeria.User_Controls.Management_Windows
                         A_Login.u.TransactionsRep.Update(t);
                         
                         ReloadData();
-                        dataGrid.SelectedIndex = -1;
                     }
                     else
                     {//Beneficio incorrecto
@@ -190,7 +182,6 @@ namespace Galeria.User_Controls.Management_Windows
                     A_Login.u.TransactionsRep.Delete(t);
 
                     ReloadData();
-                    dataGrid.SelectedIndex = -1;
                 }
                 catch (Exception ex)
                 {
@@ -214,12 +205,17 @@ namespace Galeria.User_Controls.Management_Windows
             buttDel.IsEnabled = false;
 
             txtID.Text = "";
+            comboBox.SelectedIndex = -1;
             comboBoxArt.SelectedIndex = -1;
             comboBoxUser.SelectedIndex = -1;
             txtMoney.Text = "";
             txtComment.Text = "";
             //Loaders.LoadArtworks(comboBoxArt);
             Loaders.LoadUsers(comboBoxUser);
+            if (A_Login.user.Profile.ProfileID != 4)
+            {
+                regBycolumn.Visibility = Visibility.Hidden;
+            }
         }
 
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)

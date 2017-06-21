@@ -56,83 +56,85 @@ namespace Galeria.Windows
             
             Resources.MergedDictionaries.Add(A_Login.dict);
             LoadWindow();
-            OnLangChange();
-            timerChats = new DispatcherTimer();
-            timerChats.Tick += TimerChats_Tick;
-            timerChats.Interval = new TimeSpan(0, 0, 0, 5);//TODO: Controlar tiempo
-            timerChats.Start();
         }
 
         private void TimerChats_Tick(object sender, EventArgs e)
         {
-            spChat.Children.RemoveRange(1, (spChat.Children.Count - 1));//Elimina todos los elementos menos el primero
             LoadChats();
         }
 
         void LoadChats()
         {
+            spChat.Children.RemoveRange(1, (spChat.Children.Count - 1));//Elimina todos los elementos menos el primero
             foreach (Chat item in A_Login.u.ChatsRep.GetAll())
             {
                 if (item.users.Contains(A_Login.user))
                 {
-                    if (selectedChat == null)
+                    if (selectedChat == item)
                     {
-                        selectedChat = item;
+                        //TODO: Marcar ChatControl como selected
                     }
                     ChatControl cc = new ChatControl(item);
                     cc.Margin = new Thickness(3, 3, 0, 0);
                     spChat.Children.Add(cc);
                 }
             }
-            chatView.LoadChatView(selectedChat);//TODO: Breakpoint
+            if (selectedChat != null)
+            {
+                chatView.LoadChatView(selectedChat);//TODO: Breakpoint
+            }
         }
 
-        public void LoadWindow()//TODO: Añadir elementos de la pestaña Gestión
+        public void LoadWindow()
         {
+            //Inicialmente carga todas las obras disponibles
+            List<ArtworkVO> aVOs = new List<ArtworkVO>();
+            foreach (Artwork a in A_Login.u.ArtworksRep.GetAll())
+            {
+                aVOs.Add(new ArtworkVO(a.ArtworkID));
+            }
+            LoadArtworks(aVOs);
+            //Carga los filtros
+            LoadFilters();
+
+
+            //Limita acceso según los permisos
             if (A_Login.user.Profile.ProfileID == 1)//Usuario no registrado
             {
                 Pst2.Visibility = Visibility.Hidden;//Subasta
                 Pst3.Visibility = Visibility.Hidden;//Mensajes
                 Pst4.Visibility = Visibility.Hidden;//Gestión
                 Pst5.Visibility = Visibility.Hidden;//Informes
-                //TODO: Añadir botones compra/Venta
+                sellButton.Visibility = Visibility.Hidden;//Botón Venta
             }
-            if (A_Login.user.Profile.ProfileID >= 3)//Admin
+            else if (A_Login.user.Profile.ProfileID == 2)//Usuario registrado
             {
-
+                Pst4.Visibility = Visibility.Hidden;//Gestión
+                Pst5.Visibility = Visibility.Hidden;//Informes
+                TimerChats();
             }
-            if (A_Login.user.Profile.ProfileID >= 2)//Usuario registrado
+            else if (A_Login.user.Profile.ProfileID == 3)//Admin
             {
-
+                Pst5.Visibility = Visibility.Hidden;//Informes
+                sub_Users.Width = 0;//Gestión Usuarios
+                sub_Users.Margin = new Thickness(0);
+                TimerChats();
+                HideGrids();
             }
-
-
-
-            if (!Authorization(2))//Usuario registrado
+            else if (A_Login.user.Profile.ProfileID == 4)//Master
             {
-                Pst3.Width = 0;
+                TimerChats();
+                HideGrids();
             }
-            if (!Authorization(3))//Admin
-            {
-                Pst4.Width = 0;
-            }
-            if (!Authorization(4))//Master
-            {
-                Pst5.Width = 0;
-                sub_Users.Width = 0;
-            }
-            HideGrids();
-            spChat.Children.RemoveRange(1, (spChat.Children.Count - 1));//Elimina todos los elementos menos el primero
-            LoadChats();
         }
-        
-        public bool Authorization(int perfil)
+
+        void TimerChats()
         {
-            if (A_Login.user.Profile.ProfileID >= perfil)
-            {
-                return true;
-            }
-            else return false;
+            LoadChats();
+            timerChats = new DispatcherTimer();
+            timerChats.Tick += TimerChats_Tick;
+            timerChats.Interval = new TimeSpan(0, 0, 0, 3);//TODO: Controlar tiempo
+            timerChats.Start();
         }
 
         void HideGrids()
@@ -363,12 +365,18 @@ namespace Galeria.Windows
 
         private void ObraBtn_Click(object sender, RoutedEventArgs e)
         {
-            int indexObra = int.Parse(Regex.Match(((sender as Button).Name), @"\d+").Value);
-
-            E_Buy eb = new E_Buy(new ArtworkVO(indexObra));
-            A_Login.windows.Add(eb);
-            eb.Show();
-            overAllShadow.Visibility = Visibility.Visible;
+            if (A_Login.user.Profile.ProfileID == 1)
+            {
+                MessageBox.Show((string)A_Login.dict["CG1_Msg1"]);//Debes estar registrado
+            }
+            else
+            {
+                int indexObra = int.Parse(Regex.Match(((sender as Button).Name), @"\d+").Value);
+                E_Buy eb = new E_Buy(new ArtworkVO(indexObra));
+                A_Login.windows.Add(eb);
+                eb.Show();
+                overAllShadow.Visibility = Visibility.Visible;
+            }
         }
 
         //Mientras escribe, voy buscando las obras para cargarlas
@@ -400,19 +408,20 @@ namespace Galeria.Windows
         //Método que se lanza al abrir ventana, y cada vez que se cambia de idioma
         public void OnLangChange()
         {
-            LoadFilters();
-            List<ArtworkVO> aVOs = new List<ArtworkVO>();
-            foreach (Artwork a in A_Login.u.ArtworksRep.GetAll())
-            {
-                aVOs.Add(new ArtworkVO(a.ArtworkID));
-            }
-            LoadArtworks(aVOs);//Esto implica que al cambiar de idioma elimina los filtros, pero está bien así
-            gridUsers.ReloadData();
-            gridTrans.ReloadData();
-            gridNats.ReloadData();
-            gridAuths.ReloadData();
-            gridTypes.ReloadData();
-            gridArts.ReloadData();
+            LoadWindow();
+            //LoadFilters();
+            //List<ArtworkVO> aVOs = new List<ArtworkVO>();
+            //foreach (Artwork a in A_Login.u.ArtworksRep.GetAll())
+            //{
+            //    aVOs.Add(new ArtworkVO(a.ArtworkID));
+            //}
+            //LoadArtworks(aVOs);//Esto implica que al cambiar de idioma elimina los filtros, pero está bien así
+            //gridUsers.ReloadData();
+            //gridTrans.ReloadData();
+            //gridNats.ReloadData();
+            //gridAuths.ReloadData();
+            //gridTypes.ReloadData();
+            //gridArts.ReloadData();
         }
         
         //Botón que muestra el panel de usuario
@@ -459,6 +468,7 @@ namespace Galeria.Windows
             sub_Users.FontStretch = FontStretches.Medium;
             gridUsers.Visibility = Visibility.Visible;
             gridUsers.dataGrid.SelectedIndex = -1;
+            gridUsers.ReloadData();
         }
 
         private void sub_Trans_MouseDown(object sender, MouseButtonEventArgs e)
@@ -472,6 +482,7 @@ namespace Galeria.Windows
             gridTrans.dataGrid.SelectedIndex = -1;
             //gridTrans.comboBox.SelectedIndex = 0;
             gridTrans.comboBox.SelectedIndex = -1;
+            gridTrans.ReloadData();
         }
 
         private void sub_Nats_MouseDown(object sender, MouseButtonEventArgs e)
@@ -483,6 +494,7 @@ namespace Galeria.Windows
             sub_Nats.FontStretch = FontStretches.Medium;
             gridNats.Visibility = Visibility.Visible;
             gridNats.dataGrid.SelectedIndex = -1;
+            gridNats.ReloadData();
         }
 
         private void sub_Auths_MouseDown(object sender, MouseButtonEventArgs e)
@@ -494,6 +506,7 @@ namespace Galeria.Windows
             sub_Auths.FontStretch = FontStretches.Medium;
             gridAuths.Visibility = Visibility.Visible;
             gridAuths.dataGrid.SelectedIndex = -1;
+            gridAuths.ReloadData();
         }
 
         private void sub_Types_MouseDown(object sender, MouseButtonEventArgs e)
@@ -505,6 +518,7 @@ namespace Galeria.Windows
             sub_Types.FontStretch = FontStretches.Medium;
             gridTypes.Visibility = Visibility.Visible;
             gridTypes.dataGrid.SelectedIndex = -1;
+            gridTypes.ReloadData();
         }
 
         private void sub_Arts_MouseDown(object sender, MouseButtonEventArgs e)
@@ -516,6 +530,7 @@ namespace Galeria.Windows
             sub_Arts.FontStretch = FontStretches.Medium;
             gridArts.Visibility = Visibility.Visible;
             gridArts.dataGrid.SelectedIndex = -1;
+            gridArts.ReloadData();
         }
         #endregion
 

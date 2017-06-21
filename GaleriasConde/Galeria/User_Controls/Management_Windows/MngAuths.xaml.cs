@@ -32,7 +32,10 @@ namespace Galeria.User_Controls.Management_Windows
         public MngAuths()
         {
             InitializeComponent();
-            ReloadData();
+            if (A_Login.user.Profile.ProfileID >= 3)
+            {
+                ReloadData();
+            }
         }
 
         private void dataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -60,13 +63,6 @@ namespace Galeria.User_Controls.Management_Windows
             }
             else
             {
-                buttMod.IsEnabled = false;
-                buttDel.IsEnabled = false;
-
-                txtID.Text = "";
-                txtName.Text = "";
-                txtArt.Text = "";
-                txtInfo.Text = "";
                 ReloadData();
             }
         }
@@ -78,7 +74,7 @@ namespace Galeria.User_Controls.Management_Windows
                 try
                 {
                     Author a = new Author();
-                    a.realName = txtName.Text;//Probar si da error al dejar el campo en blanco
+                    a.realName = txtName.Text;
                     a.artName = txtArt.Text;
                     Nationality n = A_Login.u.NationalitiesRep.Single(c => c.NationalityID == (int)comboBox.SelectedValue);
                     a.Nationality = n;
@@ -90,8 +86,6 @@ namespace Galeria.User_Controls.Management_Windows
                         A_Login.u.AuthorTranslationsRep.Create(at);
                     }
                     ReloadData();
-                    dataGrid.SelectedIndex = 0;
-                    dataGrid.SelectedIndex = -1;
                 }
                 catch (Exception ex)
                 {
@@ -122,7 +116,6 @@ namespace Galeria.User_Controls.Management_Windows
                     A_Login.u.AuthorsRep.Update(a);
 
                     ReloadData();
-                    dataGrid.SelectedIndex = -1;
                 }
                 else
                 {
@@ -163,7 +156,6 @@ namespace Galeria.User_Controls.Management_Windows
                         A_Login.u.AuthorsRep.Delete(A_Login.u.AuthorsRep.Single(c => c.AuthorID == obj.AuthorID));
 
                         ReloadData();
-                        dataGrid.SelectedIndex = -1;
                     }
                     catch (Exception ex)
                     {
@@ -184,6 +176,14 @@ namespace Galeria.User_Controls.Management_Windows
             }
             dataGrid.ItemsSource = VOs;
             Loaders.LoadNationalities(comboBox);
+
+            buttMod.IsEnabled = false;
+            buttDel.IsEnabled = false;
+
+            txtID.Text = "";
+            txtName.Text = "";
+            txtArt.Text = "";
+            txtInfo.Text = "";
         }
     }
 }

@@ -19,6 +19,7 @@
             <BitmapImage x:Key="add" UriSource="Images/add.ico"/>
             <BitmapImage x:Key="addUser" UriSource="Images/Add-contact.ico"/>
             <BitmapImage x:Key="cancel" UriSource="Images/cancel.ico"/>
+            <BitmapImage x:Key="send" UriSource="Images/send.ico"/>
 
             <Style TargetType="{x:Type TextBox}" x:Key="mdTxt" BasedOn="{StaticResource MaterialDesignTextBox}"/>
             <!--<Style TargetType="{x:Type TextBox}" x:Key="mdTxt1">

@@ -33,9 +33,11 @@ namespace Galeria.User_Controls
             lblEmail.Content = A_Login.user.email;
             lblTlf.Content = A_Login.user.tlf;
             imgBrush.ImageSource = Converters.BytesToImg(A_Login.user.picture);
-            if (A_Login.user.Profile.codProfile == "Default")
+            if (A_Login.user.Profile.ProfileID == 1)
             {
                 buttEdit.Visibility = Visibility.Hidden;
+                elipse1.Visibility = Visibility.Hidden;
+                elipse2.Visibility = Visibility.Hidden;
             }
         }
 

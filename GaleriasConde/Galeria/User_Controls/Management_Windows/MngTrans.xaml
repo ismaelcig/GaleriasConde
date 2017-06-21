@@ -30,12 +30,13 @@
                 <Label Content="{DynamicResource Done}" HorizontalAlignment="Left" Margin="150,20,0,0" VerticalAlignment="Top"/>
                 <ComboBox x:Name="comboBoxArt" IsEnabled="False" HorizontalAlignment="Left" Height="40" Margin="10,92,0,0" VerticalAlignment="Top" Width="220" materialDesign:HintAssist.Hint="{DynamicResource Art}" materialDesign:HintAssist.IsFloating="True" Style="{StaticResource mdCombo}"/>
                 <ComboBox x:Name="comboBoxUser" HorizontalAlignment="Left" Height="40" Margin="10,132,0,0" VerticalAlignment="Top" Width="220" materialDesign:HintAssist.Hint="{DynamicResource User}" materialDesign:HintAssist.IsFloating="True" Style="{StaticResource mdCombo}"/>
-                <TextBox x:Name="txtMoney" HorizontalAlignment="Left" Height="40" Margin="10,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" materialDesign:HintAssist.Hint="{DynamicResource Money}" materialDesign:HintAssist.IsFloating="True" Style="{StaticResource mdTxt}"/>
+                <TextBox x:Name="txtMoney" HorizontalAlignment="Left" Height="40" Margin="10,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="201" materialDesign:HintAssist.Hint="{DynamicResource Money}" materialDesign:HintAssist.IsFloating="True" Style="{StaticResource mdTxt}"/>
                 <TextBox x:Name="txtComment" HorizontalAlignment="Left" Margin="10,212,0,40" TextWrapping="Wrap" VerticalAlignment="Stretch" Width="220" AcceptsReturn="True" VerticalContentAlignment="Top" materialDesign:HintAssist.Hint="{DynamicResource Comm}" materialDesign:HintAssist.IsFloating="True" Style="{StaticResource mdTxt}"/>
 
                 <Button x:Name="buttAdd" Content="{DynamicResource CG4Add}" HorizontalAlignment="Left" Margin="10,0,0,5" VerticalAlignment="Bottom" Width="70" Click="buttAdd_Click"/>
                 <Button x:Name="buttMod" Content="{DynamicResource CG4Mod}" HorizontalAlignment="Left" Margin="85,0,0,5" VerticalAlignment="Bottom" Width="70" Click="buttMod_Click"/>
                 <Button x:Name="buttDel" Content="{DynamicResource CG4Del}" HorizontalAlignment="Left" Margin="160,0,0,5" VerticalAlignment="Bottom" Width="70" Click="buttDel_Click"/>
+                <Label x:Name="label" Content="€" HorizontalAlignment="Left" Margin="211,189,0,0" VerticalAlignment="Top" Height="23"/>
             </Grid>
         </Border>
         <DataGrid x:Name="dataGrid" HorizontalAlignment="Stretch" Margin="240,0,0,0" VerticalAlignment="Stretch" DataContext="{Binding Source=TransactionVO}" Style="{StaticResource dg}" SelectionChanged="dataGrid_SelectionChanged">
@@ -60,7 +61,7 @@
                         <TextBlock Text="{DynamicResource Money}" HorizontalAlignment="Center" />
                     </DataGridTextColumn.Header>
                 </DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding registeredBy.nick}">
+                <DataGridTextColumn x:Name="regBycolumn" Binding="{Binding registeredBy.nick}">
                     <DataGridTextColumn.Header>
                         <TextBlock Text="{DynamicResource Admin}"/>
                     </DataGridTextColumn.Header>

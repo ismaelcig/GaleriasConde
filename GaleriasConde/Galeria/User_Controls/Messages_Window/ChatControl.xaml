@@ -15,6 +15,6 @@
         <Label x:Name="chatName" Content="Chat Name 12345..." FontSize="20" FontStretch="Expanded" FontWeight="Black" HorizontalAlignment="Left" Margin="95,10,0,0" VerticalAlignment="Top"/>
         <Label x:Name="chatMsg" Content="Last Message" FontStyle="Italic" HorizontalAlignment="Left" Margin="95,52,0,0" VerticalAlignment="Top"/>
         <!--Grid invisible superpuesto para detectar click y abrir chat-->
-        <Grid Cursor="Hand" MouseDown="Grid_MouseDown"/>
+        <Grid Cursor="Hand" MouseDown="Grid_MouseDown" Panel.ZIndex="10" Background="AliceBlue" Opacity="0"/>
     </Grid>
 </UserControl>

@@ -26,7 +26,10 @@ namespace Galeria.User_Controls.Management_Windows
         public MngUsers()
         {
             InitializeComponent();
-            ReloadData();
+            if (A_Login.user.Profile.ProfileID >= 4)
+            {
+                ReloadData();
+            }
         }
 
         //Prepara para modificar el Usuario seleccionado, o limpia los campos si se ha deseleccionado
@@ -52,12 +55,6 @@ namespace Galeria.User_Controls.Management_Windows
             }
             else
             {
-                checkBox.IsEnabled = false;
-                buttMod.IsEnabled = false;
-                buttDel.IsEnabled = false;
-
-                txtUser.Text = "";
-                checkBox.IsChecked = false;
                 ReloadData();
             }
         }
@@ -110,6 +107,13 @@ namespace Galeria.User_Controls.Management_Windows
         {
             dataGrid.ItemsSource = null;
             dataGrid.ItemsSource = A_Login.u.UsersRep.GetAll();
+
+            checkBox.IsEnabled = false;
+            buttMod.IsEnabled = false;
+            buttDel.IsEnabled = false;
+
+            txtUser.Text = "";
+            checkBox.IsChecked = false;
         }
     }
 }

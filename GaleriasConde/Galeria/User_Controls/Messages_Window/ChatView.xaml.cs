@@ -30,6 +30,7 @@ namespace Galeria.User_Controls.Messages_Window
 
         public void LoadChatView(Chat chat)
         {
+            InitializeComponent();
             #region Title
             //List<User> users = A_Login.u.UsersRep.Get(c=>c.)
             if (chat.users.Count > 2)//Significa que es un grupo
@@ -82,8 +83,6 @@ namespace Galeria.User_Controls.Messages_Window
             }
             SetImg(defaultImg);
             #endregion
-
-
         }
 
         public void SetTitle(string name)
@@ -109,6 +108,11 @@ namespace Galeria.User_Controls.Messages_Window
         public void SetImg(byte[] array)
         {
             img.ImageSource = Converters.BytesToImg(array);
+        }
+
+        private void adjbutton_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }
 }

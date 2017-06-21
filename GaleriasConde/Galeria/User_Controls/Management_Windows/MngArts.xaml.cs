@@ -40,7 +40,10 @@ namespace Galeria.User_Controls.Management_Windows
                 checkBox.Visibility = Visibility.Hidden;
                 label1.Visibility = Visibility.Hidden;
             }
-            ReloadData();
+            if (A_Login.user.Profile.ProfileID >= 3)
+            {
+                ReloadData();
+            }
         }
         
         private void dataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -76,17 +79,6 @@ namespace Galeria.User_Controls.Management_Windows
             }
             else
             {
-                buttMod.IsEnabled = false;
-
-                txtID.Text = "";
-                checkBox.IsChecked = false;
-                txtTitle.Text = "";
-                comboBoxAut.SelectedIndex = -1;
-                comboBoxType.SelectedIndex = -1;
-                txtDim.Text = "";
-                txtDate.Text = "";
-                txtinfo.Text = "";
-                img.Source = null;
                 ReloadData();
             }
         }
@@ -136,8 +128,6 @@ namespace Galeria.User_Controls.Management_Windows
                         A_Login.u.ArtworkTranslationsRep.Create(at);
                     }
                     ReloadData();
-                    dataGrid.SelectedIndex = 0;
-                    dataGrid.SelectedIndex = -1;
                 }
                 catch (Exception ex)
                 {
@@ -170,7 +160,6 @@ namespace Galeria.User_Controls.Management_Windows
                     A_Login.u.ArtworksRep.Update(a);
 
                     ReloadData();
-                    dataGrid.SelectedIndex = -1;
                 }
                 else
                 {
@@ -194,6 +183,18 @@ namespace Galeria.User_Controls.Management_Windows
             dataGrid.ItemsSource = VOs;
             Loaders.LoadAuthors(comboBoxAut);
             Loaders.LoadTypes(comboBoxType);
+
+            buttMod.IsEnabled = false;
+
+            txtID.Text = "";
+            checkBox.IsChecked = false;
+            txtTitle.Text = "";
+            comboBoxAut.SelectedIndex = -1;
+            comboBoxType.SelectedIndex = -1;
+            txtDim.Text = "";
+            txtDate.Text = "";
+            txtinfo.Text = "";
+            img.Source = null;
         }
     }
 }

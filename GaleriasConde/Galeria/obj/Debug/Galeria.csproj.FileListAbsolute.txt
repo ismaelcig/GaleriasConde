@@ -198,7 +198,6 @@ C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Galeria.csprojResolveAss
 C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\MainWindow.g.cs
 C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\ConversDetail.g.cs
 C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\LanguageSelector.g.cs
-C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\LeftPanel.g.cs
 C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngArts.g.cs
 C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngAuths.g.cs
 C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngNats.g.cs
@@ -221,7 +220,6 @@ C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Dict\DictionarySP.baml
 C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\MainWindow.baml
 C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\ConversDetail.baml
 C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\LanguageSelector.baml
-C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\LeftPanel.baml
 C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngArts.baml
 C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngAuths.baml
 C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngNats.baml
@@ -237,7 +235,6 @@ C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Windows\D_UserOptions.ba
 C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Galeria.g.resources
 C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Galeria.Properties.Resources.resources
 C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Galeria.csproj.GenerateResource.Cache
-C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Galeria.Migrations.Migr0619.resources
 C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\bin\Debug\Galeria.exe.config
 C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\Galeria.exe
 C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\Galeria.pdb
@@ -314,3 +311,14 @@ C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\Windows
 C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\Windows\E_Sell.baml
 C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\Windows\E_Buy.g.cs
 C:\Users\Usuario\Desktop\Project Galeria\GaleriasConde\Galeria\obj\Debug\Windows\E_Buy.baml
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\Messages_Window\AddChat.g.cs
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\Messages_Window\ChatControl.g.cs
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\Messages_Window\ChatView.g.cs
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Windows\E_Buy.g.cs
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Windows\E_Sell.g.cs
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\Messages_Window\AddChat.baml
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\Messages_Window\ChatControl.baml
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\Messages_Window\ChatView.baml
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Windows\E_Buy.baml
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Windows\E_Sell.baml
+C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Galeria.Migrations.Migr0621.resources

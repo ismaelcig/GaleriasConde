@@ -32,7 +32,10 @@ namespace Galeria.User_Controls.Management_Windows
         public MngTypes()
         {
             InitializeComponent();
-            ReloadData();
+            if (A_Login.user.Profile.ProfileID >= 3)
+            {
+                ReloadData();
+            }
         }
 
         private void dataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)//Datagrid carga VOs
@@ -49,11 +52,6 @@ namespace Galeria.User_Controls.Management_Windows
             }
             else
             {
-                buttMod.IsEnabled = false;
-                buttDel.IsEnabled = false;
-
-                txtID.Text = "";
-                txtType.Text = "";
                 ReloadData();
             }
         }
@@ -73,8 +71,6 @@ namespace Galeria.User_Controls.Management_Windows
                         A_Login.u.TypeTranslationsRep.Create(tt);
                     }
                     ReloadData();
-                    dataGrid.SelectedIndex = 0;
-                    dataGrid.SelectedIndex = -1;
                 }
                 catch (Exception ex)
                 {
@@ -99,7 +95,6 @@ namespace Galeria.User_Controls.Management_Windows
                     A_Login.u.TypeTranslationsRep.Update(tt);
                     
                     ReloadData();
-                    dataGrid.SelectedIndex = -1;
                 }
                 else
                 {
@@ -140,7 +135,6 @@ namespace Galeria.User_Controls.Management_Windows
                         A_Login.u.TypesRep.Delete(A_Login.u.TypesRep.Single(c => c.TypeID == obj.TypeID));
 
                         ReloadData();
-                        dataGrid.SelectedIndex = -1;
                     }
                     catch (Exception ex)
                     {
@@ -160,6 +154,12 @@ namespace Galeria.User_Controls.Management_Windows
                 VOs.Add(new TypeVO(item.TypeID));
             }
             dataGrid.ItemsSource = VOs;
+
+            buttMod.IsEnabled = false;
+            buttDel.IsEnabled = false;
+
+            txtID.Text = "";
+            txtType.Text = "";
         }
     }
 }

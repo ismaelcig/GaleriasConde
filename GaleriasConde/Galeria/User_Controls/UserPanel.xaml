@@ -31,12 +31,12 @@
     </UserControl.Resources>
     
     <Grid Background="LightGray" MinHeight="135" MinWidth="300">
-        <Ellipse HorizontalAlignment="Left" Height="75" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="75">
+        <Ellipse x:Name="elipse1" HorizontalAlignment="Left" Height="75" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="75">
             <Ellipse.Fill>
                 <ImageBrush x:Name="imgBrush" ImageSource="{StaticResource camera}"/>
             </Ellipse.Fill>
         </Ellipse>
-        <Ellipse Cursor="Hand" HorizontalAlignment="Left" Height="75" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="75" MouseEnter="Ellipse_MouseEnter" MouseLeave="Ellipse_MouseLeave" MouseDown="Ellipse_MouseDown">
+        <Ellipse x:Name="elipse2" Cursor="Hand" HorizontalAlignment="Left" Height="75" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="75" MouseEnter="Ellipse_MouseEnter" MouseLeave="Ellipse_MouseLeave" MouseDown="Ellipse_MouseDown">
             <Ellipse.Fill>
                 <ImageBrush x:Name="overImgBrush" ImageSource="{StaticResource camera}" Opacity="0"></ImageBrush>
             </Ellipse.Fill>

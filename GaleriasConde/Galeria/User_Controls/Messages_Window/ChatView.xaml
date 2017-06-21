@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Galeria.User_Controls.Messages_Window"
              mc:Ignorable="d" 
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              d:DesignHeight="500" d:DesignWidth="600">
     <Grid Background="WhiteSmoke">
         <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="100" Background="Beige">
@@ -16,6 +17,17 @@
             <Label x:Name="chatName" DockPanel.Dock="Top" Content="Chat Name" FontSize="25" FontStretch="Expanded" FontWeight="Black" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
             <Label x:Name="chatUsers" Content="Users" FontStyle="Italic" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
         </DockPanel>
-        <Border BorderBrush="Black" BorderThickness="0,1,0,1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,100,0,0"/>
+        <Border BorderBrush="Black" BorderThickness="0,1,0,1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,100,0,50">
+            <ScrollViewer>
+                <StackPanel Orientation="Vertical">
+                    
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+        <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Height="50" Background="LightGray" LastChildFill="True">
+            <Image x:Name="adjbutton" Source="{StaticResource camera}" MouseDown="adjbutton_MouseDown" Cursor="Hand" DockPanel.Dock="Left" HorizontalAlignment="Left" Margin="5,0,5,0"/>
+            <Image x:Name="sendbutton" Source="{StaticResource send}" MouseDown="adjbutton_MouseDown" Cursor="Hand" DockPanel.Dock="Right" HorizontalAlignment="Right" Margin="5,7,5,7"/>
+            <TextBox x:Name="txt" Height="40" Background="White" materialDesign:HintAssist.Hint="{DynamicResource CVtxt}" materialDesign:HintAssist.FloatingScale="0.8"/>
+        </DockPanel>
     </Grid>
 </UserControl>

@@ -62,6 +62,7 @@
     <system:String x:Key="CG1Search">Search...</system:String>
     <system:String x:Key="CG1AllFilter">All</system:String>
     <system:String x:Key="CG1OnStock">Only on Stock</system:String>
+    <system:String x:Key="CG1_Msg1">You must be registered to buy.</system:String>
 
     <!--Pst4-->
     <system:String x:Key="User">User</system:String>
@@ -132,9 +133,29 @@
     <system:String x:Key="ACbutt3">Cancel</system:String>
     <system:String x:Key="MngAC_Msg1">You must enter an existing user.</system:String>
     <system:String x:Key="MngAC_Msg2">Chat with these users already exists.</system:String>
+    
+    <!--ChatView-->
+    <system:String x:Key="CVtxt">Say something nice :)</system:String>
 
     <!--UserOptions-->
     <system:String x:Key="UOtitle">User Options</system:String>
+
+    <!--Buy-->
+    <system:String x:Key="BUYtitle">Buy</system:String>
+    <system:String x:Key="BTitle">Title:</system:String>
+    <system:String x:Key="BAuthor">Author:</system:String>
+    <system:String x:Key="BDate">Date:</system:String>
+    <system:String x:Key="BDim">Dimensions:</system:String>
+    <system:String x:Key="BDescr">Description:</system:String>
+    <system:String x:Key="Avaliable">Avaliable</system:String>
+    <system:String x:Key="BUYb1">Buy it</system:String>
+
+    <!--Buy-->
+    <system:String x:Key="SELLtitle">Sell Artwork</system:String>
+    <system:String x:Key="SAuthor">Can't find it? Write it here</system:String>
+    <system:String x:Key="SDescr">Description/Comment</system:String>
+    <system:String x:Key="Sb1">Select img</system:String>
+    <system:String x:Key="Sb2">Submit proposal</system:String>
 
 </ResourceDictionary>
 
