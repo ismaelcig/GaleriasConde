@@ -44,6 +44,7 @@ namespace Galeria.User_Controls
         private void buttEdit_Click(object sender, RoutedEventArgs e)
         {//Abre ventana/Panel para modificar datos perfil
             D_UserOptions duo = new D_UserOptions();
+            A_Login.windows.Add(duo);
             C_Galeria.cg.overAllShadow.Visibility = Visibility.Visible;
             duo.Show();
         }
@@ -56,7 +57,7 @@ namespace Galeria.User_Controls
 
         private void buttLogout_Click(object sender, RoutedEventArgs e)
         {
-            C_Galeria.cg.LogOut();
+            C_Galeria.cg.Close();
         }
 
         #region Effectos
@@ -67,9 +68,9 @@ namespace Galeria.User_Controls
                 dispatcherTimer1.Stop();
             }
             catch (Exception ex)
-            {
-                Console.WriteLine("Error: " + ex.Message);
-                Console.WriteLine("Inner: " + ex.InnerException);
+            {//Da error la primera vez, porque todavía no se ha iniciado
+                //Console.WriteLine("Error: " + ex.Message);
+                //Console.WriteLine("Inner: " + ex.InnerException);
             }
             dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
             dispatcherTimer.Tick += DispatcherTimer_Tick;
@@ -121,18 +122,9 @@ namespace Galeria.User_Controls
             if (ofd.ShowDialog() == true)
             {
                 string[] split = ofd.FileName.Split('.');
-                if (split.Last().Equals("ico"))//Sólo se admite este formato para que el byte[] no sea demasiado grande
+                if (split.Last().Equals("gif"))//Sólo se admite este formato para que el byte[] no sea demasiado grande
                 {
                     A_Login.user.picture = Converters.ReadImageFile(ofd.FileName);//Guarda la img seleccionada como array de Bytes
-                    //TODO: Borrar
-                    //byte[] sad = Converters.ReadImageFile(ofd.FileName);
-                    //Console.WriteLine("There we go: ");
-                    //foreach (byte item in sad)
-                    //{
-                    //    Console.Write(item + ", ");
-                    //}
-                    //Console.WriteLine("");
-                    //Console.WriteLine("End");
                     A_Login.u.UsersRep.Update(A_Login.user);
                     imgBrush.ImageSource = Converters.BytesToImg(A_Login.user.picture);//La muestra en la interfaz
                 }

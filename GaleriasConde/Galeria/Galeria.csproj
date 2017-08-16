@@ -101,9 +101,13 @@
     <Compile Include="DAL\Repositories\UsersRep.cs" />
     <Compile Include="DAL\UnitOfWork.cs" />
     <Compile Include="Dict\CargarDiccionarios.cs" />
-    <Compile Include="Migrations\201706210845372_Migr0621.cs" />
-    <Compile Include="Migrations\201706210845372_Migr0621.Designer.cs">
-      <DependentUpon>201706210845372_Migr0621.cs</DependentUpon>
+    <Compile Include="Migrations\201706212214312_Migr0621.cs" />
+    <Compile Include="Migrations\201706212214312_Migr0621.Designer.cs">
+      <DependentUpon>201706212214312_Migr0621.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706220008314_Migr0621_2.cs" />
+    <Compile Include="Migrations\201706220008314_Migr0621_2.Designer.cs">
+      <DependentUpon>201706220008314_Migr0621_2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Artwork.cs" />
@@ -127,6 +131,9 @@
     <Compile Include="Other Classes\IArrangeAnimator.cs" />
     <Compile Include="Other Classes\Loaders.cs" />
     <Compile Include="User_Controls\AnimatedWrapPanel.cs" />
+    <Compile Include="User_Controls\AuthorControl.xaml.cs">
+      <DependentUpon>AuthorControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="User_Controls\ConversDetail.xaml.cs">
       <DependentUpon>ConversDetail.xaml</DependentUpon>
     </Compile>
@@ -162,6 +169,9 @@
     </Compile>
     <Compile Include="User_Controls\Messages_Window\ChatView.xaml.cs">
       <DependentUpon>ChatView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User_Controls\Messages_Window\MsgControl.xaml.cs">
+      <DependentUpon>MsgControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="User_Controls\UserPanel.xaml.cs">
       <DependentUpon>UserPanel.xaml</DependentUpon>
@@ -209,6 +219,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="User_Controls\AuthorControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="User_Controls\ConversDetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -257,6 +271,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="User_Controls\Messages_Window\MsgControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="User_Controls\UserPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -300,8 +318,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\201706210845372_Migr0621.resx">
-      <DependentUpon>201706210845372_Migr0621.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706212214312_Migr0621.resx">
+      <DependentUpon>201706212214312_Migr0621.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706220008314_Migr0621_2.resx">
+      <DependentUpon>201706220008314_Migr0621_2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -339,6 +360,19 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\send.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\close.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\settings.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\edit.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\expand.gif" />
+    <Resource Include="Images\minimize.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.2.0.0\build\dotnet\Fody.targets" Condition="Exists('..\packages\Fody.2.0.0\build\dotnet\Fody.targets')" />

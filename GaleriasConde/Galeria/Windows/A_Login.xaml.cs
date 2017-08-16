@@ -79,6 +79,7 @@ namespace Galeria.Windows
                             C_Galeria gal = new C_Galeria();
                             gal.Show();
                             Hide();
+                            textBox.Text = "";
                         }
                         else
                         {

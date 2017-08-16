@@ -124,7 +124,6 @@ C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\
 C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\MainWindow.g.cs
 C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\ConversDetail.g.cs
 C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\LanguageSelector.g.cs
-C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\LeftPanel.g.cs
 C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngAuths.g.cs
 C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngNats.g.cs
 C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngTrans.g.cs
@@ -145,7 +144,6 @@ C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\
 C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\MainWindow.baml
 C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\ConversDetail.baml
 C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\LanguageSelector.baml
-C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\LeftPanel.baml
 C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngAuths.baml
 C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngNats.baml
 C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\Management_Windows\MngTrans.baml
@@ -170,9 +168,6 @@ C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\
 C:\Users\ismaelci\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\Galeria.Migrations.Migr0615.resources
 C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\Windows\D_UserOptions.g.cs
 C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\Windows\D_UserOptions.baml
-C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\Galeria.Migrations.Migr0615.resources
-C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\Galeria.Migrations.Migr0615_.resources
-C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\Galeria.Migrations.Migr0615_2.resources
 C:\Users\dam204\Desktop\GaleriasConde\Galeria\bin\Debug\Galeria.exe.config
 C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Galeria.exe
 C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Galeria.pdb
@@ -322,3 +317,19 @@ C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\User_Controls\Messages_W
 C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Windows\E_Buy.baml
 C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Windows\E_Sell.baml
 C:\Users\dam204\Desktop\GaleriasConde\Galeria\obj\Debug\Galeria.Migrations.Migr0621.resources
+C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\Messages_Window\AddChat.g.cs
+C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\Messages_Window\ChatControl.g.cs
+C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\Messages_Window\ChatView.g.cs
+C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\Windows\E_Buy.g.cs
+C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\Windows\E_Sell.g.cs
+C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\Messages_Window\AddChat.baml
+C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\Messages_Window\ChatControl.baml
+C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\Messages_Window\ChatView.baml
+C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\Windows\E_Buy.baml
+C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\Windows\E_Sell.baml
+C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\Messages_Window\MsgControl.g.cs
+C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\Messages_Window\MsgControl.baml
+C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\Galeria.Migrations.Migr0621.resources
+C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\AuthorControl.g.cs
+C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\User_Controls\AuthorControl.baml
+C:\Users\Usuario\Documents\GitHub\GaleriasConde\GaleriasConde\Galeria\obj\Debug\Galeria.Migrations.Migr0621_2.resources

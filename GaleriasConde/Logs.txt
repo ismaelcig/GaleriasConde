@@ -364,3 +364,93 @@ Log Entry : 12:00:07 PM, Tuesday, June 13, 2017 :: From GenericRep6 :: A network
 Log Entry : 10:12:55, lunes, 19 de junio de 2017 :: From GenericRep6 :: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
  :Inner Exception: 
 ------------------------------------------------------------
+Log Entry : 23:44:12, miércoles, 21 de junio de 2017 :: From GenericRep6 :: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:44:12, miércoles, 21 de junio de 2017 :: From Loaders3 :: El valor no puede ser nulo.
+Nombre del parámetro: source
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:44:12, miércoles, 21 de junio de 2017 :: From LangSel2 :: Referencia a objeto no establecida como instancia de un objeto.
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:48:46, miércoles, 21 de junio de 2017 :: From GenericRep6 :: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:48:46, miércoles, 21 de junio de 2017 :: From Loaders3 :: El valor no puede ser nulo.
+Nombre del parámetro: source
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:48:46, miércoles, 21 de junio de 2017 :: From LangSel2 :: Referencia a objeto no establecida como instancia de un objeto.
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:51:55, miércoles, 21 de junio de 2017 :: From GenericRep6 :: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:51:55, miércoles, 21 de junio de 2017 :: From Loaders3 :: El valor no puede ser nulo.
+Nombre del parámetro: source
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:51:55, miércoles, 21 de junio de 2017 :: From LangSel2 :: Referencia a objeto no establecida como instancia de un objeto.
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:25:11, jueves, 22 de junio de 2017 :: From GenericRep6 :: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:25:11, jueves, 22 de junio de 2017 :: From Loaders3 :: El valor no puede ser nulo.
+Nombre del parámetro: source
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:25:11, jueves, 22 de junio de 2017 :: From LangSel2 :: Referencia a objeto no establecida como instancia de un objeto.
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:29:29, jueves, 22 de junio de 2017 :: From GenericRep6 :: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:29:29, jueves, 22 de junio de 2017 :: From Loaders3 :: El valor no puede ser nulo.
+Nombre del parámetro: source
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:29:29, jueves, 22 de junio de 2017 :: From LangSel2 :: Referencia a objeto no establecida como instancia de un objeto.
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:34:29, jueves, 22 de junio de 2017 :: From GenericRep6 :: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:34:29, jueves, 22 de junio de 2017 :: From Loaders3 :: El valor no puede ser nulo.
+Nombre del parámetro: source
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:34:29, jueves, 22 de junio de 2017 :: From LangSel2 :: Referencia a objeto no establecida como instancia de un objeto.
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:38:31, jueves, 22 de junio de 2017 :: From GenericRep6 :: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:38:31, jueves, 22 de junio de 2017 :: From Loaders3 :: El valor no puede ser nulo.
+Nombre del parámetro: source
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:38:31, jueves, 22 de junio de 2017 :: From LangSel2 :: Referencia a objeto no establecida como instancia de un objeto.
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:43:51, jueves, 22 de junio de 2017 :: From GenericRep6 :: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:43:51, jueves, 22 de junio de 2017 :: From Loaders3 :: El valor no puede ser nulo.
+Nombre del parámetro: source
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:43:51, jueves, 22 de junio de 2017 :: From LangSel2 :: Referencia a objeto no establecida como instancia de un objeto.
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:47:20, jueves, 22 de junio de 2017 :: From GenericRep6 :: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:47:20, jueves, 22 de junio de 2017 :: From Loaders3 :: El valor no puede ser nulo.
+Nombre del parámetro: source
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:47:20, jueves, 22 de junio de 2017 :: From LangSel2 :: Referencia a objeto no establecida como instancia de un objeto.
+ :Inner Exception: 
+------------------------------------------------------------

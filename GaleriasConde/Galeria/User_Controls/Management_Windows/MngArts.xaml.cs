@@ -70,6 +70,7 @@ namespace Galeria.User_Controls.Management_Windows
                         comboBoxType.SelectedItem = item;
                     }
                 }
+                txtMoney.Text = obj.money.ToString();
                 txtDim.Text = obj.dimensions;
                 txtDate.Text = obj.date;
                 txtinfo.Text = obj.info;
@@ -108,7 +109,9 @@ namespace Galeria.User_Controls.Management_Windows
 
         private void buttAdd_Click(object sender, RoutedEventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(txtTitle.Text) && comboBoxAut.SelectedIndex != -1 && comboBoxType.SelectedIndex != -1 && arrayImg != null)//El resto puede quedar en blanco, si es desconocido
+            double money = new double();
+            double.TryParse(txtMoney.Text, out money);
+            if (!string.IsNullOrWhiteSpace(txtTitle.Text) && comboBoxAut.SelectedIndex != -1 && comboBoxType.SelectedIndex != -1 && arrayImg != null && money > 0)//El resto puede quedar en blanco, si es desconocido
             {//Rollback(?)
                 try
                 {
@@ -116,15 +119,15 @@ namespace Galeria.User_Controls.Management_Windows
                     a.Author = A_Login.u.AuthorsRep.Single(c => c.AuthorID == (int)comboBoxAut.SelectedValue);
                     a.Type = A_Login.u.TypesRep.Single(c => c.TypeID == (int)comboBoxType.SelectedValue);
                     a.date = txtDate.Text;
-                    a.dimensions = txtDim.Text;
                     a.onStock = checkBox.IsChecked;
                     a.img = arrayImg;
+                    a.money = money;
                     A_Login.u.ArtworksRep.Create(a);//Creo el objeto Artwork
 
                     a = A_Login.u.ArtworksRep.GetAll().Last();//Para asegurar que tengo el último elemento, recién añadido
                     foreach (Lang lang in A_Login.u.LangsRep.GetAll())//Creo un objeto Translations por cada idioma, por defecto se crean todos iguales (salvo por codLang)
                     {                                                 //Se supone que un encargado de traducción se dedicará a adaptarlo a todos los idiomas disponibles
-                        ArtworkTranslations at = new ArtworkTranslations(a, lang.codLang, txtTitle.Text, txtinfo.Text);
+                        ArtworkTranslations at = new ArtworkTranslations(a, lang.codLang, txtTitle.Text, txtDim.Text, txtinfo.Text);
                         A_Login.u.ArtworkTranslationsRep.Create(at);
                     }
                     ReloadData();
@@ -144,18 +147,21 @@ namespace Galeria.User_Controls.Management_Windows
         {
             try
             {
-                if (!string.IsNullOrWhiteSpace(txtTitle.Text) && comboBoxAut.SelectedIndex != -1 && comboBoxType.SelectedIndex != -1)
+                double money = new double();
+                double.TryParse(txtMoney.Text, out money);
+                if (!string.IsNullOrWhiteSpace(txtTitle.Text) && comboBoxAut.SelectedIndex != -1 && comboBoxType.SelectedIndex != -1 && money > 0)
                 {
                     string lang = cd.GetCurrentLanguage();
                     ArtworkTranslations at = A_Login.u.ArtworkTranslationsRep.Single(c => c.ArtworkID == obj.ArtworkID && c.lang == lang);
                     at.title = txtTitle.Text;
+                    at.dimensions = txtDim.Text;
                     at.info = txtinfo.Text;
                     A_Login.u.ArtworkTranslationsRep.Update(at);
 
                     Artwork a = A_Login.u.ArtworksRep.Single(c => c.ArtworkID == obj.ArtworkID);
                     a.date = txtDate.Text;
-                    a.dimensions = txtDim.Text;
                     a.img = arrayImg;
+                    a.money = money;
                     a.onStock = checkBox.IsChecked;
                     A_Login.u.ArtworksRep.Update(a);
 
@@ -194,6 +200,7 @@ namespace Galeria.User_Controls.Management_Windows
             txtDim.Text = "";
             txtDate.Text = "";
             txtinfo.Text = "";
+            txtMoney.Text = "";
             img.Source = null;
         }
     }

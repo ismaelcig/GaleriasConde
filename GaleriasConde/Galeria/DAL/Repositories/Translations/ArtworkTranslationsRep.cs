@@ -16,10 +16,11 @@ namespace Galeria.DAL.Repositories.Translations
         {
             if (!string.IsNullOrWhiteSpace(buscado))
             {
-                return Get(filter: (artTr => artTr.ArtworkID.ToString().Contains(buscado.ToUpper())
-                                         || artTr.lang.ToUpper().Contains(buscado.ToUpper())
-                                         || artTr.title.ToString().Contains(buscado.ToUpper())
-                                         || artTr.info.ToString().Contains(buscado.ToUpper())
+                return Get(filter: (c => c.ArtworkID.ToString().Contains(buscado.ToUpper())
+                                         || c.lang.ToUpper().Contains(buscado.ToUpper())
+                                         || c.title.ToString().Contains(buscado.ToUpper())
+                                         || c.dimensions.ToString().Contains(buscado.ToUpper())
+                                         || c.info.ToString().Contains(buscado.ToUpper())
                                          )
                                          );
             }

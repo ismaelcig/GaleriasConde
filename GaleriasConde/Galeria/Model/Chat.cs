@@ -11,7 +11,8 @@ namespace Galeria.Model
     {
         public Chat()
         {
-
+            users = new HashSet<User>();
+            messages = new HashSet<Message>();
         }
 
         public Chat(ICollection<User> us)//Establece automáticamente el nombre

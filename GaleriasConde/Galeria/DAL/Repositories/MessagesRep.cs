@@ -17,7 +17,7 @@ namespace Galeria.DAL.Repositories
             if (!string.IsNullOrWhiteSpace(buscado))
             {
                 return Get(filter: (c => c.MessageID.ToString().Equals(buscado.ToUpper())
-                                         || c.ChatID.ToString().Equals(buscado.ToUpper())
+                                         //|| c.ChatID.ToString().Equals(buscado.ToUpper())
                                          || c.text.Equals(buscado)
                                          )
                                          );

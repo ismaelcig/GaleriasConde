@@ -45,11 +45,21 @@
         <Label x:Name="lblEmail" Content="email" FontStyle="Italic" HorizontalAlignment="Left" Margin="85,36,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblTlf" Content="988776655" FontStyle="Italic" HorizontalAlignment="Left" Margin="85,62,0,0" VerticalAlignment="Top"/>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,0,0" Height="20" Width="40">
-            <Button x:Name="buttEdit" Content="O" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Top" Height="20" Width="20" ToolTip="Icono Opciones" Click="buttEdit_Click"/>
-            <Button x:Name="buttClose" Content="X" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="buttClose_Click"/>
+            <Image x:Name="buttEdit" Source="{StaticResource edit}" MouseDown="buttEdit_Click" Cursor="Hand" ToolTip="{DynamicResource Edit}"/>
+            <Image Source="{StaticResource close}" MouseDown="buttClose_Click" Cursor="Hand" ToolTip="{DynamicResource Close}"/>
+            <!--<Button x:Name="buttEdit" Background="Transparent" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Top" Height="20" Width="20" ToolTip="{DynamicResource Options}" Click="buttEdit_Click">
+                <StackPanel>
+                    <Image Source="{StaticResource settings}"/>
+                </StackPanel>
+            </Button>-->
+            <!--<Button x:Name="buttClose" Background="Transparent" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Top" Height="20" Width="20" Click="buttClose_Click">
+                <StackPanel>
+                    <Image Source="{StaticResource close}"/>
+                </StackPanel>
+            </Button>-->
         </StackPanel>
         
-        <Button x:Name="buttLogout" Content="{DynamicResource UPButton}" HorizontalAlignment="Left" Margin="117,93,0,0" VerticalAlignment="Top" Width="75" Height="20" Click="buttLogout_Click"/>
+        <Button x:Name="buttLogout" Content="{DynamicResource UPButton}" Padding="3" HorizontalAlignment="Left" Margin="117,93,0,0" VerticalAlignment="Top" Width="Auto" Height="20" Click="buttLogout_Click"/>
 
     </Grid>
 </UserControl>

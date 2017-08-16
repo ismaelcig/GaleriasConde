@@ -20,6 +20,11 @@
             <BitmapImage x:Key="addUser" UriSource="Images/Add-contact.ico"/>
             <BitmapImage x:Key="cancel" UriSource="Images/cancel.ico"/>
             <BitmapImage x:Key="send" UriSource="Images/send.ico"/>
+            <BitmapImage x:Key="settings" UriSource="Images/settings.gif"/>
+            <BitmapImage x:Key="close" UriSource="Images/close.gif"/>
+            <BitmapImage x:Key="edit" UriSource="Images/edit.gif"/>
+            <BitmapImage x:Key="minimize" UriSource="Images/minimize.gif"/>
+            <BitmapImage x:Key="expand" UriSource="Images/expand.gif"/>
 
             <Style TargetType="{x:Type TextBox}" x:Key="mdTxt" BasedOn="{StaticResource MaterialDesignTextBox}"/>
             <!--<Style TargetType="{x:Type TextBox}" x:Key="mdTxt1">

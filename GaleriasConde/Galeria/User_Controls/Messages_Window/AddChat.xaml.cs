@@ -33,7 +33,7 @@ namespace Galeria.User_Controls.Messages_Window
         private void Ellipse_MouseDown(object sender, MouseButtonEventArgs e)
         {//Comprueba que no existe ya un chat con los miembros seleccionados
             users.Add(A_Login.user);
-            if (!ChatExists())
+            if (!ChatExists() && users.Count > 1)
             {
                 Chat c = new Chat(users);
                 //c.users = users;
@@ -108,7 +108,6 @@ namespace Galeria.User_Controls.Messages_Window
             try
             {
                 List<Chat> chatsUser = A_Login.u.ChatsRep.GetAll();
-                //chatsUser = A_Login.u.ChatsRep.Get(c => c.users.Contains(A_Login.user));
                 foreach (Chat item in chatsUser)
                 {//Recorre todos los chats para comprobar si existe ya uno con los usuarios seleccionados
                     int n = item.users.Count;//Nº de usuarios

@@ -17,6 +17,7 @@ namespace Galeria.VO
         public byte[] img { get; set; }
         public string date { get; set; }
         public string dimensions { get; set; }
+        public double money { get; set; }
         public string title { get; set; }
         public string info { get; set; }
         public AuthorVO authorVO { get; set; }
@@ -37,8 +38,9 @@ namespace Galeria.VO
             this.onStock = a.onStock;
             this.img = a.img;
             this.date = a.date;
-            this.dimensions = a.dimensions;
+            this.money = a.money;
             this.title = at.title;
+            this.dimensions = at.dimensions;
             this.info = at.info;
             this.authorVO = new AuthorVO(a.Author.AuthorID);
             this.typeVO = new TypeVO(a.Type.TypeID);

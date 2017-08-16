@@ -64,6 +64,14 @@
     <system:String x:Key="CG1OnStock">Only on Stock</system:String>
     <system:String x:Key="CG1_Msg1">You must be registered to buy.</system:String>
 
+    <!--Pst2-->
+    <system:String x:Key="CG2Hist">Historial:</system:String>
+    <system:String x:Key="CG2Bid">Bid up</system:String>
+    <system:String x:Key="CG2Not">Notifications</system:String>
+    <system:String x:Key="CG2_Msg1">Sólo puede introducir números</system:String>
+
+    <system:String x:Key="tryConnect">Connect with the server</system:String>
+
     <!--Pst4-->
     <system:String x:Key="User">User</system:String>
     <system:String x:Key="Users">Users</system:String>
@@ -119,11 +127,13 @@
     <system:String x:Key="MngU_Msg2">You can't delete master account.</system:String>
 
     <!--UserPanel-->
-    <system:String x:Key="UPMsg">Are you sure you want to exit?</system:String>
+    <system:String x:Key="UPMsg">Do you want to close the application?</system:String>
     <system:String x:Key="UPCaption">Confirmation</system:String>
     <system:String x:Key="UPButton">Log Out</system:String>
-    <system:String x:Key="ofdFilterIco">Image files (*.ico)|*.ico|All files (*.*)|*.*</system:String>
-    <system:String x:Key="MngUP_Msg1">You can only add .ico files</system:String>
+    <system:String x:Key="Edit">Edit Profile</system:String>
+    <system:String x:Key="Close">Close</system:String>
+    <system:String x:Key="ofdFilterIco">Image files (*.gif)|*.gif|All files (*.*)|*.*</system:String>
+    <system:String x:Key="MngUP_Msg1">You can only add .gif files</system:String>
 
     <!--AddChat-->
     <system:String x:Key="AClbl">New Chat with:</system:String>
@@ -136,6 +146,10 @@
     
     <!--ChatView-->
     <system:String x:Key="CVtxt">Say something nice :)</system:String>
+
+    <!--MsgControl-->
+    <system:String x:Key="You">You</system:String>
+    <system:String x:Key="CCImage">[Image]</system:String>
 
     <!--UserOptions-->
     <system:String x:Key="UOtitle">User Options</system:String>
@@ -150,12 +164,18 @@
     <system:String x:Key="Avaliable">Avaliable</system:String>
     <system:String x:Key="BUYb1">Buy it</system:String>
 
-    <!--Buy-->
+    <system:String x:Key="B_Msg1">It will be</system:String>
+    <system:String x:Key="B_Msg2">€. Are you sure?</system:String>
+    <system:String x:Key="B_Msg3">Successfully purchased.</system:String>
+
+    <!--Sell-->
     <system:String x:Key="SELLtitle">Sell Artwork</system:String>
     <system:String x:Key="SAuthor">Can't find it? Write it here</system:String>
     <system:String x:Key="SDescr">Description/Comment</system:String>
     <system:String x:Key="Sb1">Select img</system:String>
     <system:String x:Key="Sb2">Submit proposal</system:String>
+
+    <system:String x:Key="S_Msg1">Message successfully sent.</system:String>
 
 </ResourceDictionary>
 

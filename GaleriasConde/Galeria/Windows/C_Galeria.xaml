@@ -51,6 +51,13 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
+
+        <Style TargetType="{x:Type Label}" x:Key="Header">
+            <Setter Property="FontFamily" Value="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Opacity" Value="0.7"/>
+        </Style>
     </metro:Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -58,7 +65,10 @@
             <RowDefinition Height="203*"/>
         </Grid.RowDefinitions>
         <TabControl Grid.RowSpan="2">
-            <TabItem x:Name="Pst1" Header="{DynamicResource CGpst1}">
+            <TabItem x:Name="Pst1">
+                <TabItem.Header>
+                    <Label Content="{DynamicResource CGpst1}" MouseDown="Label_MouseDown_1" Style="{StaticResource Header}"/>
+                </TabItem.Header>
                 <Grid>
                     <DockPanel x:Name="docky" Background="IndianRed" LastChildFill="True" HorizontalAlignment="Left" Margin="10,10,5,10" VerticalAlignment="Stretch" Width="200" Panel.ZIndex="10">
                         <Border BorderThickness="0,0,0,1" BorderBrush="Black" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="40" DockPanel.Dock="Top">
@@ -92,25 +102,62 @@
                     <Button x:Name="sellButton" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,20,20" Content="Vender" Background="OrangeRed" BorderBrush="Red" Click="sellButton_Click"/>
                 </Grid>
             </TabItem>
-            <TabItem x:Name="Pst2" Header="{DynamicResource CGpst2}">
+            <TabItem x:Name="Pst2">
+                <TabItem.Header>
+                    <Label Content="{DynamicResource CGpst2}" MouseDown="Label_MouseDown_2" Style="{StaticResource Header}"/>
+                </TabItem.Header>
                 <Grid>
+                    <Grid x:Name="closedServer" Background="Aquamarine" Panel.ZIndex="25" Visibility="Visible">
+                        <Button x:Name="tryConnect" Content="{DynamicResource tryConnect}" Click="tryConnect_Click"/>
+                    </Grid>
                     <!--Mostrar Subasta-->
+                    <Label x:Name="lblObra" Content="(título)" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top"/>
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Stretch" Margin="10,30,300,37" VerticalAlignment="Stretch" >
+                        <Image x:Name="image"/>
+                    </Border>
+
+                    <Border x:Name="borderPuja" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="90" Margin="13,0,0,40" VerticalAlignment="Bottom" Width="200">
+                        <Canvas>
+                            <Image x:Name="imgPuja" Source="{StaticResource minimize}" Panel.ZIndex="5" Canvas.Right="0" Canvas.Top="0" Width="10" Cursor="Hand" MouseDown="imgPuja_MouseDown"/>
+                            <TextBox x:Name="txtPuja" TextAlignment="Right" Height="33" Panel.ZIndex="4" Canvas.Left="10" TextWrapping="Wrap" Width="177" KeyDown="txtPuja_KeyDown" TextChanged="txtPuja_TextChanged" materialDesign:HintAssist.Hint="Cantidad" materialDesign:HintAssist.IsFloating="True"/>
+                            <Button x:Name="buttPuja" Content="{DynamicResource CG2Bid}" Canvas.Left="10" Panel.ZIndex="4" Canvas.Top="46" Width="177" Click="buttPuja_Click"/>
+                        </Canvas>
+                    </Border>
+
+                    <Label x:Name="label4" Content="{DynamicResource CG2Hist}" HorizontalAlignment="Right" Margin="0,5,240,0" VerticalAlignment="Top"/>
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Right" Margin="0,30,10,37" VerticalAlignment="Stretch" Width="289">
+                        <ScrollViewer x:Name="scrollViewer">
+                            <StackPanel x:Name="spHist" Orientation="Vertical"/>
+                        </ScrollViewer>
+                    </Border>
+                    <!--Barra de notificaciones-->
+                    <StatusBar HorizontalAlignment="Stretch" Height="37" Margin="0,0,0,0" VerticalAlignment="Bottom">
+                        <Label x:Name="lblEstado" Content="{DynamicResource CG2Not}"/>
+                    </StatusBar>
                 </Grid>
             </TabItem>
-            <TabItem x:Name="Pst3" Header="{DynamicResource CGpst3}" >
+            <TabItem x:Name="Pst3">
+                <TabItem.Header>
+                    <Label Content="{DynamicResource CGpst3}" MouseDown="Label_MouseDown_3" Style="{StaticResource Header}"/>
+                </TabItem.Header>
+                
                 <Grid Background="IndianRed">
                     <!--Mostrar Mensajes-->
                     <ScrollViewer BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Width="299" VerticalAlignment="Stretch" Margin="10,10,0,10">
-                        <StackPanel x:Name="spChat" Orientation="Vertical" ScrollViewer.VerticalScrollBarVisibility="Auto" Background="White">
-                            <Msg_Window:AddChat x:Name="addChat" Height="80" Margin="3,3,0,0"/>
-                        </StackPanel>
+                        <DockPanel LastChildFill="True">
+                            <Msg_Window:AddChat x:Name="addChat" Height="80" Margin="3,3,0,0" DockPanel.Dock="Top"/>
+                            <StackPanel x:Name="spChat" Orientation="Vertical" ScrollViewer.VerticalScrollBarVisibility="Auto" Background="White"/>
+                        </DockPanel>
                     </ScrollViewer>
                         
-                        <Msg_Window:ChatView x:Name="chatView" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="311,10,10,10"/>
+                    <Msg_Window:ChatView x:Name="chatView" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="311,10,10,10"/>
                     <!--<StackPanel x:Name="spMsgs" ScrollViewer.VerticalScrollBarVisibility="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Orientation="Vertical" Margin="311,10,10,10" Background="Beige"/>-->
                 </Grid>
             </TabItem>
-            <TabItem x:Name="Pst4" Header="{DynamicResource CGpst4}" >
+            <TabItem x:Name="Pst4">
+                <TabItem.Header>
+                    <Label Content="{DynamicResource CGpst4}" MouseDown="Label_MouseDown_4" Style="{StaticResource Header}"/>
+                </TabItem.Header>
                 <Grid Background="LightGray">
                     <!--Pestañas Management-->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="10,0,10,0">
@@ -128,12 +175,6 @@
                     <Management_Windows:MngAuths x:Name="gridAuths" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Hidden" Margin="0,35,0,0"/>
                     <Management_Windows:MngTypes x:Name="gridTypes" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Hidden" Margin="0,35,0,0"/>
                     <Management_Windows:MngArts x:Name="gridArts" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Hidden" Margin="0,35,0,0"/>
-                </Grid>
-            </TabItem>
-            <TabItem x:Name="Pst5" Header="{DynamicResource CGpst5}" >
-                <Grid>
-                    <!--Mostrar Informes-->
-                    <TextBlock><Run Text="Mostrar Informes"/></TextBlock>
                 </Grid>
             </TabItem>
         </TabControl>

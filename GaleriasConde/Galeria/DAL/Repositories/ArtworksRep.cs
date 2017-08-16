@@ -19,7 +19,6 @@ namespace Galeria.DAL.Repositories
                 return Get(filter: (c => c.ArtworkID.ToString().Contains(buscado.ToUpper())
                                          || c.onStock.ToString().Contains(buscado.ToUpper())
                                          || c.date.ToString().Contains(buscado.ToUpper())
-                                         || c.dimensions.ToString().Contains(buscado.ToUpper())
                                          )
                                          );
             }

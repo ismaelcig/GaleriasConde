@@ -64,6 +64,34 @@
     <system:String x:Key="CG1OnStock">Sólo Disponibles</system:String>
     <system:String x:Key="CG1_Msg1">Debes estar registrado para poder comprar.</system:String>
 
+    <!--Pst2-->
+    <system:String x:Key="CG2Hist">Historial:</system:String>
+    <system:String x:Key="CG2Bid">Pujar</system:String>
+    <system:String x:Key="CG2Not">Notificaciones</system:String>
+    <system:String x:Key="CG2_Msg1">Sólo puede introducir números</system:String>
+
+    <system:String x:Key="tryConnect">Conectar con el servidor</system:String>
+<!--Estados-->
+    <system:String x:Key="E1">La sala se encuentra cerrada.</system:String>
+    <system:String x:Key="E2">Conectado.</system:String>
+    <system:String x:Key="E3">No se ha podido conectar con el servidor.</system:String>
+    <system:String x:Key="E4">Ha entrado en la sala, espere a que la puja comience.</system:String>
+    <system:String x:Key="E5">La puja comienza en</system:String>
+    <system:String x:Key="E6">Comienzo puja de</system:String>
+    <system:String x:Key="E7">en</system:String>
+    <system:String x:Key="E8">Has subido la puja a</system:String>
+    <system:String x:Key="E9">sube la puja a</system:String>
+    <system:String x:Key="E10">Puja finalizada sin comprador</system:String>
+    <system:String x:Key="E11">Finalizada la puja de</system:String>
+    <system:String x:Key="E12">Ganador:</system:String>
+    <system:String x:Key="E13">sin comprador.</system:String>
+    <system:String x:Key="E14">Puja finalizada en</system:String>
+    <system:String x:Key="E15">Si ha comprado alguna obra, nos pondremos en contacto con usted para la realización de los trámites.</system:String>
+    <system:String x:Key="E16">La sala ha sido cerrada</system:String>
+    <system:String x:Key="E17">Si ha comprado alguna obra, nos pondremos en contacto con usted para la realización de los trámites.</system:String>
+    <system:String x:Key="E18">ha abandonado la sala.</system:String>
+    <system:String x:Key="E19">Su puja debe superar la actual, que está en</system:String>
+
     <!--Pst4-->
     <system:String x:Key="User">Usuario</system:String>
     <system:String x:Key="Users">Usuarios</system:String>
@@ -119,11 +147,13 @@
     <system:String x:Key="MngU_Msg2">No puede eliminar la cuenta master.</system:String>
 
     <!--UserPanel-->
-    <system:String x:Key="UPMsg">¿Está seguro de que desea salir?</system:String>
+    <system:String x:Key="UPMsg">¿Desea cerrar la aplicación?</system:String>
     <system:String x:Key="UPCaption">Confirmación</system:String>
-    <system:String x:Key="UPButton">Salir</system:String>
-    <system:String x:Key="ofdFilterIco">Imágenes (*.ico)|*.ico|Todos (*.*)|*.*</system:String>
-    <system:String x:Key="MngUP_Msg1">Sólo puedes añadir archivos .ico</system:String>
+    <system:String x:Key="UPButton">Desconectarse</system:String>
+    <system:String x:Key="Edit">Editar Perfil</system:String>
+    <system:String x:Key="Close">Cerrar</system:String>
+    <system:String x:Key="ofdFilterIco">Imágenes (*.gif)|*.gif|Todos (*.*)|*.*</system:String>
+    <system:String x:Key="MngUP_Msg1">Sólo puedes añadir archivos .gif</system:String>
     
     <!--AddChat-->
     <system:String x:Key="AClbl">Nuevo Chat con:</system:String>
@@ -136,6 +166,10 @@
 
     <!--ChatView-->
     <system:String x:Key="CVtxt">Di algo...</system:String>
+
+    <!--MsgControl-->
+    <system:String x:Key="You">Tu</system:String>
+    <system:String x:Key="CCImage">[Imagen]</system:String>
 
     <!--UserOptions-->
     <system:String x:Key="UOtitle">Opciones de Usuario</system:String>
@@ -150,13 +184,18 @@
     <system:String x:Key="Avaliable">Disponible</system:String>
     <system:String x:Key="BUYb1">Comprar</system:String>
 
-    <!--Buy-->
+    <system:String x:Key="B_Msg1">Serán</system:String>
+    <system:String x:Key="B_Msg2">€. ¿Estás de acuerdo?</system:String>
+    <system:String x:Key="B_Msg3">Compra realizada con éxito.</system:String>
+
+    <!--Sell-->
     <system:String x:Key="SELLtitle">Vender Obra</system:String>
     <system:String x:Key="SAuthor">¿No aparece? Escríbelo aquí</system:String>
     <system:String x:Key="SDescr">Descripción/Comentario</system:String>
     <system:String x:Key="Sb1">Seleccionar img</system:String>
     <system:String x:Key="Sb2">Enviar propuesta</system:String>
 
+    <system:String x:Key="S_Msg1">Mensaje enviado con éxito</system:String>
 
 </ResourceDictionary>
 
