@@ -1,4 +1,7 @@
-﻿using Galeria.Model;
+﻿using Galeria.Dict;
+using Galeria.Model;
+using Galeria.Other_Classes;
+using Galeria.VO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -21,18 +24,19 @@ namespace Galeria.Windows
     /// </summary>
     public partial class B_Registro : Elysium.Controls.Window//TODO: BorderBrush = Brushes.Red en todos los casos de error
     {
-        public static B_Registro bregistro;
-        Usuario us = new Usuario();
+        public static B_Registro br;
+        User us = new User();
+        List<NationalityVO> nationalitiesVO = new List<NationalityVO>();
 
         public B_Registro()
         {
             InitializeComponent();
-            bregistro = this;
+            this.Name = "B_Registro";
+            br = this;
+            A_Login.windows.Add(br);
+            Resources.MergedDictionaries.Add(A_Login.dict);
             txt1Name.Focus();
-
-            comboBox.DisplayMemberPath = "nombre";
-            comboBox.SelectedValuePath = "NacionalidadID";
-            comboBox.ItemsSource = A_Login.u.NacionalidadesRepository.GetAll();
+            OnLangChange();
             gridPass.Visibility = Visibility.Hidden;
         }
 
@@ -42,21 +46,23 @@ namespace Galeria.Windows
         #region GridBase
         private void buttSig_Click(object sender, RoutedEventArgs e)
         {
-            txt3Nick.BorderBrush = null;
-            if (string.IsNullOrWhiteSpace(txt1Name.Text) && string.IsNullOrWhiteSpace(txt2Apell.Text) && string.IsNullOrWhiteSpace(txt3Nick.Text) && string.IsNullOrWhiteSpace(txt4Dir.Text) && string.IsNullOrWhiteSpace(txt5Email.Text) && string.IsNullOrWhiteSpace(txt6Tlf.Text) && comboBox.SelectedIndex != -1)
+            txt3Nick.BorderBrush = Brushes.Gray;
+            if (!string.IsNullOrWhiteSpace(txt1Name.Text) && !string.IsNullOrWhiteSpace(txt2Apell.Text) && !string.IsNullOrWhiteSpace(txt3Nick.Text) && !string.IsNullOrWhiteSpace(txt4Dir.Text) && !string.IsNullOrWhiteSpace(txt5Email.Text) && !string.IsNullOrWhiteSpace(txt6Tlf.Text) && comboBox.SelectedIndex != -1)
             {//Comprueba que se han rellenado los campos antes de proseguir
                 //Creo un usuario con esos datos y lo valido
                 #region CreaUser
-                us.nombre = txt1Name.Text;
-                us.apellidos = txt2Apell.Text;
+                us.name = txt1Name.Text;
+                us.surnames = txt2Apell.Text;
                 us.nick = txt3Nick.Text;
-                us.Nacionalidad = (Nacionalidad)comboBox.SelectedItem;
+                NationalityVO nVO = (NationalityVO)comboBox.SelectedItem;//NationalityVO es el objeto que uso en ejecución
+                us.Nationality = A_Login.u.NationalitiesRep.Single(c => c.NationalityID == nVO.NationalityID);//Nationality es lo que el usuario guarda en la BD
                 //us.pass = passwordBox1.Password;
-                us.direccion = txt4Dir.Text;
+                us.address = txt4Dir.Text;
                 us.email = txt5Email.Text;
                 us.tlf = txt6Tlf.Text;
+                us.Profile = A_Login.u.ProfilesRep.Single(c => c.ProfileID == 2);//Por defecto se crea como usuario normal, la cuenta master le puede cambiar a admin
                 #endregion
-                if (A_Login.u.UsuariosRepository.Get(c => c.nick == us.nick).Count > 0)
+                if (A_Login.u.UsersRep.Get(c => c.nick == us.nick).Count > 0)
                 {//Significa que ya hay un usuario con ese nick
                     MessageBox.Show((string)A_Login.dict["RG_Msg2"]);//Nick ya registrado
                     txt3Nick.Text = "";
@@ -77,12 +83,12 @@ namespace Galeria.Windows
 
         private void buttCancel_Click(object sender, RoutedEventArgs e)
         {
-            Cerrar();
+            CloseW();
         }
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            Cerrar();
+            CloseW();
         }
         #endregion
 
@@ -139,9 +145,10 @@ namespace Galeria.Windows
 
         private void buttConfirmar_Click(object sender, RoutedEventArgs e)
         {//Se registra al usuario
-            A_Login.u.UsuariosRepository.Create(us);
+            us.pass = passwordBox1.Password;
+            A_Login.u.UsersRep.Create(us);
             MessageBox.Show((string)A_Login.dict["RG_Msg3"]);
-            Cerrar();
+            CloseW();
         }
 
         private void buttBack_Click(object sender, RoutedEventArgs e)
@@ -155,6 +162,12 @@ namespace Galeria.Windows
             passwordBox2.Password = "";
         }
         #endregion
+
+
+        /*******************************************/
+        //                METHODS                  //
+        /*******************************************/
+
 
         //MÉTODO VALIDACIÓN
         private Boolean validado(Object obj)
@@ -179,14 +192,18 @@ namespace Galeria.Windows
                 return true;
             }
         }
-        void Cerrar()
+        void CloseW()
         {//Devuelve a la ventana de Login
-            A_Login.windows.Remove(bregistro);//Elimino esta ventana de la lista de ventanas abiertas
+            A_Login.windows.Remove(br);//Elimino esta ventana de la lista de ventanas abiertas
             A_Login.mw.Show();
             Close();
             A_Login.mw.textBox.Focus();
         }
 
+        public void OnLangChange()
+        {
+            Loaders.LoadNationalities(comboBox);
+        }
 
     }
 }

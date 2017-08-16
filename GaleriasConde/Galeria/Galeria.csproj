@@ -53,21 +53,18 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MaterialDesignColors, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MaterialDesignColors.1.1.2\lib\net45\MaterialDesignColors.dll</HintPath>
+    <Reference Include="MaterialDesignColors, Version=1.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.1.3\lib\net45\MaterialDesignColors.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MaterialDesignThemes.Wpf, Version=2.3.0.823, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignThemes.2.3.0.823\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="PropertyChanged, Version=1.53.0.0, Culture=neutral, PublicKeyToken=ee3ee20bcf148ddd, processorArchitecture=MSIL">
-      <HintPath>..\packages\PropertyChanged.Fody.1.53.0\lib\netstandard10\PropertyChanged.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -86,30 +83,104 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="DAL\AutoresRepository.cs" />
+    <Compile Include="DAL\Repositories\ArtworksRep.cs" />
+    <Compile Include="DAL\Repositories\ChatsRep.cs" />
+    <Compile Include="DAL\Repositories\LangsRep.cs" />
+    <Compile Include="DAL\Repositories\MessagesRep.cs" />
+    <Compile Include="DAL\Repositories\NationalitiesRep.cs" />
+    <Compile Include="DAL\Repositories\ProfilesRep.cs" />
+    <Compile Include="DAL\Repositories\TransactionsRep.cs" />
+    <Compile Include="DAL\Repositories\Translations\ArtworkTranslationsRep.cs" />
+    <Compile Include="DAL\Repositories\AuthorsRep.cs" />
+    <Compile Include="DAL\Repositories\Translations\AuthorTranslationsRep.cs" />
     <Compile Include="DAL\GaleriaContext.cs" />
     <Compile Include="DAL\GenericRepository.cs" />
-    <Compile Include="DAL\MensajesRepository.cs" />
-    <Compile Include="DAL\NacionalidadesRepository.cs" />
-    <Compile Include="DAL\ObrasRepository.cs" />
-    <Compile Include="DAL\PerfilesRepository.cs" />
-    <Compile Include="DAL\TiposRepository.cs" />
-    <Compile Include="DAL\TransaccionesRepository.cs" />
+    <Compile Include="DAL\Repositories\Translations\NationalityTranslationsRep.cs" />
+    <Compile Include="DAL\Repositories\Translations\TypeTranslationsRep.cs" />
+    <Compile Include="DAL\Repositories\TypesRep.cs" />
+    <Compile Include="DAL\Repositories\UsersRep.cs" />
     <Compile Include="DAL\UnitOfWork.cs" />
-    <Compile Include="DAL\UsuariosRepository.cs" />
     <Compile Include="Dict\CargarDiccionarios.cs" />
-    <Compile Include="Model\Autor.cs" />
-    <Compile Include="Model\Mensaje.cs" />
-    <Compile Include="Model\Nacionalidad.cs" />
-    <Compile Include="Model\Obra.cs" />
-    <Compile Include="Model\Perfil.cs" />
-    <Compile Include="Model\PropertyValidateModel.cs" />
-    <Compile Include="Model\Tipo.cs" />
-    <Compile Include="Model\Transaccion.cs" />
-    <Compile Include="Model\Usuario.cs" />
+    <Compile Include="Migrations\201706212214312_Migr0621.cs" />
+    <Compile Include="Migrations\201706212214312_Migr0621.Designer.cs">
+      <DependentUpon>201706212214312_Migr0621.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706220008314_Migr0621_2.cs" />
+    <Compile Include="Migrations\201706220008314_Migr0621_2.Designer.cs">
+      <DependentUpon>201706220008314_Migr0621_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Artwork.cs" />
+    <Compile Include="Model\Author.cs" />
+    <Compile Include="Model\Chat.cs" />
+    <Compile Include="Model\Lang.cs" />
+    <Compile Include="Model\Message.cs" />
+    <Compile Include="Model\Nationality.cs" />
+    <Compile Include="Model\Profile.cs" />
+    <Compile Include="Model\Transaction.cs" />
+    <Compile Include="Model\Translation\ArtworkTranslations.cs" />
+    <Compile Include="Model\Translation\AuthorTranslations.cs" />
+    <Compile Include="Model\Translation\NationalityTranslations.cs" />
+    <Compile Include="Model\Translation\TypeTranslations.cs" />
+    <Compile Include="Model\Type.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Other Classes\AnimationBase.cs" />
+    <Compile Include="Other Classes\Converters.cs" />
+    <Compile Include="Other Classes\ErrorLog.cs" />
+    <Compile Include="Other Classes\FractionDistanceAnimator.cs" />
+    <Compile Include="Other Classes\IArrangeAnimator.cs" />
+    <Compile Include="Other Classes\Loaders.cs" />
+    <Compile Include="User_Controls\AnimatedWrapPanel.cs" />
+    <Compile Include="User_Controls\AuthorControl.xaml.cs">
+      <DependentUpon>AuthorControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User_Controls\ConversDetail.xaml.cs">
+      <DependentUpon>ConversDetail.xaml</DependentUpon>
+    </Compile>
     <Compile Include="User_Controls\LanguageSelector.xaml.cs">
       <DependentUpon>LanguageSelector.xaml</DependentUpon>
     </Compile>
+    <Compile Include="User_Controls\Management_Windows\MngArts.xaml.cs">
+      <DependentUpon>MngArts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User_Controls\Management_Windows\MngAuths.xaml.cs">
+      <DependentUpon>MngAuths.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User_Controls\Management_Windows\MngNats.xaml.cs">
+      <DependentUpon>MngNats.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User_Controls\Management_Windows\MngTrans.xaml.cs">
+      <DependentUpon>MngTrans.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User_Controls\Management_Windows\MngTypes.xaml.cs">
+      <DependentUpon>MngTypes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User_Controls\Management_Windows\MngUsers.xaml.cs">
+      <DependentUpon>MngUsers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User_Controls\Management_Windows\MultiLanguageWarning.xaml.cs">
+      <DependentUpon>MultiLanguageWarning.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User_Controls\Messages_Window\AddChat.xaml.cs">
+      <DependentUpon>AddChat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User_Controls\Messages_Window\ChatControl.xaml.cs">
+      <DependentUpon>ChatControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User_Controls\Messages_Window\ChatView.xaml.cs">
+      <DependentUpon>ChatView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User_Controls\Messages_Window\MsgControl.xaml.cs">
+      <DependentUpon>MsgControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User_Controls\UserPanel.xaml.cs">
+      <DependentUpon>UserPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VO\ArtworkVO.cs" />
+    <Compile Include="VO\AuthorVO.cs" />
+    <Compile Include="VO\NationalityVO.cs" />
+    <Compile Include="VO\TransactionVO.cs" />
+    <Compile Include="VO\TypeVO.cs" />
     <Compile Include="Windows\A_Login.xaml.cs">
       <DependentUpon>A_Login.xaml</DependentUpon>
     </Compile>
@@ -118,6 +189,15 @@
     </Compile>
     <Compile Include="Windows\C_Galeria.xaml.cs">
       <DependentUpon>C_Galeria.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\D_UserOptions.xaml.cs">
+      <DependentUpon>D_UserOptions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\E_Buy.xaml.cs">
+      <DependentUpon>E_Buy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\E_Sell.xaml.cs">
+      <DependentUpon>E_Sell.xaml</DependentUpon>
     </Compile>
     <Page Include="Dict\DictionaryEN.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -139,7 +219,63 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="User_Controls\AuthorControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User_Controls\ConversDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="User_Controls\LanguageSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User_Controls\Management_Windows\MngArts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User_Controls\Management_Windows\MngAuths.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User_Controls\Management_Windows\MngNats.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User_Controls\Management_Windows\MngTrans.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User_Controls\Management_Windows\MngTypes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User_Controls\Management_Windows\MngUsers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User_Controls\Management_Windows\MultiLanguageWarning.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User_Controls\Messages_Window\AddChat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User_Controls\Messages_Window\ChatControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User_Controls\Messages_Window\ChatView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User_Controls\Messages_Window\MsgControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User_Controls\UserPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -152,6 +288,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\C_Galeria.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\D_UserOptions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\E_Buy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\E_Sell.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -170,6 +318,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Migrations\201706212214312_Migr0621.resx">
+      <DependentUpon>201706212214312_Migr0621.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706220008314_Migr0621_2.resx">
+      <DependentUpon>201706220008314_Migr0621_2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -182,12 +336,44 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="FodyWeavers.xml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\warning.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Add-contact.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\cancel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\send.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\close.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\settings.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\edit.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\expand.gif" />
+    <Resource Include="Images\minimize.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.2.0.0\build\dotnet\Fody.targets" Condition="Exists('..\packages\Fody.2.0.0\build\dotnet\Fody.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

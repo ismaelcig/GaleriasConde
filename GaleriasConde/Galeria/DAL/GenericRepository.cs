@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Galeria.Other_Classes;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -15,37 +16,62 @@ namespace Galeria.DAL
         DbSet<TEntity> dbSet;
         public GenericRepository(GaleriaContext context)
         {
-            this.context = context;
-            this.dbSet = context.Set<TEntity>();
+            try
+            {
+                this.context = context;
+                this.dbSet = context.Set<TEntity>();
+            }
+            catch (Exception ex)
+            {
+                ErrorLog.SilentLog("GenericRep1", ex);
+            }
         }
 
         public void Update(TEntity entity)
         {
-
-            context.Entry(entity).State = EntityState.Modified;
-            context.SaveChanges();
+            try
+            {
+                context.Entry(entity).State = EntityState.Modified;
+                context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                ErrorLog.SilentLog("GenericRep2", ex);
+            }
         }
         public void Delete(TEntity entityToDelete)
         {
-            dbSet = context.Set<TEntity>();
-            if (context.Entry(entityToDelete).State == EntityState.Detached)
+            try
             {
-                dbSet.Attach(entityToDelete);
+                dbSet = context.Set<TEntity>();
+                if (context.Entry(entityToDelete).State == EntityState.Detached)
+                {
+                    dbSet.Attach(entityToDelete);
+                }
+                dbSet.Remove(entityToDelete);
+
+                context.Entry(entityToDelete).State = EntityState.Deleted;
+                context.SaveChanges();
             }
-            dbSet.Remove(entityToDelete);
-
-            context.Entry(entityToDelete).State = EntityState.Deleted;
-            context.SaveChanges();
-
+            catch (Exception ex)
+            {
+                ErrorLog.SilentLog("GenericRep3", ex);
+            }
         }
 
         public void Delete(Expression<Func<TEntity, bool>> predicate)
         {
-            dbSet = context.Set<TEntity>();
-            var entities = dbSet.Where(predicate).ToList();
-            entities.ForEach(x => context.Entry(x).State = EntityState.Deleted);
-            context.SaveChanges();
-
+            try
+            {
+                dbSet = context.Set<TEntity>();
+                var entities = dbSet.Where(predicate).ToList();
+                entities.ForEach(x => context.Entry(x).State = EntityState.Deleted);
+                context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                ErrorLog.SilentLog("GenericRep4", ex);
+            }
         }
 
         public void Create(TEntity entity)
@@ -58,7 +84,7 @@ namespace Galeria.DAL
             }
             catch (Exception ex)
             {
-                string mensaje = ex.Message;
+                ErrorLog.SilentLog("GenericRep5", ex);
             }
 
 
@@ -67,8 +93,15 @@ namespace Galeria.DAL
 
         public List<TEntity> GetAll()
         {
-            return (List<TEntity>)context.Set<TEntity>().ToList();
-
+            try
+            {
+                return (List<TEntity>)context.Set<TEntity>().ToList();
+            }
+            catch (Exception ex)
+            {
+                ErrorLog.SilentLog("GenericRep6", ex);
+                return null;
+            }
         }
         public List<TEntity> Get(
             Expression<Func<TEntity, bool>> filter = null,
@@ -99,9 +132,10 @@ namespace Galeria.DAL
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex);
+                ErrorLog.SilentLog("GenericRep7", ex);
                 return null;
             }
+
         }
         public TEntity Single(Expression<Func<TEntity, bool>> predicate)
         {
@@ -112,7 +146,7 @@ namespace Galeria.DAL
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex);
+                ErrorLog.SilentLog("GenericRep8", ex);
                 return null;
             }
         }

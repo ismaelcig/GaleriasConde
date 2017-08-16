@@ -1,4 +1,6 @@
 ﻿using Galeria.Dict;
+using Galeria.Model;
+using Galeria.Other_Classes;
 using Galeria.Windows;
 using System;
 using System.Collections.Generic;
@@ -24,8 +26,8 @@ namespace Galeria.User_Controls
     {
         CargarDiccionarios cd = new CargarDiccionarios();
         int cont = 0;
-        List<Lang> languages = new List<Lang>();
-        //public static Window parentWindow;//Al menos por ahora, es necesario settear esta variable desde la ventana donde se encuentra (problema, no se ve la variable)
+        //List<Lang> languages = new List<Lang>();
+
         public LanguageSelector()
         {
             try
@@ -34,42 +36,40 @@ namespace Galeria.User_Controls
             }
             catch (Exception ex)
             {
-                string s = ex.Message;
+                ErrorLog.SilentLog("LangSel1", ex);
             }
+            //languages = A_Login.u.LangsRep.GetAll();
             #region Idiomas
-            languages.Add(new Lang { LangID = "en-US", display = "English" });//Inglés EEUU
-            //languages.Add(new Lang { LangID = "fr-CA", display = "Français" });//Francés Canadá
-            languages.Add(new Lang { LangID = "es-ES", display = "Español" });//Español España
-            //languages.Add(new Lang { LangID = "gl-ES", display = "Galego" });//Gallego
+            /*Añadidos*/
+            //LangID = 1, codLang = "en-US", display = "English" });//Inglés EEUU
+            //LangID = 2, codLang = "es-ES", display = "Español" });//Español España
+            /*Aún no añadidos*/
+            //LangID = 3, codLang = "gl-ES", display = "Galego" });//Gallego
+            //LangID = 4, codLang = "fr-CA", display = "Français" });//Francés Canadá
             #endregion
 
-            comboBox.ItemsSource = languages;
-            comboBox.DisplayMemberPath = "display";
-            comboBox.SelectedValuePath = "LangID";
+            Loaders.LoadLangs(comboBox);
             //Por defecto, se selecciona el idioma establecido
             int i = 0;
-            foreach (Lang l in comboBox.ItemsSource)
+            try
             {
-                if (l.LangID == cd.GetCurrentLanguage())
+                foreach (Lang l in comboBox.ItemsSource)
                 {
-                    break;
+                    if (l.codLang == cd.GetCurrentLanguage())
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        i++;
+                    }
                 }
-                else
-                {
-                    i++;
-                }
+                comboBox.SelectedIndex = i;
             }
-            comboBox.SelectedIndex = i;
-        }
-
-        private class Lang
-        {
-            public Lang()
+            catch (Exception ex)
             {
-
+                ErrorLog.SilentLog("LangSel2", ex);
             }
-            public string LangID { get; set; }
-            public string display { get; set; }
         }
 
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -87,11 +87,22 @@ namespace Galeria.User_Controls
                         w.Resources.MergedDictionaries.Remove(A_Login.dict);
                         A_Login.dict = cd.LanguageSelector((string)comboBox.SelectedValue);
                         w.Resources.MergedDictionaries.Add(A_Login.dict);
+                        switch (w.Name)
+                        {
+                            default:
+                                break;
+                            case "B_Registro":
+                                B_Registro.br.OnLangChange();
+                                break;
+                            case "C_Galeria":
+                                C_Galeria.cg.OnLangChange();
+                                break;
+                        }
                     }
                 }
                 catch (Exception ex)
                 {
-                    string error = ex.Message;
+                    ErrorLog.SilentLog("LangSel3", ex);
                 }
             }
         }

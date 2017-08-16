@@ -1,0 +1,68 @@
+﻿<UserControl x:Class="Galeria.User_Controls.Management_Windows.MngUsers"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Galeria.User_Controls.Management_Windows"
+             mc:Ignorable="d" 
+        xmlns:Controls="clr-namespace:Elysium.Controls;assembly=Elysium"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:metro="http://schemas.codeplex.com/elysium"
+        xmlns:params="http://schemas.codeplex.com/elysium/params"
+        xmlns:User_Controls="clr-namespace:Galeria.User_Controls"
+        params:Design.Theme="Light"
+        params:Manager.Theme="Light"
+        params:Manager.AccentBrush="BlueViolet"
+        params:Manager.ContrastBrush="BlanchedAlmond"
+        TextElement.FontWeight="Bold"
+        TextElement.FontSize="15"
+        FontFamily="pack://application:,,,/MaterialDesignThemes.Wpf;component/Resources/Roboto/#Roboto"
+             d:DesignHeight="500" d:DesignWidth="600">
+
+
+
+    <Grid Background="White">
+        <Border BorderBrush="#688CAF" BorderThickness="1" Width="Auto" Height="Auto">
+            <Grid>
+                <TextBox x:Name="txtUser" IsEnabled="False" HorizontalAlignment="Left" Height="40" Margin="21,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199" Style="{StaticResource mdTxt}" materialDesign:HintAssist.Hint="{DynamicResource User}" materialDesign:HintAssist.IsFloating="True" materialDesign:HintAssist.FloatingScale="0.8" />
+                <!-- Background="White" BorderBrush="White" CaretBrush="White" OpacityMask="White"-->
+                <metro:ToggleSwitch x:Name="checkBox" HorizontalAlignment="Left" Margin="20,64,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="label1" Content="{DynamicResource Admin}" HorizontalAlignment="Left" Margin="75,58,0,0" VerticalAlignment="Top"/>
+
+                <Button x:Name="buttMod" Content="{DynamicResource CG4Mod}" HorizontalAlignment="Left" Margin="15,113,0,0" VerticalAlignment="Top" Width="95" Click="buttMod_Click"/>
+                <Button x:Name="buttDel" Content="{DynamicResource CG4Del}" HorizontalAlignment="Left" Margin="135,113,0,0" VerticalAlignment="Top" Width="95" Click="buttDel_Click"/>
+            </Grid>
+        </Border>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Stretch" Margin="240,0,0,0" VerticalAlignment="Stretch" DataContext="{Binding Source=User}"  Style="{StaticResource dg}" SelectionChanged="dataGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding nick}">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="{DynamicResource Nick}" HorizontalAlignment="Center" />
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding name}">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="{DynamicResource Name}" HorizontalAlignment="Center" />
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding surnames}">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="{DynamicResource Surnames}" HorizontalAlignment="Center" />
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding tlf}">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="{DynamicResource Tlf}" HorizontalAlignment="Center" />
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding email}">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="{DynamicResource Email}" HorizontalAlignment="Center" />
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <!--<DataGridTextColumn Header="{DynamicResource CG4Profile}" Binding="{Binding Profile.codProfile}"/>-->
+                <!--<DataGridTextColumn Header="NatID" Binding="{Binding Nationality.NationalityID}"/>-->
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

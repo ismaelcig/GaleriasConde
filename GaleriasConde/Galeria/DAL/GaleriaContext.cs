@@ -1,5 +1,5 @@
-﻿//using Galeria.Migrations;
-using Galeria.Model;
+﻿using Galeria.Model;
+using Galeria.Model.Translation;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -11,16 +11,16 @@ namespace Galeria.DAL
 {
     public class GaleriaContext : DbContext
     {
-        public GaleriaContext() : base("GaleriaArteEntities")
+        public GaleriaContext() : base("GaleriasCondeEntities")
         {
             if (!Database.Exists())
             {
                 Database.SetInitializer(new CrearDB());
             }
-            else
-            {
-                //Database.SetInitializer(new MigrateDatabaseToLatestVersion<GaleriaContext, Configuration>());
-            }
+            //else
+            //{
+            //    //Database.SetInitializer(new MigrateDatabaseToLatestVersion<GaleriaContext, Configuration>());
+            //}
         }
 
 
@@ -28,20 +28,24 @@ namespace Galeria.DAL
         {
             protected override void Seed(GaleriaContext context)
             {
-                
+
             }
         }
-        
-        public DbSet<Usuario> Usuarios { get; set; }
-        public DbSet<Autor> Autores { get; set; }
-        public DbSet<Nacionalidad> Nacionalidades { get; set; }
-        public DbSet<Obra> Obras { get; set; }
-        public DbSet<Tipo> Tipos { get; set; }
-        public DbSet<Transaccion> Transacciones { get; set; }
-        public DbSet<Mensaje> Mensajes { get; set; }
-        //public DbSet<Conversacion> Conversaciones { get; set; }
-        //public DbSet<Permiso> Permiso { get; set; }
-        public DbSet<Perfil> Perfiles { get; set; }
+
+        public DbSet<Author> Authors { get; set; }
+        public DbSet<AuthorTranslations> AuthorTranslations { get; set; }
+        public DbSet<Nationality> Nationalities { get; set; }
+        public DbSet<NationalityTranslations> NationalityTranslations { get; set; }
+        public DbSet<Artwork> Artworks { get; set; }
+        public DbSet<ArtworkTranslations> ArtworkTranslations { get; set; }
+        public DbSet<Model.Type> Types { get; set; }
+        public DbSet<TypeTranslations> TypeTranslations { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Profile> Profiles { get; set; }
+        public DbSet<Lang> Langs { get; set; }
+        public DbSet<Chat> Chats { get; set; }
+        public DbSet<Message> Messages { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

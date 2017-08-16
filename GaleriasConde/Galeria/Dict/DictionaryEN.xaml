@@ -7,30 +7,177 @@
     <system:String x:Key="MWtitle">Welcome</system:String>
     <system:String x:Key="MWtxt">User</system:String>
     <system:String x:Key="MWpass">Password</system:String>
-    <system:String x:Key="MWb1">Next</system:String>
     <system:String x:Key="MWb2">Sign Up</system:String>
     <system:String x:Key="MWb3">Login</system:String>
-    <system:String x:Key="MWb4">Back</system:String>
-    <system:String x:Key="MW_Msg1">You must enter a username</system:String>
+    <system:String x:Key="MW_Msg1">You must enter a username.</system:String>
     <system:String x:Key="MW_Msg2">The entered user does not exist. Do you want to continue without signing up?</system:String>
-    <system:String x:Key="MW_Msg3">Wrong password</system:String>
-    <system:String x:Key="MW_Msg4">You must enter a password</system:String>
-    <system:String x:Key="MW_Msg5">There was a problem trying to access the Database</system:String>
+    <system:String x:Key="MW_Msg3">Wrong password.</system:String>
+    <system:String x:Key="MW_Msg4">You must enter a password.</system:String>
+    <system:String x:Key="MW_Msg5">There was a problem trying to access the Database.</system:String>
 
-    <!--Misc-->
+<!--Misc-->
     <system:String x:Key="CloseApp">Close Gallery</system:String>
     <system:String x:Key="CloseWin">Close Window</system:String>
     <system:String x:Key="MaximizeApp">Maximize</system:String>
     <system:String x:Key="MinimizeApp">Minimize</system:String>
+    <system:String x:Key="Error">An error has occurred, if the problem persists, please, contact us at support@galerias.conde.com</system:String>
+    <system:String x:Key="ID">ID</system:String>
+    <system:String x:Key="Next">Next</system:String>
+    <system:String x:Key="Ok">Ok</system:String>
+    <system:String x:Key="Back">Back</system:String>
 
-    <!--Registro-->
+<!--Registro-->
     <system:String x:Key="RGtitle">Sign Up</system:String>
+    <system:String x:Key="Name">Name</system:String>
+    <system:String x:Key="Surnames">Surnames</system:String>
+    <system:String x:Key="Nick">Nick</system:String>
+    <system:String x:Key="Nat">Nationality</system:String>
+    <system:String x:Key="Address">Address</system:String>
+    <system:String x:Key="Email">Email</system:String>
+    <system:String x:Key="Tlf">Phone number</system:String>
+    <system:String x:Key="RGb2">I am already registered</system:String>
+
+    <system:String x:Key="RGpass">Password</system:String>
+    <system:String x:Key="RGpass1">Verify password</system:String>
+    <system:String x:Key="RGcheck1">Must contain uppercase letter</system:String>
+    <system:String x:Key="RGcheck2">Must contain a lowercase letter</system:String>
+    <system:String x:Key="RGcheck3">Must be at least 5 characters</system:String>
+    <system:String x:Key="RGcheck4">Must have at least one number</system:String>
+    <system:String x:Key="RGcheck5">Both passwords must match</system:String>
+
+    <system:String x:Key="RG_Msg1">No field can be empty.</system:String>
+    <system:String x:Key="RG_Msg2">This nick is already registered.</system:String>
+    <system:String x:Key="RG_Msg3">Now you can log in.</system:String>
 
     <!--wGaleria-->
     <system:String x:Key="CGtitle">Galerías Conde</system:String>
     <system:String x:Key="CGpst1">Artworks</system:String>
-    <system:String x:Key="CGpst2">Authors</system:String>
+    <system:String x:Key="CGpst2">Auctions</system:String>
     <system:String x:Key="CGpst3">Messages</system:String>
     <system:String x:Key="CGpst4">Management</system:String>
     <system:String x:Key="CGpst5">Reports</system:String>
+
+    <!--Pst1-->
+    <system:String x:Key="CG1Filter">Filter</system:String>
+    <system:String x:Key="CG1Search">Search...</system:String>
+    <system:String x:Key="CG1AllFilter">All</system:String>
+    <system:String x:Key="CG1OnStock">Only on Stock</system:String>
+    <system:String x:Key="CG1_Msg1">You must be registered to buy.</system:String>
+
+    <!--Pst2-->
+    <system:String x:Key="CG2Hist">Historial:</system:String>
+    <system:String x:Key="CG2Bid">Bid up</system:String>
+    <system:String x:Key="CG2Not">Notifications</system:String>
+    <system:String x:Key="CG2_Msg1">Sólo puede introducir números</system:String>
+
+    <system:String x:Key="tryConnect">Connect with the server</system:String>
+
+    <!--Pst4-->
+    <system:String x:Key="User">User</system:String>
+    <system:String x:Key="Users">Users</system:String>
+    <system:String x:Key="Profile">Profile</system:String>
+    <system:String x:Key="Admin">Admin</system:String>
+    <system:String x:Key="warn">This element must be registered in all languages</system:String>
+
+    <system:String x:Key="Trans">Transaction</system:String>
+    <system:String x:Key="Transs">Transactions</system:String>
+    <system:String x:Key="Money">Money</system:String>
+    <system:String x:Key="Comm">Comment</system:String>
+    <system:String x:Key="Done">Done</system:String>
+    <system:String x:Key="Operation">Operation</system:String>
+    <system:String x:Key="Buy">Buy</system:String>
+    <system:String x:Key="Sell">Sell</system:String>
+	<system:String x:Key="MngTr_Msg1">Money value invalid.</system:String>
+	<system:String x:Key="MngTr_Msg2">Once created, only master can changue Transactions</system:String>
+
+    <system:String x:Key="Nats">Nationalities</system:String>
+    <system:String x:Key="NUsers">Nº Users</system:String>
+    <system:String x:Key="NAuths">Nº Authors</system:String>
+    <system:String x:Key="DelConfirmation">Are you sure you want to delete all records about this object?</system:String>
+    <system:String x:Key="MngN_Msg1"> Users have associated this Nationality. It can't be deleted.</system:String>
+
+    <system:String x:Key="Auth">Author</system:String>
+    <system:String x:Key="Auths">Authors</system:String>
+    <system:String x:Key="realName">Real Name</system:String>
+    <system:String x:Key="artName">Artistic Name</system:String>
+    <system:String x:Key="ArtNum">Artworks Number</system:String>
+    <system:String x:Key="descr">Description</system:String>
+    <system:String x:Key="MngA_Msg1"> Artworks have associated this Author. It can't be deleted.</system:String>
+
+    <system:String x:Key="Type">Type</system:String>
+    <system:String x:Key="Types">Types</system:String>
+    <system:String x:Key="MngT_Msg1"> Artworks belong to this Type. It can't be deleted.</system:String>
+    <system:String x:Key="NArts">Nº Artworks</system:String>
+
+    <system:String x:Key="Art">Artwork</system:String>
+    <system:String x:Key="Arts">Artworks</system:String>
+    <system:String x:Key="Title">Title</system:String>
+    <system:String x:Key="onStock">On Stock</system:String>
+    <system:String x:Key="date">Date</system:String>
+    <system:String x:Key="dimensions">Dimensions</system:String>
+    <system:String x:Key="img">Image</system:String>
+	<system:String x:Key="ofdFilter">Image files (*.png;*.jpeg;*.jpg;*.gif)|*.png;*.jpeg;*.jpg;*.gif|All files (*.*)|*.*</system:String>
+	<system:String x:Key="MngArt_Msg1">You can only add .png, .jpg, .jpeg or .gif files</system:String>
+
+    <system:String x:Key="CG4Add">Add</system:String>
+    <system:String x:Key="CG4Mod">Modify</system:String><!-- ¿Change? -->
+    <system:String x:Key="CG4Del">Delete</system:String>
+
+    <system:String x:Key="MngU_Msg1">You can't delete your own permission.</system:String>
+    <system:String x:Key="MngU_Msg2">You can't delete master account.</system:String>
+
+    <!--UserPanel-->
+    <system:String x:Key="UPMsg">Do you want to close the application?</system:String>
+    <system:String x:Key="UPCaption">Confirmation</system:String>
+    <system:String x:Key="UPButton">Log Out</system:String>
+    <system:String x:Key="Edit">Edit Profile</system:String>
+    <system:String x:Key="Close">Close</system:String>
+    <system:String x:Key="ofdFilterIco">Image files (*.gif)|*.gif|All files (*.*)|*.*</system:String>
+    <system:String x:Key="MngUP_Msg1">You can only add .gif files</system:String>
+
+    <!--AddChat-->
+    <system:String x:Key="AClbl">New Chat with:</system:String>
+    <system:String x:Key="ACtxt">User Nick</system:String>
+    <system:String x:Key="ACbutt">Create Chat</system:String>
+    <system:String x:Key="ACbutt2">Add User</system:String>
+    <system:String x:Key="ACbutt3">Cancel</system:String>
+    <system:String x:Key="MngAC_Msg1">You must enter an existing user.</system:String>
+    <system:String x:Key="MngAC_Msg2">Chat with these users already exists.</system:String>
+    
+    <!--ChatView-->
+    <system:String x:Key="CVtxt">Say something nice :)</system:String>
+
+    <!--MsgControl-->
+    <system:String x:Key="You">You</system:String>
+    <system:String x:Key="CCImage">[Image]</system:String>
+
+    <!--UserOptions-->
+    <system:String x:Key="UOtitle">User Options</system:String>
+
+    <!--Buy-->
+    <system:String x:Key="BUYtitle">Buy</system:String>
+    <system:String x:Key="BTitle">Title:</system:String>
+    <system:String x:Key="BAuthor">Author:</system:String>
+    <system:String x:Key="BDate">Date:</system:String>
+    <system:String x:Key="BDim">Dimensions:</system:String>
+    <system:String x:Key="BDescr">Description:</system:String>
+    <system:String x:Key="Avaliable">Avaliable</system:String>
+    <system:String x:Key="BUYb1">Buy it</system:String>
+
+    <system:String x:Key="B_Msg1">It will be</system:String>
+    <system:String x:Key="B_Msg2">€. Are you sure?</system:String>
+    <system:String x:Key="B_Msg3">Successfully purchased.</system:String>
+
+    <!--Sell-->
+    <system:String x:Key="SELLtitle">Sell Artwork</system:String>
+    <system:String x:Key="SAuthor">Can't find it? Write it here</system:String>
+    <system:String x:Key="SDescr">Description/Comment</system:String>
+    <system:String x:Key="Sb1">Select img</system:String>
+    <system:String x:Key="Sb2">Submit proposal</system:String>
+
+    <system:String x:Key="S_Msg1">Message successfully sent.</system:String>
+
 </ResourceDictionary>
+
+<!--https://social.msdn.microsoft.com/Forums/en-US/aa9a8300-5e26-4a4f-a0ff-a9a0626272a1/wpf-multilanguage-application?forum=wpf
+    https://www.codeproject.com/Articles/123460/Simplest-Way-to-Implement-Multilingual-WPF-Applica-->

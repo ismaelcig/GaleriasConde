@@ -7,32 +7,34 @@
     <system:String x:Key="MWtitle">Bienvenido</system:String>
     <system:String x:Key="MWtxt">Usuario</system:String>
     <system:String x:Key="MWpass">Contraseña</system:String>
-    <system:String x:Key="MWb1">Continuar</system:String>
     <system:String x:Key="MWb2">Registrarse</system:String>
-    <system:String x:Key="MWb3">Confirmar</system:String>
-    <system:String x:Key="MWb4">Atrás</system:String>
-    <system:String x:Key="MW_Msg1">Debe introducir un nombre de usuario</system:String>
+    <system:String x:Key="MWb3">Login</system:String>
+    <system:String x:Key="MW_Msg1">Debe introducir un nombre de usuario.</system:String>
     <system:String x:Key="MW_Msg2">El usuario introducido no existe. ¿Desea continuar sin registrarse?</system:String>
-    <system:String x:Key="MW_Msg3">Contraseña incorrecta</system:String>
-    <system:String x:Key="MW_Msg4">Debe introducir una contraseña</system:String>
-    <system:String x:Key="MW_Msg5">Ha ocurrido un problema al tratar de acceder a la Base de Datos</system:String>
+    <system:String x:Key="MW_Msg3">Contraseña incorrecta.</system:String>
+    <system:String x:Key="MW_Msg4">Debe introducir una contraseña.</system:String>
+    <system:String x:Key="MW_Msg5">Ha ocurrido un problema al tratar de acceder a la Base de Datos.</system:String>
     
 <!--Misc-->
     <system:String x:Key="CloseApp">Abandonar Galería</system:String>
     <system:String x:Key="CloseWin">Cerrar Ventana</system:String>
     <system:String x:Key="MaximizeApp">Maximizar</system:String>
     <system:String x:Key="MinimizeApp">Minimizar</system:String>
+    <system:String x:Key="Error">Ha ocurrido un error, si el problema persiste, por favor, póngase en contacto con nosotros en support@galerias.conde.com</system:String>
+    <system:String x:Key="ID">ID</system:String>
+    <system:String x:Key="Next">Siguiente</system:String>
+    <system:String x:Key="Ok">Confirmar</system:String>
+    <system:String x:Key="Back">Atrás</system:String>
 
 <!--Registro-->
     <system:String x:Key="RGtitle">Registro</system:String>
-    <system:String x:Key="RGnombre">Nombre</system:String>
-    <system:String x:Key="RGapell">Apellidos</system:String>
-    <system:String x:Key="RGnick">Nick</system:String>
-    <system:String x:Key="RGnacion">Nacionalidad</system:String>
-    <system:String x:Key="RGdir">Dirección</system:String>
-    <system:String x:Key="RGemail">Email</system:String>
-    <system:String x:Key="RGtlf">Teléfono de contacto</system:String>
-    <system:String x:Key="RGb1">Siguiente</system:String>
+    <system:String x:Key="Name">Nombre</system:String>
+    <system:String x:Key="Surnames">Apellidos</system:String>
+    <system:String x:Key="Nick">Nick</system:String>
+    <system:String x:Key="Nat">Nacionalidad</system:String>
+    <system:String x:Key="Address">Dirección</system:String>
+    <system:String x:Key="Email">Email</system:String>
+    <system:String x:Key="Tlf">Teléfono de contacto</system:String>
     <system:String x:Key="RGb2">Ya tengo una cuenta</system:String>
 
     <system:String x:Key="RGpass">Contraseña</system:String>
@@ -42,22 +44,158 @@
     <system:String x:Key="RGcheck3">Debe tener al menos 5 caracteres</system:String>
     <system:String x:Key="RGcheck4">Debe tener al menos un número</system:String>
     <system:String x:Key="RGcheck5">Ambas contraseñas deben coincidir</system:String>
-    <system:String x:Key="RGb3">Confirmar</system:String>
-    <system:String x:Key="RGb4">Atrás</system:String>
 
-    <system:String x:Key="RG_Msg1">Cubra los campos antes de proseguir</system:String>
-    <system:String x:Key="RG_Msg2">Ya existe un usuario con ese nick</system:String>
-    <system:String x:Key="RG_Msg3">Ahora puede entrar con su cuenta</system:String>
+    <system:String x:Key="RG_Msg1">Cubra los campos antes de proseguir.</system:String>
+    <system:String x:Key="RG_Msg2">Ya existe un usuario con ese nick.</system:String>
+    <system:String x:Key="RG_Msg3">Ahora puede entrar con su cuenta.</system:String>
 
-
-    <!--wGaleria-->
+<!--wGaleria-->
     <system:String x:Key="CGtitle">Galerías Conde</system:String>
     <system:String x:Key="CGpst1">Ver Obras</system:String>
-    <system:String x:Key="CGpst2">Ver Autores</system:String>
+    <system:String x:Key="CGpst2">Subastas</system:String>
     <system:String x:Key="CGpst3">Mensajes</system:String>
     <system:String x:Key="CGpst4">Gestión</system:String>
     <system:String x:Key="CGpst5">Informes</system:String>
+
+    <!--Pst1-->
+    <system:String x:Key="CG1Filter">Filtrar</system:String>
+    <system:String x:Key="CG1Search">Buscar...</system:String>
+    <system:String x:Key="CG1AllFilter">Todas</system:String>
+    <system:String x:Key="CG1OnStock">Sólo Disponibles</system:String>
+    <system:String x:Key="CG1_Msg1">Debes estar registrado para poder comprar.</system:String>
+
+    <!--Pst2-->
+    <system:String x:Key="CG2Hist">Historial:</system:String>
+    <system:String x:Key="CG2Bid">Pujar</system:String>
+    <system:String x:Key="CG2Not">Notificaciones</system:String>
+    <system:String x:Key="CG2_Msg1">Sólo puede introducir números</system:String>
+
+    <system:String x:Key="tryConnect">Conectar con el servidor</system:String>
+<!--Estados-->
+    <system:String x:Key="E1">La sala se encuentra cerrada.</system:String>
+    <system:String x:Key="E2">Conectado.</system:String>
+    <system:String x:Key="E3">No se ha podido conectar con el servidor.</system:String>
+    <system:String x:Key="E4">Ha entrado en la sala, espere a que la puja comience.</system:String>
+    <system:String x:Key="E5">La puja comienza en</system:String>
+    <system:String x:Key="E6">Comienzo puja de</system:String>
+    <system:String x:Key="E7">en</system:String>
+    <system:String x:Key="E8">Has subido la puja a</system:String>
+    <system:String x:Key="E9">sube la puja a</system:String>
+    <system:String x:Key="E10">Puja finalizada sin comprador</system:String>
+    <system:String x:Key="E11">Finalizada la puja de</system:String>
+    <system:String x:Key="E12">Ganador:</system:String>
+    <system:String x:Key="E13">sin comprador.</system:String>
+    <system:String x:Key="E14">Puja finalizada en</system:String>
+    <system:String x:Key="E15">Si ha comprado alguna obra, nos pondremos en contacto con usted para la realización de los trámites.</system:String>
+    <system:String x:Key="E16">La sala ha sido cerrada</system:String>
+    <system:String x:Key="E17">Si ha comprado alguna obra, nos pondremos en contacto con usted para la realización de los trámites.</system:String>
+    <system:String x:Key="E18">ha abandonado la sala.</system:String>
+    <system:String x:Key="E19">Su puja debe superar la actual, que está en</system:String>
+
+    <!--Pst4-->
+    <system:String x:Key="User">Usuario</system:String>
+    <system:String x:Key="Users">Usuarios</system:String>
+    <system:String x:Key="Profile">Perfil</system:String>
+    <system:String x:Key="Admin">Administrador</system:String>
+    <system:String x:Key="warn">Este elemento debe registrarse en todos los idiomas</system:String>
+
+    <system:String x:Key="Trans">Transacción</system:String>
+    <system:String x:Key="Transs">Transacciones</system:String>
+    <system:String x:Key="Money">Dinero</system:String>
+    <system:String x:Key="Comm">Comentario</system:String>
+    <system:String x:Key="Done">Realizada</system:String>
+    <system:String x:Key="Operation">Operación</system:String>
+    <system:String x:Key="Buy">Compra</system:String>
+    <system:String x:Key="Sell">Venta</system:String>
+	<system:String x:Key="MngTr_Msg1">El valor de Dinero es inválido.</system:String>
+	<system:String x:Key="MngTr_Msg2">Una vez creadas, sólo master puede cambiar las Transacciones</system:String>
+
+    <system:String x:Key="Nats">Nacionalidades</system:String> 
+    <system:String x:Key="NUsers">Nº Usuarios</system:String>
+    <system:String x:Key="NAuths">Nº Autores</system:String>
+    <system:String x:Key="DelConfirmation">¿Está seguro de que desea borrar todos los registros sobre este objeto?</system:String>
+    <system:String x:Key="MngN_Msg1"> Usuarios tienen asociada esta Nacionalidad. No puede ser eliminada.</system:String>
+
+    <system:String x:Key="Auth">Autor</system:String>
+    <system:String x:Key="Auths">Autores</system:String>
+    <system:String x:Key="realName">Nombre Real</system:String>
+    <system:String x:Key="artName">Nombre Artístico</system:String>
+    <system:String x:Key="ArtNum">Nº Obras</system:String>
+    <system:String x:Key="descr">Descripción</system:String>
+    <system:String x:Key="MngA_Msg1"> Obras tienen asociado a este Autor. No puede ser eliminado.</system:String>
+
+    <system:String x:Key="Type">Tipo</system:String>
+    <system:String x:Key="Types">Tipos</system:String>
+    <system:String x:Key="MngT_Msg1"> Obras pertenecen a este Tipo. No puede ser eliminado.</system:String>
+    <system:String x:Key="NArts">Nº Obras</system:String>
+
+    <system:String x:Key="Art">Obra</system:String>
+    <system:String x:Key="Arts">Obras</system:String>
+    <system:String x:Key="Title">Título</system:String>
+    <system:String x:Key="onStock">En Posesión</system:String>
+    <system:String x:Key="date">Fecha</system:String>
+    <system:String x:Key="dimensions">Dimensiones</system:String>
+    <system:String x:Key="img">Imagen</system:String>
+    <system:String x:Key="ofdFilter">Imágenes (*.png;*.jpeg;*.jpg;*.gif)|*.png;*.jpeg;*.jpg;*.gif|Todos (*.*)|*.*</system:String>
+    <system:String x:Key="MngArt_Msg1">Sólo puedes añadir archivos .png, .jpg, .jpeg o .gif</system:String>
+
+    <system:String x:Key="CG4Add">Añadir</system:String>
+    <system:String x:Key="CG4Mod">Modificar</system:String>
+    <system:String x:Key="CG4Del">Eliminar</system:String>
+
+    <system:String x:Key="MngU_Msg1">No puede eliminar sus propios permisos.</system:String>
+    <system:String x:Key="MngU_Msg2">No puede eliminar la cuenta master.</system:String>
+
+    <!--UserPanel-->
+    <system:String x:Key="UPMsg">¿Desea cerrar la aplicación?</system:String>
+    <system:String x:Key="UPCaption">Confirmación</system:String>
+    <system:String x:Key="UPButton">Desconectarse</system:String>
+    <system:String x:Key="Edit">Editar Perfil</system:String>
+    <system:String x:Key="Close">Cerrar</system:String>
+    <system:String x:Key="ofdFilterIco">Imágenes (*.gif)|*.gif|Todos (*.*)|*.*</system:String>
+    <system:String x:Key="MngUP_Msg1">Sólo puedes añadir archivos .gif</system:String>
     
+    <!--AddChat-->
+    <system:String x:Key="AClbl">Nuevo Chat con:</system:String>
+    <system:String x:Key="ACtxt">Nick Usuario</system:String>
+    <system:String x:Key="ACbutt">Crear Chat</system:String>
+    <system:String x:Key="ACbutt2">Añadir Usuario</system:String>
+    <system:String x:Key="ACbutt3">Cancelar</system:String>
+    <system:String x:Key="MngAC_Msg1">Debes introducir un usuario existente.</system:String>
+    <system:String x:Key="MngAC_Msg2">Ya existe un chat con estos usuarios.</system:String>
+
+    <!--ChatView-->
+    <system:String x:Key="CVtxt">Di algo...</system:String>
+
+    <!--MsgControl-->
+    <system:String x:Key="You">Tu</system:String>
+    <system:String x:Key="CCImage">[Imagen]</system:String>
+
+    <!--UserOptions-->
+    <system:String x:Key="UOtitle">Opciones de Usuario</system:String>
+
+    <!--Buy-->
+    <system:String x:Key="BUYtitle">Comprar</system:String>
+    <system:String x:Key="BTitle">Título: </system:String>
+    <system:String x:Key="BAuthor">Autor: </system:String>
+    <system:String x:Key="BDate">Fecha: </system:String>
+    <system:String x:Key="BDim">Dimensiones: </system:String>
+    <system:String x:Key="BDescr">Descripción: </system:String>
+    <system:String x:Key="Avaliable">Disponible</system:String>
+    <system:String x:Key="BUYb1">Comprar</system:String>
+
+    <system:String x:Key="B_Msg1">Serán</system:String>
+    <system:String x:Key="B_Msg2">€. ¿Estás de acuerdo?</system:String>
+    <system:String x:Key="B_Msg3">Compra realizada con éxito.</system:String>
+
+    <!--Sell-->
+    <system:String x:Key="SELLtitle">Vender Obra</system:String>
+    <system:String x:Key="SAuthor">¿No aparece? Escríbelo aquí</system:String>
+    <system:String x:Key="SDescr">Descripción/Comentario</system:String>
+    <system:String x:Key="Sb1">Seleccionar img</system:String>
+    <system:String x:Key="Sb2">Enviar propuesta</system:String>
+
+    <system:String x:Key="S_Msg1">Mensaje enviado con éxito</system:String>
 
 </ResourceDictionary>
 

@@ -1,0 +1,392 @@
+﻿Log Entry : 20:14:38, miércoles, 21 de junio de 2017 :: From GenericRep5 :: An error occurred while saving entities that do not expose foreign key properties for their relationships. The EntityEntries property will return null because a single entity cannot be identified as the source of the exception. Handling of exceptions while saving can be made easier by exposing foreign key properties in your entity types. See the InnerException for details.
+ :Inner Exception: System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: No se puede insertar un valor explícito en la columna de identidad de la tabla 'Messages' cuando IDENTITY_INSERT es OFF.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<NonQuery>b__0(DbCommand t, DbCommandInterceptionContext`1 c)
+   en System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   en System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   en System.Data.Entity.Internal.InterceptableDbCommand.ExecuteNonQuery()
+   en System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)
+   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   en System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   en System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   en System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   en System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   en System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   en System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   en System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   en System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   en System.Data.Entity.Internal.InternalContext.SaveChanges()
+------------------------------------------------------------
+Log Entry : 20:32:06, miércoles, 21 de junio de 2017 :: From GenericRep5 :: An error occurred while saving entities that do not expose foreign key properties for their relationships. The EntityEntries property will return null because a single entity cannot be identified as the source of the exception. Handling of exceptions while saving can be made easier by exposing foreign key properties in your entity types. See the InnerException for details.
+ :Inner Exception: System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: No se puede insertar un valor explícito en la columna de identidad de la tabla 'Messages' cuando IDENTITY_INSERT es OFF.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<NonQuery>b__0(DbCommand t, DbCommandInterceptionContext`1 c)
+   en System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   en System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   en System.Data.Entity.Internal.InterceptableDbCommand.ExecuteNonQuery()
+   en System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)
+   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   en System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   en System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   en System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   en System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   en System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   en System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   en System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   en System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   en System.Data.Entity.Internal.InternalContext.SaveChanges()
+------------------------------------------------------------
+Log Entry : 23:51:18, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:51:19, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:51:21, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:51:22, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:51:24, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:51:25, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:51:27, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:51:28, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:51:31, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:51:31, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:51:34, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:51:34, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:51:37, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:51:37, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:51:40, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:51:40, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:51:43, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:51:43, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:51:46, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:51:46, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:51:49, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:51:49, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:51:52, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:51:52, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:51:55, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:51:55, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:51:58, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:51:58, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:52:01, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:52:01, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:52:04, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:52:04, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:52:07, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:52:07, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:52:10, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:52:10, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:52:13, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:52:14, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:52:16, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:52:17, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:52:19, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:52:20, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:52:22, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:52:23, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:52:25, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 23:52:26, miércoles, 21 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:03:47, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:03:48, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:03:50, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:03:51, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:03:53, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:03:54, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:03:56, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:03:57, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:03:59, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:04:00, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:04:02, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:04:03, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:04:05, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:04:06, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:04:08, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:04:09, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:04:11, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:04:12, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:04:14, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:04:15, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:04:17, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:04:18, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:04:20, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:39:09, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:39:14, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:39:14, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:39:17, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:39:17, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:39:20, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:39:20, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:39:23, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:39:23, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:39:26, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:39:26, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:39:29, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:39:29, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:46:36, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:46:39, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:46:39, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:46:42, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:46:42, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:46:45, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:46:45, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:46:48, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:46:48, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:46:51, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 0:46:51, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 4:23:16, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 4:23:17, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 4:23:19, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 4:23:21, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 4:23:22, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 4:23:24, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 4:23:25, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 4:23:27, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 4:23:28, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 4:23:30, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 4:23:31, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 4:23:34, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 4:23:34, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 4:23:37, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 4:23:37, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 4:23:40, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------
+Log Entry : 4:23:40, jueves, 22 de junio de 2017 :: From Tick :: La secuencia contiene más de un elemento coincidente
+ :Inner Exception: 
+------------------------------------------------------------

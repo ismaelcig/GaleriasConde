@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Galeria.DAL.Repositories;
+using Galeria.DAL.Repositories.Translations;
+using Galeria.Other_Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,125 +14,173 @@ namespace Galeria.DAL
         private GaleriaContext context = new GaleriaContext();
         private bool disposed = false;
 
-        private AutoresRepository autoresRepository;
-        private TransaccionesRepository transaccionesRepository;
-        private UsuariosRepository usuariosRepository;
-        private ObrasRepository obrasRepository;
-        private TiposRepository tiposRepository;
-        private NacionalidadesRepository nacionalidadesRepository;
-        private MensajesRepository mensajesRepository;
-        //private ConversacionesRepository conversacionesRepository;
-        //private PermisosRepository permisosRepository;
-        private PerfilesRepository perfilesRepository;
+        private ArtworksRep artworksRep;
+        private ArtworkTranslationsRep artworkTranslationsRep;
+        private AuthorsRep authorsRep;
+        private AuthorTranslationsRep authorTranslationsRep;
+        private ChatsRep chatsRep;
+        private LangsRep langsRep;
+        private MessagesRep messagesRep;
+        private NationalitiesRep nationalitiesRep;
+        private NationalityTranslationsRep nationalityTranslationsRep;
+        private ProfilesRep profilesRep;
+        private TransactionsRep transactionsRep;
+        private TypesRep typesRep;
+        private TypeTranslationsRep typeTranslationsRep;
+        private UsersRep usersRep;
 
-        public AutoresRepository AutoresRepository
+        public ArtworksRep ArtworksRep
         {
             get
             {
-                if (this.autoresRepository == null)
+                if (this.artworksRep == null)
                 {
-                    this.autoresRepository = new AutoresRepository(context);
+                    this.artworksRep = new ArtworksRep(context);
                 }
-                return autoresRepository;
+                return artworksRep;
             }
         }
-        public TransaccionesRepository TransaccionesRepository
+        public ArtworkTranslationsRep ArtworkTranslationsRep
         {
             get
             {
-                if (this.transaccionesRepository == null)
+                if (this.artworkTranslationsRep == null)
                 {
-                    this.transaccionesRepository = new TransaccionesRepository(context);
+                    this.artworkTranslationsRep = new ArtworkTranslationsRep(context);
                 }
-                return transaccionesRepository;
+                return artworkTranslationsRep;
             }
         }
-        public UsuariosRepository UsuariosRepository
+        public AuthorsRep AuthorsRep
         {
             get
             {
-                if (this.usuariosRepository == null)
+                if (this.authorsRep == null)
                 {
-                    this.usuariosRepository = new UsuariosRepository(context);
+                    this.authorsRep = new AuthorsRep(context);
                 }
-                return usuariosRepository;
+                return authorsRep;
             }
         }
-        public ObrasRepository ObrasRepository
+        public AuthorTranslationsRep AuthorTranslationsRep
         {
             get
             {
-                if (this.obrasRepository == null)
+                if (this.authorTranslationsRep == null)
                 {
-                    this.obrasRepository = new ObrasRepository(context);
+                    this.authorTranslationsRep = new AuthorTranslationsRep(context);
                 }
-                return obrasRepository;
+                return authorTranslationsRep;
             }
         }
-        public TiposRepository TiposRepository
+        public ChatsRep ChatsRep
         {
             get
             {
-                if (this.tiposRepository == null)
+                if (this.chatsRep == null)
                 {
-                    this.tiposRepository = new TiposRepository(context);
+                    this.chatsRep = new ChatsRep(context);
                 }
-                return tiposRepository;
+                return chatsRep;
             }
         }
-        public NacionalidadesRepository NacionalidadesRepository
+        public LangsRep LangsRep
         {
             get
             {
-                if (this.nacionalidadesRepository == null)
+                if (this.langsRep == null)
                 {
-                    this.nacionalidadesRepository = new NacionalidadesRepository(context);
+                    this.langsRep = new LangsRep(context);
                 }
-                return nacionalidadesRepository;
+                return langsRep;
             }
         }
-        public MensajesRepository MensajesRepository
+        public MessagesRep MessagesRep
         {
             get
             {
-                if (this.mensajesRepository == null)
+                if (this.messagesRep == null)
                 {
-                    this.mensajesRepository = new MensajesRepository(context);
+                    this.messagesRep = new MessagesRep(context);
                 }
-                return mensajesRepository;
+                return messagesRep;
             }
-        }/*
-        public ConversacionesRepository ConversacionesRepository
+        }
+        public NationalitiesRep NationalitiesRep
         {
             get
             {
-                if (this.conversacionesRepository == null)
+                if (this.nationalitiesRep == null)
                 {
-                    this.conversacionesRepository = new ConversacionesRepository(context);
+                    this.nationalitiesRep = new NationalitiesRep(context);
                 }
-                return conversacionesRepository;
+                return nationalitiesRep;
             }
-        }*/
-        //public PermisosRepository PermisosRepository
-        //{
-        //    get
-        //    {
-        //        if (this.permisosRepository == null)
-        //        {
-        //            this.permisosRepository = new PermisosRepository(context);
-        //        }
-        //        return permisosRepository;
-        //    }
-        //}
-        public PerfilesRepository PerfilesRepository
+        }
+        public NationalityTranslationsRep NationalityTranslationsRep
         {
             get
             {
-                if (this.perfilesRepository == null)
+                if (this.nationalityTranslationsRep == null)
                 {
-                    this.perfilesRepository = new PerfilesRepository(context);
+                    this.nationalityTranslationsRep = new NationalityTranslationsRep(context);
                 }
-                return perfilesRepository;
+                return nationalityTranslationsRep;
+            }
+        }
+        public ProfilesRep ProfilesRep
+        {
+            get
+            {
+                if (this.profilesRep == null)
+                {
+                    this.profilesRep = new ProfilesRep(context);
+                }
+                return profilesRep;
+            }
+        }
+        public TransactionsRep TransactionsRep
+        {
+            get
+            {
+                if (this.transactionsRep == null)
+                {
+                    this.transactionsRep = new TransactionsRep(context);
+                }
+                return transactionsRep;
+            }
+        }
+        public TypesRep TypesRep
+        {
+            get
+            {
+                if (this.typesRep == null)
+                {
+                    this.typesRep = new TypesRep(context);
+                }
+                return typesRep;
+            }
+        }
+        public TypeTranslationsRep TypeTranslationsRep
+        {
+            get
+            {
+                if (this.typeTranslationsRep == null)
+                {
+                    this.typeTranslationsRep = new TypeTranslationsRep(context);
+                }
+                return typeTranslationsRep;
+            }
+        }
+        public UsersRep UsersRep
+        {
+            get
+            {
+                if (this.usersRep == null)
+                {
+                    this.usersRep = new UsersRep(context);
+                }
+                return usersRep;
             }
         }
 
@@ -143,7 +194,7 @@ namespace Galeria.DAL
             }
             catch (Exception ex)
             {
-                string mensaje = ex.Message;
+                ErrorLog.SilentLog("UoW1", ex);
             }
         }
 

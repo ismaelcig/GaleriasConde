@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="Galeria.User_Controls.Messages_Window.ChatView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Galeria.User_Controls.Messages_Window"
+             mc:Ignorable="d" 
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             d:DesignHeight="500" d:DesignWidth="600">
+    <UserControl.Resources>
+        <Style TargetType="Label" x:Key="NameTag">
+            <Setter Property="Foreground" Value="Green"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="MsgStyle">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid Background="WhiteSmoke">
+        <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="100" Background="Beige">
+            <Ellipse DockPanel.Dock="Left" HorizontalAlignment="Left" Height="99" Stroke="Black" VerticalAlignment="Top" Width="99">
+                <Ellipse.Fill>
+                    <ImageBrush x:Name="img" />
+                    <!--ImageSource="{StaticResource camera}"-->
+                </Ellipse.Fill>
+            </Ellipse>
+            <Label x:Name="chatName" DockPanel.Dock="Top" Content="" FontSize="25" FontStretch="Expanded" FontWeight="Black" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="chatUsers" Content="" FontStyle="Italic" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top"/>
+        </DockPanel>
+        <Border BorderBrush="Black" BorderThickness="0,1,0,1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,100,0,50">
+            <ScrollViewer>
+                <StackPanel x:Name="spMsgs" Orientation="Vertical" ScrollViewer.VerticalScrollBarVisibility="Visible"/>
+            </ScrollViewer>
+        </Border>
+        <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Height="50" Background="LightGray" LastChildFill="True">
+            <Image x:Name="adjbutton" Source="{StaticResource camera}" MouseDown="adjbutton_MouseDown" Cursor="Hand" DockPanel.Dock="Left" HorizontalAlignment="Left" Margin="5,0,5,0"/>
+            <Image x:Name="sendbutton" Source="{StaticResource send}" MouseDown="sendbutton_MouseDown" Cursor="Hand" DockPanel.Dock="Right" HorizontalAlignment="Right" Margin="5,7,5,7"/>
+            <TextBox x:Name="txt" Height="40" Background="White" materialDesign:HintAssist.Hint="{DynamicResource CVtxt}" materialDesign:HintAssist.FloatingScale="0.8" KeyDown="txt_KeyDown"/>
+        </DockPanel>
+        <Grid x:Name="shadow" Background="LightGray" Opacity="0.2" Panel.ZIndex="10" Visibility="Visible"/>
+        <Grid x:Name="edit" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Hidden">
+            <TextBox x:Name="textBox" MaxLength="25" KeyDown="textBox_KeyDown" HorizontalAlignment="Left" Height="40" Margin="105,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="311"/>
+        </Grid>
+    </Grid>
+</UserControl>

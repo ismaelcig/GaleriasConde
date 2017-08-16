@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Galeria.User_Controls"
              xmlns:ControlzEx="clr-namespace:ControlzEx;assembly=MaterialDesignThemes.Wpf" x:Class="Galeria.User_Controls.LanguageSelector"
              mc:Ignorable="d" 
-             d:DesignHeight="40" d:DesignWidth="130">
+             d:DesignHeight="36" d:DesignWidth="130">
     <UserControl.Resources>
         <Style x:Key="{x:Type ComboBox}" TargetType="ComboBox">
             <Setter Property="SnapsToDevicePixels" Value="true"/>
@@ -20,7 +20,7 @@
     
     
     <Grid>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" SelectedIndex="0" Margin="0,0,0,0" VerticalAlignment="Top" Width="130" Height="40" Background="Lavender" BorderBrush="Gold" BorderThickness="1.5" FontSize="20" VerticalContentAlignment="Center" SelectionChanged="comboBox_SelectionChanged"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" SelectedIndex="0" Margin="0,0,0,0" VerticalAlignment="Top" Width="130" Height="36" Background="Lavender" BorderBrush="Gainsboro" BorderThickness="1.5" FontSize="20" VerticalContentAlignment="Center" SelectionChanged="comboBox_SelectionChanged"/>
 
 
 
